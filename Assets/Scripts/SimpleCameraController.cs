@@ -4,6 +4,8 @@ namespace UnityTemplateProjects
 {
     public class SimpleCameraController : MonoBehaviour
     {
+        public bool freeCamEnabled;
+
         class CameraState
         {
             public float yaw;
@@ -108,6 +110,9 @@ namespace UnityTemplateProjects
         
         void Update()
         {
+            if (!freeCamEnabled)
+                return;
+
             // Exit Sample  
 
             if (Input.GetKey(KeyCode.Escape))
