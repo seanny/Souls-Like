@@ -1,19 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace SoulsLike
 {
     public class InputManager : MonoBehaviour
     {
+        [Header("Axis")]
         public float vertical;
         public float horizontal;
+        public float controllerVertical;
+        public float controllerHorizontal;
         public bool running;
+        public Vector3 v, h;
 
         public bool cameraDisabled;
 
         StateManager state;
         CameraManager cameraManager;
+        Actor attachedActor;
         float delta;
 
         // Start is called before the first frame update
@@ -25,18 +28,24 @@ namespace SoulsLike
             cameraManager = CameraManager.instance;
             cameraManager.Init(transform);
 
+            attachedActor = GetComponent<Actor>();
+
         }
 
         private void GetUpdate()
         {
-            vertical = Input.GetAxis("Vertical");
-            horizontal = Input.GetAxis("Horizontal");
-            running = Input.GetKey(KeyCode.LeftShift);
+            vertical = InputUtility.instance.movementInput.x;
+            horizontal = InputUtility.instance.movementInput.y;
         }
 
         // Update is called once per frame
         void FixedUpdate()
         {
+            if(attachedActor.actorStats.isDead == true)
+            {
+                return;
+            }
+
             delta = Time.fixedDeltaTime;
             GetUpdate();
             UpdateState();
@@ -49,6 +58,10 @@ namespace SoulsLike
 
         private void Update()
         {
+            if (attachedActor.actorStats.isDead == true)
+            {
+                return;
+            }
             delta = Time.deltaTime;
             state.Tick(delta);
         }
@@ -58,8 +71,8 @@ namespace SoulsLike
             state.horizontal = horizontal;
             state.vertical = vertical;
 
-            Vector3 v = vertical * cameraManager.transform.forward;
-            Vector3 h = horizontal * cameraManager.transform.right;
+            v = vertical * cameraManager.transform.right;
+            h = horizontal * cameraManager.transform.forward;
             state.moveDirection = (v + h).normalized;
             float m = Mathf.Abs(horizontal) + Mathf.Abs(vertical);
             state.moveAmount = Mathf.Clamp01(m);

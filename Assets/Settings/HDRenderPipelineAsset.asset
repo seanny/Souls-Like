@@ -215,7 +215,7 @@ MonoBehaviour:
     supportDecals: 1
     msaaSampleCount: 1
     supportMotionVectors: 1
-    supportRuntimeDebugDisplay: 1
+    supportRuntimeDebugDisplay: 0
     supportDitheringCrossFade: 1
     supportTerrainHole: 0
     supportRayTracing: 0

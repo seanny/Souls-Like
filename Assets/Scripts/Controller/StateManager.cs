@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace SoulsLike
 {
@@ -18,12 +16,14 @@ namespace SoulsLike
         [HideInInspector] public bool isGrounded;
         [HideInInspector] public bool isRunning;
         [HideInInspector] public bool lockOn;
+        [HideInInspector] public bool drinkingPotion;
+        private bool drinkingRoutine;
 
         [HideInInspector] public GameObject activeObject;
         [HideInInspector] public Animator animator;
         [HideInInspector] public Rigidbody rigidBody;
         [HideInInspector] public float delta;
-        [HideInInspector] public LayerMask ignoreLayers;
+        public LayerMask ignoreLayers;
 
         public void Init()
         {
@@ -103,6 +103,10 @@ namespace SoulsLike
             delta = d;
             isGrounded = IsGrounded();
             animator.SetBool("IsGrounded", isGrounded);
+            if(!isRunning)
+            {
+                lockOn = InputUtility.instance.LockOn;
+            }
         }
 
         private void HandleMovementAnimations()
@@ -122,10 +126,8 @@ namespace SoulsLike
             Vector3 direction = new Vector3(0, -1);
             float distance = 1f;
             RaycastHit raycastHit;
-            Debug.DrawRay(origin, direction * distance);
             if (Physics.Raycast(origin, direction, out raycastHit, distance, ignoreLayers))
             {
-                Debug.Log($"Hit {raycastHit.transform.name}");
                 r = true;
                 Vector3 targetPosition = raycastHit.point;
                 transform.position = targetPosition;

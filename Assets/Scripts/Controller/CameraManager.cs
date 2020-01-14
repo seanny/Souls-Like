@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace SoulsLike
 {
@@ -17,6 +15,9 @@ namespace SoulsLike
         public float lookAngle;
         public float tiltAngle;
 
+        public float controllerVertical;
+        public float controllerHorizontal;
+
         [HideInInspector] public Transform pivot;
         [HideInInspector] public Transform cameraTransform;
         float targetSpeed;
@@ -31,14 +32,15 @@ namespace SoulsLike
             target = t;
             cameraTransform = Camera.main.transform;
             pivot = cameraTransform.parent;
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
         public void Tick(float d)
         {
-            float h = Input.GetAxis("Mouse X");
-            float v = Input.GetAxis("Mouse Y");
+            float h = InputUtility.instance.cameraInput.x;
+            float v = InputUtility.instance.cameraInput.y;
 
-            targetSpeed = mouseSpeed;
+            targetSpeed = (mouseSpeed * 4) * Time.deltaTime;
             FollowTarget(d);
             HandleRotation(d, v, h, targetSpeed);
         }

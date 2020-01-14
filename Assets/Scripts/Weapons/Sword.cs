@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace SoulsLike
 {
     public class Sword : MonoBehaviour
     {
-        public Transform holder;
-        public bool isAttacking;
+        private Transform holder;
+        public bool IsAttacking;
 
         // Start is called before the first frame update
         void Start()
@@ -17,17 +15,14 @@ namespace SoulsLike
 
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log($"OnTriggerEnter({other.name})");
-            if (isAttacking && other.transform != holder)
+            if (IsAttacking && other.transform != holder)
             {
-                Debug.Log($"Attacking {other.name}");
-                isAttacking = false;
+                if (other.gameObject.TryGetComponent(out Actor actor))
+                {
+                    Debug.Log($"{holder.name} attacking {other.name}");
+                    IsAttacking = false;
+                }
             }
-        }
-
-        private void OnCollisionEnter(Collision collision)
-        {
-            Debug.Log($"OnCollisionEnter({collision.gameObject.name})");
         }
     }
 }

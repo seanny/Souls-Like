@@ -1,43 +1,53 @@
 ﻿using System.Collections;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
-public class DebugStats : MonoBehaviour
+namespace SoulsLike
 {
-    public TextMeshProUGUI debugStats;
-
-    public float frequency = 1f;
-    public int FramesPerSec { get; protected set; }
-
-    // Start is called before the first frame update
-    void Start()
+    public class DebugStats : MonoBehaviour
     {
-        StartCoroutine(FramesPerSecond());
-    }
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+        public InputManager inputManager;
+        public TextMeshProUGUI debugStats;
 
-    private IEnumerator FramesPerSecond()
-    {
-        while(true)
+        public float frequency = 1f;
+        public int FramesPerSec { get; protected set; }
+        public string[] ActiveControllers { get; protected set; }
+
+        // Start is called before the first frame update
+        void Start()
         {
-            int lastFrameCount = Time.frameCount;
-            float lastTime = Time.realtimeSinceStartup;
-            yield return new WaitForSeconds(frequency);
-            float timeSpan = Time.realtimeSinceStartup - lastTime;
-            int frameCount = Time.frameCount - lastFrameCount;
-
-            // Display it
-            FramesPerSec = Mathf.RoundToInt(frameCount / timeSpan);
+            debugStats.gameObject.SetActive(true);
+            StartCoroutine(FramesPerSecond());
         }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        string targetFPS = "N/A";
-        if(Application.targetFrameRate != -1)
+        private IEnumerator FramesPerSecond()
         {
-            targetFPS = Application.targetFrameRate.ToString();
+            while (true)
+            {
+                int lastFrameCount = Time.frameCount;
+                float lastTime = Time.realtimeSinceStartup;
+                yield return new WaitForSeconds(frequency);
+                float timeSpan = Time.realtimeSinceStartup - lastTime;
+                int frameCount = Time.frameCount - lastFrameCount;
+
+                // Display it
+                FramesPerSec = Mathf.RoundToInt(frameCount / timeSpan);
+            }
         }
-        debugStats.text = $"FPS: {FramesPerSec} - Target: {targetFPS}";
+
+        // Update is called once per frame
+        void Update()
+        {
+            string controllerNames = string.Empty;
+
+            string targetFPS = "N/A";
+            if (Application.targetFrameRate != -1)
+            {
+                targetFPS = Application.targetFrameRate.ToString();
+            }
+            debugStats.text = $"FPS: {FramesPerSec} - Target: {targetFPS}";
+        }
+#endif
     }
 }
