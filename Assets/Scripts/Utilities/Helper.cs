@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Xml;
+using System.IO;
+using UnityEngine;
+using System.Collections.Generic;
 
 namespace SoulsLike
 {
@@ -15,8 +18,8 @@ namespace SoulsLike
         public bool lockOn;
 
         public bool playAnim;
-        public string[] oneHandedAttacks;
-        public string[] twoHandedAttacks;
+        public List<string> oneHandedAttacks;
+        public List<string> twoHandedAttacks;
 
         public WeaponType weaponType;
         public bool enableRootMotion;
@@ -27,6 +30,26 @@ namespace SoulsLike
         void Start()
         {
             animator = GetComponent<Animator>();
+            oneHandedAttacks.Clear();
+            twoHandedAttacks.Clear();
+            XmlTextReader reader = new XmlTextReader(Path.Combine(Application.streamingAssetsPath, "OneHanded.xml"));
+            while (reader.Read())
+            {
+                // Do some work here on the data.
+                if(reader.Name == "anim")
+                {
+                    oneHandedAttacks.Add(reader.ReadInnerXml());
+                }
+            }
+            reader = new XmlTextReader(Path.Combine(Application.streamingAssetsPath, "TwoHanded.xml"));
+            while (reader.Read())
+            {
+                // Do some work here on the data.
+                if (reader.Name == "anim")
+                {
+                    twoHandedAttacks.Add(reader.ReadInnerXml());
+                }
+            }
         }
 
         public void PlayWeaponAnim(WeaponType weaponType)
@@ -46,12 +69,12 @@ namespace SoulsLike
                 animator.SetBool("ShieldBlock", false);
                 if (weaponType == WeaponType.OneHanded)
                 {
-                    rand = Random.Range(0, oneHandedAttacks.Length);
+                    rand = Random.Range(0, oneHandedAttacks.Count);
                     targetAnim = oneHandedAttacks[rand];
                 }
                 else if (weaponType == WeaponType.TwoHanded)
                 {
-                    rand = Random.Range(0, twoHandedAttacks.Length);
+                    rand = Random.Range(0, twoHandedAttacks.Count);
                     targetAnim = twoHandedAttacks[rand];
                 }
                 else

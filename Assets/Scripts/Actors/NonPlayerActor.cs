@@ -3,6 +3,9 @@ using UnityEngine.AI;
 
 namespace SoulsLike
 {
+    [RequireComponent(typeof(StateManager))]
+    [RequireComponent(typeof(NavMeshAgent))]
+    [RequireComponent(typeof(AiCombat))]
     public class NonPlayerActor : Actor
     {
         public enum AggressionLevel
@@ -28,6 +31,7 @@ namespace SoulsLike
         float fightWait;
         float navMeshEnabled = 0;
         float delta;
+        AiCombat aiCombat;
 
         // Use this for initialization
         protected override void Start()
@@ -35,8 +39,10 @@ namespace SoulsLike
             base.Start();
             stateManager = GetComponent<StateManager>();
             stateManager.Init();
+            navMeshAgent = GetComponent<NavMeshAgent>();
             actorStats.maxHealth = 80f + (actorStats.level / 2) + Random.Range(0, 10);
             actorStats.currentHealth = actorStats.maxHealth;
+            aiCombat = GetComponent<AiCombat>();
         }
 
         public void InitiateCombat(Actor actor)
@@ -71,14 +77,14 @@ namespace SoulsLike
 
             float delta = Time.deltaTime;
             stateManager.Tick(delta);
-            if(navMeshEnabled < 1.0f)
+            /*if(navMeshEnabled < 1.0f)
             {
                 navMeshEnabled += delta;
                 if(navMeshEnabled >= 1.0f)
                 {
                     navMeshAgent = GetComponent<NavMeshAgent>();
                 }
-            }
+            }*/
 
             if (movingTowards != null)
             {
@@ -98,89 +104,7 @@ namespace SoulsLike
                 else stateManager.moveAmount = 0;
             }
 
-            // Engage in combat if we are fighting an actor.
-            if(fightingActor != null)
-            {
-                float distance = Vector3.Distance(fightingActor.transform.position, transform.position);
-                // do something
-                if (distance < MIN_FIGHT_DISTANCE)
-                {
-                    fightWait += delta;
-                    if (fightWait > COMBAT_WAIT_TIME)
-                    {
-                        fightWait = 0f;
-                        transform.LookAt(fightingActor.transform.position);
-                        // Start the attack animation, and also enable the weapon attack scripts.
-                        animationHelper.PlayWeaponAnim(Helper.WeaponType.OneHanded);
-                        navMeshAgent.isStopped = true;
-                        fightingActor.OnActorAttacked(this, 1.5f);
-
-                        if(fightingActor.actorStats.isDead == true)
-                        {
-                            fightingActor = null;
-                            movingTowards = null;
-                        }
-                    }
-                    return;
-                }
-                else
-                {
-                    if (fightingActor.actorStats.isDead == true)
-                    {
-                        fightingActor = null;
-                        movingTowards = null;
-                        return;
-                    }
-
-                    // Go towards actor, until we are within MIN_FIGHT_DISTANCE.
-                    MoveTowardsActor(fightingActor);
-                }
-            }
-
-            // Move Actor to the current target, being either the enemy they are attacking, their movement target or to a random nearby movment point.
-            if(aggressionLevel >= AggressionLevel.Agressive)
-            {
-                if (aggressionLevel >= AggressionLevel.HatesEveryone)
-                {
-                    // Find nearest Actor.
-                    Actor[] actors = FindObjectsOfType<Actor>();
-                    Actor actor = FindNearestActor(actors, 25f);
-                    if(actor != null)
-                    {
-                        if (CanDetect(actor) == true && movingTowards != actor)
-                        {
-                            InitiateCombat(actor);
-                        }
-                    }
-                }
-                else
-                {
-                    
-                }
-            }
-        }
-
-        private bool CanDetect(Actor actor)
-        {
-            ActorStats actorStats = actor.actorStats;
-            if (actorStats.isDead == true)
-            {
-                return false;
-            }
-
-            if (actorStats.isSneaking == true && attackedBy != actor)
-            {
-                // sneakChance: (((0.5 + Distance)/500) + (Fatigue/2) + (Luck/10)) * (Sneak/5)
-                // spotChance: (((0.5 + Distance)/500) + (Fatigue/2) + (Luck*1.1))
-                // detectionChance = sneakChance > spotChance
-                float sneakChance = ((0.5f + (Vector3.Distance(transform.position, actor.transform.position) / 500) + (actorStats.fatigue / 2) + ((float)actorStats.luck / 10)) * ((float)actorStats.sneak / 5));
-                float spotChance = (((0.5f + Vector3.Distance(transform.position, actor.transform.position)) / 500) + ((float)this.actorStats.fatigue / 2) + ((float)this.actorStats.luck * 1.1f));
-                if(sneakChance > spotChance)
-                {
-                    return false;
-                }
-            }
-            return true;
+            aiCombat.Execute(Time.deltaTime);
         }
 
         private void FixedUpdate()

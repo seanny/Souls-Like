@@ -18,6 +18,7 @@ namespace SoulsLike
         [HideInInspector] public bool lockOn;
         [HideInInspector] public bool drinkingPotion;
         private bool drinkingRoutine;
+        float waitTime = 0f;
 
         [HideInInspector] public GameObject activeObject;
         [HideInInspector] public Animator animator;
@@ -107,6 +108,13 @@ namespace SoulsLike
             {
                 lockOn = InputUtility.instance.LockOn;
             }
+            waitTime += d;
+            if (InputUtility.instance.GeneralAttacking == true && waitTime > 1.5f)
+            {
+                waitTime = 0f;
+                PlayerActor.instance.FightingAnimation();
+                PlayerActor.instance.sword.IsAttacking = true;
+            }
         }
 
         private void HandleMovementAnimations()
@@ -116,7 +124,7 @@ namespace SoulsLike
             {
                 animationSpeed = Mathf.Clamp(animationSpeed, 0, 0.5f);
             }
-            animator.SetFloat("Vertical", animationSpeed, 0.4f, delta);
+            animator.SetFloat("Vertical", animationSpeed, 0.2f, delta);
         }
 
         public bool IsGrounded()
