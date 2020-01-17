@@ -63,11 +63,14 @@ namespace SoulsLike
                     }
 
                     Actor target = Actors.instance.FindTarget(actor);
-                    float distance = Vector3.Distance(target.transform.position, actorPos);
-                    if(distance < nearestDistance)
+                    if(target != null && actor != null)
                     {
-                        nearestDistance = distance;
-                        actualCombat = state;
+                        float distance = Vector3.Distance(target.transform.position, actorPos);
+                        if (distance < nearestDistance)
+                        {
+                            nearestDistance = distance;
+                            actualCombat = state;
+                        }
                     }
                 }
 

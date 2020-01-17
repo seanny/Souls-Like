@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 using UnityEngine.AI;
 
 namespace SoulsLike
@@ -31,6 +33,7 @@ namespace SoulsLike
         float delta;
         bool canRun;
         public AiSequence aiSequence;
+        public AiState[] aiStates;
 
         // Use this for initialization
         protected override void Start()
@@ -110,6 +113,27 @@ namespace SoulsLike
             return true;
         }
 
+        private AiState GetAiState()
+        {
+            AiWander aiWander = new AiWander(this);
+            aiWander.targetMovementPoint = Actors.instance.FindRandomMovementTarget(this);
+
+            Actor chaseActor = Actors.instance.FindTarget(this);
+
+            if(chaseActor != null)
+            {
+                if(Vector3.Distance(transform.position, chaseActor.transform.position) > AiState.MIN_DISTANCE)
+                {
+                    AiPursue aiPursue = new AiPursue(this, chaseActor);
+                    return aiPursue;
+                }
+                AiCombat aiCombat = new AiCombat(this, chaseActor);
+                return aiCombat;
+            }
+
+            return aiWander;
+        }
+
         // Update is called once per frame
         void Update()
         {
@@ -120,21 +144,11 @@ namespace SoulsLike
 
             float delta = Time.deltaTime;
             stateManager.Tick(delta);
+            aiStates = aiSequence.aiStates.ToArray();
 
-            if(aiSequence.StatesEmpty || aiSequence.lastAiState == StateTypeID.None)
+            if (aiSequence.StatesEmpty || aiSequence.lastAiState == StateTypeID.None)
             {
-                Actor enemyActor = Actors.instance.FindTarget(this, 5f);
-                if(enemyActor != null)
-                {
-                    AiPursue state = new AiPursue(this, Actors.instance.FindTarget(this));
-                    aiSequence.AddState(state);
-                }
-                else
-                {
-                    AiWander state = new AiWander(this);
-                    state.targetMovementPoint = Actors.instance.FindRandomMovementTarget(this);
-                    // TODO: AiWander
-                }
+                aiSequence.AddState(GetAiState());
             }
 
             aiSequence.Execute(Time.deltaTime);

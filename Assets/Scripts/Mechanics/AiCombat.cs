@@ -29,16 +29,19 @@ namespace SoulsLike
         {
             if(actor.actorStats.isDead)
             {
+                canRepeat = false;
                 return true;
             }
 
             if(target == null)
             {
+                canRepeat = false;
                 return false;
             }
 
             if(target == actor)
             {
+                canRepeat = false;
                 return true;
             }
 

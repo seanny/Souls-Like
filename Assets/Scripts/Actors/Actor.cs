@@ -10,7 +10,7 @@ namespace SoulsLike
 
         float fightWait;
         Animator animator;
-        CapsuleCollider collider;
+        CapsuleCollider actorCollider;
 
         public const float COMBAT_WAIT_TIME = 1.5f;
 
@@ -23,7 +23,7 @@ namespace SoulsLike
                 animator.gameObject.AddComponent<Helper>();
             }
             animationHelper.weaponType = Helper.WeaponType.OneHanded;
-            collider = GetComponent<CapsuleCollider>();
+            actorCollider = GetComponent<CapsuleCollider>();
         }
 
         public bool CanDetect(Actor actor)
@@ -59,7 +59,7 @@ namespace SoulsLike
             actorStats.currentHealth = 0f;
             actorStats.isDead = true;
             animator.enabled = false;
-            collider.enabled = false;
+            actorCollider.enabled = false;
         }
 
         public void FightingAnimation()
