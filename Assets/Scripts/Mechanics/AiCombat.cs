@@ -53,6 +53,7 @@ namespace SoulsLike
 
             if(Attack(delta))
             {
+                canRepeat = false;
                 return true;
             }
             return false;

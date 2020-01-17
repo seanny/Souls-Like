@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -50,6 +49,12 @@ namespace SoulsLike
             actorStats.currentHealth = actorStats.maxHealth;
             aiSequence = new AiSequence(this);
             canRun = true;
+        }
+
+        public void SmoothLook(Vector3 targetDir, int lookSpeed)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(targetDir);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, lookSpeed * delta);
         }
 
         public void InitiateCombat(Actor actor)
@@ -152,22 +157,6 @@ namespace SoulsLike
             }
 
             aiSequence.Execute(Time.deltaTime);
-
-            /*if (aiPursue.chasingActor == null)
-            {
-                aiPursue.chasingActor = Actors.instance.FindTarget(this);
-            }
-            else
-            {
-                if (Vector3.Distance(aiPursue.chasingActor.transform.position, transform.position) <= AiState.MIN_DISTANCE)
-                {
-                    aiCombat.Execute(Time.deltaTime);
-                }
-                else
-                {
-                    aiPursue.Execute(Time.deltaTime);
-                }
-            }*/
         }
 
         private void FixedUpdate()

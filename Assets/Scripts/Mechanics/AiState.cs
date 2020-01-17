@@ -11,7 +11,8 @@ namespace SoulsLike
         Follow, // Follow a particular actor.
         Pursue, // Pursue a partucular actor.
         Combat, // Attack a partucular actor.
-        Face // Look at a particular actor.
+        Face, // Look at a particular actor.
+        Patrol // Follow a particular path.
     }
 
     public class AiState

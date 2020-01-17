@@ -40,8 +40,7 @@ namespace SoulsLike
 
             if (Vector3.Distance(targetPos, actorPos) > FOLLOW_DISTANCE)
             {
-                Quaternion targetRotation = Quaternion.LookRotation(targetDir);
-                actor.transform.rotation = Quaternion.Slerp(actor.transform.rotation, targetRotation, lookSpeed * delta);
+                actor.SmoothLook(targetDir, lookSpeed);
 
                 // If actor's distance is more than FOLLOW_DISTANCE then move towards the target
                 actor.MoveTowardsActor(followingActor);
