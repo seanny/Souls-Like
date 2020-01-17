@@ -10,6 +10,7 @@ namespace SoulsLike
 
         float fightWait;
         Animator animator;
+        CapsuleCollider collider;
 
         public const float COMBAT_WAIT_TIME = 1.5f;
 
@@ -17,11 +18,21 @@ namespace SoulsLike
         {
             animator = GetComponentInChildren<Animator>();
             animationHelper = GetComponentInChildren<Helper>();
+            if (!animationHelper)
+            {
+                animator.gameObject.AddComponent<Helper>();
+            }
             animationHelper.weaponType = Helper.WeaponType.OneHanded;
+            collider = GetComponent<CapsuleCollider>();
         }
 
         public bool CanDetect(Actor actor)
         {
+            if (!Actors.instance.IsInProcessingRange(actor))
+            {
+                return false;
+            }
+
             ActorStats actorStats = actor.actorStats;
             if (actorStats.isDead == true)
             {
@@ -41,6 +52,14 @@ namespace SoulsLike
                 }
             }
             return true;
+        }
+
+        public virtual void Kill()
+        {
+            actorStats.currentHealth = 0f;
+            actorStats.isDead = true;
+            animator.enabled = false;
+            collider.enabled = false;
         }
 
         public void FightingAnimation()
@@ -69,20 +88,12 @@ namespace SoulsLike
                 damage = 1;
             }
             attacker.actorStats.fatigue -= Random.Range(0.5f, 1.5f);
-            Debug.Log($"[{name}] Damage by {attacker.name} = {(weaponDamage + attacker.actorStats.level)} + {((attacker.actorStats.fatigue + 0.5f) / 4 - (actorStats.endurance + 0.5f) / 4) / 5}");
             actorStats.currentHealth -= damage;
             attackedBy = attacker;
             if(actorStats.currentHealth <= 0)
             {
-                OnDeath();
+                Kill();
             }
-        }
-
-        protected virtual void OnDeath()
-        {
-            animator.enabled = false;
-            actorStats.currentHealth = 0;
-            actorStats.isDead = true;
         }
 
         protected virtual void OnRevive()
@@ -97,15 +108,19 @@ namespace SoulsLike
         /// </summary>
         /// <param name="actors">List of actors</param>
         /// <returns>A single actor or null if actor array is empty.</returns>
-        public Actor FindNearestActor(Actor[] actors, float range)
+        public Actor FindNearestActor(Actor[] actors, float range = Mathf.Infinity)
         {
             if (actors.Length > 0)
             {
                 Actor nearestActor = null;
-                float minDist = Mathf.Infinity;
+                float minDist = range;
                 Vector3 currentPos = transform.position;
                 foreach (Actor actor in actors)
                 {
+                    if (!Actors.instance.IsInProcessingRange(actor))
+                    {
+                        continue;
+                    }
                     float distance = Vector3.Distance(actor.transform.position, currentPos);
                     if (distance < minDist && actor != this && actor.actorStats.isDead == false)
                     {

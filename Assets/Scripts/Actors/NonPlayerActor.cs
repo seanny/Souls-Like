@@ -5,7 +5,6 @@ namespace SoulsLike
 {
     [RequireComponent(typeof(StateManager))]
     [RequireComponent(typeof(NavMeshAgent))]
-    [RequireComponent(typeof(AiCombat))]
     public class NonPlayerActor : Actor
     {
         public enum AggressionLevel
@@ -21,28 +20,33 @@ namespace SoulsLike
         };
 
         public const float MIN_FIGHT_DISTANCE = 1.5f;
-        public const float COMBAT_WAIT_TIME = 1.5f;
 
         public AggressionLevel aggressionLevel;
         NavMeshAgent navMeshAgent;
+        public Actor followingActor;
         public Actor movingTowards;
+        public bool runningTowards { get; set; }
         public Actor fightingActor;
-        StateManager stateManager;
-        float fightWait;
-        float navMeshEnabled = 0;
+        public StateManager stateManager;
         float delta;
-        AiCombat aiCombat;
+        bool canRun;
+        public AiSequence aiSequence;
 
         // Use this for initialization
         protected override void Start()
         {
             base.Start();
             stateManager = GetComponent<StateManager>();
+            if (!stateManager)
+            {
+                stateManager = gameObject.AddComponent<StateManager>();
+            }
             stateManager.Init();
             navMeshAgent = GetComponent<NavMeshAgent>();
             actorStats.maxHealth = 80f + (actorStats.level / 2) + Random.Range(0, 10);
             actorStats.currentHealth = actorStats.maxHealth;
-            aiCombat = GetComponent<AiCombat>();
+            aiSequence = new AiSequence(this);
+            canRun = true;
         }
 
         public void InitiateCombat(Actor actor)
@@ -50,10 +54,27 @@ namespace SoulsLike
             fightingActor = actor;
         }
 
-        public void Kill()
+        public override void Kill()
         {
-            actorStats.currentHealth = 0f;
-            actorStats.isDead = true;
+            base.Kill();
+            navMeshAgent.enabled = false;
+        }
+
+        private float MovementSpeed()
+        {
+            float movementSpeed = 0f;
+            if(!navMeshAgent.isStopped || navMeshAgent.destination != Vector3.zero)
+            {
+                if(runningTowards)
+                {
+                    movementSpeed = 1.0f;
+                }
+                else
+                {
+                    movementSpeed = 0.5f;
+                }
+            }
+            return movementSpeed;
         }
 
         /// <summary>
@@ -63,48 +84,76 @@ namespace SoulsLike
         public void MoveTowardsActor(Actor actor)
         {
             movingTowards = actor;
-            navMeshAgent.destination = actor.transform.position;
+            MoveTowardsPoint(actor.transform.position);
+        }
+
+        public void MoveTowardsPoint(Vector3 point)
+        {
+            stateManager.moveAmount = MovementSpeed();
+            navMeshAgent.destination = point;
             navMeshAgent.isStopped = false;
+        }
+
+        public void StopMovingTowardsActor(Actor actor)
+        {
+            movingTowards = null;
+            navMeshAgent.isStopped = true;
+        }
+
+        public bool FollowActor(Actor actor)
+        {
+            if(actor.actorStats.isDead)
+            {
+                return false;
+            }
+            followingActor = actor;
+            return true;
         }
 
         // Update is called once per frame
         void Update()
         {
-            if(actorStats.isDead == true)
+            if(actorStats.isDead == true || !canRun)
             {
                 return;
             }
 
             float delta = Time.deltaTime;
             stateManager.Tick(delta);
-            /*if(navMeshEnabled < 1.0f)
-            {
-                navMeshEnabled += delta;
-                if(navMeshEnabled >= 1.0f)
-                {
-                    navMeshAgent = GetComponent<NavMeshAgent>();
-                }
-            }*/
 
-            if (movingTowards != null)
+            if(aiSequence.StatesEmpty || aiSequence.lastAiState == StateTypeID.None)
             {
-                if (navMeshAgent.remainingDistance > MIN_FIGHT_DISTANCE)
+                Actor enemyActor = Actors.instance.FindTarget(this, 5f);
+                if(enemyActor != null)
                 {
-                    if (movingTowards == fightingActor)
-                    {
-                        stateManager.moveAmount = 1f;
-                    }
-                    else
-                    {
-                        stateManager.moveAmount = 0.5f;
-                    }
-                    MoveTowardsActor(movingTowards);
-                    return;
+                    AiPursue state = new AiPursue(this, Actors.instance.FindTarget(this));
+                    aiSequence.AddState(state);
                 }
-                else stateManager.moveAmount = 0;
+                else
+                {
+                    AiWander state = new AiWander(this);
+                    state.targetMovementPoint = Actors.instance.FindRandomMovementTarget(this);
+                    // TODO: AiWander
+                }
             }
 
-            aiCombat.Execute(Time.deltaTime);
+            aiSequence.Execute(Time.deltaTime);
+
+            /*if (aiPursue.chasingActor == null)
+            {
+                aiPursue.chasingActor = Actors.instance.FindTarget(this);
+            }
+            else
+            {
+                if (Vector3.Distance(aiPursue.chasingActor.transform.position, transform.position) <= AiState.MIN_DISTANCE)
+                {
+                    aiCombat.Execute(Time.deltaTime);
+                }
+                else
+                {
+                    aiPursue.Execute(Time.deltaTime);
+                }
+            }*/
         }
 
         private void FixedUpdate()

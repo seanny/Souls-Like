@@ -21,7 +21,7 @@ namespace SoulsLike
         public List<string> oneHandedAttacks;
         public List<string> twoHandedAttacks;
 
-        public WeaponType weaponType;
+        public WeaponType weaponType = WeaponType.None;
         public bool enableRootMotion;
 
         Animator animator;
@@ -32,22 +32,32 @@ namespace SoulsLike
             animator = GetComponent<Animator>();
             oneHandedAttacks.Clear();
             twoHandedAttacks.Clear();
-            XmlTextReader reader = new XmlTextReader(Path.Combine(Application.streamingAssetsPath, "OneHanded.xml"));
-            while (reader.Read())
+            string oneHandPath, twoHandPath;
+            oneHandPath = Application.streamingAssetsPath + "/OneHanded.xml";
+            twoHandPath = Application.streamingAssetsPath + "/TwoHanded.xml";
+
+            XmlDocument document = new XmlDocument();
+            document.Load(oneHandPath);
+            foreach(XmlNode node in document.ChildNodes)
             {
-                // Do some work here on the data.
-                if(reader.Name == "anim")
+                if(node.Name == "animation")
                 {
-                    oneHandedAttacks.Add(reader.ReadInnerXml());
+                    foreach(XmlNode nodex in node.ChildNodes)
+                    {
+                        oneHandedAttacks.Add(nodex.InnerText);
+                    }
                 }
             }
-            reader = new XmlTextReader(Path.Combine(Application.streamingAssetsPath, "TwoHanded.xml"));
-            while (reader.Read())
+
+            document.Load(oneHandPath);
+            foreach (XmlNode node in document.ChildNodes)
             {
-                // Do some work here on the data.
-                if (reader.Name == "anim")
+                if (node.Name == "animation")
                 {
-                    twoHandedAttacks.Add(reader.ReadInnerXml());
+                    foreach (XmlNode nodex in node.ChildNodes)
+                    {
+                        twoHandedAttacks.Add(nodex.InnerText);
+                    }
                 }
             }
         }

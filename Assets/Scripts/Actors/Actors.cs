@@ -1,25 +1,42 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace SoulsLike
 {
     public class Actors : MonoBehaviour
     {
-        public GameObject actorPrefab;
+        public static Actors instance { get; private set; }
+
+        public List<GameObject> actorPrefabs = new List<GameObject>();
+        public RuntimeAnimatorController runtimeAnimatorController;
+        public GameObject actorBasePrefab;
+
         private SortedDictionary<string, int> deathCount;
-        private List<Actor> actors;
-        public float ActorProcessingRange { get; private set; }
+        private List<Actor> actors = new List<Actor>();
+
+        const float maxProcessingRange = 1000;
+        const float minProcessingRange = maxProcessingRange / 2;
+
+        [Range(minProcessingRange, maxProcessingRange)]
+        public float ActorProcessingRange;
 
         private void Start()
         {
+            instance = this;
+
+            ActorStats actorStats = new ActorStats();
+            actorStats.name = "Test Actor";
+            Vector3 pos = new Vector3(0, 1, 0);
+
+            AddActor(pos, actorStats);
             UpdateProcessingRange();
+            StartCoroutine(RemoveActorTimer());
         }
 
         public void UpdateProcessingRange()
         {
-            const float maxProcessingRange = 1000;
-            const float minProcessingRange = maxProcessingRange / 2;
-
+            // TODO: Get processing range from settings file.
             float actorProcessingRange = 1000;
             actorProcessingRange = Mathf.Clamp(actorProcessingRange, minProcessingRange, maxProcessingRange);
             ActorProcessingRange = actorProcessingRange;
@@ -30,26 +47,72 @@ namespace SoulsLike
             return observer.CanDetect(actor);
         }
 
-        public void AddActor(Actor actor)
+        public Actor AddActor(Vector3 position, ActorStats actorStats)
         {
-            Actor newActor = actor;
-            if(newActor.actorStats.name.Length < 1)
+            if(actorStats.name.Length < 1)
             {
-                newActor.actorStats.name = "New Actor";
+                actorStats.name = "New Actor";
             }
-            GameObject gameObject = new GameObject(newActor.actorStats.name);
-            gameObject.AddComponent<Actor>();
-            
+
+            GameObject actorObject;
+            switch (actorStats.actorSpecies)
+            {
+                case ActorSpeciesType.HumanFemale:
+                    actorObject = Instantiate(actorPrefabs[0]);
+                    break;
+            }
+            return null;
         }
 
         public void RemoveActor(Actor actor)
         {
+            actors.Remove(actor);
+            Destroy(actor.gameObject);
+        }
 
+        public Actor FindTarget(NonPlayerActor actor, float range = 25f)
+        {
+            if (actor.aggressionLevel >= NonPlayerActor.AggressionLevel.Agressive)
+            {
+                Actor[] actors = FindObjectsOfType<Actor>();
+                Actor _actor = actor.FindNearestActor(actors, range);
+                if (_actor != null)
+                {
+                    if (actor.CanDetect(_actor) == true && !_actor.actorStats.isDead)
+                    {
+                        if (actor.aggressionLevel >= NonPlayerActor.AggressionLevel.HatesEveryone)
+                        {
+                            return _actor;
+                        }
+                        // Check if actor is in an enemy faction
+                    }
+                }
+            }
+            return null;
+        }
+
+        public MovementPoint FindRandomMovementTarget(NonPlayerActor actor, float range = 25f)
+        {
+            MovementPoint[] movementPoints = FindObjectsOfType<MovementPoint>();
+            List<MovementPoint> validMovementPoints = new List<MovementPoint>();
+            foreach(var movementPoint in movementPoints)
+            {
+                if (Vector3.Distance(movementPoint.transform.position, actor.transform.position) <= range)
+                {
+                    validMovementPoints.Add(movementPoint);
+                }
+            }
+            if(validMovementPoints.Count < 1)
+            {
+                return null;
+            }
+            int rand = Random.Range(0, validMovementPoints.Count);
+            return validMovementPoints[rand];
         }
 
         public void Resurrect(Actor actor)
         {
-
+            
         }
 
         public bool IsAttacking(Actor actor)
@@ -74,7 +137,36 @@ namespace SoulsLike
 
         private void KillDeadActors()
         {
+            foreach(Actor actor in actors)
+            {
+                if(actor.actorStats.isDead)
+                {
+                    RemoveActor(actor);
+                }
+            }
+        }
 
+        private IEnumerator RemoveActorTimer()
+        {
+            while(true)
+            {
+                yield return new WaitForSeconds(1f);
+                KillDeadActors();
+            }
+        }
+
+        public bool IsInProcessingRange(Actor actor)
+        {
+            if(actor == PlayerActor.instance)
+            {
+                return true;
+            }
+            float distance = Vector3.Distance(actor.transform.position, PlayerActor.instance.transform.position);
+            if (distance <= ActorProcessingRange)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

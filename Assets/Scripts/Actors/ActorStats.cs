@@ -12,6 +12,10 @@ namespace SoulsLike
         // Actor level
         public int level;
 
+        public ActorSpeciesType actorSpecies;
+
+        public float actorFightWait;
+
         // Actor isDead
         public bool isDead;
 

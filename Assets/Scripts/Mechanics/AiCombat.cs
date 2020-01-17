@@ -3,26 +3,20 @@ using UnityEngine;
 
 namespace SoulsLike
 {
-    [Serializable]
-    public struct AiCombatStorage
-    {
-        public float attackCooldown;
-        public float timerReact;
-        public float actionCooldown;
-    }
-
-    public class AiCombat : MonoBehaviour
+    public class AiCombat : AiState
     {
         private const float MIN_FIGHT_DISTANCE = 2.0f;
         private const float COMBAT_WAIT_TIME = 1.5f;
 
-        public NonPlayerActor actor { get; private set; }
-
         public float actionCooldown;
+        Actor target;
 
-        private void Start()
+        public AiCombat(NonPlayerActor actor, Actor target)
         {
-            actor = GetComponent<NonPlayerActor>();
+            stateType = StateTypeID.Combat;
+            canRepeat = true;
+            this.actor = actor;
+            this.target = target;
         }
 
         /// <summary>
@@ -31,14 +25,13 @@ namespace SoulsLike
         /// <param name="actor"></param>
         /// <param name="duration"></param>
         /// <returns></returns>
-        public bool Execute(float duration)
+        public override bool Execute(float delta)
         {
             if(actor.actorStats.isDead)
             {
                 return true;
             }
 
-            Actor target = FindTarget();
             if(target == null)
             {
                 return false;
@@ -51,37 +44,15 @@ namespace SoulsLike
 
             if(target.actorStats.isDead)
             {
+                canRepeat = false;
                 return true;
             }
 
-            // TODO: Check if the target is fleeing.
-
-            if(Attack(target, duration))
+            if(Attack(delta))
             {
                 return true;
             }
             return false;
-        }
-
-        private Actor FindTarget()
-        {
-            if (actor.aggressionLevel >= NonPlayerActor.AggressionLevel.Agressive)
-            {
-                Actor[] actors = FindObjectsOfType<Actor>();
-                Actor _actor = actor.FindNearestActor(actors, 25f);
-                if (_actor != null)
-                {
-                    if (actor.CanDetect(_actor) == true)
-                    {
-                        if (actor.aggressionLevel >= NonPlayerActor.AggressionLevel.HatesEveryone)
-                        {
-                            return _actor;
-                        }
-                        // Check if actor is in an enemy faction
-                    }
-                }
-            }
-            return null;
         }
 
         /// <summary>
@@ -90,20 +61,23 @@ namespace SoulsLike
         /// <param name="target"></param>
         /// <param name="storage"></param>
         /// <returns>True if combat should end, else false.</returns>
-        private bool Attack(Actor target, float duration)
+        private bool Attack(float duration)
         {
             if (target.actorStats.isDead)
             {
                 return true;
             }
-            float distance = Vector3.Distance(target.transform.position, actor.transform.position);
+
+            Vector3 targetPos = target.transform.position;
+            float distance = Vector3.Distance(targetPos, actor.transform.position);
+            targetPosition = targetPos;
             if (distance < MIN_FIGHT_DISTANCE)
             {
-                actionCooldown += duration;
-                if (actionCooldown > COMBAT_WAIT_TIME)
+                actor.actorStats.actorFightWait += duration;
+                if (actor.actorStats.actorFightWait > COMBAT_WAIT_TIME)
                 {
-                    actionCooldown = 0f;
-                    transform.LookAt(target.transform.position);
+                    actor.actorStats.actorFightWait = 0f;
+                    actor.transform.LookAt(target.transform.position);
                     // Start the attack animation, and also enable the weapon attack scripts.
                     actor.FightingAnimation();  
                     actor.OnCombat(target);
