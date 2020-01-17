@@ -85,6 +85,7 @@ namespace SoulsLike
                     // Start the attack animation, and also enable the weapon attack scripts.
                     actor.FightingAnimation();  
                     actor.OnCombat(target);
+                    target.attackedBy = actor;
                 }
                 return false;
             }

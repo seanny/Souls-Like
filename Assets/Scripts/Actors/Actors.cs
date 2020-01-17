@@ -70,6 +70,30 @@ namespace SoulsLike
             Destroy(actor.gameObject);
         }
 
+        public bool IsInFaction(Actor actor, Faction faction)
+        {
+            foreach(var fac in actor.actorStats.actorFactions)
+            {
+                if(fac == faction.name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public bool IsInFaction(Actor actor, string name)
+        {
+            foreach (var fac in actor.actorStats.actorFactions)
+            {
+                if (fac == name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public Actor FindTarget(NonPlayerActor actor, float range = 25f)
         {
             if (actor.aggressionLevel >= NonPlayerActor.AggressionLevel.Agressive)
@@ -84,7 +108,22 @@ namespace SoulsLike
                         {
                             return _actor;
                         }
+
                         // Check if actor is in an enemy faction
+                        foreach (var faction in actor.actorStats.actorFactions)
+                        {
+                            Faction fac = Faction.GetFactionByName(faction);
+                            if(fac != null)
+                            {
+                                foreach (var enemy in fac.enemies)
+                                {
+                                    if (IsInFaction(_actor, enemy))
+                                    {
+                                        return _actor;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }

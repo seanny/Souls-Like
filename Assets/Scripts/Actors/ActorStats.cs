@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using System;
+﻿using System;
+using System.Collections.Generic;
 
 namespace SoulsLike
 {
@@ -12,7 +12,11 @@ namespace SoulsLike
         // Actor level
         public int level;
 
+        // Actor species
         public ActorSpeciesType actorSpecies;
+
+        // Actor factions
+        public List<string> actorFactions;
 
         public float actorFightWait;
 

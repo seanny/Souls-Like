@@ -123,7 +123,22 @@ namespace SoulsLike
             AiWander aiWander = new AiWander(this);
             aiWander.targetMovementPoint = Actors.instance.FindRandomMovementTarget(this);
 
-            Actor chaseActor = Actors.instance.FindTarget(this);
+            Actor chaseActor;
+            if (attackedBy == null)
+            {
+                chaseActor = Actors.instance.FindTarget(this);
+            }
+            else
+            {
+                if(attackedBy.actorStats.isDead)
+                {
+                    chaseActor = Actors.instance.FindTarget(this);
+                }
+                else
+                {
+                    chaseActor = fightingActor;
+                }
+            }
 
             if(chaseActor != null)
             {
