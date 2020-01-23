@@ -26,7 +26,7 @@ namespace SoulsLike
         [HideInInspector] public float delta;
         public LayerMask ignoreLayers;
 
-        public void Init()
+        public void Init(bool isPlayer = false)
         {
             SetupAnimator();
             rigidBody = GetComponent<Rigidbody>();
@@ -112,8 +112,7 @@ namespace SoulsLike
             if (InputUtility.instance.GeneralAttacking == true && waitTime > 1.5f)
             {
                 waitTime = 0f;
-                PlayerActor.instance.FightingAnimation();
-                PlayerActor.instance.sword.IsAttacking = true;
+                PlayerActor.instance.Attack();
             }
         }
 

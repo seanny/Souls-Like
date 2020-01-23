@@ -11,11 +11,16 @@ namespace SoulsLike
         float fightWait;
         Animator animator;
         CapsuleCollider actorCollider;
-
+        LayerMask actorLayerMasks;
+        private GameObject weaponObject;
+        public GameObject weaponPrefab;
+        public IWeapon currentWeapon;
         public const float COMBAT_WAIT_TIME = 1.5f;
 
         protected virtual void Start()
         {
+            weaponPrefab = Resources.Load<GameObject>("Weapons/Sword");
+            actorLayerMasks = LayerMask.GetMask("Actor");
             animator = GetComponentInChildren<Animator>();
             animationHelper = GetComponentInChildren<Helper>();
             if (!animationHelper)
@@ -24,6 +29,20 @@ namespace SoulsLike
             }
             animationHelper.weaponType = Helper.WeaponType.OneHanded;
             actorCollider = GetComponent<CapsuleCollider>();
+
+            GiveWeapon();
+        }
+
+        private void GiveWeapon()
+        {
+            Transform weaponPlacement = gameObject.GetComponentInChildren<WeaponPlacementPoint>().transform;
+            weaponObject = Instantiate(weaponPrefab);
+            weaponObject.transform.parent = weaponPlacement;
+            currentWeapon = weaponObject.GetComponent<IWeapon>();
+            Debug.Log($"CurrentWeapon: {currentWeapon.weaponAttackPoint} | {currentWeapon.weaponAttackScale}");
+            weaponObject.transform.localPosition = currentWeapon.weaponAttackPoint;
+            weaponObject.transform.localRotation = Quaternion.Euler(currentWeapon.weaponAttackRotation);
+            weaponObject.transform.localScale = currentWeapon.weaponAttackScale;
         }
 
         public bool CanDetect(Actor actor)
@@ -62,9 +81,29 @@ namespace SoulsLike
             actorCollider.enabled = false;
         }
 
-        public void FightingAnimation()
+        private void FightingAnimation()
         {
             animationHelper.PlayWeaponAnim(Helper.WeaponType.OneHanded);
+        }
+
+        public void Attack()
+        {
+            // Play attack animation
+            FightingAnimation();
+
+            Collider[] hitEnemies = Physics.OverlapSphere(currentWeapon.weaponAttackPoint, 1.5f);
+
+            Debug.Log($"{gameObject.name}: hitEnemies = {hitEnemies.Length}");
+            foreach (var enemy in hitEnemies)
+            {
+                bool canGet = enemy.transform.root.TryGetComponent(out Actor victim);
+                Debug.Log($"{gameObject.name} canGet = {enemy.transform.root} = {canGet}");
+                if (canGet)
+                {
+                    Debug.Log($"{gameObject.name} attacking {victim.gameObject.name}");
+                    victim.OnActorAttacked(this, 1.5f);
+                }
+            }
         }
 
         public void OnCombat(Actor actor)
@@ -101,6 +140,21 @@ namespace SoulsLike
             animator.enabled = true;
             actorStats.currentHealth = actorStats.maxHealth;
             actorStats.isDead = false;
+        }
+
+        public PlayerActor FindPlayerActorInArray(Actor[] actors)
+        {
+            if (actors.Length > 0)
+            {
+                foreach (Actor actor in actors)
+                {
+                    if(actor == PlayerActor.instance)
+                    {
+                        return PlayerActor.instance;
+                    }
+                }
+            }
+            return null;
         }
 
         /// <summary>

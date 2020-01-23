@@ -33,6 +33,9 @@ namespace SoulsLike
         bool canRun;
         public AiSequence aiSequence;
         public AiState[] aiStates;
+        public Actor enemyActor;
+        AiSight aiSight;
+        public bool isEnemy;
 
         // Use this for initialization
         protected override void Start()
@@ -48,6 +51,7 @@ namespace SoulsLike
             actorStats.maxHealth = 80f + (actorStats.level / 2) + Random.Range(0, 10);
             actorStats.currentHealth = actorStats.maxHealth;
             aiSequence = new AiSequence(this);
+            aiSight = gameObject.AddComponent<AiSight>();
             canRun = true;
         }
 
@@ -142,7 +146,8 @@ namespace SoulsLike
 
             if(chaseActor != null)
             {
-                if(Vector3.Distance(transform.position, chaseActor.transform.position) > AiState.MIN_DISTANCE)
+                enemyActor = chaseActor;
+                if (Vector3.Distance(transform.position, chaseActor.transform.position) > AiState.MIN_DISTANCE)
                 {
                     AiPursue aiPursue = new AiPursue(this, chaseActor);
                     return aiPursue;

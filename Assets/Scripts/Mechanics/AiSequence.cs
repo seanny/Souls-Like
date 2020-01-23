@@ -83,7 +83,6 @@ namespace SoulsLike
                 aiState = aiStates.First();
             }
 
-            Debug.Log($"Executing {aiState.ToString()}");
             currentAiState = aiState.stateType;
             if (aiState.Execute(delta))
             {

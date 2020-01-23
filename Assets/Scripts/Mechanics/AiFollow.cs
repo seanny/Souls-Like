@@ -43,6 +43,7 @@ namespace SoulsLike
                 actor.SmoothLook(targetDir, lookSpeed);
 
                 // If actor's distance is more than FOLLOW_DISTANCE then move towards the target
+                Debug.Log($"[AiFollow|{actor}] Following {followingActor}");
                 actor.MoveTowardsActor(followingActor);
 
                 if(Vector3.Distance(targetPos, actorPos) > 14.5f)

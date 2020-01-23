@@ -80,18 +80,20 @@ namespace SoulsLike
                 actor.actorStats.actorFightWait += duration;
                 if (actor.actorStats.actorFightWait > COMBAT_WAIT_TIME)
                 {
+                    Debug.Log($"{actor} is attacking {target}");
                     actor.actorStats.actorFightWait = 0f;
                     actor.transform.LookAt(target.transform.position);
                     // Start the attack animation, and also enable the weapon attack scripts.
-                    actor.FightingAnimation();  
-                    actor.OnCombat(target);
-                    target.attackedBy = actor;
+                    actor.Attack();
+                    //actor.OnCombat(target);
+                    //target.attackedBy = actor;
                 }
                 return false;
             }
             else
             {
                 // Go towards actor, until we are within MIN_FIGHT_DISTANCE.
+                Debug.Log($"[AiCombat|{actor}] Moving towards {target}");
                 actor.MoveTowardsActor(target);
             }
             return false;

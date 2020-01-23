@@ -60,6 +60,7 @@ namespace SoulsLike
                 actor.SmoothLook(targetDir, lookSpeed);
 
                 // If actor's distance is more than FOLLOW_DISTANCE then move towards the target
+                Debug.Log($"[AiPursue|{actor}] Chasing {chasingActor}");
                 actor.MoveTowardsActor(chasingActor);
 
                 // Run towards target

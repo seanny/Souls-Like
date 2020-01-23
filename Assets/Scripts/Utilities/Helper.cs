@@ -11,7 +11,9 @@ namespace SoulsLike
         {
             None = 0,
             OneHanded,
-            TwoHanded
+            TwoHanded,
+            MagicOneHanded,
+            MagicTwoHanded
         };
 
         public bool shieldBlock;
@@ -86,6 +88,14 @@ namespace SoulsLike
                 {
                     rand = Random.Range(0, twoHandedAttacks.Count);
                     targetAnim = twoHandedAttacks[rand];
+                }
+                else if (weaponType == WeaponType.MagicOneHanded)
+                {
+                    targetAnim = "OneHandMagicAttack";
+                }
+                else if (weaponType == WeaponType.MagicTwoHanded)
+                {
+                    targetAnim = "TwoHandMagicAttack";
                 }
                 else
                 {

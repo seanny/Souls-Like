@@ -11,6 +11,10 @@ namespace SoulsLike
         public WeaponType weaponType { get => WeaponType.OneHanded; }
         public float weaponDamage { get => 1.5f; }
 
+        public Vector3 weaponAttackPoint { get => new Vector3(0, 0, -0.02f); }
+        public Vector3 weaponAttackRotation { get => new Vector3(0, 0, 0); }
+        public Vector3 weaponAttackScale { get => new Vector3(0.1f, 0.1f, 0.1f); }
+
         // Start is called before the first frame update
         void Start()
         {
@@ -44,6 +48,12 @@ namespace SoulsLike
         public void OnWeaponStore()
         {
             throw new System.NotImplementedException();
+        }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = new Color(0, 1, 0, 0.25f);
+            Gizmos.DrawSphere(transform.position, 1.5f);
         }
     }
 }

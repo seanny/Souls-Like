@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace SoulsLike
 {
@@ -16,7 +15,7 @@ namespace SoulsLike
         public ActorSpeciesType actorSpecies;
 
         // Actor factions
-        public List<string> actorFactions;
+        public string actorFaction;
 
         public float actorFightWait;
 

@@ -72,24 +72,18 @@ namespace SoulsLike
 
         public bool IsInFaction(Actor actor, Faction faction)
         {
-            foreach(var fac in actor.actorStats.actorFactions)
+            if(actor.actorStats.actorFaction == faction.name)
             {
-                if(fac == faction.name)
-                {
-                    return true;
-                }
+                return true;
             }
             return false;
         }
 
         public bool IsInFaction(Actor actor, string name)
         {
-            foreach (var fac in actor.actorStats.actorFactions)
+            if (actor.actorStats.actorFaction == name)
             {
-                if (fac == name)
-                {
-                    return true;
-                }
+                return true;
             }
             return false;
         }
@@ -110,17 +104,14 @@ namespace SoulsLike
                         }
 
                         // Check if actor is in an enemy faction
-                        foreach (var faction in actor.actorStats.actorFactions)
+                        Faction faction = Faction.GetFactionByName(actor.actorStats.actorFaction);
+                        if(faction != null)
                         {
-                            Faction fac = Faction.GetFactionByName(faction);
-                            if(fac != null)
+                            foreach (var enemyFac in faction.enemies)
                             {
-                                foreach (var enemy in fac.enemies)
+                                if (_actor.actorStats.actorFaction == enemyFac.name)
                                 {
-                                    if (IsInFaction(_actor, enemy))
-                                    {
-                                        return _actor;
-                                    }
+                                    return _actor;
                                 }
                             }
                         }

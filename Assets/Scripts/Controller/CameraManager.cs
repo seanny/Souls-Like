@@ -47,9 +47,7 @@ namespace SoulsLike
 
         private void FollowTarget(float d)
         {
-            float speed = d * followSpeed;
-            Vector3 pos = Vector3.Lerp(transform.position, target.position, speed);
-            transform.position = pos;
+            transform.position = target.position;
         }
 
         void HandleRotation(float d, float v, float h, float targetSpeed)

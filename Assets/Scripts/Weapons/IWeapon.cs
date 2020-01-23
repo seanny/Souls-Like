@@ -15,6 +15,21 @@ namespace SoulsLike
         float weaponDamage { get; }
 
         /// <summary>
+        /// Weapon Attack Point
+        /// </summary>
+        Vector3 weaponAttackPoint { get; }
+
+        /// <summary>
+        /// Weapon Attack Rotation (Euler)
+        /// </summary>
+        Vector3 weaponAttackRotation { get; }
+
+        /// <summary>
+        /// Weapon Scale
+        /// </summary>
+        Vector3 weaponAttackScale { get; }
+
+        /// <summary>
         /// On Weapon Attack (i.e. when used against an actor)
         /// </summary>
         void OnWeaponAttack(Actor actor);
