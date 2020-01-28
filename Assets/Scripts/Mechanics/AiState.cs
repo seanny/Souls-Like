@@ -24,9 +24,11 @@ namespace SoulsLike
         public StateTypeID stateType { get; protected set; }
         public Vector3 targetPosition { get; protected set; }
         public bool canRepeat { get; protected set; }
+        public DateTime triggerTime { get; private set; }
 
         public virtual bool Execute(float delta)
         {
+            triggerTime = DateTime.Now;
             return false;
         }
     }

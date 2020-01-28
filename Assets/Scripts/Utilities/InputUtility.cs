@@ -15,6 +15,7 @@ namespace SoulsLike
         public bool PowerAttacking { get; private set; }
         public bool GeneralAttacking { get; private set; }
         public bool LockOn { get; private set; }
+        public bool Interaction { get; private set; }
 
         private void Awake()
         {
@@ -30,6 +31,16 @@ namespace SoulsLike
             playerInputActions.PlayerControls.LockOn.canceled += ctx =>
             {
                 LockOn = false;
+            };
+
+            playerInputActions.PlayerControls.Interaction.started += ctx =>
+            {
+                Interaction = true;
+            };
+
+            playerInputActions.PlayerControls.Interaction.canceled += ctx =>
+            {
+                Interaction = false;
             };
 
             playerInputActions.PlayerControls.GeneralAttack.performed += ctx =>

@@ -10,6 +10,7 @@ namespace SoulsLike
 
         public float actionCooldown;
         Actor target;
+        float combatDistance;
 
         public AiCombat(NonPlayerActor actor, Actor target)
         {
@@ -27,13 +28,15 @@ namespace SoulsLike
         /// <returns></returns>
         public override bool Execute(float delta)
         {
-            if(actor.actorStats.isDead)
+            base.Execute(delta);
+            if (actor.actorStats.isDead)
             {
                 canRepeat = false;
                 return true;
             }
 
-            if(target == null)
+            combatDistance = Vector3.Distance(target.transform.position, actor.transform.position);
+            if(target == null || combatDistance > MIN_DISTANCE)
             {
                 canRepeat = false;
                 return false;
@@ -51,7 +54,7 @@ namespace SoulsLike
                 return true;
             }
 
-            if(Attack(delta))
+            if (Attack(delta))
             {
                 canRepeat = false;
                 return true;

@@ -59,6 +59,14 @@ namespace SoulsLike
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Interaction"",
+                    ""type"": ""Button"",
+                    ""id"": ""1ab9048e-aa01-4c64-8af9-355406cb7ece"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -215,6 +223,28 @@ namespace SoulsLike
                     ""action"": ""LockOn"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e5159776-f379-44b0-9b9a-ffcd81d6f9f3"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interaction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""265dc0c9-fbe1-4f58-91df-33ba8fb99c37"",
+                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interaction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -228,6 +258,7 @@ namespace SoulsLike
             m_PlayerControls_GeneralAttack = m_PlayerControls.FindAction("GeneralAttack", throwIfNotFound: true);
             m_PlayerControls_PowerAttack = m_PlayerControls.FindAction("PowerAttack", throwIfNotFound: true);
             m_PlayerControls_LockOn = m_PlayerControls.FindAction("LockOn", throwIfNotFound: true);
+            m_PlayerControls_Interaction = m_PlayerControls.FindAction("Interaction", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -282,6 +313,7 @@ namespace SoulsLike
         private readonly InputAction m_PlayerControls_GeneralAttack;
         private readonly InputAction m_PlayerControls_PowerAttack;
         private readonly InputAction m_PlayerControls_LockOn;
+        private readonly InputAction m_PlayerControls_Interaction;
         public struct PlayerControlsActions
         {
             private @PlayerInputActions m_Wrapper;
@@ -291,6 +323,7 @@ namespace SoulsLike
             public InputAction @GeneralAttack => m_Wrapper.m_PlayerControls_GeneralAttack;
             public InputAction @PowerAttack => m_Wrapper.m_PlayerControls_PowerAttack;
             public InputAction @LockOn => m_Wrapper.m_PlayerControls_LockOn;
+            public InputAction @Interaction => m_Wrapper.m_PlayerControls_Interaction;
             public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -315,6 +348,9 @@ namespace SoulsLike
                     @LockOn.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnLockOn;
                     @LockOn.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnLockOn;
                     @LockOn.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnLockOn;
+                    @Interaction.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnInteraction;
+                    @Interaction.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnInteraction;
+                    @Interaction.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnInteraction;
                 }
                 m_Wrapper.m_PlayerControlsActionsCallbackInterface = instance;
                 if (instance != null)
@@ -334,6 +370,9 @@ namespace SoulsLike
                     @LockOn.started += instance.OnLockOn;
                     @LockOn.performed += instance.OnLockOn;
                     @LockOn.canceled += instance.OnLockOn;
+                    @Interaction.started += instance.OnInteraction;
+                    @Interaction.performed += instance.OnInteraction;
+                    @Interaction.canceled += instance.OnInteraction;
                 }
             }
         }
@@ -345,6 +384,7 @@ namespace SoulsLike
             void OnGeneralAttack(InputAction.CallbackContext context);
             void OnPowerAttack(InputAction.CallbackContext context);
             void OnLockOn(InputAction.CallbackContext context);
+            void OnInteraction(InputAction.CallbackContext context);
         }
     }
 }

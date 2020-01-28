@@ -15,6 +15,7 @@ namespace SoulsLike
 
         public override bool Execute(float delta)
         {
+            base.Execute(delta);
             if (actor.actorStats.isDead)
             {
                 return false;

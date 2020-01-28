@@ -14,30 +14,9 @@ namespace SoulsLike
             this.actor = actor;
         }
 
-        bool IsLookingAtObject(Transform looker, Vector3 targetPos, float FOVAngle)
-        {
-
-            Vector3 direction = targetPos - looker.position;
-            float ang = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            float lookerAngle = looker.eulerAngles.z;
-            float checkAngle = 0f;
-
-            if (ang >= 0f)
-                checkAngle = ang - lookerAngle - 90f;
-            else if (ang < 0f)
-                checkAngle = ang - lookerAngle + 270f;
-
-            if (checkAngle < -180f)
-                checkAngle = checkAngle + 360f;
-
-            if (checkAngle <= FOVAngle * .5f && checkAngle >= -FOVAngle * .5f)
-                return true;
-            else
-                return false;
-        }
-
         public override bool Execute(float delta)
         {
+            base.Execute(delta);
             if (actor.actorStats.isDead)
             {
                 return false;

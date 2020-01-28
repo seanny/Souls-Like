@@ -88,6 +88,24 @@ namespace SoulsLike
             return false;
         }
 
+        public bool IsInEnemyFaction(Actor actor, Actor target)
+        {
+            Faction faction = Faction.GetFactionByName(actor.actorStats.actorFaction);
+            if(faction == null)
+            {
+                Debug.LogError($"Error in IsInEnemyFaction({actor}, {target}): faction is null.");
+                return false;
+            }
+            foreach (var enemyFac in faction.enemies)
+            {
+                if (target.actorStats.actorFaction == enemyFac.name)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public Actor FindTarget(NonPlayerActor actor, float range = 25f)
         {
             if (actor.aggressionLevel >= NonPlayerActor.AggressionLevel.Agressive)
@@ -104,16 +122,9 @@ namespace SoulsLike
                         }
 
                         // Check if actor is in an enemy faction
-                        Faction faction = Faction.GetFactionByName(actor.actorStats.actorFaction);
-                        if(faction != null)
+                        if(IsInEnemyFaction(actor, _actor) == true)
                         {
-                            foreach (var enemyFac in faction.enemies)
-                            {
-                                if (_actor.actorStats.actorFaction == enemyFac.name)
-                                {
-                                    return _actor;
-                                }
-                            }
+                            return _actor;
                         }
                     }
                 }

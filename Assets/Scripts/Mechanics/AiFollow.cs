@@ -11,16 +11,24 @@ namespace SoulsLike
         public Actor followingActor;
         private const float FOLLOW_DISTANCE = 2.5f;
         private int lookSpeed = 5;
+        public float MinDistance { get; set; }
 
         public AiFollow(NonPlayerActor actor, Actor followingActor)
         {
+            MinDistance = FOLLOW_DISTANCE;
             stateType = StateTypeID.Follow;
             this.followingActor = followingActor;
             this.actor = actor;
         }
 
+        public AiFollow(NonPlayerActor actor, Actor followingActor, float minDistance) : this(actor, followingActor)
+        {
+            MinDistance = minDistance;
+        }
+
         public override bool Execute(float delta)
         {
+            base.Execute(delta);
             if (actor.actorStats.isDead)
             {
                 return false;
@@ -38,7 +46,8 @@ namespace SoulsLike
             Vector3 targetDir = targetPos - actorPos;
             targetPosition = targetPos;
 
-            if (Vector3.Distance(targetPos, actorPos) > FOLLOW_DISTANCE)
+            float distance = Vector3.Distance(targetPos, actorPos);
+            if (distance > MinDistance)
             {
                 actor.SmoothLook(targetDir, lookSpeed);
 
@@ -46,7 +55,8 @@ namespace SoulsLike
                 Debug.Log($"[AiFollow|{actor}] Following {followingActor}");
                 actor.MoveTowardsActor(followingActor);
 
-                if(Vector3.Distance(targetPos, actorPos) > 14.5f)
+
+                if (distance > 14.5f)
                 {
                     // Run towards target
                     actor.runningTowards = true;

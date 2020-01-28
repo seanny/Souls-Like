@@ -39,7 +39,6 @@ namespace SoulsLike
             weaponObject = Instantiate(weaponPrefab);
             weaponObject.transform.parent = weaponPlacement;
             currentWeapon = weaponObject.GetComponent<IWeapon>();
-            Debug.Log($"CurrentWeapon: {currentWeapon.weaponAttackPoint} | {currentWeapon.weaponAttackScale}");
             weaponObject.transform.localPosition = currentWeapon.weaponAttackPoint;
             weaponObject.transform.localRotation = Quaternion.Euler(currentWeapon.weaponAttackRotation);
             weaponObject.transform.localScale = currentWeapon.weaponAttackScale;
@@ -93,14 +92,11 @@ namespace SoulsLike
 
             Collider[] hitEnemies = Physics.OverlapSphere(currentWeapon.weaponAttackPoint, 1.5f);
 
-            Debug.Log($"{gameObject.name}: hitEnemies = {hitEnemies.Length}");
             foreach (var enemy in hitEnemies)
             {
                 bool canGet = enemy.transform.root.TryGetComponent(out Actor victim);
-                Debug.Log($"{gameObject.name} canGet = {enemy.transform.root} = {canGet}");
                 if (canGet)
                 {
-                    Debug.Log($"{gameObject.name} attacking {victim.gameObject.name}");
                     victim.OnActorAttacked(this, 1.5f);
                 }
             }

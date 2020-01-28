@@ -125,7 +125,12 @@ namespace SoulsLike
         private AiState GetAiState()
         {
             AiWander aiWander = new AiWander(this);
-            aiWander.targetMovementPoint = Actors.instance.FindRandomMovementTarget(this);
+            float range = 25f;
+            aiWander.targetMovementPoint = Actors.instance.FindRandomMovementTarget(this, range);
+            if(aiWander.targetMovementPoint == null)
+            {
+                Debug.LogError($"[{gameObject.name}] Cannot find target movement point within {range} meters.");
+            }
 
             Actor chaseActor;
             if (attackedBy == null)
