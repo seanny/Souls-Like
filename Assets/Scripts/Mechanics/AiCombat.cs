@@ -83,7 +83,6 @@ namespace SoulsLike
                 actor.actorStats.actorFightWait += duration;
                 if (actor.actorStats.actorFightWait > COMBAT_WAIT_TIME)
                 {
-                    Debug.Log($"{actor} is attacking {target}");
                     actor.actorStats.actorFightWait = 0f;
                     actor.transform.LookAt(target.transform.position);
                     // Start the attack animation, and also enable the weapon attack scripts.

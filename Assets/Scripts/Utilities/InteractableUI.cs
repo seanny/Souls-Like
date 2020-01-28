@@ -11,11 +11,17 @@ namespace SoulsLike
 {
     class InteractableUI : MonoBehaviour
     {
+        public static InteractableUI instance { get; private set; }
         public TextMeshProUGUI interactableText;
         Actor[] actors;
-        Actor nearestActor;
+        public Actor nearestActor { get; private set; }
         private string interactionKey;
         public static bool IsInteracting { get; private set; }
+
+        private void Awake()
+        {
+            instance = this;
+        }
 
         void CheckControllerAndChangeUserInterfaceIfNeeded()
         {
@@ -67,7 +73,7 @@ namespace SoulsLike
             Debug.Log($"IsInteracting = {IsInteracting}");
         }
 
-        private void LateUpdate()
+        private void Update()
         {
             CheckControllerAndChangeUserInterfaceIfNeeded();
             FindNearestActorToPlayer();

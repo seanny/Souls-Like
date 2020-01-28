@@ -10,44 +10,62 @@ namespace SoulsLike
 {
     public class DialogueController : MonoBehaviour
     {
+        [Serializable]
+        public class DialogueChoice
+        {
+            public Button dialogueButton;
+            public TextMeshProUGUI dialogueText;
+            public string dialogueId;
+        }
+
         public static DialogueController instance { get; private set; }
 
+        public GameObject dialogueUi;
         public Actor speakingToActor;
-        public List<Button> dialogueChoices;
-        public List<TextMeshProUGUI> dialogueText;
-        public List<string> dialogueIDs;
+        public List<DialogueChoice> dialogueChoices;
 
-        public static void ShowDialogue(string dialogueID)
+        public static void ShowDialogue(string dialogueID, Actor actor)
         {
             Dialogue dialogue = Resources.Load<Dialogue>($"Dialogue/{dialogueID}");
-            instance.dialogueIDs.Clear();
 
-            for(int i = 0; i < instance.dialogueText.Count; i++)
+            for(int i = 0; i < instance.dialogueChoices.Count; i++)
             {
-                instance.dialogueText[i].text = dialogue.dialogueChoices[i].choiceString;
-                instance.dialogueIDs.Add(dialogue.dialogueChoices[i].dialogueID);
+                instance.dialogueChoices[i].dialogueText.text = dialogue.dialogueChoices[i].choiceString;
+                instance.dialogueChoices[i].dialogueId = dialogue.dialogueChoices[i].dialogueID;
             }
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            instance.gameObject.SetActive(true);
+            instance.dialogueUi.SetActive(true);
+        }
+
+        public static void HideDialogue()
+        {
+            instance.dialogueUi.SetActive(false);
         }
 
         private void Awake()
         {
             instance = this;
-            for(int i = 0; i < dialogueChoices.Count; i++)
-            {
-                dialogueChoices[i].onClick.AddListener(() => OnDialogueChoice(i));
-                dialogueText.Add(dialogueChoices[i].GetComponentInChildren<TextMeshProUGUI>());
-            }
         }
 
         private void Start()
         {
-            gameObject.SetActive(false);
+            dialogueUi.SetActive(false);
         }
 
-        private void OnDialogueChoice(int dialogueChoice)
+        private void LateUpdate()
+        {
+            Debug.Log($"LateUpdate InputUtility.instance.Interaction = {InputUtility.instance.Interaction}");
+            if (InputUtility.instance.Interaction == true)
+            {
+                Debug.Log($"LateUpdate InteractableUI.instance.nearestActor = {InteractableUI.instance.nearestActor}");
+                speakingToActor = InteractableUI.instance.nearestActor;
+                Debug.Log($"LateUpdate speakingToActor = {speakingToActor}");
+                ShowDialogue("TestDialogue", speakingToActor);
+            }
+        }
+
+        public void OnDialogueChoice(int dialogueChoice)
         {
             Debug.Log($"Selected choice #{dialogueChoice}");
             GameplayScript[] dialogueScripts = FindObjectsOfType<GameplayScript>();
@@ -55,14 +73,13 @@ namespace SoulsLike
             {
                 Type t = gameplayScript.GetType();
                 bool containsInterface = t.GetInterfaces().Contains(typeof(IDialogue));
-                Debug.Log(containsInterface);
                 if (containsInterface)
                 {
                     try
                     {
-                        Debug.Log($"dialogue.OnDialogue({dialogueIDs[dialogueChoice]}, {speakingToActor})");
+                        Debug.Log($"dialogue.OnDialogue({dialogueChoices[dialogueChoice].dialogueId}, {speakingToActor})");
                         IDialogue dialogue = (IDialogue)gameplayScript;
-                        dialogue.OnDialogue(dialogueIDs[dialogueChoice], speakingToActor);
+                        dialogue.OnDialogue(dialogueChoices[dialogueChoice].dialogueId, speakingToActor);
                     }
                     catch(Exception exception)
                     {
@@ -71,28 +88,6 @@ namespace SoulsLike
                     }
                 }
             }
-
-
-            /*foreach (Type t in GetType().Assembly.GetTypes())
-            {
-                bool containsInterface = t.GetInterfaces().Contains(typeof(IDialogue));
-                if (containsInterface)
-                {
-                    MethodInfo methodInfo = t.GetMethod("OnDialogue");
-                    Debug.Log($"MethodInfo = {methodInfo}");
-                    if (methodInfo != null)
-                    {
-                        Debug.Log($"MethodInfo != null");
-                        ParameterInfo[] parameters = methodInfo.GetParameters();
-                        object classInstance = Activator.CreateInstance(t, null);
-
-                        object[] parametersArray = new object[] { dialogueIDs[dialogueChoice], speakingToActor };
-
-                        object result = methodInfo.Invoke(classInstance, parametersArray);
-                        Debug.Log($"result = {result}");
-                    }
-                }
-            }*/
         }
     }
 }

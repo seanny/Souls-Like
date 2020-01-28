@@ -9,14 +9,6 @@ namespace SoulsLike
         {
         }
 
-        private void Update()
-        {
-            if(InputUtility.instance.Interaction == true)
-            {
-                DialogueController.ShowDialogue("TestDialogue");
-            }
-        }
-
         public void OnDialogue(string dialogueID, Actor actor)
         {
             Debug.Log($"OnDialogue({dialogueID}, {actor})");
