@@ -46,7 +46,6 @@ namespace SoulsLike
 
         private void Update()
         {
-            Debug.Log($"Time.timeScale = {Time.timeScale}");
             if(buttonWait > 0)
             {
                 buttonWait -= Time.deltaTime;
@@ -57,7 +56,6 @@ namespace SoulsLike
                 questJournal.SetActive(!questJournal.activeSelf);
                 if(questJournal.activeSelf == true)
                 {
-                    Debug.Log($"First Quest: {questItems.First().questID}");
                     Cursor.lockState = CursorLockMode.None;
                     Cursor.visible = true;
                     OnClickQuest(questItems.First().questID);
@@ -115,17 +113,14 @@ namespace SoulsLike
 
         private void OnClickQuest(string questID)
         {
-            Debug.Log($"OnClickQuest({questID})");
             foreach(var item in questItems)
             {
-                Debug.Log($"item.questID == {item.questID}");
                 if (item.questID == questID)
                 {
                     foreach(QuestController.QuestItem questItem in QuestController.instance.quests)
                     {
                         if(questItem.questData.Id == questID)
                         {
-                            Debug.Log($"SetQuestInfo({questItem.quest.Name}, {questItem.quest.Description})");
                             SetQuestInfo(questItem.quest.Name, questItem.quest.Description);
                             break;
                         }
