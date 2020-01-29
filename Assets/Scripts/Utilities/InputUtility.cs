@@ -16,6 +16,7 @@ namespace SoulsLike
         public bool GeneralAttacking { get; private set; }
         public bool LockOn { get; private set; }
         public bool Interaction { get; private set; }
+        public bool QuestJournal { get; private set; }
 
         private void Awake()
         {
@@ -43,6 +44,15 @@ namespace SoulsLike
                 Interaction = false;
             };
 
+            playerInputActions.PlayerControls.QuestJournal.performed += ctx =>
+            {
+                if(!QuestJournal)
+                {
+                    QuestJournal = true;
+                    StartCoroutine(FreeQuestKey());
+                }
+            };
+
             playerInputActions.PlayerControls.GeneralAttack.performed += ctx =>
             {
                 if (!PowerAttacking) 
@@ -56,6 +66,12 @@ namespace SoulsLike
                 PowerAttack();
             };
             instance = this;
+        }
+
+        IEnumerator FreeQuestKey()
+        {
+            yield return new WaitForSeconds(0.5f);
+            QuestJournal = false;
         }
 
         void PowerAttack()

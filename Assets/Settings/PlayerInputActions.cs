@@ -67,6 +67,14 @@ namespace SoulsLike
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""QuestJournal"",
+                    ""type"": ""Button"",
+                    ""id"": ""1706ae93-2a0f-49f2-bfb1-58e22b023b82"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -128,7 +136,7 @@ namespace SoulsLike
                 {
                     ""name"": """",
                     ""id"": ""289d56ad-b374-4b71-85ed-510f9c420cef"",
-                    ""path"": ""<XInputController>/leftStick"",
+                    ""path"": ""<Gamepad>/leftStick"",
                     ""interactions"": """",
                     ""processors"": ""NormalizeVector2,ScaleVector2"",
                     ""groups"": """",
@@ -150,7 +158,7 @@ namespace SoulsLike
                 {
                     ""name"": """",
                     ""id"": ""14531a51-3ebb-4e1c-a912-81e1aa2fd95f"",
-                    ""path"": ""<XInputController>/rightStick"",
+                    ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
                     ""processors"": ""ScaleVector2(x=50,y=50)"",
                     ""groups"": """",
@@ -172,7 +180,7 @@ namespace SoulsLike
                 {
                     ""name"": """",
                     ""id"": ""76d1e7b6-22f7-44c6-81a3-ca2208917eb1"",
-                    ""path"": ""<XInputController>/rightShoulder"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": ""Press(behavior=1)"",
                     ""processors"": """",
                     ""groups"": """",
@@ -194,7 +202,7 @@ namespace SoulsLike
                 {
                     ""name"": """",
                     ""id"": ""c4934cc1-ca1d-46a0-8f4a-6282c5971c69"",
-                    ""path"": ""<XInputController>/rightShoulder"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": ""Hold"",
                     ""processors"": """",
                     ""groups"": """",
@@ -216,7 +224,7 @@ namespace SoulsLike
                 {
                     ""name"": """",
                     ""id"": ""d9e89d84-0593-4f87-ab41-a958a343ffac"",
-                    ""path"": ""<XInputController>/leftTrigger"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -238,11 +246,33 @@ namespace SoulsLike
                 {
                     ""name"": """",
                     ""id"": ""265dc0c9-fbe1-4f58-91df-33ba8fb99c37"",
-                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Interaction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dc11e17a-7407-4ff4-b435-fd342a2b8440"",
+                    ""path"": ""<Keyboard>/j"",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""QuestJournal"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e5ec5987-cddd-47bc-a7c0-026607b603f8"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""QuestJournal"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -259,6 +289,7 @@ namespace SoulsLike
             m_PlayerControls_PowerAttack = m_PlayerControls.FindAction("PowerAttack", throwIfNotFound: true);
             m_PlayerControls_LockOn = m_PlayerControls.FindAction("LockOn", throwIfNotFound: true);
             m_PlayerControls_Interaction = m_PlayerControls.FindAction("Interaction", throwIfNotFound: true);
+            m_PlayerControls_QuestJournal = m_PlayerControls.FindAction("QuestJournal", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -314,6 +345,7 @@ namespace SoulsLike
         private readonly InputAction m_PlayerControls_PowerAttack;
         private readonly InputAction m_PlayerControls_LockOn;
         private readonly InputAction m_PlayerControls_Interaction;
+        private readonly InputAction m_PlayerControls_QuestJournal;
         public struct PlayerControlsActions
         {
             private @PlayerInputActions m_Wrapper;
@@ -324,6 +356,7 @@ namespace SoulsLike
             public InputAction @PowerAttack => m_Wrapper.m_PlayerControls_PowerAttack;
             public InputAction @LockOn => m_Wrapper.m_PlayerControls_LockOn;
             public InputAction @Interaction => m_Wrapper.m_PlayerControls_Interaction;
+            public InputAction @QuestJournal => m_Wrapper.m_PlayerControls_QuestJournal;
             public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -351,6 +384,9 @@ namespace SoulsLike
                     @Interaction.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnInteraction;
                     @Interaction.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnInteraction;
                     @Interaction.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnInteraction;
+                    @QuestJournal.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnQuestJournal;
+                    @QuestJournal.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnQuestJournal;
+                    @QuestJournal.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnQuestJournal;
                 }
                 m_Wrapper.m_PlayerControlsActionsCallbackInterface = instance;
                 if (instance != null)
@@ -373,6 +409,9 @@ namespace SoulsLike
                     @Interaction.started += instance.OnInteraction;
                     @Interaction.performed += instance.OnInteraction;
                     @Interaction.canceled += instance.OnInteraction;
+                    @QuestJournal.started += instance.OnQuestJournal;
+                    @QuestJournal.performed += instance.OnQuestJournal;
+                    @QuestJournal.canceled += instance.OnQuestJournal;
                 }
             }
         }
@@ -385,6 +424,7 @@ namespace SoulsLike
             void OnPowerAttack(InputAction.CallbackContext context);
             void OnLockOn(InputAction.CallbackContext context);
             void OnInteraction(InputAction.CallbackContext context);
+            void OnQuestJournal(InputAction.CallbackContext context);
         }
     }
 }

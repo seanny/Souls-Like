@@ -2,6 +2,6 @@
 {
     public interface IDialogue
     {
-        void OnDialogue(string dialogueID, Actor actor);
+        void OnDialogue(string dialogueID, string dialogueChoice, Actor actor);
     }
 }

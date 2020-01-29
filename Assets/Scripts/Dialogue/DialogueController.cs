@@ -16,6 +16,7 @@ namespace SoulsLike
             public Button dialogueButton;
             public TextMeshProUGUI dialogueText;
             public string dialogueId;
+            public string choiceID;
         }
 
         public static DialogueController instance { get; private set; }
@@ -32,6 +33,7 @@ namespace SoulsLike
             {
                 instance.dialogueChoices[i].dialogueText.text = dialogue.dialogueChoices[i].choiceString;
                 instance.dialogueChoices[i].dialogueId = dialogue.dialogueChoices[i].dialogueID;
+                instance.dialogueChoices[i].choiceID = dialogue.dialogueChoices[i].choiceID;
             }
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
@@ -48,26 +50,17 @@ namespace SoulsLike
             instance = this;
         }
 
-        private void Start()
-        {
-            dialogueUi.SetActive(false);
-        }
-
         private void LateUpdate()
         {
-            Debug.Log($"LateUpdate InputUtility.instance.Interaction = {InputUtility.instance.Interaction}");
             if (InputUtility.instance.Interaction == true)
             {
-                Debug.Log($"LateUpdate InteractableUI.instance.nearestActor = {InteractableUI.instance.nearestActor}");
                 speakingToActor = InteractableUI.instance.nearestActor;
-                Debug.Log($"LateUpdate speakingToActor = {speakingToActor}");
                 ShowDialogue("TestDialogue", speakingToActor);
             }
         }
 
         public void OnDialogueChoice(int dialogueChoice)
         {
-            Debug.Log($"Selected choice #{dialogueChoice}");
             GameplayScript[] dialogueScripts = FindObjectsOfType<GameplayScript>();
             foreach(GameplayScript gameplayScript in dialogueScripts)
             {
@@ -77,9 +70,9 @@ namespace SoulsLike
                 {
                     try
                     {
-                        Debug.Log($"dialogue.OnDialogue({dialogueChoices[dialogueChoice].dialogueId}, {speakingToActor})");
                         IDialogue dialogue = (IDialogue)gameplayScript;
-                        dialogue.OnDialogue(dialogueChoices[dialogueChoice].dialogueId, speakingToActor);
+                        dialogue.OnDialogue(dialogueChoices[dialogueChoice].dialogueId, dialogueChoices[dialogueChoice].choiceID, speakingToActor);
+                        HideDialogue();
                     }
                     catch(Exception exception)
                     {

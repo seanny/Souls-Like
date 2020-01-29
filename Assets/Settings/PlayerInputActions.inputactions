@@ -52,6 +52,14 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "QuestJournal",
+                    "type": "Button",
+                    "id": "1706ae93-2a0f-49f2-bfb1-58e22b023b82",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -113,7 +121,7 @@
                 {
                     "name": "",
                     "id": "289d56ad-b374-4b71-85ed-510f9c420cef",
-                    "path": "<XInputController>/leftStick",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "NormalizeVector2,ScaleVector2",
                     "groups": "",
@@ -135,7 +143,7 @@
                 {
                     "name": "",
                     "id": "14531a51-3ebb-4e1c-a912-81e1aa2fd95f",
-                    "path": "<XInputController>/rightStick",
+                    "path": "<Gamepad>/rightStick",
                     "interactions": "",
                     "processors": "ScaleVector2(x=50,y=50)",
                     "groups": "",
@@ -157,7 +165,7 @@
                 {
                     "name": "",
                     "id": "76d1e7b6-22f7-44c6-81a3-ca2208917eb1",
-                    "path": "<XInputController>/rightShoulder",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "Press(behavior=1)",
                     "processors": "",
                     "groups": "",
@@ -179,7 +187,7 @@
                 {
                     "name": "",
                     "id": "c4934cc1-ca1d-46a0-8f4a-6282c5971c69",
-                    "path": "<XInputController>/rightShoulder",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "Hold",
                     "processors": "",
                     "groups": "",
@@ -201,7 +209,7 @@
                 {
                     "name": "",
                     "id": "d9e89d84-0593-4f87-ab41-a958a343ffac",
-                    "path": "<XInputController>/leftTrigger",
+                    "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -223,11 +231,33 @@
                 {
                     "name": "",
                     "id": "265dc0c9-fbe1-4f58-91df-33ba8fb99c37",
-                    "path": "<XInputController>/buttonSouth",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Interaction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dc11e17a-7407-4ff4-b435-fd342a2b8440",
+                    "path": "<Keyboard>/j",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "QuestJournal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e5ec5987-cddd-47bc-a7c0-026607b603f8",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "QuestJournal",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

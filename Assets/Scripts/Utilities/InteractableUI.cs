@@ -70,7 +70,6 @@ namespace SoulsLike
                 IsInteracting = true;
             }
             else IsInteracting = false;
-            Debug.Log($"IsInteracting = {IsInteracting}");
         }
 
         private void Update()
