@@ -2,7 +2,7 @@
 
 namespace SoulsLike
 {
-    public class Actor : MonoBehaviour
+    public class Actor : Entity
     {
         public ActorStats actorStats;
         public Actor attackedBy;
@@ -17,8 +17,9 @@ namespace SoulsLike
         public IWeapon currentWeapon;
         public const float COMBAT_WAIT_TIME = 1.5f;
 
-        protected virtual void Start()
+        protected override void Start()
         {
+            base.Start();
             weaponPrefab = Resources.Load<GameObject>("Weapons/Sword");
             actorLayerMasks = LayerMask.GetMask("Actor");
             animator = GetComponentInChildren<Animator>();
@@ -29,7 +30,6 @@ namespace SoulsLike
             }
             animationHelper.weaponType = Helper.WeaponType.OneHanded;
             actorCollider = GetComponent<CapsuleCollider>();
-
             GiveWeapon();
         }
 

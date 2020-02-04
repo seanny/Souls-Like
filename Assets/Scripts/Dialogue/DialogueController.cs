@@ -52,9 +52,9 @@ namespace SoulsLike
 
         private void LateUpdate()
         {
-            if (InputUtility.instance.Interaction == true)
+            if (InputUtility.instance.Interaction == true && InteractableUI.instance.nearestEntity.TryGetComponent(out Actor actor))
             {
-                speakingToActor = InteractableUI.instance.nearestActor;
+                speakingToActor = actor;
                 ShowDialogue("TestDialogue", speakingToActor);
             }
         }

@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using TMPro;
 using UnityEngine;
-using TMPro;
 using UnityEngine.InputSystem;
 
 namespace SoulsLike
@@ -13,14 +8,21 @@ namespace SoulsLike
     {
         public static InteractableUI instance { get; private set; }
         public TextMeshProUGUI interactableText;
-        Actor[] actors;
-        public Actor nearestActor { get; private set; }
+        Entity[] entities;
+        public Entity nearestEntity { get; private set; }
         private string interactionKey;
         public static bool IsInteracting { get; private set; }
+        public float recentInteract = 0.5f;
+        PlayerActor player;
 
         private void Awake()
         {
             instance = this;
+        }
+
+        private void Start()
+        {
+            player = PlayerActor.instance;
         }
 
         void CheckControllerAndChangeUserInterfaceIfNeeded()
@@ -45,19 +47,27 @@ namespace SoulsLike
             }
         }
 
-        void FindNearestActorToPlayer()
+        void FindNearestEntityToPlayer()
         {
-            actors = FindObjectsOfType<NonPlayerActor>();
-            nearestActor = PlayerActor.instance.FindNearestActor(actors);
+            entities = FindObjectsOfType<Entity>();
+            nearestEntity = PlayerActor.instance.FindNearestEntity(entities);
         }
 
         void ToggleLabelDependingOnDistanceFromPlayer()
         {
-            var player = PlayerActor.instance;
-            if (Vector3.Distance(nearestActor.transform.position, player.transform.position) < 1.5f
-                && Actors.instance.IsInEnemyFaction(player, nearestActor) == false)
+            if (Vector3.Distance(nearestEntity.transform.position, player.transform.position) < 1.5f)
             {
-                interactableText.text = $"{interactionKey}) {nearestActor.actorStats.name}";
+                if(nearestEntity.TryGetComponent(out Actor actor))
+                {
+                    if(Actors.instance.IsInEnemyFaction(player, actor) == false)
+                    {
+                        interactableText.text = $"{interactionKey}) {actor.actorStats.name}";
+                    }
+                }
+                else
+                {
+                    interactableText.text = $"{interactionKey}) Open";
+                }
                 interactableText.gameObject.SetActive(true);
             }
             else interactableText.gameObject.SetActive(false);
@@ -65,17 +75,29 @@ namespace SoulsLike
 
         void CheckIfUserIsTryingToInteract()
         {
-            if (InputUtility.instance.Interaction == true && nearestActor != null)
+            if (InputUtility.instance.Interaction == true
+                && nearestEntity != null
+                && recentInteract >= 0.5f
+                && Vector3.Distance(nearestEntity.transform.position, player.transform.position) < 1.5f)
             {
                 IsInteracting = true;
+                recentInteract = 0f;
+                if (nearestEntity.TryGetComponent(out InteractableObject interactableObject) == true)
+                {
+                    interactableObject.OnInteract();
+                }
             }
             else IsInteracting = false;
         }
 
         private void Update()
         {
+            if(recentInteract < 0.5f)
+            {
+                recentInteract += Time.deltaTime;
+            }
             CheckControllerAndChangeUserInterfaceIfNeeded();
-            FindNearestActorToPlayer();
+            FindNearestEntityToPlayer();
             ToggleLabelDependingOnDistanceFromPlayer();
             CheckIfUserIsTryingToInteract();
         }

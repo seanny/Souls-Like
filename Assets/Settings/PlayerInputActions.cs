@@ -75,6 +75,14 @@ namespace SoulsLike
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Inventory"",
+                    ""type"": ""Button"",
+                    ""id"": ""6b73a23b-d85e-447d-b5de-b398dcf92248"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -275,6 +283,17 @@ namespace SoulsLike
                     ""action"": ""QuestJournal"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""58d952b3-6286-49e8-be1e-264c602db849"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -290,6 +309,7 @@ namespace SoulsLike
             m_PlayerControls_LockOn = m_PlayerControls.FindAction("LockOn", throwIfNotFound: true);
             m_PlayerControls_Interaction = m_PlayerControls.FindAction("Interaction", throwIfNotFound: true);
             m_PlayerControls_QuestJournal = m_PlayerControls.FindAction("QuestJournal", throwIfNotFound: true);
+            m_PlayerControls_Inventory = m_PlayerControls.FindAction("Inventory", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -346,6 +366,7 @@ namespace SoulsLike
         private readonly InputAction m_PlayerControls_LockOn;
         private readonly InputAction m_PlayerControls_Interaction;
         private readonly InputAction m_PlayerControls_QuestJournal;
+        private readonly InputAction m_PlayerControls_Inventory;
         public struct PlayerControlsActions
         {
             private @PlayerInputActions m_Wrapper;
@@ -357,6 +378,7 @@ namespace SoulsLike
             public InputAction @LockOn => m_Wrapper.m_PlayerControls_LockOn;
             public InputAction @Interaction => m_Wrapper.m_PlayerControls_Interaction;
             public InputAction @QuestJournal => m_Wrapper.m_PlayerControls_QuestJournal;
+            public InputAction @Inventory => m_Wrapper.m_PlayerControls_Inventory;
             public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -387,6 +409,9 @@ namespace SoulsLike
                     @QuestJournal.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnQuestJournal;
                     @QuestJournal.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnQuestJournal;
                     @QuestJournal.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnQuestJournal;
+                    @Inventory.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnInventory;
+                    @Inventory.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnInventory;
+                    @Inventory.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnInventory;
                 }
                 m_Wrapper.m_PlayerControlsActionsCallbackInterface = instance;
                 if (instance != null)
@@ -412,6 +437,9 @@ namespace SoulsLike
                     @QuestJournal.started += instance.OnQuestJournal;
                     @QuestJournal.performed += instance.OnQuestJournal;
                     @QuestJournal.canceled += instance.OnQuestJournal;
+                    @Inventory.started += instance.OnInventory;
+                    @Inventory.performed += instance.OnInventory;
+                    @Inventory.canceled += instance.OnInventory;
                 }
             }
         }
@@ -425,6 +453,7 @@ namespace SoulsLike
             void OnLockOn(InputAction.CallbackContext context);
             void OnInteraction(InputAction.CallbackContext context);
             void OnQuestJournal(InputAction.CallbackContext context);
+            void OnInventory(InputAction.CallbackContext context);
         }
     }
 }

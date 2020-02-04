@@ -1559,6 +1559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a029730e8bee294cb4724ebfeddafa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  entityID: Skeleton
   actorStats:
     name: 
     level: 0

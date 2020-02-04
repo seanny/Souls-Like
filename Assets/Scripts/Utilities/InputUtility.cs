@@ -7,7 +7,7 @@ namespace SoulsLike
     {
         public static InputUtility instance;
 
-        public PlayerInputActions playerInputActions;
+        public PlayerInputActions playerInputActions { get; private set; }
 
         public Vector2 movementInput;
         public Vector2 cameraInput;
@@ -17,6 +17,7 @@ namespace SoulsLike
         public bool LockOn { get; private set; }
         public bool Interaction { get; private set; }
         public bool QuestJournal { get; private set; }
+        public bool Inventory { get; private set; }
 
         private void Awake()
         {
@@ -53,6 +54,16 @@ namespace SoulsLike
                 }
             };
 
+            playerInputActions.PlayerControls.Inventory.performed += ctx =>
+            {
+                Debug.Log($"Button {playerInputActions.PlayerControls.Inventory} performed");
+                if (!Inventory)
+                {
+                    Inventory = true;
+                    StartCoroutine(FreeInventoryKey());
+                }
+            };
+
             playerInputActions.PlayerControls.GeneralAttack.performed += ctx =>
             {
                 if (!PowerAttacking) 
@@ -72,6 +83,12 @@ namespace SoulsLike
         {
             yield return new WaitForSeconds(0.5f);
             QuestJournal = false;
+        }
+
+        IEnumerator FreeInventoryKey()
+        {
+            yield return new WaitForSeconds(0.5f);
+            Inventory = false;
         }
 
         void PowerAttack()
