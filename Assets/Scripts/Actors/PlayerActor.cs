@@ -15,6 +15,7 @@ namespace SoulsLike
             sword = GetComponentInChildren<Sword>();
             instance = this;
             StartCoroutine(EnemyCheck());
+            DontDestroyOnLoad(gameObject);
         }
 
         IEnumerator EnemyCheck()
