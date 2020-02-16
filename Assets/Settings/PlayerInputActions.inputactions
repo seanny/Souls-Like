@@ -68,6 +68,14 @@
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "CommandConsole",
+                    "type": "Button",
+                    "id": "02deb17c-5462-4ea1-96cd-482bfcaa2be3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -277,6 +285,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Inventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "58571b4d-35f4-4245-96fa-229778483294",
+                    "path": "<Keyboard>/quote",
+                    "interactions": "Press(behavior=1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CommandConsole",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

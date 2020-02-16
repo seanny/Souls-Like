@@ -18,6 +18,7 @@ namespace SoulsLike
         public bool Interaction { get; private set; }
         public bool QuestJournal { get; private set; }
         public bool Inventory { get; private set; }
+        public bool CommandConsole { get; private set; }
 
         private void Awake()
         {
@@ -64,6 +65,15 @@ namespace SoulsLike
                 }
             };
 
+            playerInputActions.PlayerControls.CommandConsole.performed += ctx =>
+            {
+                if (!Inventory)
+                {
+                    CommandConsole = true;
+                    StartCoroutine(FreeCommandKey());
+                }
+            };
+
             playerInputActions.PlayerControls.GeneralAttack.performed += ctx =>
             {
                 if (!PowerAttacking) 
@@ -76,7 +86,12 @@ namespace SoulsLike
                 PowerAttacking = true;
                 PowerAttack();
             };
-            instance = this;
+            if (instance == null)
+            {
+                instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else Destroy(this);
         }
 
         IEnumerator FreeQuestKey()
@@ -89,6 +104,12 @@ namespace SoulsLike
         {
             yield return new WaitForSeconds(0.5f);
             Inventory = false;
+        }
+
+        IEnumerator FreeCommandKey()
+        {
+            yield return new WaitForSeconds(0.5f);
+            CommandConsole = false;
         }
 
         void PowerAttack()

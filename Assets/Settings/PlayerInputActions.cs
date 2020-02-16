@@ -83,6 +83,14 @@ namespace SoulsLike
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""CommandConsole"",
+                    ""type"": ""Button"",
+                    ""id"": ""02deb17c-5462-4ea1-96cd-482bfcaa2be3"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -294,6 +302,17 @@ namespace SoulsLike
                     ""action"": ""Inventory"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""58571b4d-35f4-4245-96fa-229778483294"",
+                    ""path"": ""<Keyboard>/quote"",
+                    ""interactions"": ""Press(behavior=1)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CommandConsole"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -310,6 +329,7 @@ namespace SoulsLike
             m_PlayerControls_Interaction = m_PlayerControls.FindAction("Interaction", throwIfNotFound: true);
             m_PlayerControls_QuestJournal = m_PlayerControls.FindAction("QuestJournal", throwIfNotFound: true);
             m_PlayerControls_Inventory = m_PlayerControls.FindAction("Inventory", throwIfNotFound: true);
+            m_PlayerControls_CommandConsole = m_PlayerControls.FindAction("CommandConsole", throwIfNotFound: true);
         }
 
         public void Dispose()
@@ -367,6 +387,7 @@ namespace SoulsLike
         private readonly InputAction m_PlayerControls_Interaction;
         private readonly InputAction m_PlayerControls_QuestJournal;
         private readonly InputAction m_PlayerControls_Inventory;
+        private readonly InputAction m_PlayerControls_CommandConsole;
         public struct PlayerControlsActions
         {
             private @PlayerInputActions m_Wrapper;
@@ -379,6 +400,7 @@ namespace SoulsLike
             public InputAction @Interaction => m_Wrapper.m_PlayerControls_Interaction;
             public InputAction @QuestJournal => m_Wrapper.m_PlayerControls_QuestJournal;
             public InputAction @Inventory => m_Wrapper.m_PlayerControls_Inventory;
+            public InputAction @CommandConsole => m_Wrapper.m_PlayerControls_CommandConsole;
             public InputActionMap Get() { return m_Wrapper.m_PlayerControls; }
             public void Enable() { Get().Enable(); }
             public void Disable() { Get().Disable(); }
@@ -412,6 +434,9 @@ namespace SoulsLike
                     @Inventory.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnInventory;
                     @Inventory.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnInventory;
                     @Inventory.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnInventory;
+                    @CommandConsole.started -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnCommandConsole;
+                    @CommandConsole.performed -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnCommandConsole;
+                    @CommandConsole.canceled -= m_Wrapper.m_PlayerControlsActionsCallbackInterface.OnCommandConsole;
                 }
                 m_Wrapper.m_PlayerControlsActionsCallbackInterface = instance;
                 if (instance != null)
@@ -440,6 +465,9 @@ namespace SoulsLike
                     @Inventory.started += instance.OnInventory;
                     @Inventory.performed += instance.OnInventory;
                     @Inventory.canceled += instance.OnInventory;
+                    @CommandConsole.started += instance.OnCommandConsole;
+                    @CommandConsole.performed += instance.OnCommandConsole;
+                    @CommandConsole.canceled += instance.OnCommandConsole;
                 }
             }
         }
@@ -454,6 +482,7 @@ namespace SoulsLike
             void OnInteraction(InputAction.CallbackContext context);
             void OnQuestJournal(InputAction.CallbackContext context);
             void OnInventory(InputAction.CallbackContext context);
+            void OnCommandConsole(InputAction.CallbackContext context);
         }
     }
 }

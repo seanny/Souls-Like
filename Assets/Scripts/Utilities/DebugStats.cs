@@ -13,6 +13,7 @@ namespace SoulsLike
         public float frequency = 1f;
         public int FramesPerSec { get; protected set; }
         public string[] ActiveControllers { get; protected set; }
+        public static bool Active { get; private set; }
 
         // Start is called before the first frame update
         void Start()
@@ -36,17 +37,27 @@ namespace SoulsLike
             }
         }
 
+        public static void ToggleDebugStats()
+        {
+            Active = !Active;
+        }
+
         // Update is called once per frame
         void Update()
         {
-            string controllerNames = string.Empty;
-
-            string targetFPS = "N/A";
-            if (Application.targetFrameRate != -1)
+            debugStats.gameObject.SetActive(Active);
+            
+            if(Active)
             {
-                targetFPS = Application.targetFrameRate.ToString();
+                string controllerNames = string.Empty;
+
+                string targetFPS = "N/A";
+                if (Application.targetFrameRate != -1)
+                {
+                    targetFPS = Application.targetFrameRate.ToString();
+                }
+                debugStats.text = $"FPS: {FramesPerSec} - Target: {targetFPS}";
             }
-            debugStats.text = $"FPS: {FramesPerSec} - Target: {targetFPS}";
         }
 #endif
     }

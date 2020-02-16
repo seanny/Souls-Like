@@ -55,22 +55,25 @@ namespace SoulsLike
 
         void ToggleLabelDependingOnDistanceFromPlayer()
         {
-            if (Vector3.Distance(nearestEntity.transform.position, player.transform.position) < 1.5f)
+            if(nearestEntity != null && player != null)
             {
-                if(nearestEntity.TryGetComponent(out Actor actor))
+                if (Vector3.Distance(nearestEntity.transform.position, player.transform.position) < 1.5f)
                 {
-                    if(Actors.instance.IsInEnemyFaction(player, actor) == false)
+                    if (nearestEntity.TryGetComponent(out Actor actor))
                     {
-                        interactableText.text = $"{interactionKey}) {actor.actorStats.name}";
+                        if (Actors.instance.IsInEnemyFaction(player, actor) == false)
+                        {
+                            interactableText.text = $"{interactionKey}) {actor.actorStats.name}";
+                        }
                     }
+                    else
+                    {
+                        interactableText.text = $"{interactionKey}) Open";
+                    }
+                    interactableText.gameObject.SetActive(true);
                 }
-                else
-                {
-                    interactableText.text = $"{interactionKey}) Open";
-                }
-                interactableText.gameObject.SetActive(true);
+                else interactableText.gameObject.SetActive(false);
             }
-            else interactableText.gameObject.SetActive(false);
         }
 
         void CheckIfUserIsTryingToInteract()
