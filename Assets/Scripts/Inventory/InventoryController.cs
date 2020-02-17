@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace SoulsLike
 {
@@ -23,7 +24,12 @@ namespace SoulsLike
 
         private void Update()
         {
-            if(pressed < 1f)
+            if (SceneManager.GetSceneByName("MainMenu").isLoaded)
+            {
+                return;
+            }
+
+            if (pressed < 1f)
             {
                 pressed += Time.deltaTime;
             }

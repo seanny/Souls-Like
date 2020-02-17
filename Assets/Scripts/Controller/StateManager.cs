@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace SoulsLike
 {
@@ -101,6 +102,11 @@ namespace SoulsLike
 
         public void Tick(float d)
         {
+            if (SceneManager.GetSceneByName("MainMenu").isLoaded)
+            {
+                return;
+            }
+
             delta = d;
             isGrounded = IsGrounded();
             animator.SetBool("IsGrounded", isGrounded);

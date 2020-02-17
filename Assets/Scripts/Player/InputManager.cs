@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace SoulsLike
 {
@@ -34,8 +35,11 @@ namespace SoulsLike
 
         private void GetUpdate()
         {
-            vertical = InputUtility.instance.movementInput.x;
-            horizontal = InputUtility.instance.movementInput.y;
+            if(!SceneManager.GetSceneByName("MainMenu").isLoaded)
+            {
+                vertical = InputUtility.instance.movementInput.x;
+                horizontal = InputUtility.instance.movementInput.y;
+            }
         }
 
         // Update is called once per frame

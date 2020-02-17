@@ -31,6 +31,7 @@ namespace SoulsLike
         {
             if (currentScene.isLoaded)
             {
+                Debug.Log($"Unloading scene {currentScene.name}");
                 AsyncOperation async = SceneManager.UnloadSceneAsync(currentScene.buildIndex);
                 async.allowSceneActivation = true;
             }
@@ -71,7 +72,11 @@ namespace SoulsLike
             yield return new WaitForEndOfFrame();
             currentScene = SceneManager.GetSceneByName($"{levelName}");
             yield return new WaitForEndOfFrame();
-            SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("LoadingScreen").buildIndex);
+            Scene loadingScene = SceneManager.GetSceneByName("LoadingScreen");
+            if (loadingScene.isLoaded)
+            {
+                SceneManager.UnloadSceneAsync(loadingScene);
+            }
             yield return new WaitForEndOfFrame();
         }
     }

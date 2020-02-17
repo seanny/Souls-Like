@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 namespace SoulsLike
 {
@@ -52,6 +53,11 @@ namespace SoulsLike
 
         private void LateUpdate()
         {
+            if (SceneManager.GetSceneByName("MainMenu").isLoaded)
+            {
+                return;
+            }
+
             if (InputUtility.instance.Interaction == true && InteractableUI.instance.nearestEntity.TryGetComponent(out Actor actor))
             {
                 speakingToActor = actor;

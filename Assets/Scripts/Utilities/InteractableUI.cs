@@ -1,6 +1,7 @@
 ﻿using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace SoulsLike
 {
@@ -78,6 +79,11 @@ namespace SoulsLike
 
         void CheckIfUserIsTryingToInteract()
         {
+            if (!SceneManager.GetSceneByName("MainMenu").isLoaded)
+            {
+                return;
+            }
+
             if (InputUtility.instance.Interaction == true
                 && nearestEntity != null
                 && recentInteract >= 0.5f
