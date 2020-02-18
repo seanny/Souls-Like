@@ -1,14 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace SoulsLike
 {
+    [Serializable]
+    public class EntityInventoryData
+    {
+        public List<Item> inventoryItems = new List<Item>();
+    }
+
     public class EntityInventory : MonoBehaviour
     {
+        EntityInventoryData entityInventoryData;
+
         /// <summary>
         /// Inventory Items
         /// </summary>
@@ -17,9 +22,9 @@ namespace SoulsLike
 
         private void Start()
         {
-            if(inventoryItems == null)
+            if(entityInventoryData == null)
             {
-                inventoryItems = new List<Item>();
+                entityInventoryData = new EntityInventoryData();
             }
         }
 
@@ -29,7 +34,7 @@ namespace SoulsLike
         /// <param name="item"></param>
         public void AddItem(Item item)
         {
-            inventoryItems.Add(item);
+            entityInventoryData.inventoryItems.Add(item);
         }
 
         /// <summary>
@@ -39,7 +44,7 @@ namespace SoulsLike
         public void AddItem(InteractableObject interactableObject)
         {
             Item item = Resources.Load<Item>($"Items/{interactableObject.interactableData.inventoryItem}");
-            inventoryItems.Add(item);
+            entityInventoryData.inventoryItems.Add(item);
         }
 
         /// <summary>
@@ -48,7 +53,7 @@ namespace SoulsLike
         /// <param name="item"></param>
         public void RemoveItem(Item item)
         {
-            inventoryItems.Remove(item);
+            entityInventoryData.inventoryItems.Remove(item);
         }
 
         /// <summary>
@@ -57,7 +62,7 @@ namespace SoulsLike
         /// <param name="index"></param>
         public void RemoveItem(int index)
         {
-            inventoryItems.RemoveAt(index);
+            entityInventoryData.inventoryItems.RemoveAt(index);
         }
 
         /// <summary>
@@ -66,11 +71,11 @@ namespace SoulsLike
         /// <param name="item"></param>
         public void RemoveAllItems(Item item)
         {
-            for(int i = 0; i < inventoryItems.Count; i++)
+            for(int i = 0; i < entityInventoryData.inventoryItems.Count; i++)
             {
-                if(inventoryItems[i] == item)
+                if(entityInventoryData.inventoryItems[i] == item)
                 {
-                    inventoryItems.RemoveAt(i);
+                    entityInventoryData.inventoryItems.RemoveAt(i);
                 }
             }
         }
@@ -80,7 +85,7 @@ namespace SoulsLike
         /// </summary>
         public void RemoveAllItems()
         {
-            inventoryItems.Clear();
+            entityInventoryData.inventoryItems.Clear();
         }
     }
 }

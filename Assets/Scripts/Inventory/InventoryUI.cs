@@ -45,14 +45,14 @@ namespace SoulsLike
                 Debug.Log($"{button.name} clicked (player = {player})"); 
                 if (player)
                 {
-                    PlayerActor.instance.EntityInventory.RemoveItem(item);
-                    entity.EntityInventory.AddItem(item);
+                    PlayerActor.instance.entityData.entityInventory.RemoveItem(item);
+                    entity.entityData.entityInventory.AddItem(item);
                     RemoveItemFromPlayerUI(item);
                 }
                 else
                 {
-                    entity.EntityInventory.RemoveItem(item);
-                    PlayerActor.instance.EntityInventory.AddItem(item);
+                    entity.entityData.entityInventory.RemoveItem(item);
+                    PlayerActor.instance.entityData.entityInventory.AddItem(item);
                     RemoveItemFromEntityUI(item);
                 }
                 AddItemToUI(item, !player);

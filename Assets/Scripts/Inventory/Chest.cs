@@ -7,7 +7,7 @@ namespace SoulsLike
         public override void OnInteract()
         {
             Debug.Log($"OnInteract {gameObject.name}");
-            if(InventoryController.instance.inventoryUI.entity == this)
+            if(InventoryController.instance.inventoryControllerData.inventoryUI.entity == this)
             {
                 InventoryController.instance.HideInventoryTransfer();
             }

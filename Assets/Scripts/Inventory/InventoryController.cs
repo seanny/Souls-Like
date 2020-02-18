@@ -3,12 +3,17 @@ using UnityEngine.SceneManagement;
 
 namespace SoulsLike
 {
-    public class InventoryController : MonoBehaviour
+    public class InventoryControllerData
     {
-        public static InventoryController instance;
         public InventoryUI inventoryUI;
         public PlayerInventoryUI playerInventoryUI;
         public float pressed = 1f;
+    }
+
+    public class InventoryController : MonoBehaviour
+    {
+        public static InventoryController instance;
+        public InventoryControllerData inventoryControllerData;
 
         private void Awake()
         {
@@ -17,9 +22,14 @@ namespace SoulsLike
 
         private void Start()
         {
+            if(inventoryControllerData == null)
+            {
+                inventoryControllerData = new InventoryControllerData();
+            }
+
             // Inventory UI is attached to the same GameObject as this class.
-            inventoryUI = GetComponent<InventoryUI>();
-            playerInventoryUI = GetComponent<PlayerInventoryUI>();
+            inventoryControllerData.inventoryUI = GetComponent<InventoryUI>();
+            inventoryControllerData.playerInventoryUI = GetComponent<PlayerInventoryUI>();
         }
 
         private void Update()
@@ -29,18 +39,18 @@ namespace SoulsLike
                 return;
             }
 
-            if (pressed < 1f)
+            if (inventoryControllerData.pressed < 1f)
             {
-                pressed += Time.deltaTime;
+                inventoryControllerData.pressed += Time.deltaTime;
             }
             // If the player has recently pressed the 'I' key.
-            if (InputUtility.instance.Inventory == true && pressed >= 1f)
+            if (InputUtility.instance.Inventory == true && inventoryControllerData.pressed >= 1f)
             {
-                pressed = 0f;
+                inventoryControllerData.pressed = 0f;
                 // TODO: Onky show the player inventory interface (i.e. not the transfer screen)
                 // FIXME: Inventory UI flashes when keyboard button is pressed.
                 // Toggle the interface.
-                if (playerInventoryUI.showInterface == false)
+                if (inventoryControllerData.playerInventoryUI.showInterface == false)
                 {
                     ShowInventory();
                 }
@@ -62,47 +72,47 @@ namespace SoulsLike
         private void ShowInventory()
         {
             EnableCursor();
-            playerInventoryUI.showInterface = true;
-            playerInventoryUI.ClearInterface();
+            inventoryControllerData.playerInventoryUI.showInterface = true;
+            inventoryControllerData.playerInventoryUI.ClearInterface();
 
             // Add player items to UI
-            foreach (var item in PlayerActor.instance.EntityInventory.InventoryItems)
+            foreach (var item in PlayerActor.instance.entityData.entityInventory.InventoryItems)
             {
-                playerInventoryUI.AddItemToUI(item);
+                inventoryControllerData.playerInventoryUI.AddItemToUI(item);
             }
         }
 
         private void HideInventory()
         {
-            playerInventoryUI.ClearInterface();
-            playerInventoryUI.showInterface = false;
+            inventoryControllerData.playerInventoryUI.ClearInterface();
+            inventoryControllerData.playerInventoryUI.showInterface = false;
         }
 
         public void ShowInventoryTransfer(Entity entity)
         {
             EnableCursor();
-            inventoryUI.showInterface = true;
-            inventoryUI.entity = entity;
-            inventoryUI.ClearInterface();
+            inventoryControllerData.inventoryUI.showInterface = true;
+            inventoryControllerData.inventoryUI.entity = entity;
+            inventoryControllerData.inventoryUI.ClearInterface();
 
             // Add entity items to UI
-            foreach(var item in entity.EntityInventory.InventoryItems)
+            foreach(var item in entity.entityData.entityInventory.InventoryItems)
             {
-                inventoryUI.AddItemToUI(item, false);
+                inventoryControllerData.inventoryUI.AddItemToUI(item, false);
             }
 
             // Add player items to UI
-            foreach (var item in PlayerActor.instance.EntityInventory.InventoryItems)
+            foreach (var item in PlayerActor.instance.entityData.entityInventory.InventoryItems)
             {
-                inventoryUI.AddItemToUI(item, true);
+                inventoryControllerData.inventoryUI.AddItemToUI(item, true);
             }
         }
 
         public void HideInventoryTransfer()
         {
-            inventoryUI.ClearInterface();
-            inventoryUI.showInterface = false;
-            inventoryUI.entity = null;
+            inventoryControllerData.inventoryUI.ClearInterface();
+            inventoryControllerData.inventoryUI.showInterface = false;
+            inventoryControllerData.inventoryUI.entity = null;
         }
     }
 }

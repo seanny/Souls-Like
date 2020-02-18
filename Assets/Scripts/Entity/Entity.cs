@@ -5,34 +5,22 @@ namespace SoulsLike
     [RequireComponent(typeof(EntityInventory))]
     public class Entity : MonoBehaviour
     {
-        [SerializeField] protected string entityID;
-        public string EntityID
-        { 
-            get
-            {
-                return entityID;
-            }
-        }
-
-        [SerializeField] protected EntityInventory entityInventory;
-        public EntityInventory EntityInventory
-        {
-            get
-            {
-                return entityInventory;
-            }
-        }
+        public EntityData entityData;
 
         protected virtual void Start()
         {
+            if(entityData == null)
+            {
+                entityData = new EntityData();
+            }
             bool canGetEntityInventory = TryGetComponent(out EntityInventory inventory);
             if(canGetEntityInventory == true)
             {
-                entityInventory = GetComponent<EntityInventory>();
+                entityData.entityInventory = GetComponent<EntityInventory>();
             }
             else
             {
-                entityInventory = gameObject.AddComponent(typeof(EntityInventory)) as EntityInventory;
+                entityData.entityInventory = gameObject.AddComponent(typeof(EntityInventory)) as EntityInventory;
             }
         }
 
