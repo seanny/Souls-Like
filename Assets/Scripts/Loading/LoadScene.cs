@@ -42,42 +42,52 @@ namespace SoulsLike
             if(Application.CanStreamedLevelBeLoaded($"Scenes/Levels/{levelName}") == true)
             {
                 Debug.Log($"Loading {levelName}");
-                StartCoroutine(OnLoadScene(levelName));
+                StartCoroutine(OnLoadScene(levelName, Vector3.zero, Quaternion.identity));
             }
         }
 
-        private IEnumerator OnLoadScene(string levelName)
+        public void LoadLevel(string levelName, Vector3 position, Quaternion rotation)
+        {
+            if (Application.CanStreamedLevelBeLoaded($"Scenes/Levels/{levelName}") == true)
+            {
+                Debug.Log($"Loading {levelName}");
+                StartCoroutine(OnLoadScene(levelName, position, rotation));
+            }
+        }
+
+        private IEnumerator OnLoadScene(string levelName, Vector3 position, Quaternion rotation)
         {
             var parameters = new LoadSceneParameters(LoadSceneMode.Additive);
             AsyncOperation loadingScreenAsync = SceneManager.LoadSceneAsync($"Scenes/LoadingScreen", parameters);
-            yield return new WaitForEndOfFrame();
             while(!loadingScreenAsync.isDone)
             {
                 yield return null;
             }
-            yield return new WaitForEndOfFrame();
             if (!initialObjectsLoaded)
             {
-                SceneManager.LoadScene("Scenes/SampleScene");
+                SceneManager.LoadScene("Scenes/SampleScene", parameters);
                 initialObjectsLoaded = true;
             }
-            yield return new WaitForEndOfFrame();
             UnloadLevel();
-            yield return new WaitForEndOfFrame();
             AsyncOperation asyncOperation = SceneManager.LoadSceneAsync($"Scenes/Levels/{levelName}", parameters);
             while(!asyncOperation.isDone)
             {
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForEndOfFrame();
             }
-            yield return new WaitForEndOfFrame();
             currentScene = SceneManager.GetSceneByName($"{levelName}");
-            yield return new WaitForEndOfFrame();
+            Scene mainMenu = SceneManager.GetSceneByName("MainMenu");
+            if (mainMenu.isLoaded)
+            {
+                SceneManager.UnloadSceneAsync(mainMenu);
+            }
+            
+            PlayerActor.instance.transform.position = position;
+            PlayerActor.instance.transform.rotation = rotation;
             Scene loadingScene = SceneManager.GetSceneByName("LoadingScreen");
             if (loadingScene.isLoaded)
             {
                 SceneManager.UnloadSceneAsync(loadingScene);
             }
-            yield return new WaitForEndOfFrame();
         }
     }
 }

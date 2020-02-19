@@ -5,11 +5,20 @@ namespace SoulsLike
     [Serializable]
     public class ActorStats
     {
+        public int actorID;
         // Actor's public name
         public string name;
 
         // Actor level
         public int level;
+
+        public float actorX;
+        public float actorY;
+        public float actorZ;
+        public float actorRX;
+        public float actorRY;
+        public float actorRZ;
+        public float actorRW;
 
         // Actor species
         public ActorSpeciesType actorSpecies;

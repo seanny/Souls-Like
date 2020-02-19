@@ -34,6 +34,31 @@ namespace SoulsLike
             StartCoroutine(RemoveActorTimer());
         }
 
+        /// <summary>
+        /// Set the actor stats for a number of actors (based on array)
+        /// </summary>
+        /// <param name="actors"></param>
+        /// <param name="actorStats"></param>
+        public void SetActorStats(Actor[] actors, ActorStats[] actorStats)
+        {
+            foreach(var _actor in actors)
+            {
+                SetActorStat(actorStats, _actor);
+            }
+        }
+
+        private void SetActorStat(ActorStats[] actorStats, Actor _actor)
+        {
+            foreach (var _actorStat in actorStats)
+            {
+                if (_actor.actorStats.actorID == _actorStat.actorID)
+                {
+                    _actor.actorStats = _actorStat;
+                    break;
+                }
+            }
+        }
+
         public void UpdateProcessingRange()
         {
             // TODO: Get processing range from settings file.
@@ -62,6 +87,19 @@ namespace SoulsLike
                     break;
             }
             return null;
+        }
+
+        public List<Actor> GetAllNearbyActors()
+        {
+            List<Actor> _actors = new List<Actor>();
+            foreach (Actor actor in actors)
+            {
+                if (IsInProcessingRange(actor))
+                {
+                    _actors.Add(actor);
+                }
+            }
+            return _actors;
         }
 
         public void RemoveActor(Actor actor)

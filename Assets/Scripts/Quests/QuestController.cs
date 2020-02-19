@@ -16,8 +16,8 @@ namespace SoulsLike
             public QuestData questData = new QuestData();
         }
 
-        public List<QuestItem> quests;
-        public List<QuestItem> completedQuests;
+        public List<QuestItem> quests = new List<QuestItem>();
+        public List<QuestItem> completedQuests = new List<QuestItem>();
         public QuestItem currentQuest;
 
         private void Awake()
@@ -27,9 +27,7 @@ namespace SoulsLike
 
         private void Start()
         {
-            quests = new List<QuestItem>();
             quests.Clear();
-            completedQuests = new List<QuestItem>();
             completedQuests.Clear();
         }
 

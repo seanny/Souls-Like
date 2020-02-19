@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace SoulsLike
 {
@@ -128,6 +129,20 @@ namespace SoulsLike
             if(actorStats.currentHealth <= 0)
             {
                 Kill();
+            }
+        }
+
+        protected virtual void Update()
+        {
+            if(actorStats != null)
+            {
+                actorStats.actorX = transform.position.x;
+                actorStats.actorY = transform.position.y;
+                actorStats.actorY = transform.position.z;
+                actorStats.actorRX = transform.rotation.x;
+                actorStats.actorRY = transform.rotation.y;
+                actorStats.actorRZ = transform.rotation.z;
+                actorStats.actorRW = transform.rotation.w;
             }
         }
 

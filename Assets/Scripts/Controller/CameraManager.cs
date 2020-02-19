@@ -18,8 +18,8 @@ namespace SoulsLike
         public float controllerVertical;
         public float controllerHorizontal;
 
-        [HideInInspector] public Transform pivot;
-        [HideInInspector] public Transform cameraTransform;
+        public Transform pivot;
+        public Transform cameraTransform;
         float targetSpeed;
         float turnSmoothing = .1f;
         float smoothX;
