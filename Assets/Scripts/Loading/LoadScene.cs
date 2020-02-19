@@ -16,7 +16,7 @@ namespace SoulsLike
                 instance = this;
                 DontDestroyOnLoad(gameObject);
             }
-            else Destroy(gameObject);
+            else Destroy(this);
         }
 
         public bool initialObjectsLoaded = false;

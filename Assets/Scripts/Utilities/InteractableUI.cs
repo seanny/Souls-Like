@@ -18,7 +18,12 @@ namespace SoulsLike
 
         private void Awake()
         {
-            instance = this;
+            if (instance == null)
+            {
+                instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else Destroy(this);
         }
 
         private void Start()

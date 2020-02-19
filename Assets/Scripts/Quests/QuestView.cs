@@ -34,7 +34,12 @@ namespace SoulsLike
 
         private void Awake()
         {
-            instance = this;
+            if (instance == null)
+            {
+                instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else Destroy(this);
         }
 
         private void Start()
@@ -102,7 +107,7 @@ namespace SoulsLike
             questItemView.questButton = Instantiate(questButtonPrefab).GetComponent<Button>();
             questItemView.questButtonText = questItemView.questButton.gameObject.GetComponentInChildren<TextMeshProUGUI>();
             questItemView.questButtonText.text = questName;
-            questItemView.questButton.transform.parent = questJournalScrollViewContent.transform;
+            questItemView.questButton.transform.SetParent(questJournalScrollViewContent.transform, false);
             questItemView.questButton.onClick.AddListener(delegate
             {
                 OnClickQuest(questID);

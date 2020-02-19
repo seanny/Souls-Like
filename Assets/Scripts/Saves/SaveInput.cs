@@ -11,11 +11,12 @@ namespace SoulsLike
 
         private void Start()
         {
-            if(instance == null)
+            if (instance == null)
             {
                 instance = this;
                 DontDestroyOnLoad(gameObject);
             }
+            else Destroy(this);
         }
 
         public SaveFileData LoadMostRecentSave()

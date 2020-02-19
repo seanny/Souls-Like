@@ -22,6 +22,17 @@ namespace SoulsLike
 
         private void Awake()
         {
+            if (instance == null)
+            {
+                instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else Destroy(this);
+            CreatePlayerInputActions();
+        }
+
+        private void CreatePlayerInputActions()
+        {
             playerInputActions = new PlayerInputActions();
             playerInputActions.PlayerControls.Movement.performed += ctx => movementInput = ctx.ReadValue<Vector2>();
             playerInputActions.PlayerControls.CameraMovement.performed += ctx => CameraMovement(ctx.ReadValue<Vector2>());
@@ -48,7 +59,7 @@ namespace SoulsLike
 
             playerInputActions.PlayerControls.QuestJournal.performed += ctx =>
             {
-                if(!QuestJournal)
+                if (!QuestJournal)
                 {
                     QuestJournal = true;
                     StartCoroutine(FreeQuestKey());
@@ -76,7 +87,7 @@ namespace SoulsLike
 
             playerInputActions.PlayerControls.GeneralAttack.performed += ctx =>
             {
-                if (!PowerAttacking) 
+                if (!PowerAttacking)
                 {
                     GeneralAttack();
                 }
@@ -86,12 +97,6 @@ namespace SoulsLike
                 PowerAttacking = true;
                 PowerAttack();
             };
-            if (instance == null)
-            {
-                instance = this;
-                DontDestroyOnLoad(gameObject);
-            }
-            else Destroy(this);
         }
 
         IEnumerator FreeQuestKey()
@@ -140,19 +145,20 @@ namespace SoulsLike
             cameraInput = vector;
         }
 
-        private void OnDestroy()
-        {
-            instance = null;
-        }
-
         private void OnEnable()
         {
-            playerInputActions.Enable();
+            if (playerInputActions != null)
+            {
+                playerInputActions.Enable();
+            }
         }
 
         private void OnDisable()
         {
-            playerInputActions.Disable();
+            if(playerInputActions != null)
+            {
+                playerInputActions.Disable();
+            }
         }
     }
 }

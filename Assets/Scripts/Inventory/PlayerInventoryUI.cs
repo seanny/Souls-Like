@@ -31,7 +31,7 @@ namespace SoulsLike
         {
             Button button = Instantiate(buttonPrefab);
             button.GetComponentInChildren<TextMeshProUGUI>().text = item.Name;
-            button.transform.parent = playerScrollViewContent.transform;
+            button.transform.SetParent(playerScrollViewContent.transform, false);
             inventoryButtons.Add(button.GetComponent<InventoryButton>());
         }
 

@@ -30,13 +30,22 @@ namespace SoulsLike
         public void Init(Transform t)
         {
             target = t;
+            AssignCameraTransform();
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
+        private void AssignCameraTransform()
+        {
             cameraTransform = Camera.main.transform;
             pivot = cameraTransform.parent;
-            Cursor.lockState = CursorLockMode.Locked;
         }
 
         public void Tick(float d)
         {
+            if(!IsInLevel())
+            {
+                return;
+            }
             float h = InputUtility.instance.cameraInput.x;
             float v = InputUtility.instance.cameraInput.y;
 
@@ -47,11 +56,19 @@ namespace SoulsLike
 
         private void FollowTarget(float d)
         {
+            if (!IsInLevel())
+            {
+                return;
+            }
             transform.position = target.position;
         }
 
         void HandleRotation(float d, float v, float h, float targetSpeed)
         {
+            if (!IsInLevel())
+            {
+                return;
+            }
             if (turnSmoothing > 0)
             {
                 smoothX = Mathf.SmoothDamp(smoothX, h, ref smoothXVelocity, turnSmoothing);
@@ -73,7 +90,10 @@ namespace SoulsLike
 
             tiltAngle -= smoothY * targetSpeed;
             tiltAngle = Mathf.Clamp(tiltAngle, minAngle, maxAngle);
-            pivot.localRotation = Quaternion.Euler(tiltAngle, 0, 0);
+            if(pivot != null)
+            {
+                pivot.localRotation = Quaternion.Euler(tiltAngle, 0, 0);
+            }
         }
 
         private void Awake()
@@ -81,6 +101,28 @@ namespace SoulsLike
             if (instance == null)
             {
                 instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else Destroy(this);
+        }
+
+        private bool IsInLevel()
+        {
+            bool inLevel = !UnityEngine.SceneManagement.SceneManager.GetSceneByName("MainMenu").isLoaded;
+#if UNITY_EDITOR
+            Debug.Log($"inLevel = {inLevel}");
+#endif
+            return inLevel;
+        }
+
+        private void Update()
+        {
+            if(IsInLevel())
+            {
+                if(cameraTransform == null || pivot == null)
+                {
+                    AssignCameraTransform();
+                }
             }
         }
     }
