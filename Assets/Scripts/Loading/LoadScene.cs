@@ -65,14 +65,18 @@ namespace SoulsLike
             }
             if (!initialObjectsLoaded)
             {
-                SceneManager.LoadScene("Scenes/SampleScene", parameters);
+                AsyncOperation sampleSceneAsync = SceneManager.LoadSceneAsync("Scenes/SampleScene", parameters);
+                while (!sampleSceneAsync.isDone)
+                {
+                    yield return null;
+                }
                 initialObjectsLoaded = true;
             }
             UnloadLevel();
             AsyncOperation asyncOperation = SceneManager.LoadSceneAsync($"Scenes/Levels/{levelName}", parameters);
             while(!asyncOperation.isDone)
             {
-                yield return new WaitForEndOfFrame();
+                yield return null;
             }
             currentScene = SceneManager.GetSceneByName($"{levelName}");
             Scene mainMenu = SceneManager.GetSceneByName("MainMenu");
@@ -80,9 +84,10 @@ namespace SoulsLike
             {
                 SceneManager.UnloadSceneAsync(mainMenu);
             }
-            
+
             PlayerActor.instance.transform.position = position;
             PlayerActor.instance.transform.rotation = rotation;
+            yield return new WaitForEndOfFrame();
             Scene loadingScene = SceneManager.GetSceneByName("LoadingScreen");
             if (loadingScene.isLoaded)
             {

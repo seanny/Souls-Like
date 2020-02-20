@@ -136,9 +136,7 @@ namespace SoulsLike
         {
             if(actorStats != null)
             {
-                actorStats.actorX = transform.position.x;
-                actorStats.actorY = transform.position.y;
-                actorStats.actorY = transform.position.z;
+                actorStats.actorPosition = new Vec3(transform.position);
                 actorStats.actorRX = transform.rotation.x;
                 actorStats.actorRY = transform.rotation.y;
                 actorStats.actorRZ = transform.rotation.z;

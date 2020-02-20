@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3212533885383053146
+--- !u!1 &494019243500850922
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1931603699520470345}
-  - component: {fileID: 7463988418468398975}
-  - component: {fileID: 3794811005670505350}
+  - component: {fileID: 3494866130374606073}
+  - component: {fileID: 5610153101128009423}
+  - component: {fileID: 2226974966140729910}
   m_Layer: 0
   m_Name: StreetOilLight01
   m_TagString: Untagged
@@ -18,36 +18,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1931603699520470345
+--- !u!4 &3494866130374606073
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3212533885383053146}
+  m_GameObject: {fileID: 494019243500850922}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 9.56, y: 0, z: -9.23}
-  m_LocalScale: {x: 1.6605992, y: 2.0222445, z: 1.2744094}
-  m_Children:
-  - {fileID: 6896378385788657138}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_LocalPosition: {x: 10.18, y: 0, z: -9.97}
+  m_LocalScale: {x: 1.6605992, y: 2.0222442, z: 1.2744093}
+  m_Children: []
+  m_Father: {fileID: 8501378774633935403}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7463988418468398975
+--- !u!33 &5610153101128009423
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3212533885383053146}
+  m_GameObject: {fileID: 494019243500850922}
   m_Mesh: {fileID: 3344557777270306481, guid: d7d26b444e201da4985ebb39bc4e66e2, type: 3}
---- !u!23 &3794811005670505350
+--- !u!23 &2226974966140729910
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3212533885383053146}
+  m_GameObject: {fileID: 494019243500850922}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -85,7 +84,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &6896378385788657141
+--- !u!1 &8501378774633935402
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,9 +92,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6896378385788657138}
-  - component: {fileID: 6896378385788657136}
-  - component: {fileID: 6896378385788657139}
+  - component: {fileID: 8501378774633935403}
+  m_Layer: 0
+  m_Name: StreetOilLight01 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8501378774633935403
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8501378774633935402}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8501378775716961346}
+  - {fileID: 3494866130374606073}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8501378775716961349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8501378775716961346}
+  - component: {fileID: 8501378775716961344}
+  - component: {fileID: 8501378775716961347}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -103,27 +134,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6896378385788657138
+--- !u!4 &8501378775716961346
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6896378385788657141}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.293, z: 1.975}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 8501378775716961349}
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 10.18, y: 2.5169587, z: -7.355239}
+  m_LocalScale: {x: 1.6605992, y: 2.022244, z: 1.2744092}
   m_Children: []
-  m_Father: {fileID: 1931603699520470345}
+  m_Father: {fileID: 8501378774633935403}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &6896378385788657136
+--- !u!108 &8501378775716961344
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6896378385788657141}
+  m_GameObject: {fileID: 8501378775716961349}
   m_Enabled: 1
   serializedVersion: 10
   m_Type: 2
@@ -178,13 +209,13 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &6896378385788657139
+--- !u!114 &8501378775716961347
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6896378385788657141}
+  m_GameObject: {fileID: 8501378775716961349}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}

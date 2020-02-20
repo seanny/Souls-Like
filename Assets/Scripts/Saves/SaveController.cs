@@ -6,6 +6,7 @@ using UnityEngine;
 
 namespace SoulsLike
 {
+
     public static class SaveController
     {
         public static SaveFileData LoadSave(string name)
@@ -77,7 +78,6 @@ namespace SoulsLike
             SaveFileData saveFileData = new SaveFileData();
             saveFileData.gameVersion = GameVersion.GAME_VERSION;
             saveFileData.playerStats = PlayerActor.instance.actorStats;
-            saveFileData.playerStats.actorY = saveFileData.playerStats.actorY + 0.1f;
             saveFileData.playerLevel = LoadScene.instance.currentScene.name;
             foreach (var item in QuestController.instance.quests)
             {

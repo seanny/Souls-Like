@@ -109,9 +109,6 @@ namespace SoulsLike
         private bool IsInLevel()
         {
             bool inLevel = !UnityEngine.SceneManagement.SceneManager.GetSceneByName("MainMenu").isLoaded;
-#if UNITY_EDITOR
-            Debug.Log($"inLevel = {inLevel}");
-#endif
             return inLevel;
         }
 

@@ -10,8 +10,8 @@ namespace SoulsLike
         [HideInInspector] public Vector3 moveDirection;
         [HideInInspector] public float moveAmount;
 
-        public float moveSpeed = 2f;
-        public float runSpeed = 3.5f;
+        public float moveSpeed = 3.5f;
+        public float runSpeed = 4f;
         public float rotateSpeed = 5f;
         public float groundSpeed = 0.5f;
         [HideInInspector] public bool isGrounded;
@@ -80,7 +80,7 @@ namespace SoulsLike
                 rigidBody.velocity = moveDirection * (targetSpeed * moveSpeed);
             }
 
-            if(isRunning)
+            if (isRunning)
             {
                 lockOn = false;
             }
