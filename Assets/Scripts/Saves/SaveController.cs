@@ -110,16 +110,13 @@ namespace SoulsLike
 
         public static string GetSaveDirectory()
         {
-            string savePath = Application.persistentDataPath;
-#if UNITY_EDITOR
-            Debug.Log($"Save Path: {savePath}");
-#endif
+            string savePath = Path.Combine(Application.persistentDataPath, "Saves");
             return savePath;
         }
 
         private static string GetSavePath(string name)
         {
-            string savePath = Path.Combine(Application.persistentDataPath, name + ".sav");
+            string savePath = Path.Combine(GetSaveDirectory(), name + ".sav");
 #if UNITY_EDITOR
             Debug.Log($"Save Path: {savePath}");
 #endif

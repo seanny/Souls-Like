@@ -42,6 +42,7 @@ namespace SoulsLike
                     GameObject water = Instantiate(waterData.waterObjectPrefab);
                     water.transform.position = new Vector3(i * 10f, waterData.waterHeight, y * 10f);
                     water.transform.SetParent(waterData.waterParent.transform);
+                    waterData.waterObjects.Add(water);
                 }
             }
         }
