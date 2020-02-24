@@ -7,8 +7,7 @@ namespace SoulsLike
     {
         private void Start()
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            MouseCursor.Enable();
         }
 
         public void OnContinue()

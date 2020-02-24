@@ -67,14 +67,12 @@ namespace SoulsLike
                 questJournal.SetActive(!questJournal.activeSelf);
                 if(questJournal.activeSelf == true)
                 {
-                    Cursor.lockState = CursorLockMode.None;
-                    Cursor.visible = true;
+                    MouseCursor.Enable();
                     OnClickQuest(questItems.First().questID);
                 }
                 else
                 {
-                    Cursor.lockState = CursorLockMode.Locked;
-                    Cursor.visible = false;
+                    MouseCursor.Disable();
                 }
             }
         }

@@ -31,7 +31,7 @@ namespace SoulsLike
         {
             target = t;
             AssignCameraTransform();
-            Cursor.lockState = CursorLockMode.Locked;
+            MouseCursor.Disable();
         }
 
         private void AssignCameraTransform()

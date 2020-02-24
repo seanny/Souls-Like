@@ -36,8 +36,7 @@ namespace SoulsLike
                 instance.dialogueChoices[i].dialogueId = dialogue.dialogueChoices[i].dialogueID;
                 instance.dialogueChoices[i].choiceID = dialogue.dialogueChoices[i].choiceID;
             }
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            MouseCursor.Enable();
             instance.dialogueUi.SetActive(true);
         }
 

@@ -56,8 +56,7 @@ namespace SoulsLike
                 }
                 else
                 {
-                    Cursor.lockState = CursorLockMode.Locked;
-                    Cursor.visible = false;
+                    MouseCursor.Disable();
                     HideInventory();
                 }
             }
@@ -65,8 +64,7 @@ namespace SoulsLike
 
         private void EnableCursor()
         {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+            MouseCursor.Enable();
         }
 
         private void ShowInventory()
