@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,15 +8,13 @@ namespace SoulsLike
     [Serializable]
     public class WaterData
     {
-        public GameObject waterParentPrefab;
+        public GameObject waterParent;
         public GameObject waterObjectPrefab;
         public List<GameObject> waterObjects;
 
         public float waterHeight = 0;
 
         public int maxWater = 10;
-
-        public GameObject waterParent;
     }
 
 
@@ -25,7 +24,6 @@ namespace SoulsLike
 
         private void Start()
         {
-            CreateParentObject();
             CreateWater();
         }
 
@@ -35,18 +33,10 @@ namespace SoulsLike
             {
                 for (int y = 0; y < waterData.maxWater; y++)
                 {
-                    GameObject water = Instantiate(waterData.waterObjectPrefab);
-                    water.transform.position = new Vector3(i * 10f, waterData.waterHeight, y * 10f);
-                    water.transform.SetParent(waterData.waterParent.transform);
+                    GameObject water = Instantiate(waterData.waterObjectPrefab, new Vector3(i * 10f, waterData.waterHeight, y * 10f), Quaternion.identity, waterData.waterParent.transform);
                     waterData.waterObjects.Add(water);
                 }
             }
-        }
-
-        private void CreateParentObject()
-        {
-            waterData.waterParent = Instantiate(waterData.waterParentPrefab);
-            waterData.waterParent.transform.position = Vector3.zero;
         }
     }
 }
