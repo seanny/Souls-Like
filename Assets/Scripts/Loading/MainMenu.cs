@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace SoulsLike
 {
@@ -18,7 +15,8 @@ namespace SoulsLike
         {
             SaveFileData saveFileData = SaveInput.instance.LoadMostRecentSave();
             Vector3 position = new Vector3(saveFileData.playerStats.actorPosition.x, saveFileData.playerStats.actorPosition.y, saveFileData.playerStats.actorPosition.z);
-            Quaternion rotation = new Quaternion(saveFileData.playerStats.actorRX, saveFileData.playerStats.actorRY, saveFileData.playerStats.actorRZ, saveFileData.playerStats.actorRW);
+            Quaternion rotation = new Quaternion(saveFileData.playerStats.actorRotation.x, saveFileData.playerStats.actorRotation.y, saveFileData.playerStats.actorRotation.z, saveFileData.playerStats.actorRotation.w);
+            GlobalController.SetGlobals(saveFileData.savedGlobals);
             LoadScene.instance.LoadLevel(saveFileData.playerLevel, position, rotation);
         }
 

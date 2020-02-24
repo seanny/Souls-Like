@@ -13,10 +13,7 @@ namespace SoulsLike
         public int level;
 
         public Vec3 actorPosition;
-        public float actorRX;
-        public float actorRY;
-        public float actorRZ;
-        public float actorRW;
+        public Quat actorRotation;
 
         // Actor species
         public ActorSpeciesType actorSpecies;

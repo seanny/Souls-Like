@@ -12,5 +12,6 @@ namespace SoulsLike
         public List<QuestData> questData = new List<QuestData>();
         public DateTime saveCreation = DateTime.Now;
         public List<ActorStats> actorStats = new List<ActorStats>();
+        public SavedGlobals savedGlobals = new SavedGlobals();
     }
 }

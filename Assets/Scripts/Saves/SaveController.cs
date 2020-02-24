@@ -95,6 +95,13 @@ namespace SoulsLike
             {
                 saveFileData.actorStats.Add(item.actorStats);
             }
+            saveFileData.savedGlobals = GlobalController.SavedGlobals;
+#if UNITY_EDITOR
+            foreach(var savedGlob in saveFileData.savedGlobals.globals)
+            {
+                Debug.Log($"[Saved Global] {savedGlob.Key} = {savedGlob.Value}");
+            }
+#endif
             return saveFileData;
         }
 

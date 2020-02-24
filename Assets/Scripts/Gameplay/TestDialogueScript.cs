@@ -10,6 +10,7 @@ namespace SoulsLike
             // Create test quest on load
             QuestController.instance.AddQuest("TestQuest");
             QuestController.instance.SetQuestStage("TestQuest", 1);
+            GlobalController.SetGlobal("TestSetting", 13);
         }
 
         public void OnDialogue(string dialogueID, string dialogueChoice, Actor actor)
