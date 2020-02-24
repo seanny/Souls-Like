@@ -21,14 +21,10 @@ namespace SoulsLike
 
     public class Water : MonoBehaviour
     {
-        public WaterData waterData;
+        public WaterData waterData = new WaterData();
 
         private void Start()
         {
-            if(waterData == null)
-            {
-                waterData = new WaterData();
-            }
             CreateParentObject();
             CreateWater();
         }
