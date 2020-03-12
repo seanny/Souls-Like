@@ -9,7 +9,6 @@ namespace SoulsLike
         public Actor attackedBy;
         public Helper animationHelper;
 
-        float fightWait;
         Animator animator;
         CapsuleCollider actorCollider;
         LayerMask actorLayerMasks;
@@ -45,6 +44,11 @@ namespace SoulsLike
             weaponObject.transform.localScale = currentWeapon.weaponAttackScale;
         }
 
+        /// <summary>
+        /// Can the current actor detect the specified actor.
+        /// </summary>
+        /// <param name="actor"></param>
+        /// <returns></returns>
         public bool CanDetect(Actor actor)
         {
             if (!Actors.instance.IsInProcessingRange(actor))
@@ -73,6 +77,9 @@ namespace SoulsLike
             return true;
         }
 
+        /// <summary>
+        /// Kill the current actor
+        /// </summary>
         public virtual void Kill()
         {
             actorStats.currentHealth = 0f;
@@ -86,6 +93,9 @@ namespace SoulsLike
             animationHelper.PlayWeaponAnim(Helper.WeaponType.OneHanded);
         }
 
+        /// <summary>
+        /// Attempt an attack.
+        /// </summary>
         public void Attack()
         {
             // Play attack animation
@@ -103,6 +113,10 @@ namespace SoulsLike
             }
         }
 
+        /// <summary>
+        /// On Combat
+        /// </summary>
+        /// <param name="actor"></param>
         public void OnCombat(Actor actor)
         {
             // Start the attack animation, and also enable the weapon attack scripts.
@@ -115,6 +129,11 @@ namespace SoulsLike
             }
         }
 
+        /// <summary>
+        /// On Actor Attacked
+        /// </summary>
+        /// <param name="attacker"></param>
+        /// <param name="weaponDamage"></param>
         public void OnActorAttacked(Actor attacker, float weaponDamage)
         {
             // Actor health damage: WeaponDamage + Level/5 + (Luck/5) + (Endurance/4) - (Fatigue/100) - (defenderEndurance/4)
@@ -148,6 +167,11 @@ namespace SoulsLike
             actorStats.isDead = false;
         }
 
+        /// <summary>
+        /// Return the player in an actor array.
+        /// </summary>
+        /// <param name="actors"></param>
+        /// <returns></returns>
         public PlayerActor FindPlayerActorInArray(Actor[] actors)
         {
             if (actors.Length > 0)

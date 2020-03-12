@@ -31,10 +31,8 @@ namespace SoulsLike
         public StateManager stateManager;
         float delta;
         bool canRun;
-        public AiSequence aiSequence;
         public AiState[] aiStates;
         public Actor enemyActor;
-        AiSight aiSight;
         public bool isEnemy;
 
         // Use this for initialization
@@ -50,22 +48,32 @@ namespace SoulsLike
             navMeshAgent = GetComponent<NavMeshAgent>();
             actorStats.maxHealth = 80f + (actorStats.level / 2) + Random.Range(0, 10);
             actorStats.currentHealth = actorStats.maxHealth;
-            aiSequence = new AiSequence(this);
-            aiSight = gameObject.AddComponent<AiSight>();
             canRun = true;
         }
 
+        /// <summary>
+        /// Smooth Look towards direction
+        /// </summary>
+        /// <param name="targetDir"></param>
+        /// <param name="lookSpeed"></param>
         public void SmoothLook(Vector3 targetDir, int lookSpeed)
         {
             Quaternion targetRotation = Quaternion.LookRotation(targetDir);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, lookSpeed * delta);
         }
 
+        /// <summary>
+        /// Initiate Combat with actor
+        /// </summary>
+        /// <param name="actor"></param>
         public void InitiateCombat(Actor actor)
         {
             fightingActor = actor;
         }
 
+        /// <summary>
+        /// Kill Actor
+        /// </summary>
         public override void Kill()
         {
             base.Kill();
@@ -99,6 +107,10 @@ namespace SoulsLike
             MoveTowardsPoint(actor.transform.position);
         }
 
+        /// <summary>
+        /// Move towards vector 3
+        /// </summary>
+        /// <param name="point"></param>
         public void MoveTowardsPoint(Vector3 point)
         {
             stateManager.moveAmount = MovementSpeed();
@@ -106,12 +118,21 @@ namespace SoulsLike
             navMeshAgent.isStopped = false;
         }
 
+        /// <summary>
+        /// Stop moving towards actor
+        /// </summary>
+        /// <param name="actor"></param>
         public void StopMovingTowardsActor(Actor actor)
         {
             movingTowards = null;
             navMeshAgent.isStopped = true;
         }
 
+        /// <summary>
+        /// Follow actor
+        /// </summary>
+        /// <param name="actor"></param>
+        /// <returns></returns>
         public bool FollowActor(Actor actor)
         {
             if(actor.actorStats.isDead)
@@ -120,48 +141,6 @@ namespace SoulsLike
             }
             followingActor = actor;
             return true;
-        }
-
-        private AiState GetAiState()
-        {
-            AiWander aiWander = new AiWander(this);
-            float range = 25f;
-            aiWander.targetMovementPoint = Actors.instance.FindRandomMovementTarget(this, range);
-            if(aiWander.targetMovementPoint == null)
-            {
-                Debug.LogError($"[{gameObject.name}] Cannot find target movement point within {range} meters.");
-            }
-
-            Actor chaseActor;
-            if (attackedBy == null)
-            {
-                chaseActor = Actors.instance.FindTarget(this);
-            }
-            else
-            {
-                if(attackedBy.actorStats.isDead)
-                {
-                    chaseActor = Actors.instance.FindTarget(this);
-                }
-                else
-                {
-                    chaseActor = fightingActor;
-                }
-            }
-
-            if(chaseActor != null)
-            {
-                enemyActor = chaseActor;
-                if (Vector3.Distance(transform.position, chaseActor.transform.position) > AiState.MIN_DISTANCE)
-                {
-                    AiPursue aiPursue = new AiPursue(this, chaseActor);
-                    return aiPursue;
-                }
-                AiCombat aiCombat = new AiCombat(this, chaseActor);
-                return aiCombat;
-            }
-
-            return aiWander;
         }
 
         // Update is called once per frame
@@ -175,14 +154,6 @@ namespace SoulsLike
 
             float delta = Time.deltaTime;
             stateManager.Tick(delta);
-            aiStates = aiSequence.aiStates.ToArray();
-
-            if (aiSequence.StatesEmpty || aiSequence.lastAiState == StateTypeID.None)
-            {
-                aiSequence.AddState(GetAiState());
-            }
-
-            aiSequence.Execute(Time.deltaTime);
         }
 
         private void FixedUpdate()

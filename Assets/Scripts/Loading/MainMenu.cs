@@ -10,6 +10,9 @@ namespace SoulsLike
             MouseCursor.Enable();
         }
 
+        /// <summary>
+        /// On Continue
+        /// </summary>
         public void OnContinue()
         {
             SaveFileData saveFileData = SaveInput.instance.LoadMostRecentSave();
@@ -19,21 +22,33 @@ namespace SoulsLike
             LoadScene.instance.LoadLevel(saveFileData.playerLevel, position, rotation);
         }
 
+        /// <summary>
+        /// On New
+        /// </summary>
         public void OnNew()
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// On Load
+        /// </summary>
         public void OnLoad()
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// On Settings
+        /// </summary>
         public void OnSettings()
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// On Quit
+        /// </summary>
         public void OnQuit()
         {
 #if UNITY_EDITOR

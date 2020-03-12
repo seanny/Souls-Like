@@ -34,6 +34,11 @@ namespace SoulsLike
             entityInventoryButtons = new List<InventoryButton>();
         }
 
+        /// <summary>
+        /// Add Item to Inventory UI
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="player"></param>
         public void AddItemToUI(Item item, bool player)
         {
             Button button = Instantiate(buttonPrefab);
@@ -67,6 +72,10 @@ namespace SoulsLike
             }
         }
 
+        /// <summary>
+        /// Remove Item From Player Inventory UI
+        /// </summary>
+        /// <param name="Item"></param>
         public void RemoveItemFromPlayerUI(Item Item)
         {
             for(int i = 0; i < inventoryButtons.Count; i++)
@@ -80,6 +89,10 @@ namespace SoulsLike
             }
         }
 
+        /// <summary>
+        /// Remove Item from Entity UI
+        /// </summary>
+        /// <param name="Item"></param>
         public void RemoveItemFromEntityUI(Item Item)
         {
             for (int i = 0; i < entityInventoryButtons.Count; i++)
@@ -93,6 +106,9 @@ namespace SoulsLike
             }
         }
 
+        /// <summary>
+        /// Clear Inventory UI
+        /// </summary>
         public void ClearInterface()
         {
             for (int i = 0; i < inventoryButtons.Count; i++)

@@ -86,6 +86,10 @@ namespace SoulsLike
             inventoryControllerData.playerInventoryUI.showInterface = false;
         }
 
+        /// <summary>
+        /// Show Inventory Transfer Menu
+        /// </summary>
+        /// <param name="entity"></param>
         public void ShowInventoryTransfer(Entity entity)
         {
             EnableCursor();
@@ -106,6 +110,9 @@ namespace SoulsLike
             }
         }
 
+        /// <summary>
+        /// Hide Inventory Transfer
+        /// </summary>
         public void HideInventoryTransfer()
         {
             inventoryControllerData.inventoryUI.ClearInterface();

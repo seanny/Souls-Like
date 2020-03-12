@@ -21,12 +21,18 @@ namespace SoulsLike
 
         public bool initialObjectsLoaded = false;
 
+        /// <summary>
+        /// Return to the main menu.
+        /// </summary>
         public void ReturnToMainMenu()
         {
-            UnloadLevel();
             SceneManager.LoadScene("Scenes/MainMenu");
+            UnloadLevel();
         }
 
+        /// <summary>
+        /// Unload the current level
+        /// </summary>
         public void UnloadLevel()
         {
             if (currentScene.isLoaded)
@@ -37,6 +43,10 @@ namespace SoulsLike
             }
         }
 
+        /// <summary>
+        /// Load a new level, unloading the old level.
+        /// </summary>
+        /// <param name="levelName"></param>
         public void LoadLevel(string levelName)
         {
             if(Application.CanStreamedLevelBeLoaded($"Scenes/Levels/{levelName}") == true)
@@ -46,6 +56,12 @@ namespace SoulsLike
             }
         }
 
+        /// <summary>
+        /// Load a new level, unloading the old level whilst setting the players position and rotation.
+        /// </summary>
+        /// <param name="levelName"></param>
+        /// <param name="position"></param>
+        /// <param name="rotation"></param>
         public void LoadLevel(string levelName, Vector3 position, Quaternion rotation)
         {
             if (Application.CanStreamedLevelBeLoaded($"Scenes/Levels/{levelName}") == true)
@@ -55,6 +71,13 @@ namespace SoulsLike
             }
         }
 
+        /// <summary>
+        /// OnLoadScene, called when a new scene is loaded via the level loader.
+        /// </summary>
+        /// <param name="levelName"></param>
+        /// <param name="position"></param>
+        /// <param name="rotation"></param>
+        /// <returns></returns>
         private IEnumerator OnLoadScene(string levelName, Vector3 position, Quaternion rotation)
         {
             var parameters = new LoadSceneParameters(LoadSceneMode.Additive);

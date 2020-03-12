@@ -5,94 +5,164 @@ namespace SoulsLike
     [Serializable]
     public class ActorStats
     {
+        /// <summary>
+        /// Actor ID
+        /// </summary>
         public int actorID;
-        // Actor's public name
+        
+        /// <summary>
+        /// Actor Name
+        /// </summary>
         public string name;
 
-        // Actor level
+        /// <summary>
+        /// Actor Level
+        /// </summary>
         public int level;
 
+        /// <summary>
+        /// Actor Position
+        /// </summary>
         public Vec3 actorPosition;
+
+        /// <summary>
+        /// Actor Rotation
+        /// </summary>
         public Quat actorRotation;
 
-        // Actor species
+        /// <summary>
+        /// Actor Species (i.e. Race)
+        /// </summary>
         public ActorSpeciesType actorSpecies;
 
-        // Actor factions
+        /// <summary>
+        /// Actor Faction
+        /// </summary>
         public string actorFaction;
 
+        /// <summary>
+        /// Actor Fight Wait Time
+        /// </summary>
         public float actorFightWait;
 
-        // Actor isDead
+        /// <summary>
+        /// Actor Dead?
+        /// </summary>
         public bool isDead;
 
-        // Actor's current health
+        /// <summary>
+        /// Actor Health
+        /// </summary>
         public float currentHealth;
 
-        // Actor's maximum health
+        /// <summary>
+        /// Actor Maximum Health
+        /// </summary>
         public float maxHealth;
 
-        // Actor isSneaking
+        /// <summary>
+        /// Actor Sneaking?
+        /// </summary>
         public bool isSneaking;
 
-        // Actor fatigue
+        /// <summary>
+        /// Actor Fatigue?
+        /// </summary>
         public float fatigue;
 
-        // Actor's short blade skill, dictates attack strength of short blade (i.e. short sword, dagger, etc)
+        /// <summary>
+        /// Actor's short blade skill, dictates attack strength of short blade (i.e. short sword, dagger, etc)
+        /// </summary>
         public int shortBlade;
 
-        // Actor's long blade skill, dictates attack strength of long blade (i.e. sword, katana, etc)
+        /// <summary>
+        /// Actor's long blade skill, dictates attack strength of long blade (i.e. sword, katana, etc)
+        /// </summary>
         public int longBlade;
 
-        // Actor's spear skill, dictates attack strength of spear
+        /// <summary>
+        /// Actor's spear skill, dictates attack strength of spear
+        /// </summary>
         public int spear;
 
-        // Actor's spear skill, dictates attack strength of blunt weapons (Club & mace)
+        /// <summary>
+        /// Actor's spear skill, dictates attack strength of blunt weapons (Club & mace)
+        /// </summary>
         public int bluntWeapon;
 
-        // Actor's spear skill, dictates attack strength of axe's.
+        /// <summary>
+        /// Actor's spear skill, dictates attack strength of axe's.
+        /// </summary>
         public int axe;
 
-        // Actor's spear skill, dictates the attack of all weapons by a small amount and also determines max carry weight.
+        /// <summary>
+        /// Actor's spear skill, dictates the attack of all weapons by a small amount and also determines max carry weight.
+        /// </summary>
         public int strength;
 
-        // Actor's strength, dictates damage taken (higher = less damage)
+        /// <summary>
+        /// Actor's strength, dictates damage taken (higher = less damage)
+        /// </summary>
         public int endurance;
 
-        // Actor's intelligence, dictates magic duration
+        /// <summary>
+        /// Actor's intelligence, dictates magic duration
+        /// </summary>
         public int intelligence;
 
-        // Actor's sneak, dicates how well they can sneak w/o being detected.
+        /// <summary>
+        /// Actor's sneak, dicates how well they can sneak w/o being detected.
+        /// </summary>
         public int sneak;
 
-        // Actor's atletic skill, dictates how long they can sprint and how high they can jump
+        /// <summary>
+        /// Actor's atletic skill, dictates how long they can sprint and how high they can jump
+        /// </summary>
         public int athletic;
 
-        // Actor's light armour skill, dictates how well light armour reflects damage.
+        /// <summary>
+        /// Actor's light armour skill, dictates how well light armour reflects damage.
+        /// </summary>
         public int lightArmour;
 
-        // Actor's medium armour skill, dictates how well medium armour reflects damage.
+        /// <summary>
+        /// Actor's medium armour skill, dictates how well medium armour reflects damage.
+        /// </summary>
         public int mediumArmour;
 
-        // Actor's heavy armour skill, dictates how well heavy armour reflects damage.
+        /// <summary>
+        /// Actor's heavy armour skill, dictates how well heavy armour reflects damage.
+        /// </summary>
         public int heavyArmour;
 
-        // Actor's charisma skill, dictates how well pursuastion is in dialogue and also affects prices (higher charisma = slightly lower prices)
+        /// <summary>
+        /// Actor's charisma skill, dictates how well pursuastion is in dialogue and also affects prices (higher charisma = slightly lower prices)
+        /// </summary>
         public int charisma;
 
-        // Actor's lockpicking skill, dictates the size of the "sweet spot" in the lock picking minigame.
+        /// <summary>
+        /// Actor's lockpicking skill, dictates the size of the "sweet spot" in the lock picking minigame.
+        /// </summary>
         public int lockPicking;
 
-        // Actor's block skill, dictates how well armour blocks attacks (higher = less damage)
+        /// <summary>
+        /// Actor's block skill, dictates how well armour blocks attacks (higher = less damage)
+        /// </summary>
         public int block;
 
-        // Actor's alchemy skill, dictates how the strength of player made alchemy potions.
+        /// <summary>
+        /// Actor's alchemy skill, dictates how the strength of player made alchemy potions.
+        /// </summary>
         public int alchemy;
 
-        // Actor's enchant skill, dictates how the strength of player made enchantments potions.
+        /// <summary>
+        /// Actor's enchant skill, dictates how the strength of player made enchantments potions.
+        /// </summary>
         public int enchant;
 
-        // Actor's luck, affects everything in a small way.
+        /// <summary>
+        /// Actor's luck, affects everything in a small way.
+        /// </summary>
         public int luck;
     }
 }

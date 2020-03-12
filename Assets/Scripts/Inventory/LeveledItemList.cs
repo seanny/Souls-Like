@@ -10,7 +10,14 @@ namespace SoulsLike
     [CreateAssetMenu(fileName = "Leveled List", menuName = "Leveled List")]
     public class LeveledItemList : ScriptableObject
     {
+        /// <summary>
+        /// Minumum Level
+        /// </summary>
         public int MinLevel;
+
+        /// <summary>
+        /// Inventory Items
+        /// </summary>
         public List<Item> inventoryItems;
     }
 }

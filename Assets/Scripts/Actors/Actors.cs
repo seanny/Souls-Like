@@ -47,6 +47,11 @@ namespace SoulsLike
             }
         }
 
+        /// <summary>
+        /// Set the actor stats for a single actor.
+        /// </summary>
+        /// <param name="actorStats"></param>
+        /// <param name="_actor"></param>
         private void SetActorStat(ActorStats[] actorStats, Actor _actor)
         {
             foreach (var _actorStat in actorStats)
@@ -59,6 +64,10 @@ namespace SoulsLike
             }
         }
 
+        /// <summary>
+        /// Update processing range from the settings file.
+        /// Note: Getting processing range from file is not yet implemented.
+        /// </summary>
         public void UpdateProcessingRange()
         {
             // TODO: Get processing range from settings file.
@@ -67,11 +76,23 @@ namespace SoulsLike
             ActorProcessingRange = actorProcessingRange;
         }
 
+        /// <summary>
+        /// Is Actor Detected?
+        /// </summary>
+        /// <param name="actor"></param>
+        /// <param name="observer"></param>
+        /// <returns></returns>
         public bool IsActorDetected(Actor actor, Actor observer)
         {
             return observer.CanDetect(actor);
         }
 
+        /// <summary>
+        /// Add Actor to Scene
+        /// </summary>
+        /// <param name="position"></param>
+        /// <param name="actorStats"></param>
+        /// <returns></returns>
         public Actor AddActor(Vector3 position, ActorStats actorStats)
         {
             if(actorStats.name.Length < 1)
@@ -89,6 +110,10 @@ namespace SoulsLike
             return null;
         }
 
+        /// <summary>
+        /// Get all nearby actors.
+        /// </summary>
+        /// <returns></returns>
         public List<Actor> GetAllNearbyActors()
         {
             List<Actor> _actors = new List<Actor>();
@@ -102,12 +127,22 @@ namespace SoulsLike
             return _actors;
         }
 
+        /// <summary>
+        /// Remove Actor from scene
+        /// </summary>
+        /// <param name="actor"></param>
         public void RemoveActor(Actor actor)
         {
             actors.Remove(actor);
             Destroy(actor.gameObject);
         }
 
+        /// <summary>
+        /// Is Actor in faction?
+        /// </summary>
+        /// <param name="actor"></param>
+        /// <param name="faction"></param>
+        /// <returns></returns>
         public bool IsInFaction(Actor actor, Faction faction)
         {
             if(actor.actorStats.actorFaction == faction.name)
@@ -117,6 +152,12 @@ namespace SoulsLike
             return false;
         }
 
+        /// <summary>
+        /// Is Actor in faction?
+        /// </summary>
+        /// <param name="actor"></param>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public bool IsInFaction(Actor actor, string name)
         {
             if (actor.actorStats.actorFaction == name)
@@ -126,6 +167,12 @@ namespace SoulsLike
             return false;
         }
 
+        /// <summary>
+        /// Is target in actor enemy faction?
+        /// </summary>
+        /// <param name="actor"></param>
+        /// <param name="target"></param>
+        /// <returns></returns>
         public bool IsInEnemyFaction(Actor actor, Actor target)
         {
             Faction faction = Faction.GetFactionByName(actor.actorStats.actorFaction);
@@ -144,6 +191,12 @@ namespace SoulsLike
             return false;
         }
 
+        /// <summary>
+        /// Find an enemy within the specified range.
+        /// </summary>
+        /// <param name="actor"></param>
+        /// <param name="range"></param>
+        /// <returns></returns>
         public Actor FindTarget(NonPlayerActor actor, float range = 25f)
         {
             if (actor.aggressionLevel >= NonPlayerActor.AggressionLevel.Agressive)
@@ -170,6 +223,12 @@ namespace SoulsLike
             return null;
         }
 
+        /// <summary>
+        /// Find random movement point
+        /// </summary>
+        /// <param name="actor"></param>
+        /// <param name="range"></param>
+        /// <returns></returns>
         public MovementPoint FindRandomMovementTarget(NonPlayerActor actor, float range = 25f)
         {
             MovementPoint[] movementPoints = FindObjectsOfType<MovementPoint>();
@@ -189,31 +248,64 @@ namespace SoulsLike
             return validMovementPoints[rand];
         }
 
+        /// <summary>
+        /// Resurrect Actor
+        /// Note: Not implemented.
+        /// </summary>
+        /// <param name="actor"></param>
         public void Resurrect(Actor actor)
         {
-            
+            throw new System.NotImplementedException();
         }
 
+        /// <summary>
+        /// Is Attacking?
+        /// Note: Not implemented.
+        /// </summary>
+        /// <param name="actor"></param>
+        /// <returns></returns>
         public bool IsAttacking(Actor actor)
         {
+            throw new System.NotImplementedException();
             return false;
         }
 
+        /// <summary>
+        /// Is Running?
+        /// Note: Not implemented.
+        /// </summary>
+        /// <param name="actor"></param>
+        /// <returns></returns>
         public bool IsRunning(Actor actor)
         {
+            throw new System.NotImplementedException();
             return false;
         }
 
+        /// <summary>
+        /// Is Sneaking?
+        /// Note: Not implemented.
+        /// </summary>
+        /// <param name="actor"></param>
+        /// <returns></returns>
         public bool IsSneaking(Actor actor)
         {
+            throw new System.NotImplementedException();
             return false;
         }
 
+        /// <summary>
+        /// Clear all actors.
+        /// Note: Not implemented.
+        /// </summary>
         public void Clear()
         {
-
+            throw new System.NotImplementedException();
         }
 
+        /// <summary>
+        /// Clear all dead actors.
+        /// </summary>
         private void KillDeadActors()
         {
             foreach(Actor actor in actors)
@@ -234,6 +326,11 @@ namespace SoulsLike
             }
         }
 
+        /// <summary>
+        /// Is Actor inside processing range
+        /// </summary>
+        /// <param name="actor"></param>
+        /// <returns></returns>
         public bool IsInProcessingRange(Actor actor)
         {
             if(actor == PlayerActor.instance)

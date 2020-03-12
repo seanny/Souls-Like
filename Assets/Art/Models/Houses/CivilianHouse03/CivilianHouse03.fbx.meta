@@ -3,7 +3,32 @@ guid: 50d50a9937ad41f45964887e7acf875a
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_0.001
+    second: {fileID: 2100000, guid: a5814bfd2ee1e4a45adb8569dfd734b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall_0.001
+    second: {fileID: 2100000, guid: 034a73fb854588a499aca93800bccfa8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wall_1.001
+    second: {fileID: 2100000, guid: 46fdb09fd47408e40a090d6c172c640a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Window_0.001
+    second: {fileID: 2100000, guid: 2ad141c6205dc2549bda0e441c8fc8a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood_0.001
+    second: {fileID: 2100000, guid: f01583bc54371cd42a1e63e0399341c1, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -33,7 +58,10 @@ ModelImporter:
     clipAnimations: []
     isReadable: 0
   meshes:
-    lODScreenPercentages: []
+    lODScreenPercentages:
+    - 0.25
+    - 0.125
+    - 0.01
     globalScale: 1
     meshCompression: 0
     addColliders: 0

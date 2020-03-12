@@ -36,6 +36,10 @@ namespace SoulsLike
             completedQuests.Clear();
         }
 
+        /// <summary>
+        /// Set Current Quest
+        /// </summary>
+        /// <param name="questID"></param>
         public void SetCurrentQuest(string questID)
         {
             foreach(QuestItem questItem in quests)
@@ -48,6 +52,10 @@ namespace SoulsLike
             }
         }
 
+        /// <summary>
+        /// Add a quest to the quest journal
+        /// </summary>
+        /// <param name="questID"></param>
         public void AddQuest(string questID)
         {
             Quest quest = Resources.Load<Quest>($"Quests/{questID}");
@@ -59,6 +67,11 @@ namespace SoulsLike
             QuestView.instance.AddQuestToJournal(questItem.questData.Id, quest.Name);
         }
 
+        /// <summary>
+        /// Set the stage for a specific quest.
+        /// </summary>
+        /// <param name="questID"></param>
+        /// <param name="stage"></param>
         public void SetQuestStage(string questID, int stage)
         {
             foreach (QuestItem questItem in quests)

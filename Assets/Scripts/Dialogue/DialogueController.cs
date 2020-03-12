@@ -26,6 +26,11 @@ namespace SoulsLike
         public Actor speakingToActor;
         public List<DialogueChoice> dialogueChoices;
 
+        /// <summary>
+        /// Show Dialogue
+        /// </summary>
+        /// <param name="dialogueID"></param>
+        /// <param name="actor"></param>
         public static void ShowDialogue(string dialogueID, Actor actor)
         {
             Dialogue dialogue = Resources.Load<Dialogue>($"Dialogue/{dialogueID}");
@@ -40,6 +45,9 @@ namespace SoulsLike
             instance.dialogueUi.SetActive(true);
         }
 
+        /// <summary>
+        /// Hide Dialogue Menu
+        /// </summary>
         public static void HideDialogue()
         {
             instance.dialogueUi.SetActive(false);
@@ -64,6 +72,10 @@ namespace SoulsLike
             }
         }
 
+        /// <summary>
+        /// On Dialogue Choice
+        /// </summary>
+        /// <param name="dialogueChoice"></param>
         public void OnDialogueChoice(int dialogueChoice)
         {
             GameplayScript[] dialogueScripts = FindObjectsOfType<GameplayScript>();

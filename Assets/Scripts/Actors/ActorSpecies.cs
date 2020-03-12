@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace SoulsLike
 {
+    /// <summary>
+    /// Actor Species Type
+    /// </summary>
     public enum ActorSpeciesType
     {
         HumanMale = 0,

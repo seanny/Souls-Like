@@ -27,6 +27,10 @@ namespace SoulsLike
         [HideInInspector] public float delta;
         public LayerMask ignoreLayers;
 
+        /// <summary>
+        /// Initialise StateManager
+        /// </summary>
+        /// <param name="isPlayer"></param>
         public void Init(bool isPlayer = false)
         {
             SetupAnimator();
@@ -41,6 +45,9 @@ namespace SoulsLike
             animator.SetBool("IsGrounded", true);
         }
 
+        /// <summary>
+        /// Setup the animator
+        /// </summary>
         private void SetupAnimator()
         {
             if (activeObject == null)
@@ -59,6 +66,10 @@ namespace SoulsLike
             animator.applyRootMotion = false;
         }
 
+        /// <summary>
+        /// Fixed Tick
+        /// </summary>
+        /// <param name="d"></param>
         public void FixedTick(float d)
         {
             delta = d;
@@ -100,6 +111,10 @@ namespace SoulsLike
             HandleMovementAnimations();
         }
 
+        /// <summary>
+        /// Tick
+        /// </summary>
+        /// <param name="d"></param>
         public void Tick(float d)
         {
             if (SceneManager.GetSceneByName("MainMenu").isLoaded)
@@ -122,6 +137,9 @@ namespace SoulsLike
             }
         }
 
+        /// <summary>
+        /// Handle Movement Animations
+        /// </summary>
         private void HandleMovementAnimations()
         {
             float animationSpeed = moveAmount;
@@ -132,6 +150,10 @@ namespace SoulsLike
             animator.SetFloat("Vertical", animationSpeed, 0.2f, delta);
         }
 
+        /// <summary>
+        /// Check if the actor is on the ground.
+        /// </summary>
+        /// <returns></returns>
         public bool IsGrounded()
         {
             bool r = false;

@@ -9,7 +9,6 @@ namespace SoulsLike
         public AudioSource audioSource;
         public AudioClip[] combatMusic;
         public AudioClip[] relaxMusic;
-        public int musicType;
 
         private void Start()
         {
@@ -19,28 +18,26 @@ namespace SoulsLike
             relaxMusic = Resources.LoadAll<AudioClip>("Audio/Relax");
         }
 
+        /// <summary>
+        /// Play Combat Music (found in Resources/Audio/Combat)
+        /// </summary>
         public void PlayCombatMusic()
         {
-            if(musicType != 1)
-            {
-                musicType = 1;
-                int rand = Random.Range(0, combatMusic.Length);
-                audioSource.clip = combatMusic[rand];
-                audioSource.Stop();
-                audioSource.Play();
-            }
+            int rand = Random.Range(0, combatMusic.Length);
+            audioSource.clip = combatMusic[rand];
+            audioSource.Stop();
+            audioSource.Play();
         }
 
+        /// <summary>
+        /// Play Relaxing Music (Found in Resources/Audio/Relax)
+        /// </summary>
         public void PlayRelaxMusic()
         {
-            if(musicType != 2)
-            {
-                musicType = 2;
-                int rand = Random.Range(0, relaxMusic.Length);
-                audioSource.clip = relaxMusic[rand];
-                audioSource.Stop();
-                audioSource.Play();
-            }
+            int rand = Random.Range(0, relaxMusic.Length);
+            audioSource.clip = relaxMusic[rand];
+            audioSource.Stop();
+            audioSource.Play();
         }
     }
 }

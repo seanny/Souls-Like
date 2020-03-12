@@ -12,8 +12,17 @@ namespace SoulsLike
             SavedGlobals = new SavedGlobals();
         }
 
+        /// <summary>
+        /// Set Globals
+        /// </summary>
+        /// <param name="savedGlobals"></param>
         public static void SetGlobals(SavedGlobals savedGlobals) => SavedGlobals = savedGlobals;
 
+        /// <summary>
+        /// Get Global Setting
+        /// </summary>
+        /// <param name="globalID"></param>
+        /// <returns></returns>
         public static GlobalSetting GetGlobalSetting(string globalID)
         {
             GlobalSetting globalSetting = Resources.Load<GlobalSetting>($"{GlobalConsts.GLOBAL_SETTINGS_FOLDER}/{globalID}");
@@ -25,6 +34,11 @@ namespace SoulsLike
             return globalSetting;
         }
 
+        /// <summary>
+        /// Set Global Setting
+        /// </summary>
+        /// <param name="globalID"></param>
+        /// <param name="value"></param>
         public static void SetGlobal(string globalID, int value)
         {
             GlobalSetting globalSetting = GetGlobalSetting(globalID);
@@ -50,6 +64,11 @@ namespace SoulsLike
             }
         }
 
+        /// <summary>
+        /// Get Global Setting
+        /// </summary>
+        /// <param name="globalID"></param>
+        /// <returns></returns>
         public static int GetGlobal(string globalID)
         {
             if (SavedGlobals.globals.ContainsKey(globalID))

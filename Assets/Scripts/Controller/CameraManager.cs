@@ -40,6 +40,10 @@ namespace SoulsLike
             pivot = cameraTransform.parent;
         }
 
+        /// <summary>
+        /// Tick
+        /// </summary>
+        /// <param name="d"></param>
         public void Tick(float d)
         {
             if(!IsInLevel())
