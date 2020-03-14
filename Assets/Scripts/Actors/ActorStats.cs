@@ -61,6 +61,36 @@ namespace SoulsLike
         public float maxHealth;
 
         /// <summary>
+        /// Actor Current Magic
+        /// </summary>
+        public float currentMagic;
+
+        /// <summary>
+        /// Actor Maximum Magic
+        /// </summary>
+        public float maxMagic;
+
+        /// <summary>
+        /// Actor Current Stamina
+        /// </summary>
+        public float currentStamina;
+
+        /// <summary>
+        /// Actor Maximum Stamina
+        /// </summary>
+        public float maxStamina;
+
+        /// <summary>
+        /// Actor Current Stamina
+        /// </summary>
+        public float currentToxins;
+
+        /// <summary>
+        /// Actor Maximum Stamina
+        /// </summary>
+        public float maxToxins;
+
+        /// <summary>
         /// Actor Sneaking?
         /// </summary>
         public bool isSneaking;
