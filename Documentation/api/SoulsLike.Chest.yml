@@ -1,0 +1,285 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.Chest
+  commentId: T:SoulsLike.Chest
+  id: Chest
+  parent: SoulsLike
+  children:
+  - SoulsLike.Chest.OnInteract
+  langs:
+  - csharp
+  - vb
+  name: Chest
+  nameWithType: Chest
+  fullName: SoulsLike.Chest
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/Chest.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Chest
+    path: ../Assets/Scripts/Inventory/Chest.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: 'public class Chest : InteractableObject'
+    content.vb: >-
+      Public Class Chest
+          Inherits InteractableObject
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - SoulsLike.Entity
+  - SoulsLike.InteractableObject
+  inheritedMembers:
+  - SoulsLike.InteractableObject.interactableData
+  - SoulsLike.Entity.entityData
+  - SoulsLike.Entity.Start
+  - SoulsLike.Entity.FindNearestEntity(SoulsLike.Entity[],System.Single)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SoulsLike.Chest.OnInteract
+  commentId: M:SoulsLike.Chest.OnInteract
+  id: OnInteract
+  parent: SoulsLike.Chest
+  langs:
+  - csharp
+  - vb
+  name: OnInteract()
+  nameWithType: Chest.OnInteract()
+  fullName: SoulsLike.Chest.OnInteract()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/Chest.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: OnInteract
+    path: ../Assets/Scripts/Inventory/Chest.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nOn Interact\n"
+  example: []
+  syntax:
+    content: public override void OnInteract()
+    content.vb: Public Overrides Sub OnInteract
+  overridden: SoulsLike.InteractableObject.OnInteract
+  overload: SoulsLike.Chest.OnInteract*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: SoulsLike.Entity
+  commentId: T:SoulsLike.Entity
+  parent: SoulsLike
+  name: Entity
+  nameWithType: Entity
+  fullName: SoulsLike.Entity
+- uid: SoulsLike.InteractableObject
+  commentId: T:SoulsLike.InteractableObject
+  parent: SoulsLike
+  name: InteractableObject
+  nameWithType: InteractableObject
+  fullName: SoulsLike.InteractableObject
+- uid: SoulsLike.InteractableObject.interactableData
+  commentId: F:SoulsLike.InteractableObject.interactableData
+  parent: SoulsLike.InteractableObject
+  name: interactableData
+  nameWithType: InteractableObject.interactableData
+  fullName: SoulsLike.InteractableObject.interactableData
+- uid: SoulsLike.Entity.entityData
+  commentId: F:SoulsLike.Entity.entityData
+  parent: SoulsLike.Entity
+  name: entityData
+  nameWithType: Entity.entityData
+  fullName: SoulsLike.Entity.entityData
+- uid: SoulsLike.Entity.Start
+  commentId: M:SoulsLike.Entity.Start
+  parent: SoulsLike.Entity
+  name: Start()
+  nameWithType: Entity.Start()
+  fullName: SoulsLike.Entity.Start()
+  spec.csharp:
+  - uid: SoulsLike.Entity.Start
+    name: Start
+    nameWithType: Entity.Start
+    fullName: SoulsLike.Entity.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: SoulsLike.Entity.Start
+    name: Start
+    nameWithType: Entity.Start
+    fullName: SoulsLike.Entity.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SoulsLike.Entity.FindNearestEntity(SoulsLike.Entity[],System.Single)
+  commentId: M:SoulsLike.Entity.FindNearestEntity(SoulsLike.Entity[],System.Single)
+  parent: SoulsLike.Entity
+  isExternal: true
+  name: FindNearestEntity(Entity[], Single)
+  nameWithType: Entity.FindNearestEntity(Entity[], Single)
+  fullName: SoulsLike.Entity.FindNearestEntity(SoulsLike.Entity[], System.Single)
+  nameWithType.vb: Entity.FindNearestEntity(Entity(), Single)
+  fullName.vb: SoulsLike.Entity.FindNearestEntity(SoulsLike.Entity(), System.Single)
+  name.vb: FindNearestEntity(Entity(), Single)
+  spec.csharp:
+  - uid: SoulsLike.Entity.FindNearestEntity(SoulsLike.Entity[],System.Single)
+    name: FindNearestEntity
+    nameWithType: Entity.FindNearestEntity
+    fullName: SoulsLike.Entity.FindNearestEntity
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: SoulsLike.Entity
+    name: Entity
+    nameWithType: Entity
+    fullName: SoulsLike.Entity
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: SoulsLike.Entity.FindNearestEntity(SoulsLike.Entity[],System.Single)
+    name: FindNearestEntity
+    nameWithType: Entity.FindNearestEntity
+    fullName: SoulsLike.Entity.FindNearestEntity
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: SoulsLike.Entity
+    name: Entity
+    nameWithType: Entity
+    fullName: SoulsLike.Entity
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SoulsLike.InteractableObject.OnInteract
+  commentId: M:SoulsLike.InteractableObject.OnInteract
+  parent: SoulsLike.InteractableObject
+  name: OnInteract()
+  nameWithType: InteractableObject.OnInteract()
+  fullName: SoulsLike.InteractableObject.OnInteract()
+  spec.csharp:
+  - uid: SoulsLike.InteractableObject.OnInteract
+    name: OnInteract
+    nameWithType: InteractableObject.OnInteract
+    fullName: SoulsLike.InteractableObject.OnInteract
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: SoulsLike.InteractableObject.OnInteract
+    name: OnInteract
+    nameWithType: InteractableObject.OnInteract
+    fullName: SoulsLike.InteractableObject.OnInteract
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SoulsLike.Chest.OnInteract*
+  commentId: Overload:SoulsLike.Chest.OnInteract
+  name: OnInteract
+  nameWithType: Chest.OnInteract
+  fullName: SoulsLike.Chest.OnInteract

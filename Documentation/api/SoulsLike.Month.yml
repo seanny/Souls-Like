@@ -1,0 +1,607 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.Month
+  commentId: T:SoulsLike.Month
+  id: Month
+  parent: SoulsLike
+  children:
+  - SoulsLike.Month.Any
+  - SoulsLike.Month.April
+  - SoulsLike.Month.August
+  - SoulsLike.Month.Autumn
+  - SoulsLike.Month.December
+  - SoulsLike.Month.Feburary
+  - SoulsLike.Month.Janurary
+  - SoulsLike.Month.July
+  - SoulsLike.Month.June
+  - SoulsLike.Month.March
+  - SoulsLike.Month.May
+  - SoulsLike.Month.November
+  - SoulsLike.Month.October
+  - SoulsLike.Month.September
+  - SoulsLike.Month.Spring
+  - SoulsLike.Month.Summer
+  - SoulsLike.Month.Winter
+  langs:
+  - csharp
+  - vb
+  name: Month
+  nameWithType: Month
+  fullName: SoulsLike.Month
+  type: Enum
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Month
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public enum Month
+    content.vb: Public Enum Month
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: SoulsLike.Month.Any
+  commentId: F:SoulsLike.Month.Any
+  id: Any
+  parent: SoulsLike.Month
+  langs:
+  - csharp
+  - vb
+  name: Any
+  nameWithType: Month.Any
+  fullName: SoulsLike.Month.Any
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Any
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 20
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Any = 0
+    return:
+      type: SoulsLike.Month
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.Month.Janurary
+  commentId: F:SoulsLike.Month.Janurary
+  id: Janurary
+  parent: SoulsLike.Month
+  langs:
+  - csharp
+  - vb
+  name: Janurary
+  nameWithType: Month.Janurary
+  fullName: SoulsLike.Month.Janurary
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Janurary
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 21
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Janurary = 1
+    return:
+      type: SoulsLike.Month
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.Month.Feburary
+  commentId: F:SoulsLike.Month.Feburary
+  id: Feburary
+  parent: SoulsLike.Month
+  langs:
+  - csharp
+  - vb
+  name: Feburary
+  nameWithType: Month.Feburary
+  fullName: SoulsLike.Month.Feburary
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Feburary
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 22
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Feburary = 2
+    return:
+      type: SoulsLike.Month
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.Month.March
+  commentId: F:SoulsLike.Month.March
+  id: March
+  parent: SoulsLike.Month
+  langs:
+  - csharp
+  - vb
+  name: March
+  nameWithType: Month.March
+  fullName: SoulsLike.Month.March
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: March
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: March = 3
+    return:
+      type: SoulsLike.Month
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.Month.April
+  commentId: F:SoulsLike.Month.April
+  id: April
+  parent: SoulsLike.Month
+  langs:
+  - csharp
+  - vb
+  name: April
+  nameWithType: Month.April
+  fullName: SoulsLike.Month.April
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: April
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: April = 4
+    return:
+      type: SoulsLike.Month
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.Month.May
+  commentId: F:SoulsLike.Month.May
+  id: May
+  parent: SoulsLike.Month
+  langs:
+  - csharp
+  - vb
+  name: May
+  nameWithType: Month.May
+  fullName: SoulsLike.Month.May
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: May
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 25
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: May = 5
+    return:
+      type: SoulsLike.Month
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.Month.June
+  commentId: F:SoulsLike.Month.June
+  id: June
+  parent: SoulsLike.Month
+  langs:
+  - csharp
+  - vb
+  name: June
+  nameWithType: Month.June
+  fullName: SoulsLike.Month.June
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: June
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 26
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: June = 6
+    return:
+      type: SoulsLike.Month
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.Month.July
+  commentId: F:SoulsLike.Month.July
+  id: July
+  parent: SoulsLike.Month
+  langs:
+  - csharp
+  - vb
+  name: July
+  nameWithType: Month.July
+  fullName: SoulsLike.Month.July
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: July
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 27
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: July = 7
+    return:
+      type: SoulsLike.Month
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.Month.August
+  commentId: F:SoulsLike.Month.August
+  id: August
+  parent: SoulsLike.Month
+  langs:
+  - csharp
+  - vb
+  name: August
+  nameWithType: Month.August
+  fullName: SoulsLike.Month.August
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: August
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 28
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: August = 8
+    return:
+      type: SoulsLike.Month
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.Month.September
+  commentId: F:SoulsLike.Month.September
+  id: September
+  parent: SoulsLike.Month
+  langs:
+  - csharp
+  - vb
+  name: September
+  nameWithType: Month.September
+  fullName: SoulsLike.Month.September
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: September
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 29
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: September = 9
+    return:
+      type: SoulsLike.Month
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.Month.October
+  commentId: F:SoulsLike.Month.October
+  id: October
+  parent: SoulsLike.Month
+  langs:
+  - csharp
+  - vb
+  name: October
+  nameWithType: Month.October
+  fullName: SoulsLike.Month.October
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: October
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 30
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: October = 10
+    return:
+      type: SoulsLike.Month
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.Month.November
+  commentId: F:SoulsLike.Month.November
+  id: November
+  parent: SoulsLike.Month
+  langs:
+  - csharp
+  - vb
+  name: November
+  nameWithType: Month.November
+  fullName: SoulsLike.Month.November
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: November
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 31
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: November = 11
+    return:
+      type: SoulsLike.Month
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.Month.December
+  commentId: F:SoulsLike.Month.December
+  id: December
+  parent: SoulsLike.Month
+  langs:
+  - csharp
+  - vb
+  name: December
+  nameWithType: Month.December
+  fullName: SoulsLike.Month.December
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: December
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 32
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: December = 12
+    return:
+      type: SoulsLike.Month
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.Month.Winter
+  commentId: F:SoulsLike.Month.Winter
+  id: Winter
+  parent: SoulsLike.Month
+  langs:
+  - csharp
+  - vb
+  name: Winter
+  nameWithType: Month.Winter
+  fullName: SoulsLike.Month.Winter
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Winter
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 33
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Winter = 13
+    return:
+      type: SoulsLike.Month
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.Month.Spring
+  commentId: F:SoulsLike.Month.Spring
+  id: Spring
+  parent: SoulsLike.Month
+  langs:
+  - csharp
+  - vb
+  name: Spring
+  nameWithType: Month.Spring
+  fullName: SoulsLike.Month.Spring
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Spring
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 34
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Spring = 14
+    return:
+      type: SoulsLike.Month
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.Month.Summer
+  commentId: F:SoulsLike.Month.Summer
+  id: Summer
+  parent: SoulsLike.Month
+  langs:
+  - csharp
+  - vb
+  name: Summer
+  nameWithType: Month.Summer
+  fullName: SoulsLike.Month.Summer
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Summer
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 35
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Summer = 15
+    return:
+      type: SoulsLike.Month
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.Month.Autumn
+  commentId: F:SoulsLike.Month.Autumn
+  id: Autumn
+  parent: SoulsLike.Month
+  langs:
+  - csharp
+  - vb
+  name: Autumn
+  nameWithType: Month.Autumn
+  fullName: SoulsLike.Month.Autumn
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Autumn
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 36
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Autumn = 16
+    return:
+      type: SoulsLike.Month
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: SoulsLike.Month
+  commentId: T:SoulsLike.Month
+  parent: SoulsLike
+  name: Month
+  nameWithType: Month
+  fullName: SoulsLike.Month

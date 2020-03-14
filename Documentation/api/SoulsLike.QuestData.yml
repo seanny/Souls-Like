@@ -1,0 +1,214 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.QuestData
+  commentId: T:SoulsLike.QuestData
+  id: QuestData
+  parent: SoulsLike
+  children:
+  - SoulsLike.QuestData.completed
+  - SoulsLike.QuestData.failed
+  - SoulsLike.QuestData.Id
+  - SoulsLike.QuestData.stage
+  langs:
+  - csharp
+  - vb
+  name: QuestData
+  nameWithType: QuestData
+  fullName: SoulsLike.QuestData
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Quests/QuestData.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: QuestData
+    path: ../Assets/Scripts/Quests/QuestData.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class QuestData
+    content.vb: >-
+      <Serializable>
+
+      Public Class QuestData
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SoulsLike.QuestData.Id
+  commentId: F:SoulsLike.QuestData.Id
+  id: Id
+  parent: SoulsLike.QuestData
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: QuestData.Id
+  fullName: SoulsLike.QuestData.Id
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Quests/QuestData.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Id
+    path: ../Assets/Scripts/Quests/QuestData.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public string Id
+    return:
+      type: System.String
+    content.vb: Public Id As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.QuestData.stage
+  commentId: F:SoulsLike.QuestData.stage
+  id: stage
+  parent: SoulsLike.QuestData
+  langs:
+  - csharp
+  - vb
+  name: stage
+  nameWithType: QuestData.stage
+  fullName: SoulsLike.QuestData.stage
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Quests/QuestData.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: stage
+    path: ../Assets/Scripts/Quests/QuestData.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public int stage
+    return:
+      type: System.Int32
+    content.vb: Public stage As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.QuestData.completed
+  commentId: F:SoulsLike.QuestData.completed
+  id: completed
+  parent: SoulsLike.QuestData
+  langs:
+  - csharp
+  - vb
+  name: completed
+  nameWithType: QuestData.completed
+  fullName: SoulsLike.QuestData.completed
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Quests/QuestData.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: completed
+    path: ../Assets/Scripts/Quests/QuestData.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public bool completed
+    return:
+      type: System.Boolean
+    content.vb: Public completed As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.QuestData.failed
+  commentId: F:SoulsLike.QuestData.failed
+  id: failed
+  parent: SoulsLike.QuestData
+  langs:
+  - csharp
+  - vb
+  name: failed
+  nameWithType: QuestData.failed
+  fullName: SoulsLike.QuestData.failed
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Quests/QuestData.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: failed
+    path: ../Assets/Scripts/Quests/QuestData.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public bool failed
+    return:
+      type: System.Boolean
+    content.vb: Public failed As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

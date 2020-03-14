@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.ScriptMethod
+  commentId: T:SoulsLike.ScriptMethod
+  id: ScriptMethod
+  parent: SoulsLike
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ScriptMethod
+  nameWithType: ScriptMethod
+  fullName: SoulsLike.ScriptMethod
+  type: Enum
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiCondition.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: ScriptMethod
+    path: ../Assets/Scripts/Mechanics/AI/AiCondition.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public enum ScriptMethod
+    content.vb: Public Enum ScriptMethod
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike

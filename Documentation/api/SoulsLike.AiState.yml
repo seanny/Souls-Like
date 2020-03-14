@@ -1,0 +1,425 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.AiState
+  commentId: T:SoulsLike.AiState
+  id: AiState
+  parent: SoulsLike
+  children:
+  - SoulsLike.AiState.actor
+  - SoulsLike.AiState.aiConditions
+  - SoulsLike.AiState.aiSchedule
+  - SoulsLike.AiState.Execute
+  - SoulsLike.AiState.MIN_DISTANCE
+  - SoulsLike.AiState.Start
+  langs:
+  - csharp
+  - vb
+  name: AiState
+  nameWithType: AiState
+  fullName: SoulsLike.AiState
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiState.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: AiState
+    path: ../Assets/Scripts/Mechanics/AI/AiState.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: 'public abstract class AiState : MonoBehaviour'
+    content.vb: >-
+      Public MustInherit Class AiState
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  derivedClasses:
+  - SoulsLike.AiWander
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: SoulsLike.AiState.MIN_DISTANCE
+  commentId: F:SoulsLike.AiState.MIN_DISTANCE
+  id: MIN_DISTANCE
+  parent: SoulsLike.AiState
+  langs:
+  - csharp
+  - vb
+  name: MIN_DISTANCE
+  nameWithType: AiState.MIN_DISTANCE
+  fullName: SoulsLike.AiState.MIN_DISTANCE
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiState.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: MIN_DISTANCE
+    path: ../Assets/Scripts/Mechanics/AI/AiState.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public static readonly float MIN_DISTANCE
+    return:
+      type: System.Single
+    content.vb: Public Shared ReadOnly MIN_DISTANCE As Single
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: SoulsLike.AiState.aiConditions
+  commentId: F:SoulsLike.AiState.aiConditions
+  id: aiConditions
+  parent: SoulsLike.AiState
+  langs:
+  - csharp
+  - vb
+  name: aiConditions
+  nameWithType: AiState.aiConditions
+  fullName: SoulsLike.AiState.aiConditions
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiState.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: aiConditions
+    path: ../Assets/Scripts/Mechanics/AI/AiState.cs
+    startLine: 21
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public List<AiCondition> aiConditions
+    return:
+      type: System.Collections.Generic.List{SoulsLike.AiCondition}
+    content.vb: Public aiConditions As List(Of AiCondition)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.AiState.aiSchedule
+  commentId: F:SoulsLike.AiState.aiSchedule
+  id: aiSchedule
+  parent: SoulsLike.AiState
+  langs:
+  - csharp
+  - vb
+  name: aiSchedule
+  nameWithType: AiState.aiSchedule
+  fullName: SoulsLike.AiState.aiSchedule
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiState.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: aiSchedule
+    path: ../Assets/Scripts/Mechanics/AI/AiState.cs
+    startLine: 22
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public AiSchedule aiSchedule
+    return:
+      type: SoulsLike.AiSchedule
+    content.vb: Public aiSchedule As AiSchedule
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.AiState.actor
+  commentId: F:SoulsLike.AiState.actor
+  id: actor
+  parent: SoulsLike.AiState
+  langs:
+  - csharp
+  - vb
+  name: actor
+  nameWithType: AiState.actor
+  fullName: SoulsLike.AiState.actor
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiState.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: actor
+    path: ../Assets/Scripts/Mechanics/AI/AiState.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [SerializeField]
+
+      protected NonPlayerActor actor
+    return:
+      type: SoulsLike.NonPlayerActor
+    content.vb: >-
+      <SerializeField>
+
+      Protected actor As NonPlayerActor
+  attributes:
+  - type: UnityEngine.SerializeField
+    ctor: UnityEngine.SerializeField.#ctor
+    arguments: []
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: SoulsLike.AiState.Start
+  commentId: M:SoulsLike.AiState.Start
+  id: Start
+  parent: SoulsLike.AiState
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: AiState.Start()
+  fullName: SoulsLike.AiState.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiState.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Start
+    path: ../Assets/Scripts/Mechanics/AI/AiState.cs
+    startLine: 25
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: protected virtual void Start()
+    content.vb: Protected Overridable Sub Start
+  overload: SoulsLike.AiState.Start*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+- uid: SoulsLike.AiState.Execute
+  commentId: M:SoulsLike.AiState.Execute
+  id: Execute
+  parent: SoulsLike.AiState
+  langs:
+  - csharp
+  - vb
+  name: Execute()
+  nameWithType: AiState.Execute()
+  fullName: SoulsLike.AiState.Execute()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiState.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Execute
+    path: ../Assets/Scripts/Mechanics/AI/AiState.cs
+    startLine: 34
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nExecute Ai State\n"
+  example: []
+  syntax:
+    content: public virtual void Execute()
+    content.vb: Public Overridable Sub Execute
+  overload: SoulsLike.AiState.Execute*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: System.Collections.Generic.List{SoulsLike.AiCondition}
+  commentId: T:System.Collections.Generic.List{SoulsLike.AiCondition}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<AiCondition>
+  nameWithType: List<AiCondition>
+  fullName: System.Collections.Generic.List<SoulsLike.AiCondition>
+  nameWithType.vb: List(Of AiCondition)
+  fullName.vb: System.Collections.Generic.List(Of SoulsLike.AiCondition)
+  name.vb: List(Of AiCondition)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: SoulsLike.AiCondition
+    name: AiCondition
+    nameWithType: AiCondition
+    fullName: SoulsLike.AiCondition
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: SoulsLike.AiCondition
+    name: AiCondition
+    nameWithType: AiCondition
+    fullName: SoulsLike.AiCondition
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: SoulsLike.AiSchedule
+  commentId: T:SoulsLike.AiSchedule
+  parent: SoulsLike
+  name: AiSchedule
+  nameWithType: AiSchedule
+  fullName: SoulsLike.AiSchedule
+- uid: SoulsLike.NonPlayerActor
+  commentId: T:SoulsLike.NonPlayerActor
+  parent: SoulsLike
+  name: NonPlayerActor
+  nameWithType: NonPlayerActor
+  fullName: SoulsLike.NonPlayerActor
+- uid: SoulsLike.AiState.Start*
+  commentId: Overload:SoulsLike.AiState.Start
+  name: Start
+  nameWithType: AiState.Start
+  fullName: SoulsLike.AiState.Start
+- uid: SoulsLike.AiState.Execute*
+  commentId: Overload:SoulsLike.AiState.Execute
+  name: Execute
+  nameWithType: AiState.Execute
+  fullName: SoulsLike.AiState.Execute

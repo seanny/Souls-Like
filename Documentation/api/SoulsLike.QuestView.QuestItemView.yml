@@ -1,0 +1,194 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.QuestView.QuestItemView
+  commentId: T:SoulsLike.QuestView.QuestItemView
+  id: QuestView.QuestItemView
+  parent: SoulsLike
+  children:
+  - SoulsLike.QuestView.QuestItemView.questButton
+  - SoulsLike.QuestView.QuestItemView.questButtonText
+  - SoulsLike.QuestView.QuestItemView.questID
+  langs:
+  - csharp
+  - vb
+  name: QuestView.QuestItemView
+  nameWithType: QuestView.QuestItemView
+  fullName: SoulsLike.QuestView.QuestItemView
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Quests/QuestView.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: QuestItemView
+    path: ../Assets/Scripts/Quests/QuestView.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class QuestItemView
+    content.vb: >-
+      <Serializable>
+
+      Public Class QuestItemView
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SoulsLike.QuestView.QuestItemView.questID
+  commentId: F:SoulsLike.QuestView.QuestItemView.questID
+  id: questID
+  parent: SoulsLike.QuestView.QuestItemView
+  langs:
+  - csharp
+  - vb
+  name: questID
+  nameWithType: QuestView.QuestItemView.questID
+  fullName: SoulsLike.QuestView.QuestItemView.questID
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Quests/QuestView.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: questID
+    path: ../Assets/Scripts/Quests/QuestView.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public string questID
+    return:
+      type: System.String
+    content.vb: Public questID As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.QuestView.QuestItemView.questButton
+  commentId: F:SoulsLike.QuestView.QuestItemView.questButton
+  id: questButton
+  parent: SoulsLike.QuestView.QuestItemView
+  langs:
+  - csharp
+  - vb
+  name: questButton
+  nameWithType: QuestView.QuestItemView.questButton
+  fullName: SoulsLike.QuestView.QuestItemView.questButton
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Quests/QuestView.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: questButton
+    path: ../Assets/Scripts/Quests/QuestView.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public Button questButton
+    return:
+      type: UnityEngine.UI.Button
+    content.vb: Public questButton As Button
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.QuestView.QuestItemView.questButtonText
+  commentId: F:SoulsLike.QuestView.QuestItemView.questButtonText
+  id: questButtonText
+  parent: SoulsLike.QuestView.QuestItemView
+  langs:
+  - csharp
+  - vb
+  name: questButtonText
+  nameWithType: QuestView.QuestItemView.questButtonText
+  fullName: SoulsLike.QuestView.QuestItemView.questButtonText
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Quests/QuestView.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: questButtonText
+    path: ../Assets/Scripts/Quests/QuestView.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public TextMeshProUGUI questButtonText
+    return:
+      type: TMPro.TextMeshProUGUI
+    content.vb: Public questButtonText As TextMeshProUGUI
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: UnityEngine.UI.Button
+  commentId: T:UnityEngine.UI.Button
+  parent: UnityEngine.UI
+  isExternal: true
+  name: Button
+  nameWithType: Button
+  fullName: UnityEngine.UI.Button
+- uid: UnityEngine.UI
+  commentId: N:UnityEngine.UI
+  isExternal: true
+  name: UnityEngine.UI
+  nameWithType: UnityEngine.UI
+  fullName: UnityEngine.UI
+- uid: TMPro.TextMeshProUGUI
+  commentId: T:TMPro.TextMeshProUGUI
+  parent: TMPro
+  isExternal: true
+  name: TextMeshProUGUI
+  nameWithType: TextMeshProUGUI
+  fullName: TMPro.TextMeshProUGUI
+- uid: TMPro
+  commentId: N:TMPro
+  isExternal: true
+  name: TMPro
+  nameWithType: TMPro
+  fullName: TMPro

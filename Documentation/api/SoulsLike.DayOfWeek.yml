@@ -1,0 +1,376 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.DayOfWeek
+  commentId: T:SoulsLike.DayOfWeek
+  id: DayOfWeek
+  parent: SoulsLike
+  children:
+  - SoulsLike.DayOfWeek.Any
+  - SoulsLike.DayOfWeek.Friday
+  - SoulsLike.DayOfWeek.Monday
+  - SoulsLike.DayOfWeek.Saturday
+  - SoulsLike.DayOfWeek.Sunday
+  - SoulsLike.DayOfWeek.Thursday
+  - SoulsLike.DayOfWeek.Tuesday
+  - SoulsLike.DayOfWeek.Wednesday
+  - SoulsLike.DayOfWeek.Weekdays
+  - SoulsLike.DayOfWeek.Weekends
+  langs:
+  - csharp
+  - vb
+  name: DayOfWeek
+  nameWithType: DayOfWeek
+  fullName: SoulsLike.DayOfWeek
+  type: Enum
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: DayOfWeek
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public enum DayOfWeek
+    content.vb: Public Enum DayOfWeek
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: SoulsLike.DayOfWeek.Any
+  commentId: F:SoulsLike.DayOfWeek.Any
+  id: Any
+  parent: SoulsLike.DayOfWeek
+  langs:
+  - csharp
+  - vb
+  name: Any
+  nameWithType: DayOfWeek.Any
+  fullName: SoulsLike.DayOfWeek.Any
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Any
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Any = 0
+    return:
+      type: SoulsLike.DayOfWeek
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.DayOfWeek.Monday
+  commentId: F:SoulsLike.DayOfWeek.Monday
+  id: Monday
+  parent: SoulsLike.DayOfWeek
+  langs:
+  - csharp
+  - vb
+  name: Monday
+  nameWithType: DayOfWeek.Monday
+  fullName: SoulsLike.DayOfWeek.Monday
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Monday
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Monday = 1
+    return:
+      type: SoulsLike.DayOfWeek
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.DayOfWeek.Tuesday
+  commentId: F:SoulsLike.DayOfWeek.Tuesday
+  id: Tuesday
+  parent: SoulsLike.DayOfWeek
+  langs:
+  - csharp
+  - vb
+  name: Tuesday
+  nameWithType: DayOfWeek.Tuesday
+  fullName: SoulsLike.DayOfWeek.Tuesday
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Tuesday
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Tuesday = 2
+    return:
+      type: SoulsLike.DayOfWeek
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.DayOfWeek.Wednesday
+  commentId: F:SoulsLike.DayOfWeek.Wednesday
+  id: Wednesday
+  parent: SoulsLike.DayOfWeek
+  langs:
+  - csharp
+  - vb
+  name: Wednesday
+  nameWithType: DayOfWeek.Wednesday
+  fullName: SoulsLike.DayOfWeek.Wednesday
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Wednesday
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Wednesday = 3
+    return:
+      type: SoulsLike.DayOfWeek
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.DayOfWeek.Thursday
+  commentId: F:SoulsLike.DayOfWeek.Thursday
+  id: Thursday
+  parent: SoulsLike.DayOfWeek
+  langs:
+  - csharp
+  - vb
+  name: Thursday
+  nameWithType: DayOfWeek.Thursday
+  fullName: SoulsLike.DayOfWeek.Thursday
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Thursday
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Thursday = 4
+    return:
+      type: SoulsLike.DayOfWeek
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.DayOfWeek.Friday
+  commentId: F:SoulsLike.DayOfWeek.Friday
+  id: Friday
+  parent: SoulsLike.DayOfWeek
+  langs:
+  - csharp
+  - vb
+  name: Friday
+  nameWithType: DayOfWeek.Friday
+  fullName: SoulsLike.DayOfWeek.Friday
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Friday
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Friday = 5
+    return:
+      type: SoulsLike.DayOfWeek
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.DayOfWeek.Saturday
+  commentId: F:SoulsLike.DayOfWeek.Saturday
+  id: Saturday
+  parent: SoulsLike.DayOfWeek
+  langs:
+  - csharp
+  - vb
+  name: Saturday
+  nameWithType: DayOfWeek.Saturday
+  fullName: SoulsLike.DayOfWeek.Saturday
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Saturday
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Saturday = 6
+    return:
+      type: SoulsLike.DayOfWeek
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.DayOfWeek.Sunday
+  commentId: F:SoulsLike.DayOfWeek.Sunday
+  id: Sunday
+  parent: SoulsLike.DayOfWeek
+  langs:
+  - csharp
+  - vb
+  name: Sunday
+  nameWithType: DayOfWeek.Sunday
+  fullName: SoulsLike.DayOfWeek.Sunday
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Sunday
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Sunday = 7
+    return:
+      type: SoulsLike.DayOfWeek
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.DayOfWeek.Weekdays
+  commentId: F:SoulsLike.DayOfWeek.Weekdays
+  id: Weekdays
+  parent: SoulsLike.DayOfWeek
+  langs:
+  - csharp
+  - vb
+  name: Weekdays
+  nameWithType: DayOfWeek.Weekdays
+  fullName: SoulsLike.DayOfWeek.Weekdays
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Weekdays
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Weekdays = 8
+    return:
+      type: SoulsLike.DayOfWeek
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.DayOfWeek.Weekends
+  commentId: F:SoulsLike.DayOfWeek.Weekends
+  id: Weekends
+  parent: SoulsLike.DayOfWeek
+  langs:
+  - csharp
+  - vb
+  name: Weekends
+  nameWithType: DayOfWeek.Weekends
+  fullName: SoulsLike.DayOfWeek.Weekends
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Weekends
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Weekends = 9
+    return:
+      type: SoulsLike.DayOfWeek
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: SoulsLike.DayOfWeek
+  commentId: T:SoulsLike.DayOfWeek
+  parent: SoulsLike
+  name: DayOfWeek
+  nameWithType: DayOfWeek
+  fullName: SoulsLike.DayOfWeek

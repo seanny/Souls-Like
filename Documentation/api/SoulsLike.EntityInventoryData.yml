@@ -1,0 +1,184 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.EntityInventoryData
+  commentId: T:SoulsLike.EntityInventoryData
+  id: EntityInventoryData
+  parent: SoulsLike
+  children:
+  - SoulsLike.EntityInventoryData.inventoryItems
+  langs:
+  - csharp
+  - vb
+  name: EntityInventoryData
+  nameWithType: EntityInventoryData
+  fullName: SoulsLike.EntityInventoryData
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/EntityInventory.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: EntityInventoryData
+    path: ../Assets/Scripts/Inventory/EntityInventory.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class EntityInventoryData
+    content.vb: >-
+      <Serializable>
+
+      Public Class EntityInventoryData
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SoulsLike.EntityInventoryData.inventoryItems
+  commentId: F:SoulsLike.EntityInventoryData.inventoryItems
+  id: inventoryItems
+  parent: SoulsLike.EntityInventoryData
+  langs:
+  - csharp
+  - vb
+  name: inventoryItems
+  nameWithType: EntityInventoryData.inventoryItems
+  fullName: SoulsLike.EntityInventoryData.inventoryItems
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/EntityInventory.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: inventoryItems
+    path: ../Assets/Scripts/Inventory/EntityInventory.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public List<Item> inventoryItems
+    return:
+      type: System.Collections.Generic.List{SoulsLike.Item}
+    content.vb: Public inventoryItems As List(Of Item)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.List{SoulsLike.Item}
+  commentId: T:System.Collections.Generic.List{SoulsLike.Item}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Item>
+  nameWithType: List<Item>
+  fullName: System.Collections.Generic.List<SoulsLike.Item>
+  nameWithType.vb: List(Of Item)
+  fullName.vb: System.Collections.Generic.List(Of SoulsLike.Item)
+  name.vb: List(Of Item)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: SoulsLike.Item
+    name: Item
+    nameWithType: Item
+    fullName: SoulsLike.Item
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: SoulsLike.Item
+    name: Item
+    nameWithType: Item
+    fullName: SoulsLike.Item
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

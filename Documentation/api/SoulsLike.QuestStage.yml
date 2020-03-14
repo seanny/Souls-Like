@@ -1,0 +1,258 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.QuestStage
+  commentId: T:SoulsLike.QuestStage
+  id: QuestStage
+  parent: SoulsLike
+  children:
+  - SoulsLike.QuestStage.description
+  - SoulsLike.QuestStage.entity
+  - SoulsLike.QuestStage.id
+  - SoulsLike.QuestStage.position
+  - SoulsLike.QuestStage.stageType
+  langs:
+  - csharp
+  - vb
+  name: QuestStage
+  nameWithType: QuestStage
+  fullName: SoulsLike.QuestStage
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Quests/Quest.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: QuestStage
+    path: ../Assets/Scripts/Quests/Quest.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class QuestStage
+    content.vb: >-
+      <Serializable>
+
+      Public Class QuestStage
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SoulsLike.QuestStage.id
+  commentId: F:SoulsLike.QuestStage.id
+  id: id
+  parent: SoulsLike.QuestStage
+  langs:
+  - csharp
+  - vb
+  name: id
+  nameWithType: QuestStage.id
+  fullName: SoulsLike.QuestStage.id
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Quests/Quest.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: id
+    path: ../Assets/Scripts/Quests/Quest.cs
+    startLine: 22
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public int id
+    return:
+      type: System.Int32
+    content.vb: Public id As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.QuestStage.description
+  commentId: F:SoulsLike.QuestStage.description
+  id: description
+  parent: SoulsLike.QuestStage
+  langs:
+  - csharp
+  - vb
+  name: description
+  nameWithType: QuestStage.description
+  fullName: SoulsLike.QuestStage.description
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Quests/Quest.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: description
+    path: ../Assets/Scripts/Quests/Quest.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public string description
+    return:
+      type: System.String
+    content.vb: Public description As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.QuestStage.stageType
+  commentId: F:SoulsLike.QuestStage.stageType
+  id: stageType
+  parent: SoulsLike.QuestStage
+  langs:
+  - csharp
+  - vb
+  name: stageType
+  nameWithType: QuestStage.stageType
+  fullName: SoulsLike.QuestStage.stageType
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Quests/Quest.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: stageType
+    path: ../Assets/Scripts/Quests/Quest.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public StageType stageType
+    return:
+      type: SoulsLike.StageType
+    content.vb: Public stageType As StageType
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.QuestStage.entity
+  commentId: F:SoulsLike.QuestStage.entity
+  id: entity
+  parent: SoulsLike.QuestStage
+  langs:
+  - csharp
+  - vb
+  name: entity
+  nameWithType: QuestStage.entity
+  fullName: SoulsLike.QuestStage.entity
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Quests/Quest.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: entity
+    path: ../Assets/Scripts/Quests/Quest.cs
+    startLine: 25
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public string entity
+    return:
+      type: System.String
+    content.vb: Public entity As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.QuestStage.position
+  commentId: F:SoulsLike.QuestStage.position
+  id: position
+  parent: SoulsLike.QuestStage
+  langs:
+  - csharp
+  - vb
+  name: position
+  nameWithType: QuestStage.position
+  fullName: SoulsLike.QuestStage.position
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Quests/Quest.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: position
+    path: ../Assets/Scripts/Quests/Quest.cs
+    startLine: 26
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public Vector3 position
+    return:
+      type: UnityEngine.Vector3
+    content.vb: Public position As Vector3
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: SoulsLike.StageType
+  commentId: T:SoulsLike.StageType
+  parent: SoulsLike
+  name: StageType
+  nameWithType: StageType
+  fullName: SoulsLike.StageType
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine

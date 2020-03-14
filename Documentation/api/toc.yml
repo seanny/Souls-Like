@@ -1,0 +1,200 @@
+### YamlMime:TableOfContent
+- uid: Global
+  name: Global
+  items:
+  - uid: Global.KeepBool
+    name: KeepBool
+  - uid: Global.MaskMaker
+    name: MaskMaker
+  - uid: Global.Readme
+    name: Readme
+  - uid: Global.Readme.Section
+    name: Readme.Section
+  - uid: Global.ReadmeEditor
+    name: ReadmeEditor
+  - uid: Global.WeaponPlacementPoint
+    name: WeaponPlacementPoint
+  name.vb: ''
+- uid: SoulsLike
+  name: SoulsLike
+  items:
+  - uid: SoulsLike.Actor
+    name: Actor
+  - uid: SoulsLike.Actors
+    name: Actors
+  - uid: SoulsLike.ActorSpeciesType
+    name: ActorSpeciesType
+  - uid: SoulsLike.ActorStats
+    name: ActorStats
+  - uid: SoulsLike.AiCondition
+    name: AiCondition
+  - uid: SoulsLike.AiSchedule
+    name: AiSchedule
+  - uid: SoulsLike.AiState
+    name: AiState
+  - uid: SoulsLike.AiStateManager
+    name: AiStateManager
+  - uid: SoulsLike.AiWander
+    name: AiWander
+  - uid: SoulsLike.CameraManager
+    name: CameraManager
+  - uid: SoulsLike.Chest
+    name: Chest
+  - uid: SoulsLike.ComparisonOperator
+    name: ComparisonOperator
+  - uid: SoulsLike.Console
+    name: Console
+  - uid: SoulsLike.DayNightCycle
+    name: DayNightCycle
+  - uid: SoulsLike.DayNightData
+    name: DayNightData
+  - uid: SoulsLike.DayOfWeek
+    name: DayOfWeek
+  - uid: SoulsLike.DebugStats
+    name: DebugStats
+  - uid: SoulsLike.Dialogue
+    name: Dialogue
+  - uid: SoulsLike.DialogueChoice
+    name: DialogueChoice
+  - uid: SoulsLike.DialogueController
+    name: DialogueController
+  - uid: SoulsLike.DialogueController.DialogueChoice
+    name: DialogueController.DialogueChoice
+  - uid: SoulsLike.Entity
+    name: Entity
+  - uid: SoulsLike.EntityData
+    name: EntityData
+  - uid: SoulsLike.EntityInventory
+    name: EntityInventory
+  - uid: SoulsLike.EntityInventoryData
+    name: EntityInventoryData
+  - uid: SoulsLike.Faction
+    name: Faction
+  - uid: SoulsLike.GameplayScript
+    name: GameplayScript
+  - uid: SoulsLike.GameVersion
+    name: GameVersion
+  - uid: SoulsLike.GlobalConsts
+    name: GlobalConsts
+  - uid: SoulsLike.GlobalController
+    name: GlobalController
+  - uid: SoulsLike.GlobalSetting
+    name: GlobalSetting
+  - uid: SoulsLike.Helper
+    name: Helper
+  - uid: SoulsLike.Helper.WeaponType
+    name: Helper.WeaponType
+  - uid: SoulsLike.IDialogue
+    name: IDialogue
+  - uid: SoulsLike.InputManager
+    name: InputManager
+  - uid: SoulsLike.InteractableData
+    name: InteractableData
+  - uid: SoulsLike.InteractableObject
+    name: InteractableObject
+  - uid: SoulsLike.InventoryButton
+    name: InventoryButton
+  - uid: SoulsLike.InventoryController
+    name: InventoryController
+  - uid: SoulsLike.InventoryControllerData
+    name: InventoryControllerData
+  - uid: SoulsLike.InventoryUI
+    name: InventoryUI
+  - uid: SoulsLike.IService
+    name: IService
+  - uid: SoulsLike.Item
+    name: Item
+  - uid: SoulsLike.ItemType
+    name: ItemType
+  - uid: SoulsLike.ItemWeapon
+    name: ItemWeapon
+  - uid: SoulsLike.IWeapon
+    name: IWeapon
+  - uid: SoulsLike.LeveledItemList
+    name: LeveledItemList
+  - uid: SoulsLike.LoadScene
+    name: LoadScene
+  - uid: SoulsLike.MainMenu
+    name: MainMenu
+  - uid: SoulsLike.Month
+    name: Month
+  - uid: SoulsLike.MouseCursor
+    name: MouseCursor
+  - uid: SoulsLike.MovementPoint
+    name: MovementPoint
+  - uid: SoulsLike.MusicManager
+    name: MusicManager
+  - uid: SoulsLike.NonPlayerActor
+    name: NonPlayerActor
+  - uid: SoulsLike.NonPlayerActor.AggressionLevel
+    name: NonPlayerActor.AggressionLevel
+  - uid: SoulsLike.Notification
+    name: Notification
+  - uid: SoulsLike.NotificationView
+    name: NotificationView
+  - uid: SoulsLike.PersistentObject
+    name: PersistentObject
+  - uid: SoulsLike.PlayerActor
+    name: PlayerActor
+  - uid: SoulsLike.PlayerInputActions
+    name: PlayerInputActions
+  - uid: SoulsLike.PlayerInputActions.IPlayerControlsActions
+    name: PlayerInputActions.IPlayerControlsActions
+  - uid: SoulsLike.PlayerInputActions.PlayerControlsActions
+    name: PlayerInputActions.PlayerControlsActions
+  - uid: SoulsLike.PlayerInventoryUI
+    name: PlayerInventoryUI
+  - uid: SoulsLike.Quat
+    name: Quat
+  - uid: SoulsLike.Quest
+    name: Quest
+  - uid: SoulsLike.QuestController
+    name: QuestController
+  - uid: SoulsLike.QuestController.QuestItem
+    name: QuestController.QuestItem
+  - uid: SoulsLike.QuestData
+    name: QuestData
+  - uid: SoulsLike.QuestStage
+    name: QuestStage
+  - uid: SoulsLike.QuestView
+    name: QuestView
+  - uid: SoulsLike.QuestView.QuestItemView
+    name: QuestView.QuestItemView
+  - uid: SoulsLike.RandomEncounter
+    name: RandomEncounter
+  - uid: SoulsLike.RandomEncounterZone
+    name: RandomEncounterZone
+  - uid: SoulsLike.RandomEncounterZoneData
+    name: RandomEncounterZoneData
+  - uid: SoulsLike.SaveController
+    name: SaveController
+  - uid: SoulsLike.SavedGlobals
+    name: SavedGlobals
+  - uid: SoulsLike.SaveFileData
+    name: SaveFileData
+  - uid: SoulsLike.SaveInput
+    name: SaveInput
+  - uid: SoulsLike.SceneWeapon
+    name: SceneWeapon
+  - uid: SoulsLike.ScriptManager
+    name: ScriptManager
+  - uid: SoulsLike.ScriptMethod
+    name: ScriptMethod
+  - uid: SoulsLike.ServiceLocator
+    name: ServiceLocator
+  - uid: SoulsLike.StageType
+    name: StageType
+  - uid: SoulsLike.StateManager
+    name: StateManager
+  - uid: SoulsLike.Sword
+    name: Sword
+  - uid: SoulsLike.TestDialogueScript
+    name: TestDialogueScript
+  - uid: SoulsLike.Vec3
+    name: Vec3
+  - uid: SoulsLike.Water
+    name: Water
+  - uid: SoulsLike.WaterData
+    name: WaterData
+  - uid: SoulsLike.WeaponType
+    name: WeaponType

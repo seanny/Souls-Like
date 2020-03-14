@@ -1,0 +1,145 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.WeaponType
+  commentId: T:SoulsLike.WeaponType
+  id: WeaponType
+  parent: SoulsLike
+  children:
+  - SoulsLike.WeaponType.Magical
+  - SoulsLike.WeaponType.OneHanded
+  - SoulsLike.WeaponType.TwoHanded
+  langs:
+  - csharp
+  - vb
+  name: WeaponType
+  nameWithType: WeaponType
+  fullName: SoulsLike.WeaponType
+  type: Enum
+  source:
+    remote:
+      path: Assets/Scripts/Weapons/WeaponType.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: WeaponType
+    path: ../Assets/Scripts/Weapons/WeaponType.cs
+    startLine: 2
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public enum WeaponType
+    content.vb: Public Enum WeaponType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: SoulsLike.WeaponType.OneHanded
+  commentId: F:SoulsLike.WeaponType.OneHanded
+  id: OneHanded
+  parent: SoulsLike.WeaponType
+  langs:
+  - csharp
+  - vb
+  name: OneHanded
+  nameWithType: WeaponType.OneHanded
+  fullName: SoulsLike.WeaponType.OneHanded
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Weapons/WeaponType.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: OneHanded
+    path: ../Assets/Scripts/Weapons/WeaponType.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: OneHanded = 0
+    return:
+      type: SoulsLike.WeaponType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.WeaponType.TwoHanded
+  commentId: F:SoulsLike.WeaponType.TwoHanded
+  id: TwoHanded
+  parent: SoulsLike.WeaponType
+  langs:
+  - csharp
+  - vb
+  name: TwoHanded
+  nameWithType: WeaponType.TwoHanded
+  fullName: SoulsLike.WeaponType.TwoHanded
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Weapons/WeaponType.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: TwoHanded
+    path: ../Assets/Scripts/Weapons/WeaponType.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: TwoHanded = 1
+    return:
+      type: SoulsLike.WeaponType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.WeaponType.Magical
+  commentId: F:SoulsLike.WeaponType.Magical
+  id: Magical
+  parent: SoulsLike.WeaponType
+  langs:
+  - csharp
+  - vb
+  name: Magical
+  nameWithType: WeaponType.Magical
+  fullName: SoulsLike.WeaponType.Magical
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Weapons/WeaponType.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Magical
+    path: ../Assets/Scripts/Weapons/WeaponType.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Magical = 2
+    return:
+      type: SoulsLike.WeaponType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: SoulsLike.WeaponType
+  commentId: T:SoulsLike.WeaponType
+  parent: SoulsLike
+  name: WeaponType
+  nameWithType: WeaponType
+  fullName: SoulsLike.WeaponType

@@ -11,9 +11,14 @@ namespace SoulsLike
         public WeaponType weaponType { get => WeaponType.OneHanded; }
         public float weaponDamage { get => 1.5f; }
 
-        public Vector3 weaponAttackPoint { get => new Vector3(0, 0, -0.02f); }
-        public Vector3 weaponAttackRotation { get => new Vector3(0, 0, 0); }
-        public Vector3 weaponAttackScale { get => new Vector3(0.1f, 0.1f, 0.1f); }
+        [SerializeField] private Vector3 m_WeaponAttackPoint = new Vector3(0, 0, -0.02f);
+        public Vector3 weaponAttackPoint => m_WeaponAttackPoint;
+
+        [SerializeField] private Vector3 m_WeaponAttackRotation = new Vector3(0, 0, -0.02f);
+        public Vector3 weaponAttackRotation => m_WeaponAttackRotation;
+
+        [SerializeField] private Vector3 m_WeaponAttackScale = new Vector3(0.1f, 0.1f, 0.1f);
+        public Vector3 weaponAttackScale => m_WeaponAttackScale;
 
         // Start is called before the first frame update
         void Start()

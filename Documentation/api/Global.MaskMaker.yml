@@ -1,0 +1,195 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global.MaskMaker
+  commentId: T:Global.MaskMaker
+  id: MaskMaker
+  parent: Global
+  children:
+  - Global.MaskMaker.ShowWindow
+  - Global.MaskMaker.ShowWindowRightClick
+  langs:
+  - csharp
+  - vb
+  name: MaskMaker
+  nameWithType: MaskMaker
+  fullName: MaskMaker
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Editor/MaskMaker.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: MaskMaker
+    path: ../Assets/Scripts/Editor/MaskMaker.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp-Editor
+  namespace: Global
+  syntax:
+    content: 'public class MaskMaker : EditorWindow'
+    content.vb: >-
+      Public Class MaskMaker
+          Inherits EditorWindow
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - UnityEditor.EditorWindow
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Global.MaskMaker.ShowWindow
+  commentId: M:Global.MaskMaker.ShowWindow
+  id: ShowWindow
+  parent: Global.MaskMaker
+  langs:
+  - csharp
+  - vb
+  name: ShowWindow()
+  nameWithType: MaskMaker.ShowWindow()
+  fullName: MaskMaker.ShowWindow()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Editor/MaskMaker.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: ShowWindow
+    path: ../Assets/Scripts/Editor/MaskMaker.cs
+    startLine: 48
+  assemblies:
+  - Assembly-CSharp-Editor
+  namespace: Global
+  syntax:
+    content: >-
+      [MenuItem("Tools/Mask Map Packer")]
+
+      public static void ShowWindow()
+    content.vb: >-
+      <MenuItem("Tools/Mask Map Packer")>
+
+      Public Shared Sub ShowWindow
+  overload: Global.MaskMaker.ShowWindow*
+  attributes:
+  - type: UnityEditor.MenuItem
+    ctor: UnityEditor.MenuItem.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Tools/Mask Map Packer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Global.MaskMaker.ShowWindowRightClick
+  commentId: M:Global.MaskMaker.ShowWindowRightClick
+  id: ShowWindowRightClick
+  parent: Global.MaskMaker
+  langs:
+  - csharp
+  - vb
+  name: ShowWindowRightClick()
+  nameWithType: MaskMaker.ShowWindowRightClick()
+  fullName: MaskMaker.ShowWindowRightClick()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Editor/MaskMaker.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: ShowWindowRightClick
+    path: ../Assets/Scripts/Editor/MaskMaker.cs
+    startLine: 53
+  assemblies:
+  - Assembly-CSharp-Editor
+  namespace: Global
+  syntax:
+    content: >-
+      [MenuItem("Assets/Mask Map Packer")]
+
+      public static void ShowWindowRightClick()
+    content.vb: >-
+      <MenuItem("Assets/Mask Map Packer")>
+
+      Public Shared Sub ShowWindowRightClick
+  overload: Global.MaskMaker.ShowWindowRightClick*
+  attributes:
+  - type: UnityEditor.MenuItem
+    ctor: UnityEditor.MenuItem.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Assets/Mask Map Packer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Global
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: UnityEditor.EditorWindow
+  commentId: T:UnityEditor.EditorWindow
+  parent: UnityEditor
+  isExternal: true
+  name: EditorWindow
+  nameWithType: EditorWindow
+  fullName: UnityEditor.EditorWindow
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: UnityEditor
+  commentId: N:UnityEditor
+  isExternal: true
+  name: UnityEditor
+  nameWithType: UnityEditor
+  fullName: UnityEditor
+- uid: Global.MaskMaker.ShowWindow*
+  commentId: Overload:Global.MaskMaker.ShowWindow
+  name: ShowWindow
+  nameWithType: MaskMaker.ShowWindow
+  fullName: MaskMaker.ShowWindow
+- uid: Global.MaskMaker.ShowWindowRightClick*
+  commentId: Overload:Global.MaskMaker.ShowWindowRightClick
+  name: ShowWindowRightClick
+  nameWithType: MaskMaker.ShowWindowRightClick
+  fullName: MaskMaker.ShowWindowRightClick

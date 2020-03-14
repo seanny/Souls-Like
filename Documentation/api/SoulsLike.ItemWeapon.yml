@@ -1,0 +1,159 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.ItemWeapon
+  commentId: T:SoulsLike.ItemWeapon
+  id: ItemWeapon
+  parent: SoulsLike
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ItemWeapon
+  nameWithType: ItemWeapon
+  fullName: SoulsLike.ItemWeapon
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/ItemWeapon.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: ItemWeapon
+    path: ../Assets/Scripts/Inventory/ItemWeapon.cs
+    startLine: 4
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [CreateAssetMenu(fileName = "Item", menuName = "Items/Weapon")]
+
+      public class ItemWeapon : Item
+    content.vb: >-
+      <CreateAssetMenu(fileName:="Item", menuName:="Items/Weapon")>
+
+      Public Class ItemWeapon
+          Inherits Item
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  - SoulsLike.Item
+  inheritedMembers:
+  - SoulsLike.Item.Name
+  - SoulsLike.Item.Description
+  - SoulsLike.Item.Weight
+  - SoulsLike.Item.Type
+  - SoulsLike.Item.Value
+  - SoulsLike.Item.Mesh
+  - SoulsLike.Item.PickupSound
+  - SoulsLike.Item.DropSound
+  attributes:
+  - type: UnityEngine.CreateAssetMenuAttribute
+    ctor: UnityEngine.CreateAssetMenuAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: fileName
+      type: System.String
+      value: Item
+    - name: menuName
+      type: System.String
+      value: Items/Weapon
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: SoulsLike.Item
+  commentId: T:SoulsLike.Item
+  parent: SoulsLike
+  name: Item
+  nameWithType: Item
+  fullName: SoulsLike.Item
+- uid: SoulsLike.Item.Name
+  commentId: F:SoulsLike.Item.Name
+  parent: SoulsLike.Item
+  name: Name
+  nameWithType: Item.Name
+  fullName: SoulsLike.Item.Name
+- uid: SoulsLike.Item.Description
+  commentId: F:SoulsLike.Item.Description
+  parent: SoulsLike.Item
+  name: Description
+  nameWithType: Item.Description
+  fullName: SoulsLike.Item.Description
+- uid: SoulsLike.Item.Weight
+  commentId: F:SoulsLike.Item.Weight
+  parent: SoulsLike.Item
+  name: Weight
+  nameWithType: Item.Weight
+  fullName: SoulsLike.Item.Weight
+- uid: SoulsLike.Item.Type
+  commentId: F:SoulsLike.Item.Type
+  parent: SoulsLike.Item
+  name: Type
+  nameWithType: Item.Type
+  fullName: SoulsLike.Item.Type
+- uid: SoulsLike.Item.Value
+  commentId: F:SoulsLike.Item.Value
+  parent: SoulsLike.Item
+  name: Value
+  nameWithType: Item.Value
+  fullName: SoulsLike.Item.Value
+- uid: SoulsLike.Item.Mesh
+  commentId: F:SoulsLike.Item.Mesh
+  parent: SoulsLike.Item
+  name: Mesh
+  nameWithType: Item.Mesh
+  fullName: SoulsLike.Item.Mesh
+- uid: SoulsLike.Item.PickupSound
+  commentId: F:SoulsLike.Item.PickupSound
+  parent: SoulsLike.Item
+  name: PickupSound
+  nameWithType: Item.PickupSound
+  fullName: SoulsLike.Item.PickupSound
+- uid: SoulsLike.Item.DropSound
+  commentId: F:SoulsLike.Item.DropSound
+  parent: SoulsLike.Item
+  name: DropSound
+  nameWithType: Item.DropSound
+  fullName: SoulsLike.Item.DropSound
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine

@@ -1,0 +1,483 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.DialogueController
+  commentId: T:SoulsLike.DialogueController
+  id: DialogueController
+  parent: SoulsLike
+  children:
+  - SoulsLike.DialogueController.dialogueChoices
+  - SoulsLike.DialogueController.dialogueUi
+  - SoulsLike.DialogueController.HideDialogue
+  - SoulsLike.DialogueController.instance
+  - SoulsLike.DialogueController.OnDialogueChoice(System.Int32)
+  - SoulsLike.DialogueController.ShowDialogue(System.String,SoulsLike.Actor)
+  - SoulsLike.DialogueController.speakingToActor
+  langs:
+  - csharp
+  - vb
+  name: DialogueController
+  nameWithType: DialogueController
+  fullName: SoulsLike.DialogueController
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Dialogue/DialogueController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: DialogueController
+    path: ../Assets/Scripts/Dialogue/DialogueController.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: 'public class DialogueController : MonoBehaviour'
+    content.vb: >-
+      Public Class DialogueController
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SoulsLike.DialogueController.instance
+  commentId: P:SoulsLike.DialogueController.instance
+  id: instance
+  parent: SoulsLike.DialogueController
+  langs:
+  - csharp
+  - vb
+  name: instance
+  nameWithType: DialogueController.instance
+  fullName: SoulsLike.DialogueController.instance
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Dialogue/DialogueController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: instance
+    path: ../Assets/Scripts/Dialogue/DialogueController.cs
+    startLine: 22
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public static DialogueController instance { get; }
+    parameters: []
+    return:
+      type: SoulsLike.DialogueController
+    content.vb: Public Shared ReadOnly Property instance As DialogueController
+  overload: SoulsLike.DialogueController.instance*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: SoulsLike.DialogueController.dialogueUi
+  commentId: F:SoulsLike.DialogueController.dialogueUi
+  id: dialogueUi
+  parent: SoulsLike.DialogueController
+  langs:
+  - csharp
+  - vb
+  name: dialogueUi
+  nameWithType: DialogueController.dialogueUi
+  fullName: SoulsLike.DialogueController.dialogueUi
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Dialogue/DialogueController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: dialogueUi
+    path: ../Assets/Scripts/Dialogue/DialogueController.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public GameObject dialogueUi
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public dialogueUi As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.DialogueController.speakingToActor
+  commentId: F:SoulsLike.DialogueController.speakingToActor
+  id: speakingToActor
+  parent: SoulsLike.DialogueController
+  langs:
+  - csharp
+  - vb
+  name: speakingToActor
+  nameWithType: DialogueController.speakingToActor
+  fullName: SoulsLike.DialogueController.speakingToActor
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Dialogue/DialogueController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: speakingToActor
+    path: ../Assets/Scripts/Dialogue/DialogueController.cs
+    startLine: 25
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public Actor speakingToActor
+    return:
+      type: SoulsLike.Actor
+    content.vb: Public speakingToActor As Actor
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.DialogueController.dialogueChoices
+  commentId: F:SoulsLike.DialogueController.dialogueChoices
+  id: dialogueChoices
+  parent: SoulsLike.DialogueController
+  langs:
+  - csharp
+  - vb
+  name: dialogueChoices
+  nameWithType: DialogueController.dialogueChoices
+  fullName: SoulsLike.DialogueController.dialogueChoices
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Dialogue/DialogueController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: dialogueChoices
+    path: ../Assets/Scripts/Dialogue/DialogueController.cs
+    startLine: 26
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public List<DialogueController.DialogueChoice> dialogueChoices
+    return:
+      type: System.Collections.Generic.List{SoulsLike.DialogueController.DialogueChoice}
+    content.vb: Public dialogueChoices As List(Of DialogueController.DialogueChoice)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.DialogueController.ShowDialogue(System.String,SoulsLike.Actor)
+  commentId: M:SoulsLike.DialogueController.ShowDialogue(System.String,SoulsLike.Actor)
+  id: ShowDialogue(System.String,SoulsLike.Actor)
+  parent: SoulsLike.DialogueController
+  langs:
+  - csharp
+  - vb
+  name: ShowDialogue(String, Actor)
+  nameWithType: DialogueController.ShowDialogue(String, Actor)
+  fullName: SoulsLike.DialogueController.ShowDialogue(System.String, SoulsLike.Actor)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Dialogue/DialogueController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: ShowDialogue
+    path: ../Assets/Scripts/Dialogue/DialogueController.cs
+    startLine: 33
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nShow Dialogue\n"
+  example: []
+  syntax:
+    content: public static void ShowDialogue(string dialogueID, Actor actor)
+    parameters:
+    - id: dialogueID
+      type: System.String
+      description: ''
+    - id: actor
+      type: SoulsLike.Actor
+      description: ''
+    content.vb: Public Shared Sub ShowDialogue(dialogueID As String, actor As Actor)
+  overload: SoulsLike.DialogueController.ShowDialogue*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: SoulsLike.DialogueController.HideDialogue
+  commentId: M:SoulsLike.DialogueController.HideDialogue
+  id: HideDialogue
+  parent: SoulsLike.DialogueController
+  langs:
+  - csharp
+  - vb
+  name: HideDialogue()
+  nameWithType: DialogueController.HideDialogue()
+  fullName: SoulsLike.DialogueController.HideDialogue()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Dialogue/DialogueController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: HideDialogue
+    path: ../Assets/Scripts/Dialogue/DialogueController.cs
+    startLine: 50
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nHide Dialogue Menu\n"
+  example: []
+  syntax:
+    content: public static void HideDialogue()
+    content.vb: Public Shared Sub HideDialogue
+  overload: SoulsLike.DialogueController.HideDialogue*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: SoulsLike.DialogueController.OnDialogueChoice(System.Int32)
+  commentId: M:SoulsLike.DialogueController.OnDialogueChoice(System.Int32)
+  id: OnDialogueChoice(System.Int32)
+  parent: SoulsLike.DialogueController
+  langs:
+  - csharp
+  - vb
+  name: OnDialogueChoice(Int32)
+  nameWithType: DialogueController.OnDialogueChoice(Int32)
+  fullName: SoulsLike.DialogueController.OnDialogueChoice(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Dialogue/DialogueController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: OnDialogueChoice
+    path: ../Assets/Scripts/Dialogue/DialogueController.cs
+    startLine: 78
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nOn Dialogue Choice\n"
+  example: []
+  syntax:
+    content: public void OnDialogueChoice(int dialogueChoice)
+    parameters:
+    - id: dialogueChoice
+      type: System.Int32
+      description: ''
+    content.vb: Public Sub OnDialogueChoice(dialogueChoice As Integer)
+  overload: SoulsLike.DialogueController.OnDialogueChoice*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SoulsLike.DialogueController.instance*
+  commentId: Overload:SoulsLike.DialogueController.instance
+  name: instance
+  nameWithType: DialogueController.instance
+  fullName: SoulsLike.DialogueController.instance
+- uid: SoulsLike.DialogueController
+  commentId: T:SoulsLike.DialogueController
+  parent: SoulsLike
+  name: DialogueController
+  nameWithType: DialogueController
+  fullName: SoulsLike.DialogueController
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: SoulsLike.Actor
+  commentId: T:SoulsLike.Actor
+  parent: SoulsLike
+  name: Actor
+  nameWithType: Actor
+  fullName: SoulsLike.Actor
+- uid: System.Collections.Generic.List{SoulsLike.DialogueController.DialogueChoice}
+  commentId: T:System.Collections.Generic.List{SoulsLike.DialogueController.DialogueChoice}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<DialogueController.DialogueChoice>
+  nameWithType: List<DialogueController.DialogueChoice>
+  fullName: System.Collections.Generic.List<SoulsLike.DialogueController.DialogueChoice>
+  nameWithType.vb: List(Of DialogueController.DialogueChoice)
+  fullName.vb: System.Collections.Generic.List(Of SoulsLike.DialogueController.DialogueChoice)
+  name.vb: List(Of DialogueController.DialogueChoice)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: SoulsLike.DialogueController.DialogueChoice
+    name: DialogueController.DialogueChoice
+    nameWithType: DialogueController.DialogueChoice
+    fullName: SoulsLike.DialogueController.DialogueChoice
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: SoulsLike.DialogueController.DialogueChoice
+    name: DialogueController.DialogueChoice
+    nameWithType: DialogueController.DialogueChoice
+    fullName: SoulsLike.DialogueController.DialogueChoice
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: SoulsLike.DialogueController.ShowDialogue*
+  commentId: Overload:SoulsLike.DialogueController.ShowDialogue
+  name: ShowDialogue
+  nameWithType: DialogueController.ShowDialogue
+  fullName: SoulsLike.DialogueController.ShowDialogue
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: SoulsLike.DialogueController.HideDialogue*
+  commentId: Overload:SoulsLike.DialogueController.HideDialogue
+  name: HideDialogue
+  nameWithType: DialogueController.HideDialogue
+  fullName: SoulsLike.DialogueController.HideDialogue
+- uid: SoulsLike.DialogueController.OnDialogueChoice*
+  commentId: Overload:SoulsLike.DialogueController.OnDialogueChoice
+  name: OnDialogueChoice
+  nameWithType: DialogueController.OnDialogueChoice
+  fullName: SoulsLike.DialogueController.OnDialogueChoice
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

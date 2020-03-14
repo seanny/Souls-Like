@@ -1,0 +1,285 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.MainMenu
+  commentId: T:SoulsLike.MainMenu
+  id: MainMenu
+  parent: SoulsLike
+  children:
+  - SoulsLike.MainMenu.OnContinue
+  - SoulsLike.MainMenu.OnLoad
+  - SoulsLike.MainMenu.OnNew
+  - SoulsLike.MainMenu.OnQuit
+  - SoulsLike.MainMenu.OnSettings
+  langs:
+  - csharp
+  - vb
+  name: MainMenu
+  nameWithType: MainMenu
+  fullName: SoulsLike.MainMenu
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Loading/MainMenu.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: MainMenu
+    path: ../Assets/Scripts/Loading/MainMenu.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: 'public class MainMenu : MonoBehaviour'
+    content.vb: >-
+      Public Class MainMenu
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SoulsLike.MainMenu.OnContinue
+  commentId: M:SoulsLike.MainMenu.OnContinue
+  id: OnContinue
+  parent: SoulsLike.MainMenu
+  langs:
+  - csharp
+  - vb
+  name: OnContinue()
+  nameWithType: MainMenu.OnContinue()
+  fullName: SoulsLike.MainMenu.OnContinue()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Loading/MainMenu.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: OnContinue
+    path: ../Assets/Scripts/Loading/MainMenu.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nOn Continue\n"
+  example: []
+  syntax:
+    content: public void OnContinue()
+    content.vb: Public Sub OnContinue
+  overload: SoulsLike.MainMenu.OnContinue*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.MainMenu.OnNew
+  commentId: M:SoulsLike.MainMenu.OnNew
+  id: OnNew
+  parent: SoulsLike.MainMenu
+  langs:
+  - csharp
+  - vb
+  name: OnNew()
+  nameWithType: MainMenu.OnNew()
+  fullName: SoulsLike.MainMenu.OnNew()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Loading/MainMenu.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: OnNew
+    path: ../Assets/Scripts/Loading/MainMenu.cs
+    startLine: 27
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nOn New\n"
+  example: []
+  syntax:
+    content: public void OnNew()
+    content.vb: Public Sub OnNew
+  overload: SoulsLike.MainMenu.OnNew*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.MainMenu.OnLoad
+  commentId: M:SoulsLike.MainMenu.OnLoad
+  id: OnLoad
+  parent: SoulsLike.MainMenu
+  langs:
+  - csharp
+  - vb
+  name: OnLoad()
+  nameWithType: MainMenu.OnLoad()
+  fullName: SoulsLike.MainMenu.OnLoad()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Loading/MainMenu.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: OnLoad
+    path: ../Assets/Scripts/Loading/MainMenu.cs
+    startLine: 35
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nOn Load\n"
+  example: []
+  syntax:
+    content: public void OnLoad()
+    content.vb: Public Sub OnLoad
+  overload: SoulsLike.MainMenu.OnLoad*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.MainMenu.OnSettings
+  commentId: M:SoulsLike.MainMenu.OnSettings
+  id: OnSettings
+  parent: SoulsLike.MainMenu
+  langs:
+  - csharp
+  - vb
+  name: OnSettings()
+  nameWithType: MainMenu.OnSettings()
+  fullName: SoulsLike.MainMenu.OnSettings()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Loading/MainMenu.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: OnSettings
+    path: ../Assets/Scripts/Loading/MainMenu.cs
+    startLine: 43
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nOn Settings\n"
+  example: []
+  syntax:
+    content: public void OnSettings()
+    content.vb: Public Sub OnSettings
+  overload: SoulsLike.MainMenu.OnSettings*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.MainMenu.OnQuit
+  commentId: M:SoulsLike.MainMenu.OnQuit
+  id: OnQuit
+  parent: SoulsLike.MainMenu
+  langs:
+  - csharp
+  - vb
+  name: OnQuit()
+  nameWithType: MainMenu.OnQuit()
+  fullName: SoulsLike.MainMenu.OnQuit()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Loading/MainMenu.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: OnQuit
+    path: ../Assets/Scripts/Loading/MainMenu.cs
+    startLine: 51
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nOn Quit\n"
+  example: []
+  syntax:
+    content: public void OnQuit()
+    content.vb: Public Sub OnQuit
+  overload: SoulsLike.MainMenu.OnQuit*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SoulsLike.MainMenu.OnContinue*
+  commentId: Overload:SoulsLike.MainMenu.OnContinue
+  name: OnContinue
+  nameWithType: MainMenu.OnContinue
+  fullName: SoulsLike.MainMenu.OnContinue
+- uid: SoulsLike.MainMenu.OnNew*
+  commentId: Overload:SoulsLike.MainMenu.OnNew
+  name: OnNew
+  nameWithType: MainMenu.OnNew
+  fullName: SoulsLike.MainMenu.OnNew
+- uid: SoulsLike.MainMenu.OnLoad*
+  commentId: Overload:SoulsLike.MainMenu.OnLoad
+  name: OnLoad
+  nameWithType: MainMenu.OnLoad
+  fullName: SoulsLike.MainMenu.OnLoad
+- uid: SoulsLike.MainMenu.OnSettings*
+  commentId: Overload:SoulsLike.MainMenu.OnSettings
+  name: OnSettings
+  nameWithType: MainMenu.OnSettings
+  fullName: SoulsLike.MainMenu.OnSettings
+- uid: SoulsLike.MainMenu.OnQuit*
+  commentId: Overload:SoulsLike.MainMenu.OnQuit
+  name: OnQuit
+  nameWithType: MainMenu.OnQuit
+  fullName: SoulsLike.MainMenu.OnQuit

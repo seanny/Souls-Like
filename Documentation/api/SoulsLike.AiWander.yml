@@ -1,0 +1,395 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.AiWander
+  commentId: T:SoulsLike.AiWander
+  id: AiWander
+  parent: SoulsLike
+  children:
+  - SoulsLike.AiWander.Execute
+  - SoulsLike.AiWander.MovementPoints
+  - SoulsLike.AiWander.Start
+  langs:
+  - csharp
+  - vb
+  name: AiWander
+  nameWithType: AiWander
+  fullName: SoulsLike.AiWander
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiWander.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: AiWander
+    path: ../Assets/Scripts/Mechanics/AI/AiWander.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: 'public class AiWander : AiState'
+    content.vb: >-
+      Public Class AiWander
+          Inherits AiState
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - SoulsLike.AiState
+  inheritedMembers:
+  - SoulsLike.AiState.MIN_DISTANCE
+  - SoulsLike.AiState.aiConditions
+  - SoulsLike.AiState.aiSchedule
+  - SoulsLike.AiState.actor
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SoulsLike.AiWander.MovementPoints
+  commentId: P:SoulsLike.AiWander.MovementPoints
+  id: MovementPoints
+  parent: SoulsLike.AiWander
+  langs:
+  - csharp
+  - vb
+  name: MovementPoints
+  nameWithType: AiWander.MovementPoints
+  fullName: SoulsLike.AiWander.MovementPoints
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiWander.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: MovementPoints
+    path: ../Assets/Scripts/Mechanics/AI/AiWander.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public List<MovementPoint> MovementPoints { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{SoulsLike.MovementPoint}
+    content.vb: Public ReadOnly Property MovementPoints As List(Of MovementPoint)
+  overload: SoulsLike.AiWander.MovementPoints*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: SoulsLike.AiWander.Start
+  commentId: M:SoulsLike.AiWander.Start
+  id: Start
+  parent: SoulsLike.AiWander
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: AiWander.Start()
+  fullName: SoulsLike.AiWander.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiWander.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Start
+    path: ../Assets/Scripts/Mechanics/AI/AiWander.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: protected override void Start()
+    content.vb: Protected Overrides Sub Start
+  overridden: SoulsLike.AiState.Start
+  overload: SoulsLike.AiWander.Start*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: SoulsLike.AiWander.Execute
+  commentId: M:SoulsLike.AiWander.Execute
+  id: Execute
+  parent: SoulsLike.AiWander
+  langs:
+  - csharp
+  - vb
+  name: Execute()
+  nameWithType: AiWander.Execute()
+  fullName: SoulsLike.AiWander.Execute()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiWander.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Execute
+    path: ../Assets/Scripts/Mechanics/AI/AiWander.cs
+    startLine: 42
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nExecute AiWander\n"
+  example: []
+  syntax:
+    content: public override void Execute()
+    content.vb: Public Overrides Sub Execute
+  overridden: SoulsLike.AiState.Execute
+  overload: SoulsLike.AiWander.Execute*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: SoulsLike.AiState
+  commentId: T:SoulsLike.AiState
+  parent: SoulsLike
+  name: AiState
+  nameWithType: AiState
+  fullName: SoulsLike.AiState
+- uid: SoulsLike.AiState.MIN_DISTANCE
+  commentId: F:SoulsLike.AiState.MIN_DISTANCE
+  parent: SoulsLike.AiState
+  name: MIN_DISTANCE
+  nameWithType: AiState.MIN_DISTANCE
+  fullName: SoulsLike.AiState.MIN_DISTANCE
+- uid: SoulsLike.AiState.aiConditions
+  commentId: F:SoulsLike.AiState.aiConditions
+  parent: SoulsLike.AiState
+  name: aiConditions
+  nameWithType: AiState.aiConditions
+  fullName: SoulsLike.AiState.aiConditions
+- uid: SoulsLike.AiState.aiSchedule
+  commentId: F:SoulsLike.AiState.aiSchedule
+  parent: SoulsLike.AiState
+  name: aiSchedule
+  nameWithType: AiState.aiSchedule
+  fullName: SoulsLike.AiState.aiSchedule
+- uid: SoulsLike.AiState.actor
+  commentId: F:SoulsLike.AiState.actor
+  parent: SoulsLike.AiState
+  name: actor
+  nameWithType: AiState.actor
+  fullName: SoulsLike.AiState.actor
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SoulsLike.AiWander.MovementPoints*
+  commentId: Overload:SoulsLike.AiWander.MovementPoints
+  name: MovementPoints
+  nameWithType: AiWander.MovementPoints
+  fullName: SoulsLike.AiWander.MovementPoints
+- uid: System.Collections.Generic.List{SoulsLike.MovementPoint}
+  commentId: T:System.Collections.Generic.List{SoulsLike.MovementPoint}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<MovementPoint>
+  nameWithType: List<MovementPoint>
+  fullName: System.Collections.Generic.List<SoulsLike.MovementPoint>
+  nameWithType.vb: List(Of MovementPoint)
+  fullName.vb: System.Collections.Generic.List(Of SoulsLike.MovementPoint)
+  name.vb: List(Of MovementPoint)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: SoulsLike.MovementPoint
+    name: MovementPoint
+    nameWithType: MovementPoint
+    fullName: SoulsLike.MovementPoint
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: SoulsLike.MovementPoint
+    name: MovementPoint
+    nameWithType: MovementPoint
+    fullName: SoulsLike.MovementPoint
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: SoulsLike.AiState.Start
+  commentId: M:SoulsLike.AiState.Start
+  parent: SoulsLike.AiState
+  name: Start()
+  nameWithType: AiState.Start()
+  fullName: SoulsLike.AiState.Start()
+  spec.csharp:
+  - uid: SoulsLike.AiState.Start
+    name: Start
+    nameWithType: AiState.Start
+    fullName: SoulsLike.AiState.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: SoulsLike.AiState.Start
+    name: Start
+    nameWithType: AiState.Start
+    fullName: SoulsLike.AiState.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SoulsLike.AiWander.Start*
+  commentId: Overload:SoulsLike.AiWander.Start
+  name: Start
+  nameWithType: AiWander.Start
+  fullName: SoulsLike.AiWander.Start
+- uid: SoulsLike.AiState.Execute
+  commentId: M:SoulsLike.AiState.Execute
+  parent: SoulsLike.AiState
+  name: Execute()
+  nameWithType: AiState.Execute()
+  fullName: SoulsLike.AiState.Execute()
+  spec.csharp:
+  - uid: SoulsLike.AiState.Execute
+    name: Execute
+    nameWithType: AiState.Execute
+    fullName: SoulsLike.AiState.Execute
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: SoulsLike.AiState.Execute
+    name: Execute
+    nameWithType: AiState.Execute
+    fullName: SoulsLike.AiState.Execute
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SoulsLike.AiWander.Execute*
+  commentId: Overload:SoulsLike.AiWander.Execute
+  name: Execute
+  nameWithType: AiWander.Execute
+  fullName: SoulsLike.AiWander.Execute

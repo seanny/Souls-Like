@@ -1,0 +1,101 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.GlobalConsts
+  commentId: T:SoulsLike.GlobalConsts
+  id: GlobalConsts
+  parent: SoulsLike
+  children:
+  - SoulsLike.GlobalConsts.GLOBAL_SETTINGS_FOLDER
+  langs:
+  - csharp
+  - vb
+  name: GlobalConsts
+  nameWithType: GlobalConsts
+  fullName: SoulsLike.GlobalConsts
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Globals/GlobalConsts.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: GlobalConsts
+    path: ../Assets/Scripts/Globals/GlobalConsts.cs
+    startLine: 2
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public static class GlobalConsts
+    content.vb: Public Module GlobalConsts
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: SoulsLike.GlobalConsts.GLOBAL_SETTINGS_FOLDER
+  commentId: F:SoulsLike.GlobalConsts.GLOBAL_SETTINGS_FOLDER
+  id: GLOBAL_SETTINGS_FOLDER
+  parent: SoulsLike.GlobalConsts
+  langs:
+  - csharp
+  - vb
+  name: GLOBAL_SETTINGS_FOLDER
+  nameWithType: GlobalConsts.GLOBAL_SETTINGS_FOLDER
+  fullName: SoulsLike.GlobalConsts.GLOBAL_SETTINGS_FOLDER
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Globals/GlobalConsts.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: GLOBAL_SETTINGS_FOLDER
+    path: ../Assets/Scripts/Globals/GlobalConsts.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nGlobal Settings Folder Name\n"
+  example: []
+  syntax:
+    content: public static readonly string GLOBAL_SETTINGS_FOLDER
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly GLOBAL_SETTINGS_FOLDER As String
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

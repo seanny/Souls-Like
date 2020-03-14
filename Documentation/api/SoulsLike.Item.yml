@@ -1,0 +1,417 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.Item
+  commentId: T:SoulsLike.Item
+  id: Item
+  parent: SoulsLike
+  children:
+  - SoulsLike.Item.Description
+  - SoulsLike.Item.DropSound
+  - SoulsLike.Item.Mesh
+  - SoulsLike.Item.Name
+  - SoulsLike.Item.PickupSound
+  - SoulsLike.Item.Type
+  - SoulsLike.Item.Value
+  - SoulsLike.Item.Weight
+  langs:
+  - csharp
+  - vb
+  name: Item
+  nameWithType: Item
+  fullName: SoulsLike.Item
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/Item.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Item
+    path: ../Assets/Scripts/Inventory/Item.cs
+    startLine: 20
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [CreateAssetMenu(fileName = "Item", menuName = "Items/Generic Item")]
+
+      public class Item : ScriptableObject
+    content.vb: >-
+      <CreateAssetMenu(fileName:="Item", menuName:="Items/Generic Item")>
+
+      Public Class Item
+          Inherits ScriptableObject
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.ScriptableObject
+  derivedClasses:
+  - SoulsLike.ItemWeapon
+  attributes:
+  - type: UnityEngine.CreateAssetMenuAttribute
+    ctor: UnityEngine.CreateAssetMenuAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: fileName
+      type: System.String
+      value: Item
+    - name: menuName
+      type: System.String
+      value: Items/Generic Item
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SoulsLike.Item.Name
+  commentId: F:SoulsLike.Item.Name
+  id: Name
+  parent: SoulsLike.Item
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Item.Name
+  fullName: SoulsLike.Item.Name
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/Item.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Name
+    path: ../Assets/Scripts/Inventory/Item.cs
+    startLine: 26
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nItem name\n"
+  example: []
+  syntax:
+    content: public string Name
+    return:
+      type: System.String
+    content.vb: Public Name As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.Item.Description
+  commentId: F:SoulsLike.Item.Description
+  id: Description
+  parent: SoulsLike.Item
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: Item.Description
+  fullName: SoulsLike.Item.Description
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/Item.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Description
+    path: ../Assets/Scripts/Inventory/Item.cs
+    startLine: 32
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nItem Description\n"
+  example: []
+  syntax:
+    content: >-
+      [TextArea(15, 20)]
+
+      public string Description
+    return:
+      type: System.String
+    content.vb: >-
+      <TextArea(15, 20)>
+
+      Public Description As String
+  attributes:
+  - type: UnityEngine.TextAreaAttribute
+    ctor: UnityEngine.TextAreaAttribute.#ctor(System.Int32,System.Int32)
+    arguments:
+    - type: System.Int32
+      value: 15
+    - type: System.Int32
+      value: 20
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.Item.Weight
+  commentId: F:SoulsLike.Item.Weight
+  id: Weight
+  parent: SoulsLike.Item
+  langs:
+  - csharp
+  - vb
+  name: Weight
+  nameWithType: Item.Weight
+  fullName: SoulsLike.Item.Weight
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/Item.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Weight
+    path: ../Assets/Scripts/Inventory/Item.cs
+    startLine: 37
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nItem Weight\n"
+  example: []
+  syntax:
+    content: public int Weight
+    return:
+      type: System.Int32
+    content.vb: Public Weight As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.Item.Type
+  commentId: F:SoulsLike.Item.Type
+  id: Type
+  parent: SoulsLike.Item
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: Item.Type
+  fullName: SoulsLike.Item.Type
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/Item.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Type
+    path: ../Assets/Scripts/Inventory/Item.cs
+    startLine: 42
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nItem Type\n"
+  example: []
+  syntax:
+    content: public ItemType Type
+    return:
+      type: SoulsLike.ItemType
+    content.vb: Public Type As ItemType
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.Item.Value
+  commentId: F:SoulsLike.Item.Value
+  id: Value
+  parent: SoulsLike.Item
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: Item.Value
+  fullName: SoulsLike.Item.Value
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/Item.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Value
+    path: ../Assets/Scripts/Inventory/Item.cs
+    startLine: 47
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nItem Value\n"
+  example: []
+  syntax:
+    content: public int Value
+    return:
+      type: System.Int32
+    content.vb: Public Value As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.Item.Mesh
+  commentId: F:SoulsLike.Item.Mesh
+  id: Mesh
+  parent: SoulsLike.Item
+  langs:
+  - csharp
+  - vb
+  name: Mesh
+  nameWithType: Item.Mesh
+  fullName: SoulsLike.Item.Mesh
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/Item.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Mesh
+    path: ../Assets/Scripts/Inventory/Item.cs
+    startLine: 52
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nItem Mesh\n"
+  example: []
+  syntax:
+    content: public GameObject Mesh
+    return:
+      type: UnityEngine.GameObject
+    content.vb: Public Mesh As GameObject
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.Item.PickupSound
+  commentId: F:SoulsLike.Item.PickupSound
+  id: PickupSound
+  parent: SoulsLike.Item
+  langs:
+  - csharp
+  - vb
+  name: PickupSound
+  nameWithType: Item.PickupSound
+  fullName: SoulsLike.Item.PickupSound
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/Item.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: PickupSound
+    path: ../Assets/Scripts/Inventory/Item.cs
+    startLine: 57
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nItem Pickup Sound\n"
+  example: []
+  syntax:
+    content: public AudioClip PickupSound
+    return:
+      type: UnityEngine.AudioClip
+    content.vb: Public PickupSound As AudioClip
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.Item.DropSound
+  commentId: F:SoulsLike.Item.DropSound
+  id: DropSound
+  parent: SoulsLike.Item
+  langs:
+  - csharp
+  - vb
+  name: DropSound
+  nameWithType: Item.DropSound
+  fullName: SoulsLike.Item.DropSound
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/Item.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: DropSound
+    path: ../Assets/Scripts/Inventory/Item.cs
+    startLine: 62
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nItem Drop Sound\n"
+  example: []
+  syntax:
+    content: public AudioClip DropSound
+    return:
+      type: UnityEngine.AudioClip
+    content.vb: Public DropSound As AudioClip
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.ScriptableObject
+  commentId: T:UnityEngine.ScriptableObject
+  parent: UnityEngine
+  isExternal: true
+  name: ScriptableObject
+  nameWithType: ScriptableObject
+  fullName: UnityEngine.ScriptableObject
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: SoulsLike.ItemType
+  commentId: T:SoulsLike.ItemType
+  parent: SoulsLike
+  name: ItemType
+  nameWithType: ItemType
+  fullName: SoulsLike.ItemType
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine.AudioClip
+  commentId: T:UnityEngine.AudioClip
+  parent: UnityEngine
+  isExternal: true
+  name: AudioClip
+  nameWithType: AudioClip
+  fullName: UnityEngine.AudioClip

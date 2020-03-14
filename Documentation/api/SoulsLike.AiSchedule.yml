@@ -1,0 +1,305 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.AiSchedule
+  commentId: T:SoulsLike.AiSchedule
+  id: AiSchedule
+  parent: SoulsLike
+  children:
+  - SoulsLike.AiSchedule.#ctor(SoulsLike.DayOfWeek,SoulsLike.Month,System.Int32,System.Int32,System.Single)
+  - SoulsLike.AiSchedule.dayOfWeek
+  - SoulsLike.AiSchedule.duration
+  - SoulsLike.AiSchedule.hour
+  - SoulsLike.AiSchedule.minute
+  - SoulsLike.AiSchedule.month
+  langs:
+  - csharp
+  - vb
+  name: AiSchedule
+  nameWithType: AiSchedule
+  fullName: SoulsLike.AiSchedule
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: AiSchedule
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 39
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class AiSchedule
+    content.vb: >-
+      <Serializable>
+
+      Public Class AiSchedule
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SoulsLike.AiSchedule.dayOfWeek
+  commentId: F:SoulsLike.AiSchedule.dayOfWeek
+  id: dayOfWeek
+  parent: SoulsLike.AiSchedule
+  langs:
+  - csharp
+  - vb
+  name: dayOfWeek
+  nameWithType: AiSchedule.dayOfWeek
+  fullName: SoulsLike.AiSchedule.dayOfWeek
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: dayOfWeek
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 42
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public DayOfWeek dayOfWeek
+    return:
+      type: SoulsLike.DayOfWeek
+    content.vb: Public dayOfWeek As DayOfWeek
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.AiSchedule.month
+  commentId: F:SoulsLike.AiSchedule.month
+  id: month
+  parent: SoulsLike.AiSchedule
+  langs:
+  - csharp
+  - vb
+  name: month
+  nameWithType: AiSchedule.month
+  fullName: SoulsLike.AiSchedule.month
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: month
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 43
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public Month month
+    return:
+      type: SoulsLike.Month
+    content.vb: Public month As Month
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.AiSchedule.hour
+  commentId: F:SoulsLike.AiSchedule.hour
+  id: hour
+  parent: SoulsLike.AiSchedule
+  langs:
+  - csharp
+  - vb
+  name: hour
+  nameWithType: AiSchedule.hour
+  fullName: SoulsLike.AiSchedule.hour
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: hour
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 44
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public int hour
+    return:
+      type: System.Int32
+    content.vb: Public hour As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.AiSchedule.minute
+  commentId: F:SoulsLike.AiSchedule.minute
+  id: minute
+  parent: SoulsLike.AiSchedule
+  langs:
+  - csharp
+  - vb
+  name: minute
+  nameWithType: AiSchedule.minute
+  fullName: SoulsLike.AiSchedule.minute
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: minute
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 45
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public int minute
+    return:
+      type: System.Int32
+    content.vb: Public minute As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.AiSchedule.duration
+  commentId: F:SoulsLike.AiSchedule.duration
+  id: duration
+  parent: SoulsLike.AiSchedule
+  langs:
+  - csharp
+  - vb
+  name: duration
+  nameWithType: AiSchedule.duration
+  fullName: SoulsLike.AiSchedule.duration
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: duration
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 46
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public float duration
+    return:
+      type: System.Single
+    content.vb: Public duration As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.AiSchedule.#ctor(SoulsLike.DayOfWeek,SoulsLike.Month,System.Int32,System.Int32,System.Single)
+  commentId: M:SoulsLike.AiSchedule.#ctor(SoulsLike.DayOfWeek,SoulsLike.Month,System.Int32,System.Int32,System.Single)
+  id: '#ctor(SoulsLike.DayOfWeek,SoulsLike.Month,System.Int32,System.Int32,System.Single)'
+  parent: SoulsLike.AiSchedule
+  langs:
+  - csharp
+  - vb
+  name: AiSchedule(DayOfWeek, Month, Int32, Int32, Single)
+  nameWithType: AiSchedule.AiSchedule(DayOfWeek, Month, Int32, Int32, Single)
+  fullName: SoulsLike.AiSchedule.AiSchedule(SoulsLike.DayOfWeek, SoulsLike.Month, System.Int32, System.Int32, System.Single)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/AI/AiSchedule.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: .ctor
+    path: ../Assets/Scripts/Mechanics/AI/AiSchedule.cs
+    startLine: 56
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nAi Schedule Constructor\n"
+  example: []
+  syntax:
+    content: public AiSchedule(DayOfWeek dayOfWeek, Month month, int hour, int minute, float duration)
+    parameters:
+    - id: dayOfWeek
+      type: SoulsLike.DayOfWeek
+      description: ''
+    - id: month
+      type: SoulsLike.Month
+      description: ''
+    - id: hour
+      type: System.Int32
+      description: ''
+    - id: minute
+      type: System.Int32
+      description: ''
+    - id: duration
+      type: System.Single
+      description: ''
+    content.vb: Public Sub New(dayOfWeek As DayOfWeek, month As Month, hour As Integer, minute As Integer, duration As Single)
+  overload: SoulsLike.AiSchedule.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SoulsLike.DayOfWeek
+  commentId: T:SoulsLike.DayOfWeek
+  parent: SoulsLike
+  name: DayOfWeek
+  nameWithType: DayOfWeek
+  fullName: SoulsLike.DayOfWeek
+- uid: SoulsLike.Month
+  commentId: T:SoulsLike.Month
+  parent: SoulsLike
+  name: Month
+  nameWithType: Month
+  fullName: SoulsLike.Month
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: SoulsLike.AiSchedule.#ctor*
+  commentId: Overload:SoulsLike.AiSchedule.#ctor
+  name: AiSchedule
+  nameWithType: AiSchedule.AiSchedule
+  fullName: SoulsLike.AiSchedule.AiSchedule

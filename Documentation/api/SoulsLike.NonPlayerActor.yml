@@ -1,0 +1,1387 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.NonPlayerActor
+  commentId: T:SoulsLike.NonPlayerActor
+  id: NonPlayerActor
+  parent: SoulsLike
+  children:
+  - SoulsLike.NonPlayerActor.aggressionLevel
+  - SoulsLike.NonPlayerActor.aiStates
+  - SoulsLike.NonPlayerActor.enemyActor
+  - SoulsLike.NonPlayerActor.fightingActor
+  - SoulsLike.NonPlayerActor.FollowActor(SoulsLike.Actor)
+  - SoulsLike.NonPlayerActor.followingActor
+  - SoulsLike.NonPlayerActor.InitiateCombat(SoulsLike.Actor)
+  - SoulsLike.NonPlayerActor.isEnemy
+  - SoulsLike.NonPlayerActor.Kill
+  - SoulsLike.NonPlayerActor.MIN_FIGHT_DISTANCE
+  - SoulsLike.NonPlayerActor.MoveTowardsActor(SoulsLike.Actor)
+  - SoulsLike.NonPlayerActor.MoveTowardsPoint(UnityEngine.Vector3)
+  - SoulsLike.NonPlayerActor.movingTowards
+  - SoulsLike.NonPlayerActor.runningTowards
+  - SoulsLike.NonPlayerActor.SmoothLook(UnityEngine.Vector3,System.Int32)
+  - SoulsLike.NonPlayerActor.Start
+  - SoulsLike.NonPlayerActor.stateManager
+  - SoulsLike.NonPlayerActor.StopMovingTowardsActor(SoulsLike.Actor)
+  - SoulsLike.NonPlayerActor.Update
+  langs:
+  - csharp
+  - vb
+  name: NonPlayerActor
+  nameWithType: NonPlayerActor
+  fullName: SoulsLike.NonPlayerActor
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: NonPlayerActor
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [RequireComponent(typeof(StateManager))]
+
+      [RequireComponent(typeof(NavMeshAgent))]
+
+      public class NonPlayerActor : Actor
+    content.vb: >-
+      <RequireComponent(GetType(StateManager))>
+
+      <RequireComponent(GetType(NavMeshAgent))>
+
+      Public Class NonPlayerActor
+          Inherits Actor
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - SoulsLike.Entity
+  - SoulsLike.Actor
+  inheritedMembers:
+  - SoulsLike.Actor.actorStats
+  - SoulsLike.Actor.attackedBy
+  - SoulsLike.Actor.animationHelper
+  - SoulsLike.Actor.weaponPrefab
+  - SoulsLike.Actor.currentWeapon
+  - SoulsLike.Actor.COMBAT_WAIT_TIME
+  - SoulsLike.Actor.CanDetect(SoulsLike.Actor)
+  - SoulsLike.Actor.Attack
+  - SoulsLike.Actor.OnCombat(SoulsLike.Actor)
+  - SoulsLike.Actor.OnActorAttacked(SoulsLike.Actor,System.Single)
+  - SoulsLike.Actor.OnRevive
+  - SoulsLike.Actor.FindPlayerActorInArray(SoulsLike.Actor[])
+  - SoulsLike.Actor.FindNearestActor(SoulsLike.Actor[],System.Single)
+  - SoulsLike.Entity.entityData
+  - SoulsLike.Entity.FindNearestEntity(SoulsLike.Entity[],System.Single)
+  attributes:
+  - type: UnityEngine.RequireComponent
+    ctor: UnityEngine.RequireComponent.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: SoulsLike.StateManager
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SoulsLike.NonPlayerActor.MIN_FIGHT_DISTANCE
+  commentId: F:SoulsLike.NonPlayerActor.MIN_FIGHT_DISTANCE
+  id: MIN_FIGHT_DISTANCE
+  parent: SoulsLike.NonPlayerActor
+  langs:
+  - csharp
+  - vb
+  name: MIN_FIGHT_DISTANCE
+  nameWithType: NonPlayerActor.MIN_FIGHT_DISTANCE
+  fullName: SoulsLike.NonPlayerActor.MIN_FIGHT_DISTANCE
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: MIN_FIGHT_DISTANCE
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 22
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public const float MIN_FIGHT_DISTANCE = 1.5F
+    return:
+      type: System.Single
+    content.vb: Public Const MIN_FIGHT_DISTANCE As Single = 1.5F
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.NonPlayerActor.aggressionLevel
+  commentId: F:SoulsLike.NonPlayerActor.aggressionLevel
+  id: aggressionLevel
+  parent: SoulsLike.NonPlayerActor
+  langs:
+  - csharp
+  - vb
+  name: aggressionLevel
+  nameWithType: NonPlayerActor.aggressionLevel
+  fullName: SoulsLike.NonPlayerActor.aggressionLevel
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: aggressionLevel
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public NonPlayerActor.AggressionLevel aggressionLevel
+    return:
+      type: SoulsLike.NonPlayerActor.AggressionLevel
+    content.vb: Public aggressionLevel As NonPlayerActor.AggressionLevel
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.NonPlayerActor.followingActor
+  commentId: F:SoulsLike.NonPlayerActor.followingActor
+  id: followingActor
+  parent: SoulsLike.NonPlayerActor
+  langs:
+  - csharp
+  - vb
+  name: followingActor
+  nameWithType: NonPlayerActor.followingActor
+  fullName: SoulsLike.NonPlayerActor.followingActor
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: followingActor
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 26
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public Actor followingActor
+    return:
+      type: SoulsLike.Actor
+    content.vb: Public followingActor As Actor
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.NonPlayerActor.movingTowards
+  commentId: F:SoulsLike.NonPlayerActor.movingTowards
+  id: movingTowards
+  parent: SoulsLike.NonPlayerActor
+  langs:
+  - csharp
+  - vb
+  name: movingTowards
+  nameWithType: NonPlayerActor.movingTowards
+  fullName: SoulsLike.NonPlayerActor.movingTowards
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: movingTowards
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 27
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public Actor movingTowards
+    return:
+      type: SoulsLike.Actor
+    content.vb: Public movingTowards As Actor
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.NonPlayerActor.runningTowards
+  commentId: P:SoulsLike.NonPlayerActor.runningTowards
+  id: runningTowards
+  parent: SoulsLike.NonPlayerActor
+  langs:
+  - csharp
+  - vb
+  name: runningTowards
+  nameWithType: NonPlayerActor.runningTowards
+  fullName: SoulsLike.NonPlayerActor.runningTowards
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: runningTowards
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 28
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public bool runningTowards { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property runningTowards As Boolean
+  overload: SoulsLike.NonPlayerActor.runningTowards*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.NonPlayerActor.fightingActor
+  commentId: F:SoulsLike.NonPlayerActor.fightingActor
+  id: fightingActor
+  parent: SoulsLike.NonPlayerActor
+  langs:
+  - csharp
+  - vb
+  name: fightingActor
+  nameWithType: NonPlayerActor.fightingActor
+  fullName: SoulsLike.NonPlayerActor.fightingActor
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: fightingActor
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 29
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public Actor fightingActor
+    return:
+      type: SoulsLike.Actor
+    content.vb: Public fightingActor As Actor
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.NonPlayerActor.stateManager
+  commentId: F:SoulsLike.NonPlayerActor.stateManager
+  id: stateManager
+  parent: SoulsLike.NonPlayerActor
+  langs:
+  - csharp
+  - vb
+  name: stateManager
+  nameWithType: NonPlayerActor.stateManager
+  fullName: SoulsLike.NonPlayerActor.stateManager
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: stateManager
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 30
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public StateManager stateManager
+    return:
+      type: SoulsLike.StateManager
+    content.vb: Public stateManager As StateManager
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.NonPlayerActor.aiStates
+  commentId: F:SoulsLike.NonPlayerActor.aiStates
+  id: aiStates
+  parent: SoulsLike.NonPlayerActor
+  langs:
+  - csharp
+  - vb
+  name: aiStates
+  nameWithType: NonPlayerActor.aiStates
+  fullName: SoulsLike.NonPlayerActor.aiStates
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: aiStates
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 33
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public AiState[] aiStates
+    return:
+      type: SoulsLike.AiState[]
+    content.vb: Public aiStates As AiState()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.NonPlayerActor.enemyActor
+  commentId: F:SoulsLike.NonPlayerActor.enemyActor
+  id: enemyActor
+  parent: SoulsLike.NonPlayerActor
+  langs:
+  - csharp
+  - vb
+  name: enemyActor
+  nameWithType: NonPlayerActor.enemyActor
+  fullName: SoulsLike.NonPlayerActor.enemyActor
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: enemyActor
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 34
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public Actor enemyActor
+    return:
+      type: SoulsLike.Actor
+    content.vb: Public enemyActor As Actor
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.NonPlayerActor.isEnemy
+  commentId: F:SoulsLike.NonPlayerActor.isEnemy
+  id: isEnemy
+  parent: SoulsLike.NonPlayerActor
+  langs:
+  - csharp
+  - vb
+  name: isEnemy
+  nameWithType: NonPlayerActor.isEnemy
+  fullName: SoulsLike.NonPlayerActor.isEnemy
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: isEnemy
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 35
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public bool isEnemy
+    return:
+      type: System.Boolean
+    content.vb: Public isEnemy As Boolean
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.NonPlayerActor.Start
+  commentId: M:SoulsLike.NonPlayerActor.Start
+  id: Start
+  parent: SoulsLike.NonPlayerActor
+  langs:
+  - csharp
+  - vb
+  name: Start()
+  nameWithType: NonPlayerActor.Start()
+  fullName: SoulsLike.NonPlayerActor.Start()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Start
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 38
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: protected override void Start()
+    content.vb: Protected Overrides Sub Start
+  overridden: SoulsLike.Actor.Start
+  overload: SoulsLike.NonPlayerActor.Start*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+- uid: SoulsLike.NonPlayerActor.SmoothLook(UnityEngine.Vector3,System.Int32)
+  commentId: M:SoulsLike.NonPlayerActor.SmoothLook(UnityEngine.Vector3,System.Int32)
+  id: SmoothLook(UnityEngine.Vector3,System.Int32)
+  parent: SoulsLike.NonPlayerActor
+  langs:
+  - csharp
+  - vb
+  name: SmoothLook(Vector3, Int32)
+  nameWithType: NonPlayerActor.SmoothLook(Vector3, Int32)
+  fullName: SoulsLike.NonPlayerActor.SmoothLook(UnityEngine.Vector3, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: SmoothLook
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 58
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nSmooth Look towards direction\n"
+  example: []
+  syntax:
+    content: public void SmoothLook(Vector3 targetDir, int lookSpeed)
+    parameters:
+    - id: targetDir
+      type: UnityEngine.Vector3
+      description: ''
+    - id: lookSpeed
+      type: System.Int32
+      description: ''
+    content.vb: Public Sub SmoothLook(targetDir As Vector3, lookSpeed As Integer)
+  overload: SoulsLike.NonPlayerActor.SmoothLook*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.NonPlayerActor.InitiateCombat(SoulsLike.Actor)
+  commentId: M:SoulsLike.NonPlayerActor.InitiateCombat(SoulsLike.Actor)
+  id: InitiateCombat(SoulsLike.Actor)
+  parent: SoulsLike.NonPlayerActor
+  langs:
+  - csharp
+  - vb
+  name: InitiateCombat(Actor)
+  nameWithType: NonPlayerActor.InitiateCombat(Actor)
+  fullName: SoulsLike.NonPlayerActor.InitiateCombat(SoulsLike.Actor)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: InitiateCombat
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 68
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nInitiate Combat with actor\n"
+  example: []
+  syntax:
+    content: public void InitiateCombat(Actor actor)
+    parameters:
+    - id: actor
+      type: SoulsLike.Actor
+      description: ''
+    content.vb: Public Sub InitiateCombat(actor As Actor)
+  overload: SoulsLike.NonPlayerActor.InitiateCombat*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.NonPlayerActor.Kill
+  commentId: M:SoulsLike.NonPlayerActor.Kill
+  id: Kill
+  parent: SoulsLike.NonPlayerActor
+  langs:
+  - csharp
+  - vb
+  name: Kill()
+  nameWithType: NonPlayerActor.Kill()
+  fullName: SoulsLike.NonPlayerActor.Kill()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Kill
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 76
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nKill Actor\n"
+  example: []
+  syntax:
+    content: public override void Kill()
+    content.vb: Public Overrides Sub Kill
+  overridden: SoulsLike.Actor.Kill
+  overload: SoulsLike.NonPlayerActor.Kill*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: SoulsLike.NonPlayerActor.MoveTowardsActor(SoulsLike.Actor)
+  commentId: M:SoulsLike.NonPlayerActor.MoveTowardsActor(SoulsLike.Actor)
+  id: MoveTowardsActor(SoulsLike.Actor)
+  parent: SoulsLike.NonPlayerActor
+  langs:
+  - csharp
+  - vb
+  name: MoveTowardsActor(Actor)
+  nameWithType: NonPlayerActor.MoveTowardsActor(Actor)
+  fullName: SoulsLike.NonPlayerActor.MoveTowardsActor(SoulsLike.Actor)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: MoveTowardsActor
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 103
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nMove NPC towards an area.\n"
+  example: []
+  syntax:
+    content: public void MoveTowardsActor(Actor actor)
+    parameters:
+    - id: actor
+      type: SoulsLike.Actor
+    content.vb: Public Sub MoveTowardsActor(actor As Actor)
+  overload: SoulsLike.NonPlayerActor.MoveTowardsActor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.NonPlayerActor.MoveTowardsPoint(UnityEngine.Vector3)
+  commentId: M:SoulsLike.NonPlayerActor.MoveTowardsPoint(UnityEngine.Vector3)
+  id: MoveTowardsPoint(UnityEngine.Vector3)
+  parent: SoulsLike.NonPlayerActor
+  langs:
+  - csharp
+  - vb
+  name: MoveTowardsPoint(Vector3)
+  nameWithType: NonPlayerActor.MoveTowardsPoint(Vector3)
+  fullName: SoulsLike.NonPlayerActor.MoveTowardsPoint(UnityEngine.Vector3)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: MoveTowardsPoint
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 113
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nMove towards vector 3\n"
+  example: []
+  syntax:
+    content: public void MoveTowardsPoint(Vector3 point)
+    parameters:
+    - id: point
+      type: UnityEngine.Vector3
+      description: ''
+    content.vb: Public Sub MoveTowardsPoint(point As Vector3)
+  overload: SoulsLike.NonPlayerActor.MoveTowardsPoint*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.NonPlayerActor.StopMovingTowardsActor(SoulsLike.Actor)
+  commentId: M:SoulsLike.NonPlayerActor.StopMovingTowardsActor(SoulsLike.Actor)
+  id: StopMovingTowardsActor(SoulsLike.Actor)
+  parent: SoulsLike.NonPlayerActor
+  langs:
+  - csharp
+  - vb
+  name: StopMovingTowardsActor(Actor)
+  nameWithType: NonPlayerActor.StopMovingTowardsActor(Actor)
+  fullName: SoulsLike.NonPlayerActor.StopMovingTowardsActor(SoulsLike.Actor)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: StopMovingTowardsActor
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 124
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nStop moving towards actor\n"
+  example: []
+  syntax:
+    content: public void StopMovingTowardsActor(Actor actor)
+    parameters:
+    - id: actor
+      type: SoulsLike.Actor
+      description: ''
+    content.vb: Public Sub StopMovingTowardsActor(actor As Actor)
+  overload: SoulsLike.NonPlayerActor.StopMovingTowardsActor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.NonPlayerActor.FollowActor(SoulsLike.Actor)
+  commentId: M:SoulsLike.NonPlayerActor.FollowActor(SoulsLike.Actor)
+  id: FollowActor(SoulsLike.Actor)
+  parent: SoulsLike.NonPlayerActor
+  langs:
+  - csharp
+  - vb
+  name: FollowActor(Actor)
+  nameWithType: NonPlayerActor.FollowActor(Actor)
+  fullName: SoulsLike.NonPlayerActor.FollowActor(SoulsLike.Actor)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: FollowActor
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 135
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nFollow actor\n"
+  example: []
+  syntax:
+    content: public bool FollowActor(Actor actor)
+    parameters:
+    - id: actor
+      type: SoulsLike.Actor
+      description: ''
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function FollowActor(actor As Actor) As Boolean
+  overload: SoulsLike.NonPlayerActor.FollowActor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.NonPlayerActor.Update
+  commentId: M:SoulsLike.NonPlayerActor.Update
+  id: Update
+  parent: SoulsLike.NonPlayerActor
+  langs:
+  - csharp
+  - vb
+  name: Update()
+  nameWithType: NonPlayerActor.Update()
+  fullName: SoulsLike.NonPlayerActor.Update()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Update
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 146
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: protected override void Update()
+    content.vb: Protected Overrides Sub Update
+  overridden: SoulsLike.Actor.Update
+  overload: SoulsLike.NonPlayerActor.Update*
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: SoulsLike.Entity
+  commentId: T:SoulsLike.Entity
+  parent: SoulsLike
+  name: Entity
+  nameWithType: Entity
+  fullName: SoulsLike.Entity
+- uid: SoulsLike.Actor
+  commentId: T:SoulsLike.Actor
+  parent: SoulsLike
+  name: Actor
+  nameWithType: Actor
+  fullName: SoulsLike.Actor
+- uid: SoulsLike.Actor.actorStats
+  commentId: F:SoulsLike.Actor.actorStats
+  parent: SoulsLike.Actor
+  name: actorStats
+  nameWithType: Actor.actorStats
+  fullName: SoulsLike.Actor.actorStats
+- uid: SoulsLike.Actor.attackedBy
+  commentId: F:SoulsLike.Actor.attackedBy
+  parent: SoulsLike.Actor
+  name: attackedBy
+  nameWithType: Actor.attackedBy
+  fullName: SoulsLike.Actor.attackedBy
+- uid: SoulsLike.Actor.animationHelper
+  commentId: F:SoulsLike.Actor.animationHelper
+  parent: SoulsLike.Actor
+  name: animationHelper
+  nameWithType: Actor.animationHelper
+  fullName: SoulsLike.Actor.animationHelper
+- uid: SoulsLike.Actor.weaponPrefab
+  commentId: F:SoulsLike.Actor.weaponPrefab
+  parent: SoulsLike.Actor
+  name: weaponPrefab
+  nameWithType: Actor.weaponPrefab
+  fullName: SoulsLike.Actor.weaponPrefab
+- uid: SoulsLike.Actor.currentWeapon
+  commentId: F:SoulsLike.Actor.currentWeapon
+  parent: SoulsLike.Actor
+  name: currentWeapon
+  nameWithType: Actor.currentWeapon
+  fullName: SoulsLike.Actor.currentWeapon
+- uid: SoulsLike.Actor.COMBAT_WAIT_TIME
+  commentId: F:SoulsLike.Actor.COMBAT_WAIT_TIME
+  parent: SoulsLike.Actor
+  name: COMBAT_WAIT_TIME
+  nameWithType: Actor.COMBAT_WAIT_TIME
+  fullName: SoulsLike.Actor.COMBAT_WAIT_TIME
+- uid: SoulsLike.Actor.CanDetect(SoulsLike.Actor)
+  commentId: M:SoulsLike.Actor.CanDetect(SoulsLike.Actor)
+  parent: SoulsLike.Actor
+  name: CanDetect(Actor)
+  nameWithType: Actor.CanDetect(Actor)
+  fullName: SoulsLike.Actor.CanDetect(SoulsLike.Actor)
+  spec.csharp:
+  - uid: SoulsLike.Actor.CanDetect(SoulsLike.Actor)
+    name: CanDetect
+    nameWithType: Actor.CanDetect
+    fullName: SoulsLike.Actor.CanDetect
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: SoulsLike.Actor
+    name: Actor
+    nameWithType: Actor
+    fullName: SoulsLike.Actor
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: SoulsLike.Actor.CanDetect(SoulsLike.Actor)
+    name: CanDetect
+    nameWithType: Actor.CanDetect
+    fullName: SoulsLike.Actor.CanDetect
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: SoulsLike.Actor
+    name: Actor
+    nameWithType: Actor
+    fullName: SoulsLike.Actor
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SoulsLike.Actor.Attack
+  commentId: M:SoulsLike.Actor.Attack
+  parent: SoulsLike.Actor
+  name: Attack()
+  nameWithType: Actor.Attack()
+  fullName: SoulsLike.Actor.Attack()
+  spec.csharp:
+  - uid: SoulsLike.Actor.Attack
+    name: Attack
+    nameWithType: Actor.Attack
+    fullName: SoulsLike.Actor.Attack
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: SoulsLike.Actor.Attack
+    name: Attack
+    nameWithType: Actor.Attack
+    fullName: SoulsLike.Actor.Attack
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SoulsLike.Actor.OnCombat(SoulsLike.Actor)
+  commentId: M:SoulsLike.Actor.OnCombat(SoulsLike.Actor)
+  parent: SoulsLike.Actor
+  name: OnCombat(Actor)
+  nameWithType: Actor.OnCombat(Actor)
+  fullName: SoulsLike.Actor.OnCombat(SoulsLike.Actor)
+  spec.csharp:
+  - uid: SoulsLike.Actor.OnCombat(SoulsLike.Actor)
+    name: OnCombat
+    nameWithType: Actor.OnCombat
+    fullName: SoulsLike.Actor.OnCombat
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: SoulsLike.Actor
+    name: Actor
+    nameWithType: Actor
+    fullName: SoulsLike.Actor
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: SoulsLike.Actor.OnCombat(SoulsLike.Actor)
+    name: OnCombat
+    nameWithType: Actor.OnCombat
+    fullName: SoulsLike.Actor.OnCombat
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: SoulsLike.Actor
+    name: Actor
+    nameWithType: Actor
+    fullName: SoulsLike.Actor
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SoulsLike.Actor.OnActorAttacked(SoulsLike.Actor,System.Single)
+  commentId: M:SoulsLike.Actor.OnActorAttacked(SoulsLike.Actor,System.Single)
+  parent: SoulsLike.Actor
+  isExternal: true
+  name: OnActorAttacked(Actor, Single)
+  nameWithType: Actor.OnActorAttacked(Actor, Single)
+  fullName: SoulsLike.Actor.OnActorAttacked(SoulsLike.Actor, System.Single)
+  spec.csharp:
+  - uid: SoulsLike.Actor.OnActorAttacked(SoulsLike.Actor,System.Single)
+    name: OnActorAttacked
+    nameWithType: Actor.OnActorAttacked
+    fullName: SoulsLike.Actor.OnActorAttacked
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: SoulsLike.Actor
+    name: Actor
+    nameWithType: Actor
+    fullName: SoulsLike.Actor
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: SoulsLike.Actor.OnActorAttacked(SoulsLike.Actor,System.Single)
+    name: OnActorAttacked
+    nameWithType: Actor.OnActorAttacked
+    fullName: SoulsLike.Actor.OnActorAttacked
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: SoulsLike.Actor
+    name: Actor
+    nameWithType: Actor
+    fullName: SoulsLike.Actor
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SoulsLike.Actor.OnRevive
+  commentId: M:SoulsLike.Actor.OnRevive
+  parent: SoulsLike.Actor
+  name: OnRevive()
+  nameWithType: Actor.OnRevive()
+  fullName: SoulsLike.Actor.OnRevive()
+  spec.csharp:
+  - uid: SoulsLike.Actor.OnRevive
+    name: OnRevive
+    nameWithType: Actor.OnRevive
+    fullName: SoulsLike.Actor.OnRevive
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: SoulsLike.Actor.OnRevive
+    name: OnRevive
+    nameWithType: Actor.OnRevive
+    fullName: SoulsLike.Actor.OnRevive
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SoulsLike.Actor.FindPlayerActorInArray(SoulsLike.Actor[])
+  commentId: M:SoulsLike.Actor.FindPlayerActorInArray(SoulsLike.Actor[])
+  parent: SoulsLike.Actor
+  name: FindPlayerActorInArray(Actor[])
+  nameWithType: Actor.FindPlayerActorInArray(Actor[])
+  fullName: SoulsLike.Actor.FindPlayerActorInArray(SoulsLike.Actor[])
+  nameWithType.vb: Actor.FindPlayerActorInArray(Actor())
+  fullName.vb: SoulsLike.Actor.FindPlayerActorInArray(SoulsLike.Actor())
+  name.vb: FindPlayerActorInArray(Actor())
+  spec.csharp:
+  - uid: SoulsLike.Actor.FindPlayerActorInArray(SoulsLike.Actor[])
+    name: FindPlayerActorInArray
+    nameWithType: Actor.FindPlayerActorInArray
+    fullName: SoulsLike.Actor.FindPlayerActorInArray
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: SoulsLike.Actor
+    name: Actor
+    nameWithType: Actor
+    fullName: SoulsLike.Actor
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: SoulsLike.Actor.FindPlayerActorInArray(SoulsLike.Actor[])
+    name: FindPlayerActorInArray
+    nameWithType: Actor.FindPlayerActorInArray
+    fullName: SoulsLike.Actor.FindPlayerActorInArray
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: SoulsLike.Actor
+    name: Actor
+    nameWithType: Actor
+    fullName: SoulsLike.Actor
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SoulsLike.Actor.FindNearestActor(SoulsLike.Actor[],System.Single)
+  commentId: M:SoulsLike.Actor.FindNearestActor(SoulsLike.Actor[],System.Single)
+  parent: SoulsLike.Actor
+  isExternal: true
+  name: FindNearestActor(Actor[], Single)
+  nameWithType: Actor.FindNearestActor(Actor[], Single)
+  fullName: SoulsLike.Actor.FindNearestActor(SoulsLike.Actor[], System.Single)
+  nameWithType.vb: Actor.FindNearestActor(Actor(), Single)
+  fullName.vb: SoulsLike.Actor.FindNearestActor(SoulsLike.Actor(), System.Single)
+  name.vb: FindNearestActor(Actor(), Single)
+  spec.csharp:
+  - uid: SoulsLike.Actor.FindNearestActor(SoulsLike.Actor[],System.Single)
+    name: FindNearestActor
+    nameWithType: Actor.FindNearestActor
+    fullName: SoulsLike.Actor.FindNearestActor
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: SoulsLike.Actor
+    name: Actor
+    nameWithType: Actor
+    fullName: SoulsLike.Actor
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: SoulsLike.Actor.FindNearestActor(SoulsLike.Actor[],System.Single)
+    name: FindNearestActor
+    nameWithType: Actor.FindNearestActor
+    fullName: SoulsLike.Actor.FindNearestActor
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: SoulsLike.Actor
+    name: Actor
+    nameWithType: Actor
+    fullName: SoulsLike.Actor
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SoulsLike.Entity.entityData
+  commentId: F:SoulsLike.Entity.entityData
+  parent: SoulsLike.Entity
+  name: entityData
+  nameWithType: Entity.entityData
+  fullName: SoulsLike.Entity.entityData
+- uid: SoulsLike.Entity.FindNearestEntity(SoulsLike.Entity[],System.Single)
+  commentId: M:SoulsLike.Entity.FindNearestEntity(SoulsLike.Entity[],System.Single)
+  parent: SoulsLike.Entity
+  isExternal: true
+  name: FindNearestEntity(Entity[], Single)
+  nameWithType: Entity.FindNearestEntity(Entity[], Single)
+  fullName: SoulsLike.Entity.FindNearestEntity(SoulsLike.Entity[], System.Single)
+  nameWithType.vb: Entity.FindNearestEntity(Entity(), Single)
+  fullName.vb: SoulsLike.Entity.FindNearestEntity(SoulsLike.Entity(), System.Single)
+  name.vb: FindNearestEntity(Entity(), Single)
+  spec.csharp:
+  - uid: SoulsLike.Entity.FindNearestEntity(SoulsLike.Entity[],System.Single)
+    name: FindNearestEntity
+    nameWithType: Entity.FindNearestEntity
+    fullName: SoulsLike.Entity.FindNearestEntity
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: SoulsLike.Entity
+    name: Entity
+    nameWithType: Entity
+    fullName: SoulsLike.Entity
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: SoulsLike.Entity.FindNearestEntity(SoulsLike.Entity[],System.Single)
+    name: FindNearestEntity
+    nameWithType: Entity.FindNearestEntity
+    fullName: SoulsLike.Entity.FindNearestEntity
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: SoulsLike.Entity
+    name: Entity
+    nameWithType: Entity
+    fullName: SoulsLike.Entity
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: SoulsLike.NonPlayerActor.AggressionLevel
+  commentId: T:SoulsLike.NonPlayerActor.AggressionLevel
+  parent: SoulsLike
+  name: NonPlayerActor.AggressionLevel
+  nameWithType: NonPlayerActor.AggressionLevel
+  fullName: SoulsLike.NonPlayerActor.AggressionLevel
+- uid: SoulsLike.NonPlayerActor.runningTowards*
+  commentId: Overload:SoulsLike.NonPlayerActor.runningTowards
+  name: runningTowards
+  nameWithType: NonPlayerActor.runningTowards
+  fullName: SoulsLike.NonPlayerActor.runningTowards
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: SoulsLike.StateManager
+  commentId: T:SoulsLike.StateManager
+  parent: SoulsLike
+  name: StateManager
+  nameWithType: StateManager
+  fullName: SoulsLike.StateManager
+- uid: SoulsLike.AiState[]
+  isExternal: true
+  name: AiState[]
+  nameWithType: AiState[]
+  fullName: SoulsLike.AiState[]
+  nameWithType.vb: AiState()
+  fullName.vb: SoulsLike.AiState()
+  name.vb: AiState()
+  spec.csharp:
+  - uid: SoulsLike.AiState
+    name: AiState
+    nameWithType: AiState
+    fullName: SoulsLike.AiState
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: SoulsLike.AiState
+    name: AiState
+    nameWithType: AiState
+    fullName: SoulsLike.AiState
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: SoulsLike.Actor.Start
+  commentId: M:SoulsLike.Actor.Start
+  parent: SoulsLike.Actor
+  name: Start()
+  nameWithType: Actor.Start()
+  fullName: SoulsLike.Actor.Start()
+  spec.csharp:
+  - uid: SoulsLike.Actor.Start
+    name: Start
+    nameWithType: Actor.Start
+    fullName: SoulsLike.Actor.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: SoulsLike.Actor.Start
+    name: Start
+    nameWithType: Actor.Start
+    fullName: SoulsLike.Actor.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SoulsLike.NonPlayerActor.Start*
+  commentId: Overload:SoulsLike.NonPlayerActor.Start
+  name: Start
+  nameWithType: NonPlayerActor.Start
+  fullName: SoulsLike.NonPlayerActor.Start
+- uid: SoulsLike.NonPlayerActor.SmoothLook*
+  commentId: Overload:SoulsLike.NonPlayerActor.SmoothLook
+  name: SmoothLook
+  nameWithType: NonPlayerActor.SmoothLook
+  fullName: SoulsLike.NonPlayerActor.SmoothLook
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: SoulsLike.NonPlayerActor.InitiateCombat*
+  commentId: Overload:SoulsLike.NonPlayerActor.InitiateCombat
+  name: InitiateCombat
+  nameWithType: NonPlayerActor.InitiateCombat
+  fullName: SoulsLike.NonPlayerActor.InitiateCombat
+- uid: SoulsLike.Actor.Kill
+  commentId: M:SoulsLike.Actor.Kill
+  parent: SoulsLike.Actor
+  name: Kill()
+  nameWithType: Actor.Kill()
+  fullName: SoulsLike.Actor.Kill()
+  spec.csharp:
+  - uid: SoulsLike.Actor.Kill
+    name: Kill
+    nameWithType: Actor.Kill
+    fullName: SoulsLike.Actor.Kill
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: SoulsLike.Actor.Kill
+    name: Kill
+    nameWithType: Actor.Kill
+    fullName: SoulsLike.Actor.Kill
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SoulsLike.NonPlayerActor.Kill*
+  commentId: Overload:SoulsLike.NonPlayerActor.Kill
+  name: Kill
+  nameWithType: NonPlayerActor.Kill
+  fullName: SoulsLike.NonPlayerActor.Kill
+- uid: SoulsLike.NonPlayerActor.MoveTowardsActor*
+  commentId: Overload:SoulsLike.NonPlayerActor.MoveTowardsActor
+  name: MoveTowardsActor
+  nameWithType: NonPlayerActor.MoveTowardsActor
+  fullName: SoulsLike.NonPlayerActor.MoveTowardsActor
+- uid: SoulsLike.NonPlayerActor.MoveTowardsPoint*
+  commentId: Overload:SoulsLike.NonPlayerActor.MoveTowardsPoint
+  name: MoveTowardsPoint
+  nameWithType: NonPlayerActor.MoveTowardsPoint
+  fullName: SoulsLike.NonPlayerActor.MoveTowardsPoint
+- uid: SoulsLike.NonPlayerActor.StopMovingTowardsActor*
+  commentId: Overload:SoulsLike.NonPlayerActor.StopMovingTowardsActor
+  name: StopMovingTowardsActor
+  nameWithType: NonPlayerActor.StopMovingTowardsActor
+  fullName: SoulsLike.NonPlayerActor.StopMovingTowardsActor
+- uid: SoulsLike.NonPlayerActor.FollowActor*
+  commentId: Overload:SoulsLike.NonPlayerActor.FollowActor
+  name: FollowActor
+  nameWithType: NonPlayerActor.FollowActor
+  fullName: SoulsLike.NonPlayerActor.FollowActor
+- uid: SoulsLike.Actor.Update
+  commentId: M:SoulsLike.Actor.Update
+  parent: SoulsLike.Actor
+  name: Update()
+  nameWithType: Actor.Update()
+  fullName: SoulsLike.Actor.Update()
+  spec.csharp:
+  - uid: SoulsLike.Actor.Update
+    name: Update
+    nameWithType: Actor.Update
+    fullName: SoulsLike.Actor.Update
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: SoulsLike.Actor.Update
+    name: Update
+    nameWithType: Actor.Update
+    fullName: SoulsLike.Actor.Update
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SoulsLike.NonPlayerActor.Update*
+  commentId: Overload:SoulsLike.NonPlayerActor.Update
+  name: Update
+  nameWithType: NonPlayerActor.Update
+  fullName: SoulsLike.NonPlayerActor.Update

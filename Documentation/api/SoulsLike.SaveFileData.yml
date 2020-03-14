@@ -1,0 +1,451 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.SaveFileData
+  commentId: T:SoulsLike.SaveFileData
+  id: SaveFileData
+  parent: SoulsLike
+  children:
+  - SoulsLike.SaveFileData.actorStats
+  - SoulsLike.SaveFileData.gameVersion
+  - SoulsLike.SaveFileData.playerLevel
+  - SoulsLike.SaveFileData.playerStats
+  - SoulsLike.SaveFileData.questData
+  - SoulsLike.SaveFileData.saveCreation
+  - SoulsLike.SaveFileData.savedGlobals
+  langs:
+  - csharp
+  - vb
+  name: SaveFileData
+  nameWithType: SaveFileData
+  fullName: SoulsLike.SaveFileData
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Saves/SaveFileData.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: SaveFileData
+    path: ../Assets/Scripts/Saves/SaveFileData.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class SaveFileData
+    content.vb: >-
+      <Serializable>
+
+      Public Class SaveFileData
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SoulsLike.SaveFileData.gameVersion
+  commentId: F:SoulsLike.SaveFileData.gameVersion
+  id: gameVersion
+  parent: SoulsLike.SaveFileData
+  langs:
+  - csharp
+  - vb
+  name: gameVersion
+  nameWithType: SaveFileData.gameVersion
+  fullName: SoulsLike.SaveFileData.gameVersion
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Saves/SaveFileData.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: gameVersion
+    path: ../Assets/Scripts/Saves/SaveFileData.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public float gameVersion
+    return:
+      type: System.Single
+    content.vb: Public gameVersion As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.SaveFileData.playerStats
+  commentId: F:SoulsLike.SaveFileData.playerStats
+  id: playerStats
+  parent: SoulsLike.SaveFileData
+  langs:
+  - csharp
+  - vb
+  name: playerStats
+  nameWithType: SaveFileData.playerStats
+  fullName: SoulsLike.SaveFileData.playerStats
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Saves/SaveFileData.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: playerStats
+    path: ../Assets/Scripts/Saves/SaveFileData.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public ActorStats playerStats
+    return:
+      type: SoulsLike.ActorStats
+    content.vb: Public playerStats As ActorStats
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.SaveFileData.playerLevel
+  commentId: F:SoulsLike.SaveFileData.playerLevel
+  id: playerLevel
+  parent: SoulsLike.SaveFileData
+  langs:
+  - csharp
+  - vb
+  name: playerLevel
+  nameWithType: SaveFileData.playerLevel
+  fullName: SoulsLike.SaveFileData.playerLevel
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Saves/SaveFileData.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: playerLevel
+    path: ../Assets/Scripts/Saves/SaveFileData.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public string playerLevel
+    return:
+      type: System.String
+    content.vb: Public playerLevel As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.SaveFileData.questData
+  commentId: F:SoulsLike.SaveFileData.questData
+  id: questData
+  parent: SoulsLike.SaveFileData
+  langs:
+  - csharp
+  - vb
+  name: questData
+  nameWithType: SaveFileData.questData
+  fullName: SoulsLike.SaveFileData.questData
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Saves/SaveFileData.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: questData
+    path: ../Assets/Scripts/Saves/SaveFileData.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public List<QuestData> questData
+    return:
+      type: System.Collections.Generic.List{SoulsLike.QuestData}
+    content.vb: Public questData As List(Of QuestData)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.SaveFileData.saveCreation
+  commentId: F:SoulsLike.SaveFileData.saveCreation
+  id: saveCreation
+  parent: SoulsLike.SaveFileData
+  langs:
+  - csharp
+  - vb
+  name: saveCreation
+  nameWithType: SaveFileData.saveCreation
+  fullName: SoulsLike.SaveFileData.saveCreation
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Saves/SaveFileData.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: saveCreation
+    path: ../Assets/Scripts/Saves/SaveFileData.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public DateTime saveCreation
+    return:
+      type: System.DateTime
+    content.vb: Public saveCreation As Date
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.SaveFileData.actorStats
+  commentId: F:SoulsLike.SaveFileData.actorStats
+  id: actorStats
+  parent: SoulsLike.SaveFileData
+  langs:
+  - csharp
+  - vb
+  name: actorStats
+  nameWithType: SaveFileData.actorStats
+  fullName: SoulsLike.SaveFileData.actorStats
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Saves/SaveFileData.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: actorStats
+    path: ../Assets/Scripts/Saves/SaveFileData.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public List<ActorStats> actorStats
+    return:
+      type: System.Collections.Generic.List{SoulsLike.ActorStats}
+    content.vb: Public actorStats As List(Of ActorStats)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.SaveFileData.savedGlobals
+  commentId: F:SoulsLike.SaveFileData.savedGlobals
+  id: savedGlobals
+  parent: SoulsLike.SaveFileData
+  langs:
+  - csharp
+  - vb
+  name: savedGlobals
+  nameWithType: SaveFileData.savedGlobals
+  fullName: SoulsLike.SaveFileData.savedGlobals
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Saves/SaveFileData.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: savedGlobals
+    path: ../Assets/Scripts/Saves/SaveFileData.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public SavedGlobals savedGlobals
+    return:
+      type: SoulsLike.SavedGlobals
+    content.vb: Public savedGlobals As SavedGlobals
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: SoulsLike.ActorStats
+  commentId: T:SoulsLike.ActorStats
+  parent: SoulsLike
+  name: ActorStats
+  nameWithType: ActorStats
+  fullName: SoulsLike.ActorStats
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.List{SoulsLike.QuestData}
+  commentId: T:System.Collections.Generic.List{SoulsLike.QuestData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<QuestData>
+  nameWithType: List<QuestData>
+  fullName: System.Collections.Generic.List<SoulsLike.QuestData>
+  nameWithType.vb: List(Of QuestData)
+  fullName.vb: System.Collections.Generic.List(Of SoulsLike.QuestData)
+  name.vb: List(Of QuestData)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: SoulsLike.QuestData
+    name: QuestData
+    nameWithType: QuestData
+    fullName: SoulsLike.QuestData
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: SoulsLike.QuestData
+    name: QuestData
+    nameWithType: QuestData
+    fullName: SoulsLike.QuestData
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: System.Collections.Generic.List{SoulsLike.ActorStats}
+  commentId: T:System.Collections.Generic.List{SoulsLike.ActorStats}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<ActorStats>
+  nameWithType: List<ActorStats>
+  fullName: System.Collections.Generic.List<SoulsLike.ActorStats>
+  nameWithType.vb: List(Of ActorStats)
+  fullName.vb: System.Collections.Generic.List(Of SoulsLike.ActorStats)
+  name.vb: List(Of ActorStats)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: SoulsLike.ActorStats
+    name: ActorStats
+    nameWithType: ActorStats
+    fullName: SoulsLike.ActorStats
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: SoulsLike.ActorStats
+    name: ActorStats
+    nameWithType: ActorStats
+    fullName: SoulsLike.ActorStats
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: SoulsLike.SavedGlobals
+  commentId: T:SoulsLike.SavedGlobals
+  parent: SoulsLike
+  name: SavedGlobals
+  nameWithType: SavedGlobals
+  fullName: SoulsLike.SavedGlobals

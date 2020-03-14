@@ -1,0 +1,103 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.IDialogue
+  commentId: T:SoulsLike.IDialogue
+  id: IDialogue
+  parent: SoulsLike
+  children:
+  - SoulsLike.IDialogue.OnDialogue(System.String,System.String,SoulsLike.Actor)
+  langs:
+  - csharp
+  - vb
+  name: IDialogue
+  nameWithType: IDialogue
+  fullName: SoulsLike.IDialogue
+  type: Interface
+  source:
+    remote:
+      path: Assets/Scripts/Dialogue/IDialogue.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: IDialogue
+    path: ../Assets/Scripts/Dialogue/IDialogue.cs
+    startLine: 2
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public interface IDialogue
+    content.vb: Public Interface IDialogue
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: SoulsLike.IDialogue.OnDialogue(System.String,System.String,SoulsLike.Actor)
+  commentId: M:SoulsLike.IDialogue.OnDialogue(System.String,System.String,SoulsLike.Actor)
+  id: OnDialogue(System.String,System.String,SoulsLike.Actor)
+  parent: SoulsLike.IDialogue
+  langs:
+  - csharp
+  - vb
+  name: OnDialogue(String, String, Actor)
+  nameWithType: IDialogue.OnDialogue(String, String, Actor)
+  fullName: SoulsLike.IDialogue.OnDialogue(System.String, System.String, SoulsLike.Actor)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Dialogue/IDialogue.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: OnDialogue
+    path: ../Assets/Scripts/Dialogue/IDialogue.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nOn Dialogue\n"
+  example: []
+  syntax:
+    content: void OnDialogue(string dialogueID, string dialogueChoice, Actor actor)
+    parameters:
+    - id: dialogueID
+      type: System.String
+      description: ''
+    - id: dialogueChoice
+      type: System.String
+      description: ''
+    - id: actor
+      type: SoulsLike.Actor
+      description: ''
+    content.vb: Sub OnDialogue(dialogueID As String, dialogueChoice As String, actor As Actor)
+  overload: SoulsLike.IDialogue.OnDialogue*
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: SoulsLike.IDialogue.OnDialogue*
+  commentId: Overload:SoulsLike.IDialogue.OnDialogue
+  name: OnDialogue
+  nameWithType: IDialogue.OnDialogue
+  fullName: SoulsLike.IDialogue.OnDialogue
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: SoulsLike.Actor
+  commentId: T:SoulsLike.Actor
+  parent: SoulsLike
+  name: Actor
+  nameWithType: Actor
+  fullName: SoulsLike.Actor
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

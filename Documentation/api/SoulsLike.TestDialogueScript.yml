@@ -1,0 +1,275 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.TestDialogueScript
+  commentId: T:SoulsLike.TestDialogueScript
+  id: TestDialogueScript
+  parent: SoulsLike
+  children:
+  - SoulsLike.TestDialogueScript.OnDialogue(System.String,System.String,SoulsLike.Actor)
+  langs:
+  - csharp
+  - vb
+  name: TestDialogueScript
+  nameWithType: TestDialogueScript
+  fullName: SoulsLike.TestDialogueScript
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Gameplay/TestDialogueScript.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: TestDialogueScript
+    path: ../Assets/Scripts/Gameplay/TestDialogueScript.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: 'public class TestDialogueScript : GameplayScript, IDialogue'
+    content.vb: >-
+      Public Class TestDialogueScript
+          Inherits GameplayScript
+          Implements IDialogue
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - SoulsLike.GameplayScript
+  implements:
+  - SoulsLike.IDialogue
+  inheritedMembers:
+  - SoulsLike.GameplayScript.scriptHolder
+  - SoulsLike.GameplayScript.GetScriptHolder
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SoulsLike.TestDialogueScript.OnDialogue(System.String,System.String,SoulsLike.Actor)
+  commentId: M:SoulsLike.TestDialogueScript.OnDialogue(System.String,System.String,SoulsLike.Actor)
+  id: OnDialogue(System.String,System.String,SoulsLike.Actor)
+  parent: SoulsLike.TestDialogueScript
+  langs:
+  - csharp
+  - vb
+  name: OnDialogue(String, String, Actor)
+  nameWithType: TestDialogueScript.OnDialogue(String, String, Actor)
+  fullName: SoulsLike.TestDialogueScript.OnDialogue(System.String, System.String, SoulsLike.Actor)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Gameplay/TestDialogueScript.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: OnDialogue
+    path: ../Assets/Scripts/Gameplay/TestDialogueScript.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public void OnDialogue(string dialogueID, string dialogueChoice, Actor actor)
+    parameters:
+    - id: dialogueID
+      type: System.String
+    - id: dialogueChoice
+      type: System.String
+    - id: actor
+      type: SoulsLike.Actor
+    content.vb: Public Sub OnDialogue(dialogueID As String, dialogueChoice As String, actor As Actor)
+  overload: SoulsLike.TestDialogueScript.OnDialogue*
+  implements:
+  - SoulsLike.IDialogue.OnDialogue(System.String,System.String,SoulsLike.Actor)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: SoulsLike.GameplayScript
+  commentId: T:SoulsLike.GameplayScript
+  parent: SoulsLike
+  name: GameplayScript
+  nameWithType: GameplayScript
+  fullName: SoulsLike.GameplayScript
+- uid: SoulsLike.IDialogue
+  commentId: T:SoulsLike.IDialogue
+  parent: SoulsLike
+  name: IDialogue
+  nameWithType: IDialogue
+  fullName: SoulsLike.IDialogue
+- uid: SoulsLike.GameplayScript.scriptHolder
+  commentId: F:SoulsLike.GameplayScript.scriptHolder
+  parent: SoulsLike.GameplayScript
+  name: scriptHolder
+  nameWithType: GameplayScript.scriptHolder
+  fullName: SoulsLike.GameplayScript.scriptHolder
+- uid: SoulsLike.GameplayScript.GetScriptHolder
+  commentId: M:SoulsLike.GameplayScript.GetScriptHolder
+  parent: SoulsLike.GameplayScript
+  name: GetScriptHolder()
+  nameWithType: GameplayScript.GetScriptHolder()
+  fullName: SoulsLike.GameplayScript.GetScriptHolder()
+  spec.csharp:
+  - uid: SoulsLike.GameplayScript.GetScriptHolder
+    name: GetScriptHolder
+    nameWithType: GameplayScript.GetScriptHolder
+    fullName: SoulsLike.GameplayScript.GetScriptHolder
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: SoulsLike.GameplayScript.GetScriptHolder
+    name: GetScriptHolder
+    nameWithType: GameplayScript.GetScriptHolder
+    fullName: SoulsLike.GameplayScript.GetScriptHolder
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SoulsLike.TestDialogueScript.OnDialogue*
+  commentId: Overload:SoulsLike.TestDialogueScript.OnDialogue
+  name: OnDialogue
+  nameWithType: TestDialogueScript.OnDialogue
+  fullName: SoulsLike.TestDialogueScript.OnDialogue
+- uid: SoulsLike.IDialogue.OnDialogue(System.String,System.String,SoulsLike.Actor)
+  commentId: M:SoulsLike.IDialogue.OnDialogue(System.String,System.String,SoulsLike.Actor)
+  parent: SoulsLike.IDialogue
+  isExternal: true
+  name: OnDialogue(String, String, Actor)
+  nameWithType: IDialogue.OnDialogue(String, String, Actor)
+  fullName: SoulsLike.IDialogue.OnDialogue(System.String, System.String, SoulsLike.Actor)
+  spec.csharp:
+  - uid: SoulsLike.IDialogue.OnDialogue(System.String,System.String,SoulsLike.Actor)
+    name: OnDialogue
+    nameWithType: IDialogue.OnDialogue
+    fullName: SoulsLike.IDialogue.OnDialogue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: SoulsLike.Actor
+    name: Actor
+    nameWithType: Actor
+    fullName: SoulsLike.Actor
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: SoulsLike.IDialogue.OnDialogue(System.String,System.String,SoulsLike.Actor)
+    name: OnDialogue
+    nameWithType: IDialogue.OnDialogue
+    fullName: SoulsLike.IDialogue.OnDialogue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: SoulsLike.Actor
+    name: Actor
+    nameWithType: Actor
+    fullName: SoulsLike.Actor
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: SoulsLike.Actor
+  commentId: T:SoulsLike.Actor
+  parent: SoulsLike
+  name: Actor
+  nameWithType: Actor
+  fullName: SoulsLike.Actor

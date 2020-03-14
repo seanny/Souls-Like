@@ -1,0 +1,259 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.InventoryController
+  commentId: T:SoulsLike.InventoryController
+  id: InventoryController
+  parent: SoulsLike
+  children:
+  - SoulsLike.InventoryController.HideInventoryTransfer
+  - SoulsLike.InventoryController.instance
+  - SoulsLike.InventoryController.inventoryControllerData
+  - SoulsLike.InventoryController.ShowInventoryTransfer(SoulsLike.Entity)
+  langs:
+  - csharp
+  - vb
+  name: InventoryController
+  nameWithType: InventoryController
+  fullName: SoulsLike.InventoryController
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/InventoryController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: InventoryController
+    path: ../Assets/Scripts/Inventory/InventoryController.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: 'public class InventoryController : MonoBehaviour'
+    content.vb: >-
+      Public Class InventoryController
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SoulsLike.InventoryController.instance
+  commentId: F:SoulsLike.InventoryController.instance
+  id: instance
+  parent: SoulsLike.InventoryController
+  langs:
+  - csharp
+  - vb
+  name: instance
+  nameWithType: InventoryController.instance
+  fullName: SoulsLike.InventoryController.instance
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/InventoryController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: instance
+    path: ../Assets/Scripts/Inventory/InventoryController.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public static InventoryController instance
+    return:
+      type: SoulsLike.InventoryController
+    content.vb: Public Shared instance As InventoryController
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: SoulsLike.InventoryController.inventoryControllerData
+  commentId: F:SoulsLike.InventoryController.inventoryControllerData
+  id: inventoryControllerData
+  parent: SoulsLike.InventoryController
+  langs:
+  - csharp
+  - vb
+  name: inventoryControllerData
+  nameWithType: InventoryController.inventoryControllerData
+  fullName: SoulsLike.InventoryController.inventoryControllerData
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/InventoryController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: inventoryControllerData
+    path: ../Assets/Scripts/Inventory/InventoryController.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public InventoryControllerData inventoryControllerData
+    return:
+      type: SoulsLike.InventoryControllerData
+    content.vb: Public inventoryControllerData As InventoryControllerData
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.InventoryController.ShowInventoryTransfer(SoulsLike.Entity)
+  commentId: M:SoulsLike.InventoryController.ShowInventoryTransfer(SoulsLike.Entity)
+  id: ShowInventoryTransfer(SoulsLike.Entity)
+  parent: SoulsLike.InventoryController
+  langs:
+  - csharp
+  - vb
+  name: ShowInventoryTransfer(Entity)
+  nameWithType: InventoryController.ShowInventoryTransfer(Entity)
+  fullName: SoulsLike.InventoryController.ShowInventoryTransfer(SoulsLike.Entity)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/InventoryController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: ShowInventoryTransfer
+    path: ../Assets/Scripts/Inventory/InventoryController.cs
+    startLine: 92
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nShow Inventory Transfer Menu\n"
+  example: []
+  syntax:
+    content: public void ShowInventoryTransfer(Entity entity)
+    parameters:
+    - id: entity
+      type: SoulsLike.Entity
+      description: ''
+    content.vb: Public Sub ShowInventoryTransfer(entity As Entity)
+  overload: SoulsLike.InventoryController.ShowInventoryTransfer*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.InventoryController.HideInventoryTransfer
+  commentId: M:SoulsLike.InventoryController.HideInventoryTransfer
+  id: HideInventoryTransfer
+  parent: SoulsLike.InventoryController
+  langs:
+  - csharp
+  - vb
+  name: HideInventoryTransfer()
+  nameWithType: InventoryController.HideInventoryTransfer()
+  fullName: SoulsLike.InventoryController.HideInventoryTransfer()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/InventoryController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: HideInventoryTransfer
+    path: ../Assets/Scripts/Inventory/InventoryController.cs
+    startLine: 115
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nHide Inventory Transfer\n"
+  example: []
+  syntax:
+    content: public void HideInventoryTransfer()
+    content.vb: Public Sub HideInventoryTransfer
+  overload: SoulsLike.InventoryController.HideInventoryTransfer*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SoulsLike.InventoryController
+  commentId: T:SoulsLike.InventoryController
+  parent: SoulsLike
+  name: InventoryController
+  nameWithType: InventoryController
+  fullName: SoulsLike.InventoryController
+- uid: SoulsLike.InventoryControllerData
+  commentId: T:SoulsLike.InventoryControllerData
+  parent: SoulsLike
+  name: InventoryControllerData
+  nameWithType: InventoryControllerData
+  fullName: SoulsLike.InventoryControllerData
+- uid: SoulsLike.InventoryController.ShowInventoryTransfer*
+  commentId: Overload:SoulsLike.InventoryController.ShowInventoryTransfer
+  name: ShowInventoryTransfer
+  nameWithType: InventoryController.ShowInventoryTransfer
+  fullName: SoulsLike.InventoryController.ShowInventoryTransfer
+- uid: SoulsLike.Entity
+  commentId: T:SoulsLike.Entity
+  parent: SoulsLike
+  name: Entity
+  nameWithType: Entity
+  fullName: SoulsLike.Entity
+- uid: SoulsLike.InventoryController.HideInventoryTransfer*
+  commentId: Overload:SoulsLike.InventoryController.HideInventoryTransfer
+  name: HideInventoryTransfer
+  nameWithType: InventoryController.HideInventoryTransfer
+  fullName: SoulsLike.InventoryController.HideInventoryTransfer

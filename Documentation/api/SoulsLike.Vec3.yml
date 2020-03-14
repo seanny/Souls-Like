@@ -1,0 +1,211 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.Vec3
+  commentId: T:SoulsLike.Vec3
+  id: Vec3
+  parent: SoulsLike
+  children:
+  - SoulsLike.Vec3.#ctor(UnityEngine.Vector3)
+  - SoulsLike.Vec3.x
+  - SoulsLike.Vec3.y
+  - SoulsLike.Vec3.z
+  langs:
+  - csharp
+  - vb
+  name: Vec3
+  nameWithType: Vec3
+  fullName: SoulsLike.Vec3
+  type: Struct
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/InteractableObject.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Vec3
+    path: ../Assets/Scripts/Inventory/InteractableObject.cs
+    startLine: 26
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [Serializable]
+
+      public struct Vec3
+    content.vb: >-
+      <Serializable>
+
+      Public Structure Vec3
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: SoulsLike.Vec3.#ctor(UnityEngine.Vector3)
+  commentId: M:SoulsLike.Vec3.#ctor(UnityEngine.Vector3)
+  id: '#ctor(UnityEngine.Vector3)'
+  parent: SoulsLike.Vec3
+  langs:
+  - csharp
+  - vb
+  name: Vec3(Vector3)
+  nameWithType: Vec3.Vec3(Vector3)
+  fullName: SoulsLike.Vec3.Vec3(UnityEngine.Vector3)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/InteractableObject.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: .ctor
+    path: ../Assets/Scripts/Inventory/InteractableObject.cs
+    startLine: 29
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public Vec3(Vector3 vector3)
+    parameters:
+    - id: vector3
+      type: UnityEngine.Vector3
+    content.vb: Public Sub New(vector3 As Vector3)
+  overload: SoulsLike.Vec3.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.Vec3.x
+  commentId: F:SoulsLike.Vec3.x
+  id: x
+  parent: SoulsLike.Vec3
+  langs:
+  - csharp
+  - vb
+  name: x
+  nameWithType: Vec3.x
+  fullName: SoulsLike.Vec3.x
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/InteractableObject.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: x
+    path: ../Assets/Scripts/Inventory/InteractableObject.cs
+    startLine: 36
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public float x
+    return:
+      type: System.Single
+    content.vb: Public x As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.Vec3.y
+  commentId: F:SoulsLike.Vec3.y
+  id: y
+  parent: SoulsLike.Vec3
+  langs:
+  - csharp
+  - vb
+  name: y
+  nameWithType: Vec3.y
+  fullName: SoulsLike.Vec3.y
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/InteractableObject.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: y
+    path: ../Assets/Scripts/Inventory/InteractableObject.cs
+    startLine: 37
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public float y
+    return:
+      type: System.Single
+    content.vb: Public y As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.Vec3.z
+  commentId: F:SoulsLike.Vec3.z
+  id: z
+  parent: SoulsLike.Vec3
+  langs:
+  - csharp
+  - vb
+  name: z
+  nameWithType: Vec3.z
+  fullName: SoulsLike.Vec3.z
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/InteractableObject.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: z
+    path: ../Assets/Scripts/Inventory/InteractableObject.cs
+    startLine: 38
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public float z
+    return:
+      type: System.Single
+    content.vb: Public z As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: SoulsLike.Vec3.#ctor*
+  commentId: Overload:SoulsLike.Vec3.#ctor
+  name: Vec3
+  nameWithType: Vec3.Vec3
+  fullName: SoulsLike.Vec3.Vec3
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

@@ -1,0 +1,132 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.MouseCursor
+  commentId: T:SoulsLike.MouseCursor
+  id: MouseCursor
+  parent: SoulsLike
+  children:
+  - SoulsLike.MouseCursor.Disable
+  - SoulsLike.MouseCursor.Enable
+  langs:
+  - csharp
+  - vb
+  name: MouseCursor
+  nameWithType: MouseCursor
+  fullName: SoulsLike.MouseCursor
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Utilities/MouseCursor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: MouseCursor
+    path: ../Assets/Scripts/Utilities/MouseCursor.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public static class MouseCursor
+    content.vb: Public Module MouseCursor
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: SoulsLike.MouseCursor.Enable
+  commentId: M:SoulsLike.MouseCursor.Enable
+  id: Enable
+  parent: SoulsLike.MouseCursor
+  langs:
+  - csharp
+  - vb
+  name: Enable()
+  nameWithType: MouseCursor.Enable()
+  fullName: SoulsLike.MouseCursor.Enable()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Utilities/MouseCursor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Enable
+    path: ../Assets/Scripts/Utilities/MouseCursor.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public static void Enable()
+    content.vb: Public Shared Sub Enable
+  overload: SoulsLike.MouseCursor.Enable*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: SoulsLike.MouseCursor.Disable
+  commentId: M:SoulsLike.MouseCursor.Disable
+  id: Disable
+  parent: SoulsLike.MouseCursor
+  langs:
+  - csharp
+  - vb
+  name: Disable()
+  nameWithType: MouseCursor.Disable()
+  fullName: SoulsLike.MouseCursor.Disable()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Utilities/MouseCursor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Disable
+    path: ../Assets/Scripts/Utilities/MouseCursor.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public static void Disable()
+    content.vb: Public Shared Sub Disable
+  overload: SoulsLike.MouseCursor.Disable*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SoulsLike.MouseCursor.Enable*
+  commentId: Overload:SoulsLike.MouseCursor.Enable
+  name: Enable
+  nameWithType: MouseCursor.Enable
+  fullName: SoulsLike.MouseCursor.Enable
+- uid: SoulsLike.MouseCursor.Disable*
+  commentId: Overload:SoulsLike.MouseCursor.Disable
+  name: Disable
+  nameWithType: MouseCursor.Disable
+  fullName: SoulsLike.MouseCursor.Disable

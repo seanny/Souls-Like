@@ -1,0 +1,226 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.DialogueController.DialogueChoice
+  commentId: T:SoulsLike.DialogueController.DialogueChoice
+  id: DialogueController.DialogueChoice
+  parent: SoulsLike
+  children:
+  - SoulsLike.DialogueController.DialogueChoice.choiceID
+  - SoulsLike.DialogueController.DialogueChoice.dialogueButton
+  - SoulsLike.DialogueController.DialogueChoice.dialogueId
+  - SoulsLike.DialogueController.DialogueChoice.dialogueText
+  langs:
+  - csharp
+  - vb
+  name: DialogueController.DialogueChoice
+  nameWithType: DialogueController.DialogueChoice
+  fullName: SoulsLike.DialogueController.DialogueChoice
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Dialogue/DialogueController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: DialogueChoice
+    path: ../Assets/Scripts/Dialogue/DialogueController.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class DialogueChoice
+    content.vb: >-
+      <Serializable>
+
+      Public Class DialogueChoice
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SoulsLike.DialogueController.DialogueChoice.dialogueButton
+  commentId: F:SoulsLike.DialogueController.DialogueChoice.dialogueButton
+  id: dialogueButton
+  parent: SoulsLike.DialogueController.DialogueChoice
+  langs:
+  - csharp
+  - vb
+  name: dialogueButton
+  nameWithType: DialogueController.DialogueChoice.dialogueButton
+  fullName: SoulsLike.DialogueController.DialogueChoice.dialogueButton
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Dialogue/DialogueController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: dialogueButton
+    path: ../Assets/Scripts/Dialogue/DialogueController.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public Button dialogueButton
+    return:
+      type: UnityEngine.UI.Button
+    content.vb: Public dialogueButton As Button
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.DialogueController.DialogueChoice.dialogueText
+  commentId: F:SoulsLike.DialogueController.DialogueChoice.dialogueText
+  id: dialogueText
+  parent: SoulsLike.DialogueController.DialogueChoice
+  langs:
+  - csharp
+  - vb
+  name: dialogueText
+  nameWithType: DialogueController.DialogueChoice.dialogueText
+  fullName: SoulsLike.DialogueController.DialogueChoice.dialogueText
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Dialogue/DialogueController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: dialogueText
+    path: ../Assets/Scripts/Dialogue/DialogueController.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public TextMeshProUGUI dialogueText
+    return:
+      type: TMPro.TextMeshProUGUI
+    content.vb: Public dialogueText As TextMeshProUGUI
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.DialogueController.DialogueChoice.dialogueId
+  commentId: F:SoulsLike.DialogueController.DialogueChoice.dialogueId
+  id: dialogueId
+  parent: SoulsLike.DialogueController.DialogueChoice
+  langs:
+  - csharp
+  - vb
+  name: dialogueId
+  nameWithType: DialogueController.DialogueChoice.dialogueId
+  fullName: SoulsLike.DialogueController.DialogueChoice.dialogueId
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Dialogue/DialogueController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: dialogueId
+    path: ../Assets/Scripts/Dialogue/DialogueController.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public string dialogueId
+    return:
+      type: System.String
+    content.vb: Public dialogueId As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.DialogueController.DialogueChoice.choiceID
+  commentId: F:SoulsLike.DialogueController.DialogueChoice.choiceID
+  id: choiceID
+  parent: SoulsLike.DialogueController.DialogueChoice
+  langs:
+  - csharp
+  - vb
+  name: choiceID
+  nameWithType: DialogueController.DialogueChoice.choiceID
+  fullName: SoulsLike.DialogueController.DialogueChoice.choiceID
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Dialogue/DialogueController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: choiceID
+    path: ../Assets/Scripts/Dialogue/DialogueController.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public string choiceID
+    return:
+      type: System.String
+    content.vb: Public choiceID As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine.UI.Button
+  commentId: T:UnityEngine.UI.Button
+  parent: UnityEngine.UI
+  isExternal: true
+  name: Button
+  nameWithType: Button
+  fullName: UnityEngine.UI.Button
+- uid: UnityEngine.UI
+  commentId: N:UnityEngine.UI
+  isExternal: true
+  name: UnityEngine.UI
+  nameWithType: UnityEngine.UI
+  fullName: UnityEngine.UI
+- uid: TMPro.TextMeshProUGUI
+  commentId: T:TMPro.TextMeshProUGUI
+  parent: TMPro
+  isExternal: true
+  name: TextMeshProUGUI
+  nameWithType: TextMeshProUGUI
+  fullName: TMPro.TextMeshProUGUI
+- uid: TMPro
+  commentId: N:TMPro
+  isExternal: true
+  name: TMPro
+  nameWithType: TMPro
+  fullName: TMPro
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

@@ -1,0 +1,211 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.Helper.WeaponType
+  commentId: T:SoulsLike.Helper.WeaponType
+  id: Helper.WeaponType
+  parent: SoulsLike
+  children:
+  - SoulsLike.Helper.WeaponType.MagicOneHanded
+  - SoulsLike.Helper.WeaponType.MagicTwoHanded
+  - SoulsLike.Helper.WeaponType.None
+  - SoulsLike.Helper.WeaponType.OneHanded
+  - SoulsLike.Helper.WeaponType.TwoHanded
+  langs:
+  - csharp
+  - vb
+  name: Helper.WeaponType
+  nameWithType: Helper.WeaponType
+  fullName: SoulsLike.Helper.WeaponType
+  type: Enum
+  source:
+    remote:
+      path: Assets/Scripts/Utilities/Helper.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: WeaponType
+    path: ../Assets/Scripts/Utilities/Helper.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public enum WeaponType
+    content.vb: Public Enum WeaponType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: SoulsLike.Helper.WeaponType.None
+  commentId: F:SoulsLike.Helper.WeaponType.None
+  id: None
+  parent: SoulsLike.Helper.WeaponType
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: Helper.WeaponType.None
+  fullName: SoulsLike.Helper.WeaponType.None
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Utilities/Helper.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: None
+    path: ../Assets/Scripts/Utilities/Helper.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: None = 0
+    return:
+      type: SoulsLike.Helper.WeaponType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.Helper.WeaponType.OneHanded
+  commentId: F:SoulsLike.Helper.WeaponType.OneHanded
+  id: OneHanded
+  parent: SoulsLike.Helper.WeaponType
+  langs:
+  - csharp
+  - vb
+  name: OneHanded
+  nameWithType: Helper.WeaponType.OneHanded
+  fullName: SoulsLike.Helper.WeaponType.OneHanded
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Utilities/Helper.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: OneHanded
+    path: ../Assets/Scripts/Utilities/Helper.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: OneHanded = 1
+    return:
+      type: SoulsLike.Helper.WeaponType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.Helper.WeaponType.TwoHanded
+  commentId: F:SoulsLike.Helper.WeaponType.TwoHanded
+  id: TwoHanded
+  parent: SoulsLike.Helper.WeaponType
+  langs:
+  - csharp
+  - vb
+  name: TwoHanded
+  nameWithType: Helper.WeaponType.TwoHanded
+  fullName: SoulsLike.Helper.WeaponType.TwoHanded
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Utilities/Helper.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: TwoHanded
+    path: ../Assets/Scripts/Utilities/Helper.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: TwoHanded = 2
+    return:
+      type: SoulsLike.Helper.WeaponType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.Helper.WeaponType.MagicOneHanded
+  commentId: F:SoulsLike.Helper.WeaponType.MagicOneHanded
+  id: MagicOneHanded
+  parent: SoulsLike.Helper.WeaponType
+  langs:
+  - csharp
+  - vb
+  name: MagicOneHanded
+  nameWithType: Helper.WeaponType.MagicOneHanded
+  fullName: SoulsLike.Helper.WeaponType.MagicOneHanded
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Utilities/Helper.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: MagicOneHanded
+    path: ../Assets/Scripts/Utilities/Helper.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: MagicOneHanded = 3
+    return:
+      type: SoulsLike.Helper.WeaponType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.Helper.WeaponType.MagicTwoHanded
+  commentId: F:SoulsLike.Helper.WeaponType.MagicTwoHanded
+  id: MagicTwoHanded
+  parent: SoulsLike.Helper.WeaponType
+  langs:
+  - csharp
+  - vb
+  name: MagicTwoHanded
+  nameWithType: Helper.WeaponType.MagicTwoHanded
+  fullName: SoulsLike.Helper.WeaponType.MagicTwoHanded
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Utilities/Helper.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: MagicTwoHanded
+    path: ../Assets/Scripts/Utilities/Helper.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: MagicTwoHanded = 4
+    return:
+      type: SoulsLike.Helper.WeaponType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: SoulsLike.Helper.WeaponType
+  commentId: T:SoulsLike.Helper.WeaponType
+  parent: SoulsLike
+  name: Helper.WeaponType
+  nameWithType: Helper.WeaponType
+  fullName: SoulsLike.Helper.WeaponType

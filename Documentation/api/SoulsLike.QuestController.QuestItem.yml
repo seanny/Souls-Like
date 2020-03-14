@@ -1,0 +1,141 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.QuestController.QuestItem
+  commentId: T:SoulsLike.QuestController.QuestItem
+  id: QuestController.QuestItem
+  parent: SoulsLike
+  children:
+  - SoulsLike.QuestController.QuestItem.quest
+  - SoulsLike.QuestController.QuestItem.questData
+  langs:
+  - csharp
+  - vb
+  name: QuestController.QuestItem
+  nameWithType: QuestController.QuestItem
+  fullName: SoulsLike.QuestController.QuestItem
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Quests/QuestController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: QuestItem
+    path: ../Assets/Scripts/Quests/QuestController.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class QuestItem
+    content.vb: >-
+      <Serializable>
+
+      Public Class QuestItem
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SoulsLike.QuestController.QuestItem.quest
+  commentId: F:SoulsLike.QuestController.QuestItem.quest
+  id: quest
+  parent: SoulsLike.QuestController.QuestItem
+  langs:
+  - csharp
+  - vb
+  name: quest
+  nameWithType: QuestController.QuestItem.quest
+  fullName: SoulsLike.QuestController.QuestItem.quest
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Quests/QuestController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: quest
+    path: ../Assets/Scripts/Quests/QuestController.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public Quest quest
+    return:
+      type: SoulsLike.Quest
+    content.vb: Public quest As Quest
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.QuestController.QuestItem.questData
+  commentId: F:SoulsLike.QuestController.QuestItem.questData
+  id: questData
+  parent: SoulsLike.QuestController.QuestItem
+  langs:
+  - csharp
+  - vb
+  name: questData
+  nameWithType: QuestController.QuestItem.questData
+  fullName: SoulsLike.QuestController.QuestItem.questData
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Quests/QuestController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: questData
+    path: ../Assets/Scripts/Quests/QuestController.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public QuestData questData
+    return:
+      type: SoulsLike.QuestData
+    content.vb: Public questData As QuestData
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SoulsLike.Quest
+  commentId: T:SoulsLike.Quest
+  parent: SoulsLike
+  name: Quest
+  nameWithType: Quest
+  fullName: SoulsLike.Quest
+- uid: SoulsLike.QuestData
+  commentId: T:SoulsLike.QuestData
+  parent: SoulsLike
+  name: QuestData
+  nameWithType: QuestData
+  fullName: SoulsLike.QuestData

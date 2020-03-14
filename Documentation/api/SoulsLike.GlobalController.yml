@@ -1,0 +1,310 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.GlobalController
+  commentId: T:SoulsLike.GlobalController
+  id: GlobalController
+  parent: SoulsLike
+  children:
+  - SoulsLike.GlobalController.GetGlobal(System.String)
+  - SoulsLike.GlobalController.GetGlobalSetting(System.String)
+  - SoulsLike.GlobalController.SavedGlobals
+  - SoulsLike.GlobalController.SetGlobal(System.String,System.Int32)
+  - SoulsLike.GlobalController.SetGlobals(SoulsLike.SavedGlobals)
+  langs:
+  - csharp
+  - vb
+  name: GlobalController
+  nameWithType: GlobalController
+  fullName: SoulsLike.GlobalController
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Globals/GlobalController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: GlobalController
+    path: ../Assets/Scripts/Globals/GlobalController.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public static class GlobalController
+    content.vb: Public Module GlobalController
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: SoulsLike.GlobalController.SavedGlobals
+  commentId: P:SoulsLike.GlobalController.SavedGlobals
+  id: SavedGlobals
+  parent: SoulsLike.GlobalController
+  langs:
+  - csharp
+  - vb
+  name: SavedGlobals
+  nameWithType: GlobalController.SavedGlobals
+  fullName: SoulsLike.GlobalController.SavedGlobals
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Globals/GlobalController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: SavedGlobals
+    path: ../Assets/Scripts/Globals/GlobalController.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public static SavedGlobals SavedGlobals { get; }
+    parameters: []
+    return:
+      type: SoulsLike.SavedGlobals
+    content.vb: Public Shared ReadOnly Property SavedGlobals As SavedGlobals
+  overload: SoulsLike.GlobalController.SavedGlobals*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: SoulsLike.GlobalController.SetGlobals(SoulsLike.SavedGlobals)
+  commentId: M:SoulsLike.GlobalController.SetGlobals(SoulsLike.SavedGlobals)
+  id: SetGlobals(SoulsLike.SavedGlobals)
+  parent: SoulsLike.GlobalController
+  langs:
+  - csharp
+  - vb
+  name: SetGlobals(SavedGlobals)
+  nameWithType: GlobalController.SetGlobals(SavedGlobals)
+  fullName: SoulsLike.GlobalController.SetGlobals(SoulsLike.SavedGlobals)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Globals/GlobalController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: SetGlobals
+    path: ../Assets/Scripts/Globals/GlobalController.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nSet Globals\n"
+  example: []
+  syntax:
+    content: public static void SetGlobals(SavedGlobals savedGlobals)
+    parameters:
+    - id: savedGlobals
+      type: SoulsLike.SavedGlobals
+      description: ''
+    content.vb: Public Shared Sub SetGlobals(savedGlobals As SavedGlobals)
+  overload: SoulsLike.GlobalController.SetGlobals*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: SoulsLike.GlobalController.GetGlobalSetting(System.String)
+  commentId: M:SoulsLike.GlobalController.GetGlobalSetting(System.String)
+  id: GetGlobalSetting(System.String)
+  parent: SoulsLike.GlobalController
+  langs:
+  - csharp
+  - vb
+  name: GetGlobalSetting(String)
+  nameWithType: GlobalController.GetGlobalSetting(String)
+  fullName: SoulsLike.GlobalController.GetGlobalSetting(System.String)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Globals/GlobalController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: GetGlobalSetting
+    path: ../Assets/Scripts/Globals/GlobalController.cs
+    startLine: 25
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nGet Global Setting\n"
+  example: []
+  syntax:
+    content: public static GlobalSetting GetGlobalSetting(string globalID)
+    parameters:
+    - id: globalID
+      type: System.String
+      description: ''
+    return:
+      type: SoulsLike.GlobalSetting
+      description: ''
+    content.vb: Public Shared Function GetGlobalSetting(globalID As String) As GlobalSetting
+  overload: SoulsLike.GlobalController.GetGlobalSetting*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: SoulsLike.GlobalController.SetGlobal(System.String,System.Int32)
+  commentId: M:SoulsLike.GlobalController.SetGlobal(System.String,System.Int32)
+  id: SetGlobal(System.String,System.Int32)
+  parent: SoulsLike.GlobalController
+  langs:
+  - csharp
+  - vb
+  name: SetGlobal(String, Int32)
+  nameWithType: GlobalController.SetGlobal(String, Int32)
+  fullName: SoulsLike.GlobalController.SetGlobal(System.String, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Globals/GlobalController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: SetGlobal
+    path: ../Assets/Scripts/Globals/GlobalController.cs
+    startLine: 41
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nSet Global Setting\n"
+  example: []
+  syntax:
+    content: public static void SetGlobal(string globalID, int value)
+    parameters:
+    - id: globalID
+      type: System.String
+      description: ''
+    - id: value
+      type: System.Int32
+      description: ''
+    content.vb: Public Shared Sub SetGlobal(globalID As String, value As Integer)
+  overload: SoulsLike.GlobalController.SetGlobal*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: SoulsLike.GlobalController.GetGlobal(System.String)
+  commentId: M:SoulsLike.GlobalController.GetGlobal(System.String)
+  id: GetGlobal(System.String)
+  parent: SoulsLike.GlobalController
+  langs:
+  - csharp
+  - vb
+  name: GetGlobal(String)
+  nameWithType: GlobalController.GetGlobal(String)
+  fullName: SoulsLike.GlobalController.GetGlobal(System.String)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Globals/GlobalController.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: GetGlobal
+    path: ../Assets/Scripts/Globals/GlobalController.cs
+    startLine: 71
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nGet Global Setting\n"
+  example: []
+  syntax:
+    content: public static int GetGlobal(string globalID)
+    parameters:
+    - id: globalID
+      type: System.String
+      description: ''
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Shared Function GetGlobal(globalID As String) As Integer
+  overload: SoulsLike.GlobalController.GetGlobal*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SoulsLike.GlobalController.SavedGlobals*
+  commentId: Overload:SoulsLike.GlobalController.SavedGlobals
+  name: SavedGlobals
+  nameWithType: GlobalController.SavedGlobals
+  fullName: SoulsLike.GlobalController.SavedGlobals
+- uid: SoulsLike.SavedGlobals
+  commentId: T:SoulsLike.SavedGlobals
+  parent: SoulsLike
+  name: SavedGlobals
+  nameWithType: SavedGlobals
+  fullName: SoulsLike.SavedGlobals
+- uid: SoulsLike.GlobalController.SetGlobals*
+  commentId: Overload:SoulsLike.GlobalController.SetGlobals
+  name: SetGlobals
+  nameWithType: GlobalController.SetGlobals
+  fullName: SoulsLike.GlobalController.SetGlobals
+- uid: SoulsLike.GlobalController.GetGlobalSetting*
+  commentId: Overload:SoulsLike.GlobalController.GetGlobalSetting
+  name: GetGlobalSetting
+  nameWithType: GlobalController.GetGlobalSetting
+  fullName: SoulsLike.GlobalController.GetGlobalSetting
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: SoulsLike.GlobalSetting
+  commentId: T:SoulsLike.GlobalSetting
+  parent: SoulsLike
+  name: GlobalSetting
+  nameWithType: GlobalSetting
+  fullName: SoulsLike.GlobalSetting
+- uid: SoulsLike.GlobalController.SetGlobal*
+  commentId: Overload:SoulsLike.GlobalController.SetGlobal
+  name: SetGlobal
+  nameWithType: GlobalController.SetGlobal
+  fullName: SoulsLike.GlobalController.SetGlobal
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: SoulsLike.GlobalController.GetGlobal*
+  commentId: Overload:SoulsLike.GlobalController.GetGlobal
+  name: GetGlobal
+  nameWithType: GlobalController.GetGlobal
+  fullName: SoulsLike.GlobalController.GetGlobal

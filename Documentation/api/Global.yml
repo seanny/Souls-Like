@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: Global
+  id: Global
+  children:
+  - Global.KeepBool
+  - Global.MaskMaker
+  - Global.Readme
+  - Global.Readme.Section
+  - Global.ReadmeEditor
+  - Global.WeaponPlacementPoint
+  langs:
+  - csharp
+  - vb
+  name: Global
+  nameWithType: Global
+  fullName: Global
+  type: Namespace
+  assemblies:
+  - Assembly-CSharp
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+references:
+- uid: Global.KeepBool
+  commentId: T:Global.KeepBool
+  name: KeepBool
+  nameWithType: KeepBool
+  fullName: KeepBool
+- uid: Global.WeaponPlacementPoint
+  commentId: T:Global.WeaponPlacementPoint
+  name: WeaponPlacementPoint
+  nameWithType: WeaponPlacementPoint
+  fullName: WeaponPlacementPoint
+- uid: Global.Readme
+  commentId: T:Global.Readme
+  name: Readme
+  nameWithType: Readme
+  fullName: Readme
+- uid: Global.Readme.Section
+  commentId: T:Global.Readme.Section
+  name: Readme.Section
+  nameWithType: Readme.Section
+  fullName: Readme.Section
+- uid: Global.MaskMaker
+  commentId: T:Global.MaskMaker
+  name: MaskMaker
+  nameWithType: MaskMaker
+  fullName: MaskMaker
+- uid: Global.ReadmeEditor
+  commentId: T:Global.ReadmeEditor
+  name: ReadmeEditor
+  nameWithType: ReadmeEditor
+  fullName: ReadmeEditor

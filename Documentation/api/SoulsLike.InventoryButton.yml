@@ -1,0 +1,285 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.InventoryButton
+  commentId: T:SoulsLike.InventoryButton
+  id: InventoryButton
+  parent: SoulsLike
+  children:
+  - SoulsLike.InventoryButton.ItemImage
+  - SoulsLike.InventoryButton.ItemName
+  - SoulsLike.InventoryButton.ItemValue
+  - SoulsLike.InventoryButton.ItemWeight
+  langs:
+  - csharp
+  - vb
+  name: InventoryButton
+  nameWithType: InventoryButton
+  fullName: SoulsLike.InventoryButton
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/InventoryButton.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: InventoryButton
+    path: ../Assets/Scripts/Inventory/InventoryButton.cs
+    startLine: 6
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: 'public class InventoryButton : MonoBehaviour'
+    content.vb: >-
+      Public Class InventoryButton
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SoulsLike.InventoryButton.ItemImage
+  commentId: P:SoulsLike.InventoryButton.ItemImage
+  id: ItemImage
+  parent: SoulsLike.InventoryButton
+  langs:
+  - csharp
+  - vb
+  name: ItemImage
+  nameWithType: InventoryButton.ItemImage
+  fullName: SoulsLike.InventoryButton.ItemImage
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/InventoryButton.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: ItemImage
+    path: ../Assets/Scripts/Inventory/InventoryButton.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public Image ItemImage { get; }
+    parameters: []
+    return:
+      type: UnityEngine.UI.Image
+    content.vb: Public ReadOnly Property ItemImage As Image
+  overload: SoulsLike.InventoryButton.ItemImage*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: SoulsLike.InventoryButton.ItemName
+  commentId: P:SoulsLike.InventoryButton.ItemName
+  id: ItemName
+  parent: SoulsLike.InventoryButton
+  langs:
+  - csharp
+  - vb
+  name: ItemName
+  nameWithType: InventoryButton.ItemName
+  fullName: SoulsLike.InventoryButton.ItemName
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/InventoryButton.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: ItemName
+    path: ../Assets/Scripts/Inventory/InventoryButton.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public TextMeshProUGUI ItemName { get; }
+    parameters: []
+    return:
+      type: TMPro.TextMeshProUGUI
+    content.vb: Public ReadOnly Property ItemName As TextMeshProUGUI
+  overload: SoulsLike.InventoryButton.ItemName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: SoulsLike.InventoryButton.ItemWeight
+  commentId: P:SoulsLike.InventoryButton.ItemWeight
+  id: ItemWeight
+  parent: SoulsLike.InventoryButton
+  langs:
+  - csharp
+  - vb
+  name: ItemWeight
+  nameWithType: InventoryButton.ItemWeight
+  fullName: SoulsLike.InventoryButton.ItemWeight
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/InventoryButton.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: ItemWeight
+    path: ../Assets/Scripts/Inventory/InventoryButton.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public TextMeshProUGUI ItemWeight { get; }
+    parameters: []
+    return:
+      type: TMPro.TextMeshProUGUI
+    content.vb: Public ReadOnly Property ItemWeight As TextMeshProUGUI
+  overload: SoulsLike.InventoryButton.ItemWeight*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: SoulsLike.InventoryButton.ItemValue
+  commentId: P:SoulsLike.InventoryButton.ItemValue
+  id: ItemValue
+  parent: SoulsLike.InventoryButton
+  langs:
+  - csharp
+  - vb
+  name: ItemValue
+  nameWithType: InventoryButton.ItemValue
+  fullName: SoulsLike.InventoryButton.ItemValue
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/InventoryButton.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: ItemValue
+    path: ../Assets/Scripts/Inventory/InventoryButton.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public TextMeshProUGUI ItemValue { get; }
+    parameters: []
+    return:
+      type: TMPro.TextMeshProUGUI
+    content.vb: Public ReadOnly Property ItemValue As TextMeshProUGUI
+  overload: SoulsLike.InventoryButton.ItemValue*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SoulsLike.InventoryButton.ItemImage*
+  commentId: Overload:SoulsLike.InventoryButton.ItemImage
+  name: ItemImage
+  nameWithType: InventoryButton.ItemImage
+  fullName: SoulsLike.InventoryButton.ItemImage
+- uid: UnityEngine.UI.Image
+  commentId: T:UnityEngine.UI.Image
+  parent: UnityEngine.UI
+  isExternal: true
+  name: Image
+  nameWithType: Image
+  fullName: UnityEngine.UI.Image
+- uid: UnityEngine.UI
+  commentId: N:UnityEngine.UI
+  isExternal: true
+  name: UnityEngine.UI
+  nameWithType: UnityEngine.UI
+  fullName: UnityEngine.UI
+- uid: SoulsLike.InventoryButton.ItemName*
+  commentId: Overload:SoulsLike.InventoryButton.ItemName
+  name: ItemName
+  nameWithType: InventoryButton.ItemName
+  fullName: SoulsLike.InventoryButton.ItemName
+- uid: TMPro.TextMeshProUGUI
+  commentId: T:TMPro.TextMeshProUGUI
+  parent: TMPro
+  isExternal: true
+  name: TextMeshProUGUI
+  nameWithType: TextMeshProUGUI
+  fullName: TMPro.TextMeshProUGUI
+- uid: TMPro
+  commentId: N:TMPro
+  isExternal: true
+  name: TMPro
+  nameWithType: TMPro
+  fullName: TMPro
+- uid: SoulsLike.InventoryButton.ItemWeight*
+  commentId: Overload:SoulsLike.InventoryButton.ItemWeight
+  name: ItemWeight
+  nameWithType: InventoryButton.ItemWeight
+  fullName: SoulsLike.InventoryButton.ItemWeight
+- uid: SoulsLike.InventoryButton.ItemValue*
+  commentId: Overload:SoulsLike.InventoryButton.ItemValue
+  name: ItemValue
+  nameWithType: InventoryButton.ItemValue
+  fullName: SoulsLike.InventoryButton.ItemValue

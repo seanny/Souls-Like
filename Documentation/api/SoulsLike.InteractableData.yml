@@ -1,0 +1,180 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.InteractableData
+  commentId: T:SoulsLike.InteractableData
+  id: InteractableData
+  parent: SoulsLike
+  children:
+  - SoulsLike.InteractableData.inventoryItem
+  - SoulsLike.InteractableData.position
+  - SoulsLike.InteractableData.rotation
+  langs:
+  - csharp
+  - vb
+  name: InteractableData
+  nameWithType: InteractableData
+  fullName: SoulsLike.InteractableData
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/InteractableObject.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: InteractableData
+    path: ../Assets/Scripts/Inventory/InteractableObject.cs
+    startLine: 41
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class InteractableData
+    content.vb: >-
+      <Serializable>
+
+      Public Class InteractableData
+  inheritance:
+  - System.Object
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SoulsLike.InteractableData.inventoryItem
+  commentId: F:SoulsLike.InteractableData.inventoryItem
+  id: inventoryItem
+  parent: SoulsLike.InteractableData
+  langs:
+  - csharp
+  - vb
+  name: inventoryItem
+  nameWithType: InteractableData.inventoryItem
+  fullName: SoulsLike.InteractableData.inventoryItem
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/InteractableObject.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: inventoryItem
+    path: ../Assets/Scripts/Inventory/InteractableObject.cs
+    startLine: 44
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public string inventoryItem
+    return:
+      type: System.String
+    content.vb: Public inventoryItem As String
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.InteractableData.position
+  commentId: F:SoulsLike.InteractableData.position
+  id: position
+  parent: SoulsLike.InteractableData
+  langs:
+  - csharp
+  - vb
+  name: position
+  nameWithType: InteractableData.position
+  fullName: SoulsLike.InteractableData.position
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/InteractableObject.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: position
+    path: ../Assets/Scripts/Inventory/InteractableObject.cs
+    startLine: 45
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public Vec3 position
+    return:
+      type: SoulsLike.Vec3
+    content.vb: Public position As Vec3
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.InteractableData.rotation
+  commentId: F:SoulsLike.InteractableData.rotation
+  id: rotation
+  parent: SoulsLike.InteractableData
+  langs:
+  - csharp
+  - vb
+  name: rotation
+  nameWithType: InteractableData.rotation
+  fullName: SoulsLike.InteractableData.rotation
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/InteractableObject.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: rotation
+    path: ../Assets/Scripts/Inventory/InteractableObject.cs
+    startLine: 46
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public Quat rotation
+    return:
+      type: SoulsLike.Quat
+    content.vb: Public rotation As Quat
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: SoulsLike.Vec3
+  commentId: T:SoulsLike.Vec3
+  parent: SoulsLike
+  name: Vec3
+  nameWithType: Vec3
+  fullName: SoulsLike.Vec3
+- uid: SoulsLike.Quat
+  commentId: T:SoulsLike.Quat
+  parent: SoulsLike
+  name: Quat
+  nameWithType: Quat
+  fullName: SoulsLike.Quat

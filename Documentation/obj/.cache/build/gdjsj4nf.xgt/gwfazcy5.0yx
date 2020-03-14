@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class NonPlayerActor
+   | Project Legends </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class NonPlayerActor
+   | Project Legends ">
+    <meta name="generator" content="docfx 2.50.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="SoulsLike.NonPlayerActor">
+  
+  
+  <h1 id="SoulsLike_NonPlayerActor" data-uid="SoulsLike.NonPlayerActor" class="text-break">Class NonPlayerActor
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">UnityEngine.Object</span></div>
+    <div class="level2"><span class="xref">UnityEngine.Component</span></div>
+    <div class="level3"><span class="xref">UnityEngine.Behaviour</span></div>
+    <div class="level4"><span class="xref">UnityEngine.MonoBehaviour</span></div>
+    <div class="level5"><a class="xref" href="SoulsLike.Entity.html">Entity</a></div>
+    <div class="level6"><a class="xref" href="SoulsLike.Actor.html">Actor</a></div>
+    <div class="level7"><span class="xref">NonPlayerActor</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="SoulsLike.Actor.html#SoulsLike_Actor_actorStats">Actor.actorStats</a>
+    </div>
+    <div>
+      <a class="xref" href="SoulsLike.Actor.html#SoulsLike_Actor_attackedBy">Actor.attackedBy</a>
+    </div>
+    <div>
+      <a class="xref" href="SoulsLike.Actor.html#SoulsLike_Actor_animationHelper">Actor.animationHelper</a>
+    </div>
+    <div>
+      <a class="xref" href="SoulsLike.Actor.html#SoulsLike_Actor_weaponPrefab">Actor.weaponPrefab</a>
+    </div>
+    <div>
+      <a class="xref" href="SoulsLike.Actor.html#SoulsLike_Actor_currentWeapon">Actor.currentWeapon</a>
+    </div>
+    <div>
+      <a class="xref" href="SoulsLike.Actor.html#SoulsLike_Actor_COMBAT_WAIT_TIME">Actor.COMBAT_WAIT_TIME</a>
+    </div>
+    <div>
+      <a class="xref" href="SoulsLike.Actor.html#SoulsLike_Actor_CanDetect_SoulsLike_Actor_">Actor.CanDetect(Actor)</a>
+    </div>
+    <div>
+      <a class="xref" href="SoulsLike.Actor.html#SoulsLike_Actor_Attack">Actor.Attack()</a>
+    </div>
+    <div>
+      <a class="xref" href="SoulsLike.Actor.html#SoulsLike_Actor_OnCombat_SoulsLike_Actor_">Actor.OnCombat(Actor)</a>
+    </div>
+    <div>
+      <a class="xref" href="SoulsLike.Actor.html#SoulsLike_Actor_OnActorAttacked_SoulsLike_Actor_System_Single_">Actor.OnActorAttacked(Actor, Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="SoulsLike.Actor.html#SoulsLike_Actor_OnRevive">Actor.OnRevive()</a>
+    </div>
+    <div>
+      <a class="xref" href="SoulsLike.Actor.html#SoulsLike_Actor_FindPlayerActorInArray_SoulsLike_Actor___">Actor.FindPlayerActorInArray(Actor[])</a>
+    </div>
+    <div>
+      <a class="xref" href="SoulsLike.Actor.html#SoulsLike_Actor_FindNearestActor_SoulsLike_Actor___System_Single_">Actor.FindNearestActor(Actor[], Single)</a>
+    </div>
+    <div>
+      <a class="xref" href="SoulsLike.Entity.html#SoulsLike_Entity_entityData">Entity.entityData</a>
+    </div>
+    <div>
+      <a class="xref" href="SoulsLike.Entity.html#SoulsLike_Entity_FindNearestEntity_SoulsLike_Entity___System_Single_">Entity.FindNearestEntity(Entity[], Single)</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="SoulsLike.html">SoulsLike</a></h6>
+  <h6><strong>Assembly</strong>: Assembly-CSharp.dll</h6>
+  <h5 id="SoulsLike_NonPlayerActor_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[RequireComponent(typeof(StateManager))]
+[RequireComponent(typeof(NavMeshAgent))]
+public class NonPlayerActor : Actor</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/seanny/Souls-Like/new/master/apiSpec/new?filename=SoulsLike_NonPlayerActor_aggressionLevel.md&amp;value=---%0Auid%3A%20SoulsLike.NonPlayerActor.aggressionLevel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/seanny/Souls-Like/blob/master/Assets/Scripts/Actors/NonPlayerActor.cs/#L25">View Source</a>
+  </span>
+  <h4 id="SoulsLike_NonPlayerActor_aggressionLevel" data-uid="SoulsLike.NonPlayerActor.aggressionLevel">aggressionLevel</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NonPlayerActor.AggressionLevel aggressionLevel</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SoulsLike.NonPlayerActor.AggressionLevel.html">NonPlayerActor.AggressionLevel</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/seanny/Souls-Like/new/master/apiSpec/new?filename=SoulsLike_NonPlayerActor_aiStates.md&amp;value=---%0Auid%3A%20SoulsLike.NonPlayerActor.aiStates%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/seanny/Souls-Like/blob/master/Assets/Scripts/Actors/NonPlayerActor.cs/#L34">View Source</a>
+  </span>
+  <h4 id="SoulsLike_NonPlayerActor_aiStates" data-uid="SoulsLike.NonPlayerActor.aiStates">aiStates</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AiState[] aiStates</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SoulsLike.AiState.html">AiState</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/seanny/Souls-Like/new/master/apiSpec/new?filename=SoulsLike_NonPlayerActor_enemyActor.md&amp;value=---%0Auid%3A%20SoulsLike.NonPlayerActor.enemyActor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/seanny/Souls-Like/blob/master/Assets/Scripts/Actors/NonPlayerActor.cs/#L35">View Source</a>
+  </span>
+  <h4 id="SoulsLike_NonPlayerActor_enemyActor" data-uid="SoulsLike.NonPlayerActor.enemyActor">enemyActor</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Actor enemyActor</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SoulsLike.Actor.html">Actor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/seanny/Souls-Like/new/master/apiSpec/new?filename=SoulsLike_NonPlayerActor_fightingActor.md&amp;value=---%0Auid%3A%20SoulsLike.NonPlayerActor.fightingActor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/seanny/Souls-Like/blob/master/Assets/Scripts/Actors/NonPlayerActor.cs/#L30">View Source</a>
+  </span>
+  <h4 id="SoulsLike_NonPlayerActor_fightingActor" data-uid="SoulsLike.NonPlayerActor.fightingActor">fightingActor</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Actor fightingActor</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SoulsLike.Actor.html">Actor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/seanny/Souls-Like/new/master/apiSpec/new?filename=SoulsLike_NonPlayerActor_followingActor.md&amp;value=---%0Auid%3A%20SoulsLike.NonPlayerActor.followingActor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/seanny/Souls-Like/blob/master/Assets/Scripts/Actors/NonPlayerActor.cs/#L27">View Source</a>
+  </span>
+  <h4 id="SoulsLike_NonPlayerActor_followingActor" data-uid="SoulsLike.NonPlayerActor.followingActor">followingActor</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Actor followingActor</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SoulsLike.Actor.html">Actor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/seanny/Souls-Like/new/master/apiSpec/new?filename=SoulsLike_NonPlayerActor_isEnemy.md&amp;value=---%0Auid%3A%20SoulsLike.NonPlayerActor.isEnemy%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/seanny/Souls-Like/blob/master/Assets/Scripts/Actors/NonPlayerActor.cs/#L36">View Source</a>
+  </span>
+  <h4 id="SoulsLike_NonPlayerActor_isEnemy" data-uid="SoulsLike.NonPlayerActor.isEnemy">isEnemy</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool isEnemy</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/seanny/Souls-Like/new/master/apiSpec/new?filename=SoulsLike_NonPlayerActor_MIN_FIGHT_DISTANCE.md&amp;value=---%0Auid%3A%20SoulsLike.NonPlayerActor.MIN_FIGHT_DISTANCE%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/seanny/Souls-Like/blob/master/Assets/Scripts/Actors/NonPlayerActor.cs/#L23">View Source</a>
+  </span>
+  <h4 id="SoulsLike_NonPlayerActor_MIN_FIGHT_DISTANCE" data-uid="SoulsLike.NonPlayerActor.MIN_FIGHT_DISTANCE">MIN_FIGHT_DISTANCE</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const float MIN_FIGHT_DISTANCE = 1.5F</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/seanny/Souls-Like/new/master/apiSpec/new?filename=SoulsLike_NonPlayerActor_movingTowards.md&amp;value=---%0Auid%3A%20SoulsLike.NonPlayerActor.movingTowards%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/seanny/Souls-Like/blob/master/Assets/Scripts/Actors/NonPlayerActor.cs/#L28">View Source</a>
+  </span>
+  <h4 id="SoulsLike_NonPlayerActor_movingTowards" data-uid="SoulsLike.NonPlayerActor.movingTowards">movingTowards</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Actor movingTowards</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SoulsLike.Actor.html">Actor</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/seanny/Souls-Like/new/master/apiSpec/new?filename=SoulsLike_NonPlayerActor_stateManager.md&amp;value=---%0Auid%3A%20SoulsLike.NonPlayerActor.stateManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/seanny/Souls-Like/blob/master/Assets/Scripts/Actors/NonPlayerActor.cs/#L31">View Source</a>
+  </span>
+  <h4 id="SoulsLike_NonPlayerActor_stateManager" data-uid="SoulsLike.NonPlayerActor.stateManager">stateManager</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StateManager stateManager</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SoulsLike.StateManager.html">StateManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/seanny/Souls-Like/new/master/apiSpec/new?filename=SoulsLike_NonPlayerActor_runningTowards.md&amp;value=---%0Auid%3A%20SoulsLike.NonPlayerActor.runningTowards%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/seanny/Souls-Like/blob/master/Assets/Scripts/Actors/NonPlayerActor.cs/#L29">View Source</a>
+  </span>
+  <a id="SoulsLike_NonPlayerActor_runningTowards_" data-uid="SoulsLike.NonPlayerActor.runningTowards*"></a>
+  <h4 id="SoulsLike_NonPlayerActor_runningTowards" data-uid="SoulsLike.NonPlayerActor.runningTowards">runningTowards</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool runningTowards { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/seanny/Souls-Like/new/master/apiSpec/new?filename=SoulsLike_NonPlayerActor_FollowActor_SoulsLike_Actor_.md&amp;value=---%0Auid%3A%20SoulsLike.NonPlayerActor.FollowActor(SoulsLike.Actor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/seanny/Souls-Like/blob/master/Assets/Scripts/Actors/NonPlayerActor.cs/#L136">View Source</a>
+  </span>
+  <a id="SoulsLike_NonPlayerActor_FollowActor_" data-uid="SoulsLike.NonPlayerActor.FollowActor*"></a>
+  <h4 id="SoulsLike_NonPlayerActor_FollowActor_SoulsLike_Actor_" data-uid="SoulsLike.NonPlayerActor.FollowActor(SoulsLike.Actor)">FollowActor(Actor)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/SoulsLike.NonPlayerActor.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Follow actor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FollowActor(Actor actor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SoulsLike.Actor.html">Actor</a></td>
+        <td><span class="parametername">actor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/seanny/Souls-Like/new/master/apiSpec/new?filename=SoulsLike_NonPlayerActor_InitiateCombat_SoulsLike_Actor_.md&amp;value=---%0Auid%3A%20SoulsLike.NonPlayerActor.InitiateCombat(SoulsLike.Actor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/seanny/Souls-Like/blob/master/Assets/Scripts/Actors/NonPlayerActor.cs/#L69">View Source</a>
+  </span>
+  <a id="SoulsLike_NonPlayerActor_InitiateCombat_" data-uid="SoulsLike.NonPlayerActor.InitiateCombat*"></a>
+  <h4 id="SoulsLike_NonPlayerActor_InitiateCombat_SoulsLike_Actor_" data-uid="SoulsLike.NonPlayerActor.InitiateCombat(SoulsLike.Actor)">InitiateCombat(Actor)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/SoulsLike.NonPlayerActor.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Initiate Combat with actor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void InitiateCombat(Actor actor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SoulsLike.Actor.html">Actor</a></td>
+        <td><span class="parametername">actor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/seanny/Souls-Like/new/master/apiSpec/new?filename=SoulsLike_NonPlayerActor_Kill.md&amp;value=---%0Auid%3A%20SoulsLike.NonPlayerActor.Kill%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/seanny/Souls-Like/blob/master/Assets/Scripts/Actors/NonPlayerActor.cs/#L77">View Source</a>
+  </span>
+  <a id="SoulsLike_NonPlayerActor_Kill_" data-uid="SoulsLike.NonPlayerActor.Kill*"></a>
+  <h4 id="SoulsLike_NonPlayerActor_Kill" data-uid="SoulsLike.NonPlayerActor.Kill">Kill()</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/SoulsLike.NonPlayerActor.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Kill Actor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Kill()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="SoulsLike.Actor.html#SoulsLike_Actor_Kill">Actor.Kill()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/seanny/Souls-Like/new/master/apiSpec/new?filename=SoulsLike_NonPlayerActor_MoveTowardsActor_SoulsLike_Actor_.md&amp;value=---%0Auid%3A%20SoulsLike.NonPlayerActor.MoveTowardsActor(SoulsLike.Actor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/seanny/Souls-Like/blob/master/Assets/Scripts/Actors/NonPlayerActor.cs/#L104">View Source</a>
+  </span>
+  <a id="SoulsLike_NonPlayerActor_MoveTowardsActor_" data-uid="SoulsLike.NonPlayerActor.MoveTowardsActor*"></a>
+  <h4 id="SoulsLike_NonPlayerActor_MoveTowardsActor_SoulsLike_Actor_" data-uid="SoulsLike.NonPlayerActor.MoveTowardsActor(SoulsLike.Actor)">MoveTowardsActor(Actor)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/SoulsLike.NonPlayerActor.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Move NPC towards an area.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void MoveTowardsActor(Actor actor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SoulsLike.Actor.html">Actor</a></td>
+        <td><span class="parametername">actor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/seanny/Souls-Like/new/master/apiSpec/new?filename=SoulsLike_NonPlayerActor_MoveTowardsPoint_UnityEngine_Vector3_.md&amp;value=---%0Auid%3A%20SoulsLike.NonPlayerActor.MoveTowardsPoint(UnityEngine.Vector3)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/seanny/Souls-Like/blob/master/Assets/Scripts/Actors/NonPlayerActor.cs/#L114">View Source</a>
+  </span>
+  <a id="SoulsLike_NonPlayerActor_MoveTowardsPoint_" data-uid="SoulsLike.NonPlayerActor.MoveTowardsPoint*"></a>
+  <h4 id="SoulsLike_NonPlayerActor_MoveTowardsPoint_UnityEngine_Vector3_" data-uid="SoulsLike.NonPlayerActor.MoveTowardsPoint(UnityEngine.Vector3)">MoveTowardsPoint(Vector3)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/SoulsLike.NonPlayerActor.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Move towards vector 3</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void MoveTowardsPoint(Vector3 point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Vector3</span></td>
+        <td><span class="parametername">point</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/seanny/Souls-Like/new/master/apiSpec/new?filename=SoulsLike_NonPlayerActor_SmoothLook_UnityEngine_Vector3_System_Int32_.md&amp;value=---%0Auid%3A%20SoulsLike.NonPlayerActor.SmoothLook(UnityEngine.Vector3%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/seanny/Souls-Like/blob/master/Assets/Scripts/Actors/NonPlayerActor.cs/#L59">View Source</a>
+  </span>
+  <a id="SoulsLike_NonPlayerActor_SmoothLook_" data-uid="SoulsLike.NonPlayerActor.SmoothLook*"></a>
+  <h4 id="SoulsLike_NonPlayerActor_SmoothLook_UnityEngine_Vector3_System_Int32_" data-uid="SoulsLike.NonPlayerActor.SmoothLook(UnityEngine.Vector3,System.Int32)">SmoothLook(Vector3, Int32)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/SoulsLike.NonPlayerActor.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Smooth Look towards direction</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SmoothLook(Vector3 targetDir, int lookSpeed)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UnityEngine.Vector3</span></td>
+        <td><span class="parametername">targetDir</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">lookSpeed</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/seanny/Souls-Like/new/master/apiSpec/new?filename=SoulsLike_NonPlayerActor_Start.md&amp;value=---%0Auid%3A%20SoulsLike.NonPlayerActor.Start%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/seanny/Souls-Like/blob/master/Assets/Scripts/Actors/NonPlayerActor.cs/#L39">View Source</a>
+  </span>
+  <a id="SoulsLike_NonPlayerActor_Start_" data-uid="SoulsLike.NonPlayerActor.Start*"></a>
+  <h4 id="SoulsLike_NonPlayerActor_Start" data-uid="SoulsLike.NonPlayerActor.Start">Start()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Start()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="SoulsLike.Actor.html#SoulsLike_Actor_Start">Actor.Start()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/seanny/Souls-Like/new/master/apiSpec/new?filename=SoulsLike_NonPlayerActor_StopMovingTowardsActor_SoulsLike_Actor_.md&amp;value=---%0Auid%3A%20SoulsLike.NonPlayerActor.StopMovingTowardsActor(SoulsLike.Actor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/seanny/Souls-Like/blob/master/Assets/Scripts/Actors/NonPlayerActor.cs/#L125">View Source</a>
+  </span>
+  <a id="SoulsLike_NonPlayerActor_StopMovingTowardsActor_" data-uid="SoulsLike.NonPlayerActor.StopMovingTowardsActor*"></a>
+  <h4 id="SoulsLike_NonPlayerActor_StopMovingTowardsActor_SoulsLike_Actor_" data-uid="SoulsLike.NonPlayerActor.StopMovingTowardsActor(SoulsLike.Actor)">StopMovingTowardsActor(Actor)</h4>
+  <div class="markdown level1 summary"><p sourcefile="api/SoulsLike.NonPlayerActor.yml" sourcestartlinenumber="2" sourceendlinenumber="2">Stop moving towards actor</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void StopMovingTowardsActor(Actor actor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="SoulsLike.Actor.html">Actor</a></td>
+        <td><span class="parametername">actor</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/seanny/Souls-Like/new/master/apiSpec/new?filename=SoulsLike_NonPlayerActor_Update.md&amp;value=---%0Auid%3A%20SoulsLike.NonPlayerActor.Update%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/seanny/Souls-Like/blob/master/Assets/Scripts/Actors/NonPlayerActor.cs/#L147">View Source</a>
+  </span>
+  <a id="SoulsLike_NonPlayerActor_Update_" data-uid="SoulsLike.NonPlayerActor.Update*"></a>
+  <h4 id="SoulsLike_NonPlayerActor_Update" data-uid="SoulsLike.NonPlayerActor.Update">Update()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Update()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="SoulsLike.Actor.html#SoulsLike_Actor_Update">Actor.Update()</a></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/seanny/Souls-Like/new/master/apiSpec/new?filename=SoulsLike_NonPlayerActor.md&amp;value=---%0Auid%3A%20SoulsLike.NonPlayerActor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/seanny/Souls-Like/blob/master/Assets/Scripts/Actors/NonPlayerActor.cs/#L7" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Project Legends
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

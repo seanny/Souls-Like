@@ -1,0 +1,145 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.NonPlayerActor.AggressionLevel
+  commentId: T:SoulsLike.NonPlayerActor.AggressionLevel
+  id: NonPlayerActor.AggressionLevel
+  parent: SoulsLike
+  children:
+  - SoulsLike.NonPlayerActor.AggressionLevel.Agressive
+  - SoulsLike.NonPlayerActor.AggressionLevel.HatesEveryone
+  - SoulsLike.NonPlayerActor.AggressionLevel.Neutral
+  langs:
+  - csharp
+  - vb
+  name: NonPlayerActor.AggressionLevel
+  nameWithType: NonPlayerActor.AggressionLevel
+  fullName: SoulsLike.NonPlayerActor.AggressionLevel
+  type: Enum
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: AggressionLevel
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public enum AggressionLevel
+    content.vb: Public Enum AggressionLevel
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: SoulsLike.NonPlayerActor.AggressionLevel.Neutral
+  commentId: F:SoulsLike.NonPlayerActor.AggressionLevel.Neutral
+  id: Neutral
+  parent: SoulsLike.NonPlayerActor.AggressionLevel
+  langs:
+  - csharp
+  - vb
+  name: Neutral
+  nameWithType: NonPlayerActor.AggressionLevel.Neutral
+  fullName: SoulsLike.NonPlayerActor.AggressionLevel.Neutral
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Neutral
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Neutral = 0
+    return:
+      type: SoulsLike.NonPlayerActor.AggressionLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.NonPlayerActor.AggressionLevel.Agressive
+  commentId: F:SoulsLike.NonPlayerActor.AggressionLevel.Agressive
+  id: Agressive
+  parent: SoulsLike.NonPlayerActor.AggressionLevel
+  langs:
+  - csharp
+  - vb
+  name: Agressive
+  nameWithType: NonPlayerActor.AggressionLevel.Agressive
+  fullName: SoulsLike.NonPlayerActor.AggressionLevel.Agressive
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Agressive
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Agressive = 1
+    return:
+      type: SoulsLike.NonPlayerActor.AggressionLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.NonPlayerActor.AggressionLevel.HatesEveryone
+  commentId: F:SoulsLike.NonPlayerActor.AggressionLevel.HatesEveryone
+  id: HatesEveryone
+  parent: SoulsLike.NonPlayerActor.AggressionLevel
+  langs:
+  - csharp
+  - vb
+  name: HatesEveryone
+  nameWithType: NonPlayerActor.AggressionLevel.HatesEveryone
+  fullName: SoulsLike.NonPlayerActor.AggressionLevel.HatesEveryone
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Actors/NonPlayerActor.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: HatesEveryone
+    path: ../Assets/Scripts/Actors/NonPlayerActor.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: HatesEveryone = 2
+    return:
+      type: SoulsLike.NonPlayerActor.AggressionLevel
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: SoulsLike.NonPlayerActor.AggressionLevel
+  commentId: T:SoulsLike.NonPlayerActor.AggressionLevel
+  parent: SoulsLike
+  name: NonPlayerActor.AggressionLevel
+  nameWithType: NonPlayerActor.AggressionLevel
+  fullName: SoulsLike.NonPlayerActor.AggressionLevel

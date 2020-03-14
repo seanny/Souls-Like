@@ -1,0 +1,475 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.EntityInventory
+  commentId: T:SoulsLike.EntityInventory
+  id: EntityInventory
+  parent: SoulsLike
+  children:
+  - SoulsLike.EntityInventory.AddItem(SoulsLike.InteractableObject)
+  - SoulsLike.EntityInventory.AddItem(SoulsLike.Item)
+  - SoulsLike.EntityInventory.InventoryItems
+  - SoulsLike.EntityInventory.RemoveAllItems
+  - SoulsLike.EntityInventory.RemoveAllItems(SoulsLike.Item)
+  - SoulsLike.EntityInventory.RemoveItem(SoulsLike.Item)
+  - SoulsLike.EntityInventory.RemoveItem(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: EntityInventory
+  nameWithType: EntityInventory
+  fullName: SoulsLike.EntityInventory
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/EntityInventory.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: EntityInventory
+    path: ../Assets/Scripts/Inventory/EntityInventory.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: 'public class EntityInventory : MonoBehaviour'
+    content.vb: >-
+      Public Class EntityInventory
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SoulsLike.EntityInventory.InventoryItems
+  commentId: P:SoulsLike.EntityInventory.InventoryItems
+  id: InventoryItems
+  parent: SoulsLike.EntityInventory
+  langs:
+  - csharp
+  - vb
+  name: InventoryItems
+  nameWithType: EntityInventory.InventoryItems
+  fullName: SoulsLike.EntityInventory.InventoryItems
+  type: Property
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/EntityInventory.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: InventoryItems
+    path: ../Assets/Scripts/Inventory/EntityInventory.cs
+    startLine: 20
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public List<Item> InventoryItems { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{SoulsLike.Item}
+    content.vb: Public ReadOnly Property InventoryItems As List(Of Item)
+  overload: SoulsLike.EntityInventory.InventoryItems*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: SoulsLike.EntityInventory.AddItem(SoulsLike.Item)
+  commentId: M:SoulsLike.EntityInventory.AddItem(SoulsLike.Item)
+  id: AddItem(SoulsLike.Item)
+  parent: SoulsLike.EntityInventory
+  langs:
+  - csharp
+  - vb
+  name: AddItem(Item)
+  nameWithType: EntityInventory.AddItem(Item)
+  fullName: SoulsLike.EntityInventory.AddItem(SoulsLike.Item)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/EntityInventory.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: AddItem
+    path: ../Assets/Scripts/Inventory/EntityInventory.cs
+    startLine: 34
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nAdd item to inventory.\n"
+  example: []
+  syntax:
+    content: public void AddItem(Item item)
+    parameters:
+    - id: item
+      type: SoulsLike.Item
+      description: ''
+    content.vb: Public Sub AddItem(item As Item)
+  overload: SoulsLike.EntityInventory.AddItem*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.EntityInventory.AddItem(SoulsLike.InteractableObject)
+  commentId: M:SoulsLike.EntityInventory.AddItem(SoulsLike.InteractableObject)
+  id: AddItem(SoulsLike.InteractableObject)
+  parent: SoulsLike.EntityInventory
+  langs:
+  - csharp
+  - vb
+  name: AddItem(InteractableObject)
+  nameWithType: EntityInventory.AddItem(InteractableObject)
+  fullName: SoulsLike.EntityInventory.AddItem(SoulsLike.InteractableObject)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/EntityInventory.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: AddItem
+    path: ../Assets/Scripts/Inventory/EntityInventory.cs
+    startLine: 43
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nAdd object to inventory.\n"
+  example: []
+  syntax:
+    content: public void AddItem(InteractableObject interactableObject)
+    parameters:
+    - id: interactableObject
+      type: SoulsLike.InteractableObject
+      description: ''
+    content.vb: Public Sub AddItem(interactableObject As InteractableObject)
+  overload: SoulsLike.EntityInventory.AddItem*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.EntityInventory.RemoveItem(SoulsLike.Item)
+  commentId: M:SoulsLike.EntityInventory.RemoveItem(SoulsLike.Item)
+  id: RemoveItem(SoulsLike.Item)
+  parent: SoulsLike.EntityInventory
+  langs:
+  - csharp
+  - vb
+  name: RemoveItem(Item)
+  nameWithType: EntityInventory.RemoveItem(Item)
+  fullName: SoulsLike.EntityInventory.RemoveItem(SoulsLike.Item)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/EntityInventory.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: RemoveItem
+    path: ../Assets/Scripts/Inventory/EntityInventory.cs
+    startLine: 53
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nRemove item from inventory.\n"
+  example: []
+  syntax:
+    content: public void RemoveItem(Item item)
+    parameters:
+    - id: item
+      type: SoulsLike.Item
+      description: ''
+    content.vb: Public Sub RemoveItem(item As Item)
+  overload: SoulsLike.EntityInventory.RemoveItem*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.EntityInventory.RemoveItem(System.Int32)
+  commentId: M:SoulsLike.EntityInventory.RemoveItem(System.Int32)
+  id: RemoveItem(System.Int32)
+  parent: SoulsLike.EntityInventory
+  langs:
+  - csharp
+  - vb
+  name: RemoveItem(Int32)
+  nameWithType: EntityInventory.RemoveItem(Int32)
+  fullName: SoulsLike.EntityInventory.RemoveItem(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/EntityInventory.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: RemoveItem
+    path: ../Assets/Scripts/Inventory/EntityInventory.cs
+    startLine: 62
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nRemove item from inventory.\n"
+  example: []
+  syntax:
+    content: public void RemoveItem(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+      description: ''
+    content.vb: Public Sub RemoveItem(index As Integer)
+  overload: SoulsLike.EntityInventory.RemoveItem*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.EntityInventory.RemoveAllItems(SoulsLike.Item)
+  commentId: M:SoulsLike.EntityInventory.RemoveAllItems(SoulsLike.Item)
+  id: RemoveAllItems(SoulsLike.Item)
+  parent: SoulsLike.EntityInventory
+  langs:
+  - csharp
+  - vb
+  name: RemoveAllItems(Item)
+  nameWithType: EntityInventory.RemoveAllItems(Item)
+  fullName: SoulsLike.EntityInventory.RemoveAllItems(SoulsLike.Item)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/EntityInventory.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: RemoveAllItems
+    path: ../Assets/Scripts/Inventory/EntityInventory.cs
+    startLine: 71
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nRemove all instances of item\n"
+  example: []
+  syntax:
+    content: public void RemoveAllItems(Item item)
+    parameters:
+    - id: item
+      type: SoulsLike.Item
+      description: ''
+    content.vb: Public Sub RemoveAllItems(item As Item)
+  overload: SoulsLike.EntityInventory.RemoveAllItems*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.EntityInventory.RemoveAllItems
+  commentId: M:SoulsLike.EntityInventory.RemoveAllItems
+  id: RemoveAllItems
+  parent: SoulsLike.EntityInventory
+  langs:
+  - csharp
+  - vb
+  name: RemoveAllItems()
+  nameWithType: EntityInventory.RemoveAllItems()
+  fullName: SoulsLike.EntityInventory.RemoveAllItems()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Inventory/EntityInventory.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: RemoveAllItems
+    path: ../Assets/Scripts/Inventory/EntityInventory.cs
+    startLine: 85
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nEmpty the inventory.\n"
+  example: []
+  syntax:
+    content: public void RemoveAllItems()
+    content.vb: Public Sub RemoveAllItems
+  overload: SoulsLike.EntityInventory.RemoveAllItems*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: SoulsLike.EntityInventory.InventoryItems*
+  commentId: Overload:SoulsLike.EntityInventory.InventoryItems
+  name: InventoryItems
+  nameWithType: EntityInventory.InventoryItems
+  fullName: SoulsLike.EntityInventory.InventoryItems
+- uid: System.Collections.Generic.List{SoulsLike.Item}
+  commentId: T:System.Collections.Generic.List{SoulsLike.Item}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Item>
+  nameWithType: List<Item>
+  fullName: System.Collections.Generic.List<SoulsLike.Item>
+  nameWithType.vb: List(Of Item)
+  fullName.vb: System.Collections.Generic.List(Of SoulsLike.Item)
+  name.vb: List(Of Item)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: SoulsLike.Item
+    name: Item
+    nameWithType: Item
+    fullName: SoulsLike.Item
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: SoulsLike.Item
+    name: Item
+    nameWithType: Item
+    fullName: SoulsLike.Item
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: SoulsLike.EntityInventory.AddItem*
+  commentId: Overload:SoulsLike.EntityInventory.AddItem
+  name: AddItem
+  nameWithType: EntityInventory.AddItem
+  fullName: SoulsLike.EntityInventory.AddItem
+- uid: SoulsLike.Item
+  commentId: T:SoulsLike.Item
+  parent: SoulsLike
+  name: Item
+  nameWithType: Item
+  fullName: SoulsLike.Item
+- uid: SoulsLike.InteractableObject
+  commentId: T:SoulsLike.InteractableObject
+  parent: SoulsLike
+  name: InteractableObject
+  nameWithType: InteractableObject
+  fullName: SoulsLike.InteractableObject
+- uid: SoulsLike.EntityInventory.RemoveItem*
+  commentId: Overload:SoulsLike.EntityInventory.RemoveItem
+  name: RemoveItem
+  nameWithType: EntityInventory.RemoveItem
+  fullName: SoulsLike.EntityInventory.RemoveItem
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: SoulsLike.EntityInventory.RemoveAllItems*
+  commentId: Overload:SoulsLike.EntityInventory.RemoveAllItems
+  name: RemoveAllItems
+  nameWithType: EntityInventory.RemoveAllItems
+  fullName: SoulsLike.EntityInventory.RemoveAllItems

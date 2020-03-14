@@ -1,0 +1,368 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.PlayerInputActions.IPlayerControlsActions
+  commentId: T:SoulsLike.PlayerInputActions.IPlayerControlsActions
+  id: PlayerInputActions.IPlayerControlsActions
+  parent: SoulsLike
+  children:
+  - SoulsLike.PlayerInputActions.IPlayerControlsActions.OnCameraMovement(UnityEngine.InputSystem.InputAction.CallbackContext)
+  - SoulsLike.PlayerInputActions.IPlayerControlsActions.OnCommandConsole(UnityEngine.InputSystem.InputAction.CallbackContext)
+  - SoulsLike.PlayerInputActions.IPlayerControlsActions.OnGeneralAttack(UnityEngine.InputSystem.InputAction.CallbackContext)
+  - SoulsLike.PlayerInputActions.IPlayerControlsActions.OnInteraction(UnityEngine.InputSystem.InputAction.CallbackContext)
+  - SoulsLike.PlayerInputActions.IPlayerControlsActions.OnInventory(UnityEngine.InputSystem.InputAction.CallbackContext)
+  - SoulsLike.PlayerInputActions.IPlayerControlsActions.OnLockOn(UnityEngine.InputSystem.InputAction.CallbackContext)
+  - SoulsLike.PlayerInputActions.IPlayerControlsActions.OnMovement(UnityEngine.InputSystem.InputAction.CallbackContext)
+  - SoulsLike.PlayerInputActions.IPlayerControlsActions.OnPowerAttack(UnityEngine.InputSystem.InputAction.CallbackContext)
+  - SoulsLike.PlayerInputActions.IPlayerControlsActions.OnQuestJournal(UnityEngine.InputSystem.InputAction.CallbackContext)
+  langs:
+  - csharp
+  - vb
+  name: PlayerInputActions.IPlayerControlsActions
+  nameWithType: PlayerInputActions.IPlayerControlsActions
+  fullName: SoulsLike.PlayerInputActions.IPlayerControlsActions
+  type: Interface
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: IPlayerControlsActions
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 474
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public interface IPlayerControlsActions
+    content.vb: Public Interface IPlayerControlsActions
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnMovement(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:SoulsLike.PlayerInputActions.IPlayerControlsActions.OnMovement(UnityEngine.InputSystem.InputAction.CallbackContext)
+  id: OnMovement(UnityEngine.InputSystem.InputAction.CallbackContext)
+  parent: SoulsLike.PlayerInputActions.IPlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: OnMovement(InputAction.CallbackContext)
+  nameWithType: PlayerInputActions.IPlayerControlsActions.OnMovement(InputAction.CallbackContext)
+  fullName: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnMovement(UnityEngine.InputSystem.InputAction.CallbackContext)
+  type: Method
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: OnMovement
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 476
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: void OnMovement(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: UnityEngine.InputSystem.InputAction.CallbackContext
+    content.vb: Sub OnMovement(context As InputAction.CallbackContext)
+  overload: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnMovement*
+- uid: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnCameraMovement(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:SoulsLike.PlayerInputActions.IPlayerControlsActions.OnCameraMovement(UnityEngine.InputSystem.InputAction.CallbackContext)
+  id: OnCameraMovement(UnityEngine.InputSystem.InputAction.CallbackContext)
+  parent: SoulsLike.PlayerInputActions.IPlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: OnCameraMovement(InputAction.CallbackContext)
+  nameWithType: PlayerInputActions.IPlayerControlsActions.OnCameraMovement(InputAction.CallbackContext)
+  fullName: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnCameraMovement(UnityEngine.InputSystem.InputAction.CallbackContext)
+  type: Method
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: OnCameraMovement
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 477
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: void OnCameraMovement(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: UnityEngine.InputSystem.InputAction.CallbackContext
+    content.vb: Sub OnCameraMovement(context As InputAction.CallbackContext)
+  overload: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnCameraMovement*
+- uid: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnGeneralAttack(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:SoulsLike.PlayerInputActions.IPlayerControlsActions.OnGeneralAttack(UnityEngine.InputSystem.InputAction.CallbackContext)
+  id: OnGeneralAttack(UnityEngine.InputSystem.InputAction.CallbackContext)
+  parent: SoulsLike.PlayerInputActions.IPlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: OnGeneralAttack(InputAction.CallbackContext)
+  nameWithType: PlayerInputActions.IPlayerControlsActions.OnGeneralAttack(InputAction.CallbackContext)
+  fullName: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnGeneralAttack(UnityEngine.InputSystem.InputAction.CallbackContext)
+  type: Method
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: OnGeneralAttack
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 478
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: void OnGeneralAttack(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: UnityEngine.InputSystem.InputAction.CallbackContext
+    content.vb: Sub OnGeneralAttack(context As InputAction.CallbackContext)
+  overload: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnGeneralAttack*
+- uid: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnPowerAttack(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:SoulsLike.PlayerInputActions.IPlayerControlsActions.OnPowerAttack(UnityEngine.InputSystem.InputAction.CallbackContext)
+  id: OnPowerAttack(UnityEngine.InputSystem.InputAction.CallbackContext)
+  parent: SoulsLike.PlayerInputActions.IPlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: OnPowerAttack(InputAction.CallbackContext)
+  nameWithType: PlayerInputActions.IPlayerControlsActions.OnPowerAttack(InputAction.CallbackContext)
+  fullName: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnPowerAttack(UnityEngine.InputSystem.InputAction.CallbackContext)
+  type: Method
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: OnPowerAttack
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 479
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: void OnPowerAttack(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: UnityEngine.InputSystem.InputAction.CallbackContext
+    content.vb: Sub OnPowerAttack(context As InputAction.CallbackContext)
+  overload: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnPowerAttack*
+- uid: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnLockOn(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:SoulsLike.PlayerInputActions.IPlayerControlsActions.OnLockOn(UnityEngine.InputSystem.InputAction.CallbackContext)
+  id: OnLockOn(UnityEngine.InputSystem.InputAction.CallbackContext)
+  parent: SoulsLike.PlayerInputActions.IPlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: OnLockOn(InputAction.CallbackContext)
+  nameWithType: PlayerInputActions.IPlayerControlsActions.OnLockOn(InputAction.CallbackContext)
+  fullName: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnLockOn(UnityEngine.InputSystem.InputAction.CallbackContext)
+  type: Method
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: OnLockOn
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 480
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: void OnLockOn(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: UnityEngine.InputSystem.InputAction.CallbackContext
+    content.vb: Sub OnLockOn(context As InputAction.CallbackContext)
+  overload: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnLockOn*
+- uid: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnInteraction(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:SoulsLike.PlayerInputActions.IPlayerControlsActions.OnInteraction(UnityEngine.InputSystem.InputAction.CallbackContext)
+  id: OnInteraction(UnityEngine.InputSystem.InputAction.CallbackContext)
+  parent: SoulsLike.PlayerInputActions.IPlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: OnInteraction(InputAction.CallbackContext)
+  nameWithType: PlayerInputActions.IPlayerControlsActions.OnInteraction(InputAction.CallbackContext)
+  fullName: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnInteraction(UnityEngine.InputSystem.InputAction.CallbackContext)
+  type: Method
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: OnInteraction
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 481
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: void OnInteraction(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: UnityEngine.InputSystem.InputAction.CallbackContext
+    content.vb: Sub OnInteraction(context As InputAction.CallbackContext)
+  overload: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnInteraction*
+- uid: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnQuestJournal(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:SoulsLike.PlayerInputActions.IPlayerControlsActions.OnQuestJournal(UnityEngine.InputSystem.InputAction.CallbackContext)
+  id: OnQuestJournal(UnityEngine.InputSystem.InputAction.CallbackContext)
+  parent: SoulsLike.PlayerInputActions.IPlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: OnQuestJournal(InputAction.CallbackContext)
+  nameWithType: PlayerInputActions.IPlayerControlsActions.OnQuestJournal(InputAction.CallbackContext)
+  fullName: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnQuestJournal(UnityEngine.InputSystem.InputAction.CallbackContext)
+  type: Method
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: OnQuestJournal
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 482
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: void OnQuestJournal(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: UnityEngine.InputSystem.InputAction.CallbackContext
+    content.vb: Sub OnQuestJournal(context As InputAction.CallbackContext)
+  overload: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnQuestJournal*
+- uid: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnInventory(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:SoulsLike.PlayerInputActions.IPlayerControlsActions.OnInventory(UnityEngine.InputSystem.InputAction.CallbackContext)
+  id: OnInventory(UnityEngine.InputSystem.InputAction.CallbackContext)
+  parent: SoulsLike.PlayerInputActions.IPlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: OnInventory(InputAction.CallbackContext)
+  nameWithType: PlayerInputActions.IPlayerControlsActions.OnInventory(InputAction.CallbackContext)
+  fullName: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnInventory(UnityEngine.InputSystem.InputAction.CallbackContext)
+  type: Method
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: OnInventory
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 483
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: void OnInventory(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: UnityEngine.InputSystem.InputAction.CallbackContext
+    content.vb: Sub OnInventory(context As InputAction.CallbackContext)
+  overload: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnInventory*
+- uid: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnCommandConsole(UnityEngine.InputSystem.InputAction.CallbackContext)
+  commentId: M:SoulsLike.PlayerInputActions.IPlayerControlsActions.OnCommandConsole(UnityEngine.InputSystem.InputAction.CallbackContext)
+  id: OnCommandConsole(UnityEngine.InputSystem.InputAction.CallbackContext)
+  parent: SoulsLike.PlayerInputActions.IPlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: OnCommandConsole(InputAction.CallbackContext)
+  nameWithType: PlayerInputActions.IPlayerControlsActions.OnCommandConsole(InputAction.CallbackContext)
+  fullName: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnCommandConsole(UnityEngine.InputSystem.InputAction.CallbackContext)
+  type: Method
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: OnCommandConsole
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 484
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: void OnCommandConsole(InputAction.CallbackContext context)
+    parameters:
+    - id: context
+      type: UnityEngine.InputSystem.InputAction.CallbackContext
+    content.vb: Sub OnCommandConsole(context As InputAction.CallbackContext)
+  overload: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnCommandConsole*
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnMovement*
+  commentId: Overload:SoulsLike.PlayerInputActions.IPlayerControlsActions.OnMovement
+  name: OnMovement
+  nameWithType: PlayerInputActions.IPlayerControlsActions.OnMovement
+  fullName: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnMovement
+- uid: UnityEngine.InputSystem.InputAction.CallbackContext
+  commentId: T:UnityEngine.InputSystem.InputAction.CallbackContext
+  parent: UnityEngine.InputSystem
+  isExternal: true
+  name: InputAction.CallbackContext
+  nameWithType: InputAction.CallbackContext
+  fullName: UnityEngine.InputSystem.InputAction.CallbackContext
+- uid: UnityEngine.InputSystem
+  commentId: N:UnityEngine.InputSystem
+  isExternal: true
+  name: UnityEngine.InputSystem
+  nameWithType: UnityEngine.InputSystem
+  fullName: UnityEngine.InputSystem
+- uid: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnCameraMovement*
+  commentId: Overload:SoulsLike.PlayerInputActions.IPlayerControlsActions.OnCameraMovement
+  name: OnCameraMovement
+  nameWithType: PlayerInputActions.IPlayerControlsActions.OnCameraMovement
+  fullName: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnCameraMovement
+- uid: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnGeneralAttack*
+  commentId: Overload:SoulsLike.PlayerInputActions.IPlayerControlsActions.OnGeneralAttack
+  name: OnGeneralAttack
+  nameWithType: PlayerInputActions.IPlayerControlsActions.OnGeneralAttack
+  fullName: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnGeneralAttack
+- uid: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnPowerAttack*
+  commentId: Overload:SoulsLike.PlayerInputActions.IPlayerControlsActions.OnPowerAttack
+  name: OnPowerAttack
+  nameWithType: PlayerInputActions.IPlayerControlsActions.OnPowerAttack
+  fullName: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnPowerAttack
+- uid: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnLockOn*
+  commentId: Overload:SoulsLike.PlayerInputActions.IPlayerControlsActions.OnLockOn
+  name: OnLockOn
+  nameWithType: PlayerInputActions.IPlayerControlsActions.OnLockOn
+  fullName: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnLockOn
+- uid: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnInteraction*
+  commentId: Overload:SoulsLike.PlayerInputActions.IPlayerControlsActions.OnInteraction
+  name: OnInteraction
+  nameWithType: PlayerInputActions.IPlayerControlsActions.OnInteraction
+  fullName: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnInteraction
+- uid: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnQuestJournal*
+  commentId: Overload:SoulsLike.PlayerInputActions.IPlayerControlsActions.OnQuestJournal
+  name: OnQuestJournal
+  nameWithType: PlayerInputActions.IPlayerControlsActions.OnQuestJournal
+  fullName: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnQuestJournal
+- uid: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnInventory*
+  commentId: Overload:SoulsLike.PlayerInputActions.IPlayerControlsActions.OnInventory
+  name: OnInventory
+  nameWithType: PlayerInputActions.IPlayerControlsActions.OnInventory
+  fullName: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnInventory
+- uid: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnCommandConsole*
+  commentId: Overload:SoulsLike.PlayerInputActions.IPlayerControlsActions.OnCommandConsole
+  name: OnCommandConsole
+  nameWithType: PlayerInputActions.IPlayerControlsActions.OnCommandConsole
+  fullName: SoulsLike.PlayerInputActions.IPlayerControlsActions.OnCommandConsole

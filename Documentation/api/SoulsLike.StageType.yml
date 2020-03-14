@@ -1,0 +1,244 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.StageType
+  commentId: T:SoulsLike.StageType
+  id: StageType
+  parent: SoulsLike
+  children:
+  - SoulsLike.StageType.Complete
+  - SoulsLike.StageType.Fail
+  - SoulsLike.StageType.Fetch
+  - SoulsLike.StageType.Kill
+  - SoulsLike.StageType.Talk
+  - SoulsLike.StageType.Travel
+  langs:
+  - csharp
+  - vb
+  name: StageType
+  nameWithType: StageType
+  fullName: SoulsLike.StageType
+  type: Enum
+  source:
+    remote:
+      path: Assets/Scripts/Quests/Quest.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: StageType
+    path: ../Assets/Scripts/Quests/Quest.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public enum StageType
+    content.vb: Public Enum StageType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: SoulsLike.StageType.Travel
+  commentId: F:SoulsLike.StageType.Travel
+  id: Travel
+  parent: SoulsLike.StageType
+  langs:
+  - csharp
+  - vb
+  name: Travel
+  nameWithType: StageType.Travel
+  fullName: SoulsLike.StageType.Travel
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Quests/Quest.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Travel
+    path: ../Assets/Scripts/Quests/Quest.cs
+    startLine: 11
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Travel = 0
+    return:
+      type: SoulsLike.StageType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.StageType.Fetch
+  commentId: F:SoulsLike.StageType.Fetch
+  id: Fetch
+  parent: SoulsLike.StageType
+  langs:
+  - csharp
+  - vb
+  name: Fetch
+  nameWithType: StageType.Fetch
+  fullName: SoulsLike.StageType.Fetch
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Quests/Quest.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Fetch
+    path: ../Assets/Scripts/Quests/Quest.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Fetch = 1
+    return:
+      type: SoulsLike.StageType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.StageType.Kill
+  commentId: F:SoulsLike.StageType.Kill
+  id: Kill
+  parent: SoulsLike.StageType
+  langs:
+  - csharp
+  - vb
+  name: Kill
+  nameWithType: StageType.Kill
+  fullName: SoulsLike.StageType.Kill
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Quests/Quest.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Kill
+    path: ../Assets/Scripts/Quests/Quest.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Kill = 2
+    return:
+      type: SoulsLike.StageType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.StageType.Talk
+  commentId: F:SoulsLike.StageType.Talk
+  id: Talk
+  parent: SoulsLike.StageType
+  langs:
+  - csharp
+  - vb
+  name: Talk
+  nameWithType: StageType.Talk
+  fullName: SoulsLike.StageType.Talk
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Quests/Quest.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Talk
+    path: ../Assets/Scripts/Quests/Quest.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Talk = 3
+    return:
+      type: SoulsLike.StageType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.StageType.Complete
+  commentId: F:SoulsLike.StageType.Complete
+  id: Complete
+  parent: SoulsLike.StageType
+  langs:
+  - csharp
+  - vb
+  name: Complete
+  nameWithType: StageType.Complete
+  fullName: SoulsLike.StageType.Complete
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Quests/Quest.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Complete
+    path: ../Assets/Scripts/Quests/Quest.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Complete = 4
+    return:
+      type: SoulsLike.StageType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: SoulsLike.StageType.Fail
+  commentId: F:SoulsLike.StageType.Fail
+  id: Fail
+  parent: SoulsLike.StageType
+  langs:
+  - csharp
+  - vb
+  name: Fail
+  nameWithType: StageType.Fail
+  fullName: SoulsLike.StageType.Fail
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Quests/Quest.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Fail
+    path: ../Assets/Scripts/Quests/Quest.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: Fail = 5
+    return:
+      type: SoulsLike.StageType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: SoulsLike.StageType
+  commentId: T:SoulsLike.StageType
+  parent: SoulsLike
+  name: StageType
+  nameWithType: StageType
+  fullName: SoulsLike.StageType

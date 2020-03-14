@@ -1,0 +1,738 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions
+  commentId: T:SoulsLike.PlayerInputActions.PlayerControlsActions
+  id: PlayerInputActions.PlayerControlsActions
+  parent: SoulsLike
+  children:
+  - SoulsLike.PlayerInputActions.PlayerControlsActions.#ctor(SoulsLike.PlayerInputActions)
+  - SoulsLike.PlayerInputActions.PlayerControlsActions.CameraMovement
+  - SoulsLike.PlayerInputActions.PlayerControlsActions.CommandConsole
+  - SoulsLike.PlayerInputActions.PlayerControlsActions.Disable
+  - SoulsLike.PlayerInputActions.PlayerControlsActions.Enable
+  - SoulsLike.PlayerInputActions.PlayerControlsActions.enabled
+  - SoulsLike.PlayerInputActions.PlayerControlsActions.GeneralAttack
+  - SoulsLike.PlayerInputActions.PlayerControlsActions.Get
+  - SoulsLike.PlayerInputActions.PlayerControlsActions.Interaction
+  - SoulsLike.PlayerInputActions.PlayerControlsActions.Inventory
+  - SoulsLike.PlayerInputActions.PlayerControlsActions.LockOn
+  - SoulsLike.PlayerInputActions.PlayerControlsActions.Movement
+  - SoulsLike.PlayerInputActions.PlayerControlsActions.op_Implicit(SoulsLike.PlayerInputActions.PlayerControlsActions)~UnityEngine.InputSystem.InputActionMap
+  - SoulsLike.PlayerInputActions.PlayerControlsActions.PowerAttack
+  - SoulsLike.PlayerInputActions.PlayerControlsActions.QuestJournal
+  - SoulsLike.PlayerInputActions.PlayerControlsActions.SetCallbacks(SoulsLike.PlayerInputActions.IPlayerControlsActions)
+  langs:
+  - csharp
+  - vb
+  name: PlayerInputActions.PlayerControlsActions
+  nameWithType: PlayerInputActions.PlayerControlsActions
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions
+  type: Struct
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: PlayerControlsActions
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 390
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public struct PlayerControlsActions
+    content.vb: Public Structure PlayerControlsActions
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.#ctor(SoulsLike.PlayerInputActions)
+  commentId: M:SoulsLike.PlayerInputActions.PlayerControlsActions.#ctor(SoulsLike.PlayerInputActions)
+  id: '#ctor(SoulsLike.PlayerInputActions)'
+  parent: SoulsLike.PlayerInputActions.PlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: PlayerControlsActions(PlayerInputActions)
+  nameWithType: PlayerInputActions.PlayerControlsActions.PlayerControlsActions(PlayerInputActions)
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.PlayerControlsActions(SoulsLike.PlayerInputActions)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: .ctor
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 393
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public PlayerControlsActions(PlayerInputActions wrapper)
+    parameters:
+    - id: wrapper
+      type: SoulsLike.PlayerInputActions
+    content.vb: Public Sub New(wrapper As PlayerInputActions)
+  overload: SoulsLike.PlayerInputActions.PlayerControlsActions.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.Movement
+  commentId: P:SoulsLike.PlayerInputActions.PlayerControlsActions.Movement
+  id: Movement
+  parent: SoulsLike.PlayerInputActions.PlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: Movement
+  nameWithType: PlayerInputActions.PlayerControlsActions.Movement
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.Movement
+  type: Property
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Movement
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 394
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public InputAction Movement { get; }
+    parameters: []
+    return:
+      type: UnityEngine.InputSystem.InputAction
+    content.vb: Public ReadOnly Property Movement As InputAction
+  overload: SoulsLike.PlayerInputActions.PlayerControlsActions.Movement*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.CameraMovement
+  commentId: P:SoulsLike.PlayerInputActions.PlayerControlsActions.CameraMovement
+  id: CameraMovement
+  parent: SoulsLike.PlayerInputActions.PlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: CameraMovement
+  nameWithType: PlayerInputActions.PlayerControlsActions.CameraMovement
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.CameraMovement
+  type: Property
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: CameraMovement
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 395
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public InputAction CameraMovement { get; }
+    parameters: []
+    return:
+      type: UnityEngine.InputSystem.InputAction
+    content.vb: Public ReadOnly Property CameraMovement As InputAction
+  overload: SoulsLike.PlayerInputActions.PlayerControlsActions.CameraMovement*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.GeneralAttack
+  commentId: P:SoulsLike.PlayerInputActions.PlayerControlsActions.GeneralAttack
+  id: GeneralAttack
+  parent: SoulsLike.PlayerInputActions.PlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: GeneralAttack
+  nameWithType: PlayerInputActions.PlayerControlsActions.GeneralAttack
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.GeneralAttack
+  type: Property
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: GeneralAttack
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 396
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public InputAction GeneralAttack { get; }
+    parameters: []
+    return:
+      type: UnityEngine.InputSystem.InputAction
+    content.vb: Public ReadOnly Property GeneralAttack As InputAction
+  overload: SoulsLike.PlayerInputActions.PlayerControlsActions.GeneralAttack*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.PowerAttack
+  commentId: P:SoulsLike.PlayerInputActions.PlayerControlsActions.PowerAttack
+  id: PowerAttack
+  parent: SoulsLike.PlayerInputActions.PlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: PowerAttack
+  nameWithType: PlayerInputActions.PlayerControlsActions.PowerAttack
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.PowerAttack
+  type: Property
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: PowerAttack
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 397
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public InputAction PowerAttack { get; }
+    parameters: []
+    return:
+      type: UnityEngine.InputSystem.InputAction
+    content.vb: Public ReadOnly Property PowerAttack As InputAction
+  overload: SoulsLike.PlayerInputActions.PlayerControlsActions.PowerAttack*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.LockOn
+  commentId: P:SoulsLike.PlayerInputActions.PlayerControlsActions.LockOn
+  id: LockOn
+  parent: SoulsLike.PlayerInputActions.PlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: LockOn
+  nameWithType: PlayerInputActions.PlayerControlsActions.LockOn
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.LockOn
+  type: Property
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: LockOn
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 398
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public InputAction LockOn { get; }
+    parameters: []
+    return:
+      type: UnityEngine.InputSystem.InputAction
+    content.vb: Public ReadOnly Property LockOn As InputAction
+  overload: SoulsLike.PlayerInputActions.PlayerControlsActions.LockOn*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.Interaction
+  commentId: P:SoulsLike.PlayerInputActions.PlayerControlsActions.Interaction
+  id: Interaction
+  parent: SoulsLike.PlayerInputActions.PlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: Interaction
+  nameWithType: PlayerInputActions.PlayerControlsActions.Interaction
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.Interaction
+  type: Property
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Interaction
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 399
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public InputAction Interaction { get; }
+    parameters: []
+    return:
+      type: UnityEngine.InputSystem.InputAction
+    content.vb: Public ReadOnly Property Interaction As InputAction
+  overload: SoulsLike.PlayerInputActions.PlayerControlsActions.Interaction*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.QuestJournal
+  commentId: P:SoulsLike.PlayerInputActions.PlayerControlsActions.QuestJournal
+  id: QuestJournal
+  parent: SoulsLike.PlayerInputActions.PlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: QuestJournal
+  nameWithType: PlayerInputActions.PlayerControlsActions.QuestJournal
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.QuestJournal
+  type: Property
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: QuestJournal
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 400
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public InputAction QuestJournal { get; }
+    parameters: []
+    return:
+      type: UnityEngine.InputSystem.InputAction
+    content.vb: Public ReadOnly Property QuestJournal As InputAction
+  overload: SoulsLike.PlayerInputActions.PlayerControlsActions.QuestJournal*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.Inventory
+  commentId: P:SoulsLike.PlayerInputActions.PlayerControlsActions.Inventory
+  id: Inventory
+  parent: SoulsLike.PlayerInputActions.PlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: Inventory
+  nameWithType: PlayerInputActions.PlayerControlsActions.Inventory
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.Inventory
+  type: Property
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Inventory
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 401
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public InputAction Inventory { get; }
+    parameters: []
+    return:
+      type: UnityEngine.InputSystem.InputAction
+    content.vb: Public ReadOnly Property Inventory As InputAction
+  overload: SoulsLike.PlayerInputActions.PlayerControlsActions.Inventory*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.CommandConsole
+  commentId: P:SoulsLike.PlayerInputActions.PlayerControlsActions.CommandConsole
+  id: CommandConsole
+  parent: SoulsLike.PlayerInputActions.PlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: CommandConsole
+  nameWithType: PlayerInputActions.PlayerControlsActions.CommandConsole
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.CommandConsole
+  type: Property
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: CommandConsole
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 402
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public InputAction CommandConsole { get; }
+    parameters: []
+    return:
+      type: UnityEngine.InputSystem.InputAction
+    content.vb: Public ReadOnly Property CommandConsole As InputAction
+  overload: SoulsLike.PlayerInputActions.PlayerControlsActions.CommandConsole*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.Get
+  commentId: M:SoulsLike.PlayerInputActions.PlayerControlsActions.Get
+  id: Get
+  parent: SoulsLike.PlayerInputActions.PlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: Get()
+  nameWithType: PlayerInputActions.PlayerControlsActions.Get()
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.Get()
+  type: Method
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Get
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 403
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public InputActionMap Get()
+    return:
+      type: UnityEngine.InputSystem.InputActionMap
+    content.vb: Public Function Get As InputActionMap
+  overload: SoulsLike.PlayerInputActions.PlayerControlsActions.Get*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.Enable
+  commentId: M:SoulsLike.PlayerInputActions.PlayerControlsActions.Enable
+  id: Enable
+  parent: SoulsLike.PlayerInputActions.PlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: Enable()
+  nameWithType: PlayerInputActions.PlayerControlsActions.Enable()
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.Enable()
+  type: Method
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Enable
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 404
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public void Enable()
+    content.vb: Public Sub Enable
+  overload: SoulsLike.PlayerInputActions.PlayerControlsActions.Enable*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.Disable
+  commentId: M:SoulsLike.PlayerInputActions.PlayerControlsActions.Disable
+  id: Disable
+  parent: SoulsLike.PlayerInputActions.PlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: Disable()
+  nameWithType: PlayerInputActions.PlayerControlsActions.Disable()
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.Disable()
+  type: Method
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Disable
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 405
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public void Disable()
+    content.vb: Public Sub Disable
+  overload: SoulsLike.PlayerInputActions.PlayerControlsActions.Disable*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.enabled
+  commentId: P:SoulsLike.PlayerInputActions.PlayerControlsActions.enabled
+  id: enabled
+  parent: SoulsLike.PlayerInputActions.PlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: enabled
+  nameWithType: PlayerInputActions.PlayerControlsActions.enabled
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.enabled
+  type: Property
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: enabled
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 406
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public bool enabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property enabled As Boolean
+  overload: SoulsLike.PlayerInputActions.PlayerControlsActions.enabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.op_Implicit(SoulsLike.PlayerInputActions.PlayerControlsActions)~UnityEngine.InputSystem.InputActionMap
+  commentId: M:SoulsLike.PlayerInputActions.PlayerControlsActions.op_Implicit(SoulsLike.PlayerInputActions.PlayerControlsActions)~UnityEngine.InputSystem.InputActionMap
+  id: op_Implicit(SoulsLike.PlayerInputActions.PlayerControlsActions)~UnityEngine.InputSystem.InputActionMap
+  parent: SoulsLike.PlayerInputActions.PlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: Implicit(PlayerInputActions.PlayerControlsActions to InputActionMap)
+  nameWithType: PlayerInputActions.PlayerControlsActions.Implicit(PlayerInputActions.PlayerControlsActions to InputActionMap)
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.Implicit(SoulsLike.PlayerInputActions.PlayerControlsActions to UnityEngine.InputSystem.InputActionMap)
+  type: Operator
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: op_Implicit
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 407
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public static implicit operator InputActionMap(PlayerInputActions.PlayerControlsActions set)
+    parameters:
+    - id: set
+      type: SoulsLike.PlayerInputActions.PlayerControlsActions
+    return:
+      type: UnityEngine.InputSystem.InputActionMap
+    content.vb: Public Shared Widening Operator CType(set As PlayerInputActions.PlayerControlsActions) As InputActionMap
+  overload: SoulsLike.PlayerInputActions.PlayerControlsActions.op_Implicit*
+  nameWithType.vb: PlayerInputActions.PlayerControlsActions.Widening(PlayerInputActions.PlayerControlsActions to InputActionMap)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: SoulsLike.PlayerInputActions.PlayerControlsActions.Widening(SoulsLike.PlayerInputActions.PlayerControlsActions to UnityEngine.InputSystem.InputActionMap)
+  name.vb: Widening(PlayerInputActions.PlayerControlsActions to InputActionMap)
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.SetCallbacks(SoulsLike.PlayerInputActions.IPlayerControlsActions)
+  commentId: M:SoulsLike.PlayerInputActions.PlayerControlsActions.SetCallbacks(SoulsLike.PlayerInputActions.IPlayerControlsActions)
+  id: SetCallbacks(SoulsLike.PlayerInputActions.IPlayerControlsActions)
+  parent: SoulsLike.PlayerInputActions.PlayerControlsActions
+  langs:
+  - csharp
+  - vb
+  name: SetCallbacks(PlayerInputActions.IPlayerControlsActions)
+  nameWithType: PlayerInputActions.PlayerControlsActions.SetCallbacks(PlayerInputActions.IPlayerControlsActions)
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.SetCallbacks(SoulsLike.PlayerInputActions.IPlayerControlsActions)
+  type: Method
+  source:
+    remote:
+      path: Assets/Settings/PlayerInputActions.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: SetCallbacks
+    path: ../Assets/Settings/PlayerInputActions.cs
+    startLine: 408
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public void SetCallbacks(PlayerInputActions.IPlayerControlsActions instance)
+    parameters:
+    - id: instance
+      type: SoulsLike.PlayerInputActions.IPlayerControlsActions
+    content.vb: Public Sub SetCallbacks(instance As PlayerInputActions.IPlayerControlsActions)
+  overload: SoulsLike.PlayerInputActions.PlayerControlsActions.SetCallbacks*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.#ctor*
+  commentId: Overload:SoulsLike.PlayerInputActions.PlayerControlsActions.#ctor
+  name: PlayerControlsActions
+  nameWithType: PlayerInputActions.PlayerControlsActions.PlayerControlsActions
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.PlayerControlsActions
+- uid: SoulsLike.PlayerInputActions
+  commentId: T:SoulsLike.PlayerInputActions
+  parent: SoulsLike
+  name: PlayerInputActions
+  nameWithType: PlayerInputActions
+  fullName: SoulsLike.PlayerInputActions
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.Movement*
+  commentId: Overload:SoulsLike.PlayerInputActions.PlayerControlsActions.Movement
+  name: Movement
+  nameWithType: PlayerInputActions.PlayerControlsActions.Movement
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.Movement
+- uid: UnityEngine.InputSystem.InputAction
+  commentId: T:UnityEngine.InputSystem.InputAction
+  parent: UnityEngine.InputSystem
+  isExternal: true
+  name: InputAction
+  nameWithType: InputAction
+  fullName: UnityEngine.InputSystem.InputAction
+- uid: UnityEngine.InputSystem
+  commentId: N:UnityEngine.InputSystem
+  isExternal: true
+  name: UnityEngine.InputSystem
+  nameWithType: UnityEngine.InputSystem
+  fullName: UnityEngine.InputSystem
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.CameraMovement*
+  commentId: Overload:SoulsLike.PlayerInputActions.PlayerControlsActions.CameraMovement
+  name: CameraMovement
+  nameWithType: PlayerInputActions.PlayerControlsActions.CameraMovement
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.CameraMovement
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.GeneralAttack*
+  commentId: Overload:SoulsLike.PlayerInputActions.PlayerControlsActions.GeneralAttack
+  name: GeneralAttack
+  nameWithType: PlayerInputActions.PlayerControlsActions.GeneralAttack
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.GeneralAttack
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.PowerAttack*
+  commentId: Overload:SoulsLike.PlayerInputActions.PlayerControlsActions.PowerAttack
+  name: PowerAttack
+  nameWithType: PlayerInputActions.PlayerControlsActions.PowerAttack
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.PowerAttack
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.LockOn*
+  commentId: Overload:SoulsLike.PlayerInputActions.PlayerControlsActions.LockOn
+  name: LockOn
+  nameWithType: PlayerInputActions.PlayerControlsActions.LockOn
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.LockOn
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.Interaction*
+  commentId: Overload:SoulsLike.PlayerInputActions.PlayerControlsActions.Interaction
+  name: Interaction
+  nameWithType: PlayerInputActions.PlayerControlsActions.Interaction
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.Interaction
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.QuestJournal*
+  commentId: Overload:SoulsLike.PlayerInputActions.PlayerControlsActions.QuestJournal
+  name: QuestJournal
+  nameWithType: PlayerInputActions.PlayerControlsActions.QuestJournal
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.QuestJournal
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.Inventory*
+  commentId: Overload:SoulsLike.PlayerInputActions.PlayerControlsActions.Inventory
+  name: Inventory
+  nameWithType: PlayerInputActions.PlayerControlsActions.Inventory
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.Inventory
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.CommandConsole*
+  commentId: Overload:SoulsLike.PlayerInputActions.PlayerControlsActions.CommandConsole
+  name: CommandConsole
+  nameWithType: PlayerInputActions.PlayerControlsActions.CommandConsole
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.CommandConsole
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.Get*
+  commentId: Overload:SoulsLike.PlayerInputActions.PlayerControlsActions.Get
+  name: Get
+  nameWithType: PlayerInputActions.PlayerControlsActions.Get
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.Get
+- uid: UnityEngine.InputSystem.InputActionMap
+  commentId: T:UnityEngine.InputSystem.InputActionMap
+  parent: UnityEngine.InputSystem
+  isExternal: true
+  name: InputActionMap
+  nameWithType: InputActionMap
+  fullName: UnityEngine.InputSystem.InputActionMap
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.Enable*
+  commentId: Overload:SoulsLike.PlayerInputActions.PlayerControlsActions.Enable
+  name: Enable
+  nameWithType: PlayerInputActions.PlayerControlsActions.Enable
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.Enable
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.Disable*
+  commentId: Overload:SoulsLike.PlayerInputActions.PlayerControlsActions.Disable
+  name: Disable
+  nameWithType: PlayerInputActions.PlayerControlsActions.Disable
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.Disable
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.enabled*
+  commentId: Overload:SoulsLike.PlayerInputActions.PlayerControlsActions.enabled
+  name: enabled
+  nameWithType: PlayerInputActions.PlayerControlsActions.enabled
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.enabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.op_Implicit*
+  commentId: Overload:SoulsLike.PlayerInputActions.PlayerControlsActions.op_Implicit
+  name: Implicit
+  nameWithType: PlayerInputActions.PlayerControlsActions.Implicit
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.Implicit
+  nameWithType.vb: PlayerInputActions.PlayerControlsActions.Widening
+  fullName.vb: SoulsLike.PlayerInputActions.PlayerControlsActions.Widening
+  name.vb: Widening
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions
+  commentId: T:SoulsLike.PlayerInputActions.PlayerControlsActions
+  parent: SoulsLike
+  name: PlayerInputActions.PlayerControlsActions
+  nameWithType: PlayerInputActions.PlayerControlsActions
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions
+- uid: SoulsLike.PlayerInputActions.PlayerControlsActions.SetCallbacks*
+  commentId: Overload:SoulsLike.PlayerInputActions.PlayerControlsActions.SetCallbacks
+  name: SetCallbacks
+  nameWithType: PlayerInputActions.PlayerControlsActions.SetCallbacks
+  fullName: SoulsLike.PlayerInputActions.PlayerControlsActions.SetCallbacks
+- uid: SoulsLike.PlayerInputActions.IPlayerControlsActions
+  commentId: T:SoulsLike.PlayerInputActions.IPlayerControlsActions
+  parent: SoulsLike
+  name: PlayerInputActions.IPlayerControlsActions
+  nameWithType: PlayerInputActions.IPlayerControlsActions
+  fullName: SoulsLike.PlayerInputActions.IPlayerControlsActions

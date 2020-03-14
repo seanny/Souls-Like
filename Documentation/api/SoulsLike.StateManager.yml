@@ -1,0 +1,975 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.StateManager
+  commentId: T:SoulsLike.StateManager
+  id: StateManager
+  parent: SoulsLike
+  children:
+  - SoulsLike.StateManager.activeObject
+  - SoulsLike.StateManager.animator
+  - SoulsLike.StateManager.delta
+  - SoulsLike.StateManager.drinkingPotion
+  - SoulsLike.StateManager.FixedTick(System.Single)
+  - SoulsLike.StateManager.groundSpeed
+  - SoulsLike.StateManager.horizontal
+  - SoulsLike.StateManager.ignoreLayers
+  - SoulsLike.StateManager.Init(System.Boolean)
+  - SoulsLike.StateManager.isGrounded
+  - SoulsLike.StateManager.IsGrounded
+  - SoulsLike.StateManager.isRunning
+  - SoulsLike.StateManager.lockOn
+  - SoulsLike.StateManager.moveAmount
+  - SoulsLike.StateManager.moveDirection
+  - SoulsLike.StateManager.moveSpeed
+  - SoulsLike.StateManager.rigidBody
+  - SoulsLike.StateManager.rotateSpeed
+  - SoulsLike.StateManager.runSpeed
+  - SoulsLike.StateManager.Tick(System.Single)
+  - SoulsLike.StateManager.vertical
+  langs:
+  - csharp
+  - vb
+  name: StateManager
+  nameWithType: StateManager
+  fullName: SoulsLike.StateManager
+  type: Class
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: StateManager
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 5
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: 'public class StateManager : MonoBehaviour'
+    content.vb: >-
+      Public Class StateManager
+          Inherits MonoBehaviour
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: SoulsLike.StateManager.vertical
+  commentId: F:SoulsLike.StateManager.vertical
+  id: vertical
+  parent: SoulsLike.StateManager
+  langs:
+  - csharp
+  - vb
+  name: vertical
+  nameWithType: StateManager.vertical
+  fullName: SoulsLike.StateManager.vertical
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: vertical
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 7
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [HideInInspector]
+
+      public float vertical
+    return:
+      type: System.Single
+    content.vb: >-
+      <HideInInspector>
+
+      Public vertical As Single
+  attributes:
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.StateManager.horizontal
+  commentId: F:SoulsLike.StateManager.horizontal
+  id: horizontal
+  parent: SoulsLike.StateManager
+  langs:
+  - csharp
+  - vb
+  name: horizontal
+  nameWithType: StateManager.horizontal
+  fullName: SoulsLike.StateManager.horizontal
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: horizontal
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 8
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [HideInInspector]
+
+      public float horizontal
+    return:
+      type: System.Single
+    content.vb: >-
+      <HideInInspector>
+
+      Public horizontal As Single
+  attributes:
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.StateManager.moveDirection
+  commentId: F:SoulsLike.StateManager.moveDirection
+  id: moveDirection
+  parent: SoulsLike.StateManager
+  langs:
+  - csharp
+  - vb
+  name: moveDirection
+  nameWithType: StateManager.moveDirection
+  fullName: SoulsLike.StateManager.moveDirection
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: moveDirection
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 9
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [HideInInspector]
+
+      public Vector3 moveDirection
+    return:
+      type: UnityEngine.Vector3
+    content.vb: >-
+      <HideInInspector>
+
+      Public moveDirection As Vector3
+  attributes:
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.StateManager.moveAmount
+  commentId: F:SoulsLike.StateManager.moveAmount
+  id: moveAmount
+  parent: SoulsLike.StateManager
+  langs:
+  - csharp
+  - vb
+  name: moveAmount
+  nameWithType: StateManager.moveAmount
+  fullName: SoulsLike.StateManager.moveAmount
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: moveAmount
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 10
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [HideInInspector]
+
+      public float moveAmount
+    return:
+      type: System.Single
+    content.vb: >-
+      <HideInInspector>
+
+      Public moveAmount As Single
+  attributes:
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.StateManager.moveSpeed
+  commentId: F:SoulsLike.StateManager.moveSpeed
+  id: moveSpeed
+  parent: SoulsLike.StateManager
+  langs:
+  - csharp
+  - vb
+  name: moveSpeed
+  nameWithType: StateManager.moveSpeed
+  fullName: SoulsLike.StateManager.moveSpeed
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: moveSpeed
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 12
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public float moveSpeed
+    return:
+      type: System.Single
+    content.vb: Public moveSpeed As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.StateManager.runSpeed
+  commentId: F:SoulsLike.StateManager.runSpeed
+  id: runSpeed
+  parent: SoulsLike.StateManager
+  langs:
+  - csharp
+  - vb
+  name: runSpeed
+  nameWithType: StateManager.runSpeed
+  fullName: SoulsLike.StateManager.runSpeed
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: runSpeed
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 13
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public float runSpeed
+    return:
+      type: System.Single
+    content.vb: Public runSpeed As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.StateManager.rotateSpeed
+  commentId: F:SoulsLike.StateManager.rotateSpeed
+  id: rotateSpeed
+  parent: SoulsLike.StateManager
+  langs:
+  - csharp
+  - vb
+  name: rotateSpeed
+  nameWithType: StateManager.rotateSpeed
+  fullName: SoulsLike.StateManager.rotateSpeed
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: rotateSpeed
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 14
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public float rotateSpeed
+    return:
+      type: System.Single
+    content.vb: Public rotateSpeed As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.StateManager.groundSpeed
+  commentId: F:SoulsLike.StateManager.groundSpeed
+  id: groundSpeed
+  parent: SoulsLike.StateManager
+  langs:
+  - csharp
+  - vb
+  name: groundSpeed
+  nameWithType: StateManager.groundSpeed
+  fullName: SoulsLike.StateManager.groundSpeed
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: groundSpeed
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 15
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public float groundSpeed
+    return:
+      type: System.Single
+    content.vb: Public groundSpeed As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.StateManager.isGrounded
+  commentId: F:SoulsLike.StateManager.isGrounded
+  id: isGrounded
+  parent: SoulsLike.StateManager
+  langs:
+  - csharp
+  - vb
+  name: isGrounded
+  nameWithType: StateManager.isGrounded
+  fullName: SoulsLike.StateManager.isGrounded
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: isGrounded
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [HideInInspector]
+
+      public bool isGrounded
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <HideInInspector>
+
+      Public isGrounded As Boolean
+  attributes:
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.StateManager.isRunning
+  commentId: F:SoulsLike.StateManager.isRunning
+  id: isRunning
+  parent: SoulsLike.StateManager
+  langs:
+  - csharp
+  - vb
+  name: isRunning
+  nameWithType: StateManager.isRunning
+  fullName: SoulsLike.StateManager.isRunning
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: isRunning
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 17
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [HideInInspector]
+
+      public bool isRunning
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <HideInInspector>
+
+      Public isRunning As Boolean
+  attributes:
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.StateManager.lockOn
+  commentId: F:SoulsLike.StateManager.lockOn
+  id: lockOn
+  parent: SoulsLike.StateManager
+  langs:
+  - csharp
+  - vb
+  name: lockOn
+  nameWithType: StateManager.lockOn
+  fullName: SoulsLike.StateManager.lockOn
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: lockOn
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 18
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [HideInInspector]
+
+      public bool lockOn
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <HideInInspector>
+
+      Public lockOn As Boolean
+  attributes:
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.StateManager.drinkingPotion
+  commentId: F:SoulsLike.StateManager.drinkingPotion
+  id: drinkingPotion
+  parent: SoulsLike.StateManager
+  langs:
+  - csharp
+  - vb
+  name: drinkingPotion
+  nameWithType: StateManager.drinkingPotion
+  fullName: SoulsLike.StateManager.drinkingPotion
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: drinkingPotion
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 19
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [HideInInspector]
+
+      public bool drinkingPotion
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <HideInInspector>
+
+      Public drinkingPotion As Boolean
+  attributes:
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.StateManager.activeObject
+  commentId: F:SoulsLike.StateManager.activeObject
+  id: activeObject
+  parent: SoulsLike.StateManager
+  langs:
+  - csharp
+  - vb
+  name: activeObject
+  nameWithType: StateManager.activeObject
+  fullName: SoulsLike.StateManager.activeObject
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: activeObject
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 23
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [HideInInspector]
+
+      public GameObject activeObject
+    return:
+      type: UnityEngine.GameObject
+    content.vb: >-
+      <HideInInspector>
+
+      Public activeObject As GameObject
+  attributes:
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.StateManager.animator
+  commentId: F:SoulsLike.StateManager.animator
+  id: animator
+  parent: SoulsLike.StateManager
+  langs:
+  - csharp
+  - vb
+  name: animator
+  nameWithType: StateManager.animator
+  fullName: SoulsLike.StateManager.animator
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: animator
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 24
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [HideInInspector]
+
+      public Animator animator
+    return:
+      type: UnityEngine.Animator
+    content.vb: >-
+      <HideInInspector>
+
+      Public animator As Animator
+  attributes:
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.StateManager.rigidBody
+  commentId: F:SoulsLike.StateManager.rigidBody
+  id: rigidBody
+  parent: SoulsLike.StateManager
+  langs:
+  - csharp
+  - vb
+  name: rigidBody
+  nameWithType: StateManager.rigidBody
+  fullName: SoulsLike.StateManager.rigidBody
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: rigidBody
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 25
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [HideInInspector]
+
+      public Rigidbody rigidBody
+    return:
+      type: UnityEngine.Rigidbody
+    content.vb: >-
+      <HideInInspector>
+
+      Public rigidBody As Rigidbody
+  attributes:
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.StateManager.delta
+  commentId: F:SoulsLike.StateManager.delta
+  id: delta
+  parent: SoulsLike.StateManager
+  langs:
+  - csharp
+  - vb
+  name: delta
+  nameWithType: StateManager.delta
+  fullName: SoulsLike.StateManager.delta
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: delta
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 26
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [HideInInspector]
+
+      public float delta
+    return:
+      type: System.Single
+    content.vb: >-
+      <HideInInspector>
+
+      Public delta As Single
+  attributes:
+  - type: UnityEngine.HideInInspector
+    ctor: UnityEngine.HideInInspector.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.StateManager.ignoreLayers
+  commentId: F:SoulsLike.StateManager.ignoreLayers
+  id: ignoreLayers
+  parent: SoulsLike.StateManager
+  langs:
+  - csharp
+  - vb
+  name: ignoreLayers
+  nameWithType: StateManager.ignoreLayers
+  fullName: SoulsLike.StateManager.ignoreLayers
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: ignoreLayers
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 27
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: public LayerMask ignoreLayers
+    return:
+      type: UnityEngine.LayerMask
+    content.vb: Public ignoreLayers As LayerMask
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.StateManager.Init(System.Boolean)
+  commentId: M:SoulsLike.StateManager.Init(System.Boolean)
+  id: Init(System.Boolean)
+  parent: SoulsLike.StateManager
+  langs:
+  - csharp
+  - vb
+  name: Init(Boolean)
+  nameWithType: StateManager.Init(Boolean)
+  fullName: SoulsLike.StateManager.Init(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Init
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 33
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nInitialise StateManager\n"
+  example: []
+  syntax:
+    content: public void Init(bool isPlayer = false)
+    parameters:
+    - id: isPlayer
+      type: System.Boolean
+      description: ''
+    content.vb: Public Sub Init(isPlayer As Boolean = False)
+  overload: SoulsLike.StateManager.Init*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.StateManager.FixedTick(System.Single)
+  commentId: M:SoulsLike.StateManager.FixedTick(System.Single)
+  id: FixedTick(System.Single)
+  parent: SoulsLike.StateManager
+  langs:
+  - csharp
+  - vb
+  name: FixedTick(Single)
+  nameWithType: StateManager.FixedTick(Single)
+  fullName: SoulsLike.StateManager.FixedTick(System.Single)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: FixedTick
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 72
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nFixed Tick\n"
+  example: []
+  syntax:
+    content: public void FixedTick(float d)
+    parameters:
+    - id: d
+      type: System.Single
+      description: ''
+    content.vb: Public Sub FixedTick(d As Single)
+  overload: SoulsLike.StateManager.FixedTick*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.StateManager.Tick(System.Single)
+  commentId: M:SoulsLike.StateManager.Tick(System.Single)
+  id: Tick(System.Single)
+  parent: SoulsLike.StateManager
+  langs:
+  - csharp
+  - vb
+  name: Tick(Single)
+  nameWithType: StateManager.Tick(Single)
+  fullName: SoulsLike.StateManager.Tick(System.Single)
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: Tick
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 117
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nTick\n"
+  example: []
+  syntax:
+    content: public void Tick(float d)
+    parameters:
+    - id: d
+      type: System.Single
+      description: ''
+    content.vb: Public Sub Tick(d As Single)
+  overload: SoulsLike.StateManager.Tick*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.StateManager.IsGrounded
+  commentId: M:SoulsLike.StateManager.IsGrounded
+  id: IsGrounded
+  parent: SoulsLike.StateManager
+  langs:
+  - csharp
+  - vb
+  name: IsGrounded()
+  nameWithType: StateManager.IsGrounded()
+  fullName: SoulsLike.StateManager.IsGrounded()
+  type: Method
+  source:
+    remote:
+      path: Assets/Scripts/Controller/StateManager.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: IsGrounded
+    path: ../Assets/Scripts/Controller/StateManager.cs
+    startLine: 156
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nCheck if the actor is on the ground.\n"
+  example: []
+  syntax:
+    content: public bool IsGrounded()
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Function IsGrounded As Boolean
+  overload: SoulsLike.StateManager.IsGrounded*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: UnityEngine.Vector3
+  commentId: T:UnityEngine.Vector3
+  parent: UnityEngine
+  isExternal: true
+  name: Vector3
+  nameWithType: Vector3
+  fullName: UnityEngine.Vector3
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: UnityEngine.GameObject
+  commentId: T:UnityEngine.GameObject
+  parent: UnityEngine
+  isExternal: true
+  name: GameObject
+  nameWithType: GameObject
+  fullName: UnityEngine.GameObject
+- uid: UnityEngine.Animator
+  commentId: T:UnityEngine.Animator
+  parent: UnityEngine
+  isExternal: true
+  name: Animator
+  nameWithType: Animator
+  fullName: UnityEngine.Animator
+- uid: UnityEngine.Rigidbody
+  commentId: T:UnityEngine.Rigidbody
+  parent: UnityEngine
+  isExternal: true
+  name: Rigidbody
+  nameWithType: Rigidbody
+  fullName: UnityEngine.Rigidbody
+- uid: UnityEngine.LayerMask
+  commentId: T:UnityEngine.LayerMask
+  parent: UnityEngine
+  isExternal: true
+  name: LayerMask
+  nameWithType: LayerMask
+  fullName: UnityEngine.LayerMask
+- uid: SoulsLike.StateManager.Init*
+  commentId: Overload:SoulsLike.StateManager.Init
+  name: Init
+  nameWithType: StateManager.Init
+  fullName: SoulsLike.StateManager.Init
+- uid: SoulsLike.StateManager.FixedTick*
+  commentId: Overload:SoulsLike.StateManager.FixedTick
+  name: FixedTick
+  nameWithType: StateManager.FixedTick
+  fullName: SoulsLike.StateManager.FixedTick
+- uid: SoulsLike.StateManager.Tick*
+  commentId: Overload:SoulsLike.StateManager.Tick
+  name: Tick
+  nameWithType: StateManager.Tick
+  fullName: SoulsLike.StateManager.Tick
+- uid: SoulsLike.StateManager.IsGrounded*
+  commentId: Overload:SoulsLike.StateManager.IsGrounded
+  name: IsGrounded
+  nameWithType: StateManager.IsGrounded
+  fullName: SoulsLike.StateManager.IsGrounded

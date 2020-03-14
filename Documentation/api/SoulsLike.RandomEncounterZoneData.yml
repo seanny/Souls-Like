@@ -1,0 +1,138 @@
+### YamlMime:ManagedReference
+items:
+- uid: SoulsLike.RandomEncounterZoneData
+  commentId: T:SoulsLike.RandomEncounterZoneData
+  id: RandomEncounterZoneData
+  parent: SoulsLike
+  children:
+  - SoulsLike.RandomEncounterZoneData.encounterSpawnTime
+  - SoulsLike.RandomEncounterZoneData.zoneID
+  langs:
+  - csharp
+  - vb
+  name: RandomEncounterZoneData
+  nameWithType: RandomEncounterZoneData
+  fullName: SoulsLike.RandomEncounterZoneData
+  type: Struct
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/RandomEncounterZone.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: RandomEncounterZoneData
+    path: ../Assets/Scripts/Mechanics/RandomEncounterZone.cs
+    startLine: 16
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  syntax:
+    content: >-
+      [Serializable]
+
+      public struct RandomEncounterZoneData
+    content.vb: >-
+      <Serializable>
+
+      Public Structure RandomEncounterZoneData
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: SoulsLike.RandomEncounterZoneData.zoneID
+  commentId: F:SoulsLike.RandomEncounterZoneData.zoneID
+  id: zoneID
+  parent: SoulsLike.RandomEncounterZoneData
+  langs:
+  - csharp
+  - vb
+  name: zoneID
+  nameWithType: RandomEncounterZoneData.zoneID
+  fullName: SoulsLike.RandomEncounterZoneData.zoneID
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/RandomEncounterZone.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: zoneID
+    path: ../Assets/Scripts/Mechanics/RandomEncounterZone.cs
+    startLine: 22
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nZone ID\n"
+  example: []
+  syntax:
+    content: public int zoneID
+    return:
+      type: System.Int32
+    content.vb: Public zoneID As Integer
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: SoulsLike.RandomEncounterZoneData.encounterSpawnTime
+  commentId: F:SoulsLike.RandomEncounterZoneData.encounterSpawnTime
+  id: encounterSpawnTime
+  parent: SoulsLike.RandomEncounterZoneData
+  langs:
+  - csharp
+  - vb
+  name: encounterSpawnTime
+  nameWithType: RandomEncounterZoneData.encounterSpawnTime
+  fullName: SoulsLike.RandomEncounterZoneData.encounterSpawnTime
+  type: Field
+  source:
+    remote:
+      path: Assets/Scripts/Mechanics/RandomEncounterZone.cs
+      branch: master
+      repo: https://github.com/seanny/Souls-Like.git
+    id: encounterSpawnTime
+    path: ../Assets/Scripts/Mechanics/RandomEncounterZone.cs
+    startLine: 27
+  assemblies:
+  - Assembly-CSharp
+  namespace: SoulsLike
+  summary: "\nEncounter Spawn Time\n"
+  example: []
+  syntax:
+    content: public float encounterSpawnTime
+    return:
+      type: System.Single
+    content.vb: Public encounterSpawnTime As Single
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: SoulsLike
+  commentId: N:SoulsLike
+  name: SoulsLike
+  nameWithType: SoulsLike
+  fullName: SoulsLike
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single

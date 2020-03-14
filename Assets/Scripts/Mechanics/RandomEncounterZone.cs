@@ -8,13 +8,23 @@ namespace SoulsLike
     [CreateAssetMenu(fileName = "Random Encounter", menuName = "Random Encounter")]
     public class RandomEncounter : ScriptableObject
     {
+        /// <summary>
+        /// List of Actors to be spawned in random encounter.
+        /// </summary>
         public List<Actor> actors = new List<Actor>();
     }
 
     [Serializable]
     public struct RandomEncounterZoneData
     {
+        /// <summary>
+        /// Zone ID
+        /// </summary>
         public int zoneID;
+
+        /// <summary>
+        /// Encounter Spawn Time
+        /// </summary>
         public float encounterSpawnTime;
     }
 
