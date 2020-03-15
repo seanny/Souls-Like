@@ -29,7 +29,7 @@ namespace SoulsLike
                 enemy = false;
                 foreach (NonPlayerActor actor in actors)
                 {
-                    if(actor.enemyActor == this && !actor.actorStats.isDead)
+                    if(actor.NpcCombat.FightingActor == this && !actor.actorStats.isDead)
                     {
                         enemy = true;
                         break;

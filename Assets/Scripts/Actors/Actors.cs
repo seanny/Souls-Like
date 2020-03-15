@@ -199,7 +199,7 @@ namespace SoulsLike
         /// <returns></returns>
         public Actor FindTarget(NonPlayerActor actor, float range = 25f)
         {
-            if (actor.aggressionLevel >= NonPlayerActor.AggressionLevel.Agressive)
+            if (actor.NpcCombat.AggressionLevel >= AggressionLevel.Agressive)
             {
                 Actor[] actors = FindObjectsOfType<Actor>();
                 Actor _actor = actor.FindNearestActor(actors, range);
@@ -207,7 +207,7 @@ namespace SoulsLike
                 {
                     if (actor.CanDetect(_actor) == true && !_actor.actorStats.isDead)
                     {
-                        if (actor.aggressionLevel >= NonPlayerActor.AggressionLevel.HatesEveryone)
+                        if (actor.NpcCombat.AggressionLevel >= AggressionLevel.HatesEveryone)
                         {
                             return _actor;
                         }

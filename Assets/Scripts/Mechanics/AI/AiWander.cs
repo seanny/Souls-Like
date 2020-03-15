@@ -48,15 +48,16 @@ namespace SoulsLike
             }
             Vector3 actorPos = actor.transform.position;
             Vector3 targetPos = targetMovementPoint.transform.position;
-            Vector3 targetDir = targetPos - actorPos;
-            
-            if (Vector3.Distance(targetPos, actorPos) > MIN_DISTANCE)
+
+            float distance = Vector3.Distance(targetPos, actorPos);
+            if (distance > MIN_DISTANCE)
             {
+                Debug.Log($"[AiWander] Moving towards {targetPos}");
                 actor.transform.LookAt(targetPos);
 
                 // If actor's distance is more than MIN_DISTANCE then walk towards the target
-                actor.MoveTowardsPoint(targetPos);
-                actor.runningTowards = false;
+                actor.NpcMovement.MoveTowardsPoint(targetPos);
+                actor.NpcMovement.SetRunning(false);
             }
             else
             {
