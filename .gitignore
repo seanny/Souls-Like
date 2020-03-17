@@ -10,7 +10,7 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 /_[Ss]ite
-/_[Dd]ocumentation/[Oo]bj]
+/_[Dd]ocumentation/[Oo]bj]/
 /_[Dd]ocumentation/[Aa]pi]/*.yml
 !/_[Dd]ocumentation/[Aa]pi]/toc.yml
 

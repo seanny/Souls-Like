@@ -31,75 +31,20 @@ namespace SoulsLike
             Debug.Log($"[AiStateManager] Searching for next AI State.");
             foreach (AiState aiState in m_AiStates)
             {
+                // Check if there is less than 1 AiCondition
                 if(aiState.aiConditions.Count < 1)
                 {
-                    Debug.Log($"[AiStateManager] Using {aiState} right away as it has no conditions.");
                     // If aiState has no conditions, use this state right away.
+                    Debug.Log($"[AiStateManager] Using {aiState} right away as it has no conditions.");
                     return aiState;
                 }
                 // Check if all conditions are true
                 foreach(AiCondition aiCondition in aiState.aiConditions)
                 {
-                    if(!string.IsNullOrEmpty(aiCondition.scriptClass) && !string.IsNullOrEmpty(aiCondition.scriptMethod))
+                    // Check if the AiCondition.IsConditionMet is true.
+                    if(aiCondition.IsConditionMet() == true)
                     {
-                        Type magicType = Type.GetType(aiCondition.scriptClass);
-                        ConstructorInfo magicConstructor = magicType.GetConstructor(Type.EmptyTypes);
-                        object magicClassObject = magicConstructor.Invoke(new object[] { });
-
-                        MethodInfo magicMethod = magicType.GetMethod(aiCondition.scriptMethod);
-                        if(magicMethod.ReturnType != typeof(float))
-                        {
-                            Debug.LogError($"[AiStateManager] {aiCondition.scriptClass}.{aiCondition.scriptMethod} return type must be a float.");
-                            break;
-                        }
-                        object magicValue = magicMethod.Invoke(magicClassObject, aiCondition.scriptParamaters);
-
-                        switch(aiCondition.comparisonOperator)
-                        {
-                            case ComparisonOperator.EqualTo:
-                                if((float)magicValue == aiCondition.value)
-                                {
-                                    Debug.Log($"[AiStateManager] Using {aiState} as == {aiCondition.value}.");
-                                    return aiState;
-                                }
-                                break;
-                            case ComparisonOperator.LessOrEqualTo:
-                                if ((float)magicValue <= aiCondition.value)
-                                {
-                                    Debug.Log($"[AiStateManager] Using {aiState} as <= {aiCondition.value}.");
-                                    return aiState;
-                                }
-                                break;
-                            case ComparisonOperator.LessThan:
-                                if ((float)magicValue < aiCondition.value)
-                                {
-                                    Debug.Log($"[AiStateManager] Using {aiState} as < {aiCondition.value}.");
-                                    return aiState;
-                                }
-                                break;
-                            case ComparisonOperator.MoreOrEqualTo:
-                                if ((float)magicValue >= aiCondition.value)
-                                {
-                                    Debug.Log($"[AiStateManager] Using {aiState} as >= {aiCondition.value}.");
-                                    return aiState;
-                                }
-                                break;
-                            case ComparisonOperator.MoreThan:
-                                if ((float)magicValue > aiCondition.value)
-                                {
-                                    Debug.Log($"[AiStateManager] Using {aiState} as > {aiCondition.value}.");
-                                    return aiState;
-                                }
-                                break;
-                            case ComparisonOperator.NotEqualTo:
-                                if ((float)magicValue != aiCondition.value)
-                                {
-                                    Debug.Log($"[AiStateManager] Using {aiState} as != {aiCondition.value}.");
-                                    return aiState;
-                                }
-                                break;
-                        }
-                        
+                        return aiState;
                     }
                 }
             }

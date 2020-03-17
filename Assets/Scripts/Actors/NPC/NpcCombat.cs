@@ -2,6 +2,9 @@
 
 namespace SoulsLike
 {
+    /// <summary>
+    /// Aggresssion Level
+    /// </summary>
     public enum AggressionLevel
     {
         // Does not attack, unless attacked.
@@ -14,9 +17,19 @@ namespace SoulsLike
         HatesEveryone
     };
 
+    /// <summary>
+    /// Non Player Character Combat Controller
+    /// </summary>
     public class NpcCombat : MonoBehaviour
     {
+        /// <summary>
+        /// Aggression Level
+        /// </summary>
         public AggressionLevel AggressionLevel => m_AggressionLevel;
+
+        /// <summary>
+        /// Fighting Actor
+        /// </summary>
         public Actor FightingActor => m_FightingActor;
 
         [SerializeField] private AggressionLevel m_AggressionLevel;

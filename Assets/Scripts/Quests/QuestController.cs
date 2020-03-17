@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 namespace SoulsLike
 {
@@ -103,6 +102,18 @@ namespace SoulsLike
                     break;
                 }
             }
+        }
+
+        public int GetQuestStage(string questID)
+        {
+            foreach (QuestItem questItem in quests)
+            {
+                if (questItem.questData.Id == questID)
+                {
+                    return questItem.questData.stage;
+                }
+            }
+            return -1;
         }
     }
 }
