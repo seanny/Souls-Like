@@ -26,6 +26,8 @@
     name: ActorSpeciesType
   - uid: SoulsLike.ActorStats
     name: ActorStats
+  - uid: SoulsLike.AggressionLevel
+    name: AggressionLevel
   - uid: SoulsLike.AiCondition
     name: AiCondition
   - uid: SoulsLike.AiSchedule
@@ -36,6 +38,8 @@
     name: AiStateManager
   - uid: SoulsLike.AiWander
     name: AiWander
+  - uid: SoulsLike.BaseHUD
+    name: BaseHUD
   - uid: SoulsLike.CameraManager
     name: CameraManager
   - uid: SoulsLike.Chest
@@ -80,6 +84,8 @@
     name: GlobalController
   - uid: SoulsLike.GlobalSetting
     name: GlobalSetting
+  - uid: SoulsLike.HealthHUD
+    name: HealthHUD
   - uid: SoulsLike.Helper
     name: Helper
   - uid: SoulsLike.Helper.WeaponType
@@ -114,6 +120,8 @@
     name: LeveledItemList
   - uid: SoulsLike.LoadScene
     name: LoadScene
+  - uid: SoulsLike.MagicHUD
+    name: MagicHUD
   - uid: SoulsLike.MainMenu
     name: MainMenu
   - uid: SoulsLike.Month
@@ -126,12 +134,16 @@
     name: MusicManager
   - uid: SoulsLike.NonPlayerActor
     name: NonPlayerActor
-  - uid: SoulsLike.NonPlayerActor.AggressionLevel
-    name: NonPlayerActor.AggressionLevel
   - uid: SoulsLike.Notification
     name: Notification
   - uid: SoulsLike.NotificationView
     name: NotificationView
+  - uid: SoulsLike.NpcCombat
+    name: NpcCombat
+  - uid: SoulsLike.NpcLook
+    name: NpcLook
+  - uid: SoulsLike.NpcMovement
+    name: NpcMovement
   - uid: SoulsLike.PersistentObject
     name: PersistentObject
   - uid: SoulsLike.PlayerActor
@@ -184,12 +196,16 @@
     name: ServiceLocator
   - uid: SoulsLike.StageType
     name: StageType
+  - uid: SoulsLike.StaminaHUD
+    name: StaminaHUD
   - uid: SoulsLike.StateManager
     name: StateManager
   - uid: SoulsLike.Sword
     name: Sword
   - uid: SoulsLike.TestDialogueScript
     name: TestDialogueScript
+  - uid: SoulsLike.ToxinHUD
+    name: ToxinHUD
   - uid: SoulsLike.Vec3
     name: Vec3
   - uid: SoulsLike.Water

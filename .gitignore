@@ -11,6 +11,8 @@
 /[Mm]emoryCaptures/
 /_[Ss]ite
 /_[Dd]ocumentation/[Oo]bj]
+/_[Dd]ocumentation/[Aa]pi]/*.yml
+!/_[Dd]ocumentation/[Aa]pi]/toc.yml
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
