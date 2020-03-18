@@ -51,7 +51,9 @@ namespace SoulsLike
         GetActorLevel,
         GetPlayerLevel,
         GetPlayerHealth,
-        GetPlayerMagic
+        GetPlayerMagic,
+        GetGlobal,
+        GetHour
     };
 
     /// <summary>
@@ -95,6 +97,7 @@ namespace SoulsLike
             {
                 case ComparisonOperator.EqualTo:
                     isMet = HandleEqualTo();
+                    IsTrue()
                     break;
                 case ComparisonOperator.LessThan:
                     isMet = HandleLessThan();
@@ -113,6 +116,35 @@ namespace SoulsLike
                     break;
             }
             return isMet;
+        }
+
+        public bool IsTrue<T, U>(T value1, ComparisonOperator comparisonOperator, U value2)
+            where T : U
+            where U : IComparable
+        {
+            bool retValue = false;
+            switch(comparisonOperator)
+            {
+                case ComparisonOperator.EqualTo:
+                    retValue = value1.CompareTo(value2) == 0;
+                    break;
+                case ComparisonOperator.LessOrEqualTo:
+                    retValue = value1.CompareTo(value2) <= 0;
+                    break;
+                case ComparisonOperator.LessThan:
+                    retValue = value1.CompareTo(value2) < 0;
+                    break;
+                case ComparisonOperator.MoreOrEqualTo:
+                    retValue = value1.CompareTo(value2) >= 0;
+                    break;
+                case ComparisonOperator.MoreThan:
+                    retValue = value1.CompareTo(value2) > 0;
+                    break;
+                case ComparisonOperator.NotEqualTo:
+                    retValue = value1.CompareTo(value2) != 0;
+                    break;
+            }
+            return retValue;
         }
 
         /// <summary>
