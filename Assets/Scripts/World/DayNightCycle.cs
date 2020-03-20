@@ -16,7 +16,19 @@ namespace SoulsLike
 
     public class DayNightCycle : MonoBehaviour
     {
-        public DayNightData saveData = new DayNightData();
+        public DayNightData saveData
+        {
+            get
+            {
+                return m_SaveData;
+            }
+            set
+            {
+                m_SaveData = value;
+            }
+        }
+
+        [SerializeField] private DayNightData m_SaveData;
         public Light sun;
 
         public static void SetDayNightCycleStats(DayNightData dayNightData)
@@ -28,31 +40,40 @@ namespace SoulsLike
             }
         }
 
+
+        private void Start()
+        {
+            if(m_SaveData == null)
+            {
+                m_SaveData = new DayNightData();
+            }
+        }
+
         private void Update()
         {
-            saveData.minute += Time.deltaTime;
-            if(Mathf.RoundToInt(saveData.minute) > 59)
+            m_SaveData.minute += Time.deltaTime;
+            if(Mathf.RoundToInt(m_SaveData.minute) > 59)
             {
-                saveData.minute = 0;
-                saveData.hour++;
-                if(saveData.hour > 23)
+                m_SaveData.minute = 0;
+                m_SaveData.hour++;
+                if(m_SaveData.hour > 23)
                 {
-                    saveData.hour = 0;
-                    saveData.day++;
-                    if(saveData.day > 30)
+                    m_SaveData.hour = 0;
+                    m_SaveData.day++;
+                    if(m_SaveData.day > 30)
                     {
-                        saveData.day = 0;
-                        saveData.month++;
-                        if(saveData.month > 12)
+                        m_SaveData.day = 0;
+                        m_SaveData.month++;
+                        if(m_SaveData.month > 12)
                         {
-                            saveData.month = 0;
-                            saveData.year++;
+                            m_SaveData.month = 0;
+                            m_SaveData.year++;
                         }
                     }
                 }
             }
 
-            float degrees = ((saveData.hour / 24.0f) * 360f) - 90f;
+            float degrees = ((m_SaveData.hour / 24.0f) * 360f) - 90f;
             sun.transform.rotation = Quaternion.Euler(degrees, 0, 0);
         }
     }
