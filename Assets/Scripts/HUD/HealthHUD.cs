@@ -8,7 +8,12 @@
             {
                 return;
             }
-            m_Scrollbar.size = PlayerActor.instance.actorStats.currentHealth / PlayerActor.instance.actorStats.maxHealth;
+            float value = PlayerActor.instance.actorStats.currentHealth / PlayerActor.instance.actorStats.maxHealth;
+            if (float.IsNaN(value))
+            {
+                value = 0f;
+            }
+            m_Scrollbar.size = value;
         }
 
         // Update is called once per frame

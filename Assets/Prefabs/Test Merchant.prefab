@@ -1495,6 +1495,7 @@ GameObject:
   - component: {fileID: 442035234819577137}
   - component: {fileID: 442035234819577136}
   - component: {fileID: 442035234819577139}
+  - component: {fileID: 1785136840423980711}
   m_Layer: 11
   m_Name: Test Merchant
   m_TagString: Actor
@@ -1559,16 +1560,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a029730e8bee294cb4724ebfeddafa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entityID: TestMerchant
   actorStats:
+    actorID: 0
     name: 
     level: 0
+    actorPosition:
+      x: 0
+      y: 0
+      z: 0
+    actorRotation:
+      x: 0
+      y: 0
+      z: 0
+      w: 0
     actorSpecies: 0
     actorFaction: Civili\
     actorFightWait: 0
     isDead: 0
     currentHealth: 10
     maxHealth: 0
+    currentMagic: 0
+    maxMagic: 0
+    currentStamina: 0
+    maxStamina: 0
+    currentToxins: 0
+    maxToxins: 0
     isSneaking: 0
     fatigue: 100
     shortBlade: 0
@@ -1593,16 +1609,10 @@ MonoBehaviour:
   attackedBy: {fileID: 0}
   animationHelper: {fileID: 0}
   weaponPrefab: {fileID: 0}
-  aggressionLevel: 0
-  followingActor: {fileID: 0}
-  movingTowards: {fileID: 0}
-  fightingActor: {fileID: 0}
+  m_NpcMovement: {fileID: 0}
+  m_NpcCombat: {fileID: 0}
   stateManager: {fileID: 0}
-  aiSequence:
-    actor: {fileID: 0}
-    lastAiState: 0
-    currentAiState: 0
-  enemyActor: {fileID: 0}
+  aiStates: []
   isEnemy: 0
 --- !u!195 &442035234819577136
 NavMeshAgent:
@@ -1657,6 +1667,18 @@ MonoBehaviour:
   ignoreLayers:
     serializedVersion: 2
     m_Bits: 0
+--- !u!114 &1785136840423980711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442035234819577149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddac1d7eb8b93b846b0e833391d604e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &442035234841453529
 GameObject:
   m_ObjectHideFlags: 0

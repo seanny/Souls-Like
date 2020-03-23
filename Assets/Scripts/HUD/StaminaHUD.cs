@@ -13,8 +13,13 @@
                 return;
             }
 
+            float value = PlayerActor.instance.actorStats.currentStamina / PlayerActor.instance.actorStats.maxStamina;
+            if (float.IsNaN(value))
+            {
+                value = 0f;
+            }
             // Get the current magic divided by the magic magic.
-            m_Scrollbar.size = PlayerActor.instance.actorStats.currentStamina / PlayerActor.instance.actorStats.maxStamina;
+            m_Scrollbar.size = value;
         }
 
         // Update is called once per frame

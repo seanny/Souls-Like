@@ -81,12 +81,12 @@ namespace SoulsLike
         public float maxStamina;
 
         /// <summary>
-        /// Actor Current Stamina
+        /// Actor Current Toxins
         /// </summary>
         public float currentToxins;
 
         /// <summary>
-        /// Actor Maximum Stamina
+        /// Actor Maximum Toxins
         /// </summary>
         public float maxToxins;
 

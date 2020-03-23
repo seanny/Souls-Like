@@ -12,5 +12,10 @@ namespace SoulsLike
         {
             m_Scrollbar = GetComponent<Scrollbar>();
         }
+
+        public void SetHUD(float current, float max)
+        {
+            m_Scrollbar.size = current / max;
+        }
     }
 }

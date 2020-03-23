@@ -1,4 +1,6 @@
-﻿namespace SoulsLike
+﻿using UnityEngine;
+
+namespace SoulsLike
 {
     public class ToxinHUD : BaseHUD
     {
@@ -14,7 +16,12 @@
             }
 
             // Get the current magic divided by the magic magic.
-            m_Scrollbar.size = PlayerActor.instance.actorStats.currentToxins / PlayerActor.instance.actorStats.maxToxins;
+            float value = PlayerActor.instance.actorStats.currentToxins / PlayerActor.instance.actorStats.maxToxins;
+            if(float.IsNaN(value))
+            {
+                value = 0f;
+            }
+            m_Scrollbar.size = value;
         }
 
         // Update is called once per frame
