@@ -2521,7 +2521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31014abc769f856479f86f5625af3494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveData:
+  m_SaveData:
     minute: 0
     hour: 0
     day: 0
@@ -18040,7 +18040,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1145259624
 Transform:
   m_ObjectHideFlags: 0
