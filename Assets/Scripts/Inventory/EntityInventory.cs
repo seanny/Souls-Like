@@ -17,7 +17,9 @@ namespace SoulsLike
         /// <summary>
         /// Inventory Items
         /// </summary>
+#pragma warning disable 0649
         [SerializeField] private List<Item> inventoryItems;
+#pragma warning restore 0649
         public List<Item> InventoryItems => inventoryItems;
 
         private void Start()

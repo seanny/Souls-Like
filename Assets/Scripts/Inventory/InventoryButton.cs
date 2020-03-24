@@ -6,6 +6,7 @@ namespace SoulsLike
 {
     public class InventoryButton : MonoBehaviour
     {
+#pragma warning disable 0649
         [SerializeField] private Image itemImage;
         public Image ItemImage => itemImage;
 
@@ -17,5 +18,6 @@ namespace SoulsLike
 
         [SerializeField] private TextMeshProUGUI itemValue;
         public TextMeshProUGUI ItemValue => itemValue;
+#pragma warning restore 0649
     }
 }

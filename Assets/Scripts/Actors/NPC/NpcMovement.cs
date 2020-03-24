@@ -136,11 +136,6 @@ namespace SoulsLike
         public bool FollowActor(Actor actor)
         {
             throw new System.NotImplementedException();
-            if (actor.actorStats.isDead)
-            {
-                return false;
-            }
-            return true;
         }
     }
 }

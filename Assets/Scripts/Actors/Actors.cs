@@ -267,7 +267,6 @@ namespace SoulsLike
         public bool IsAttacking(Actor actor)
         {
             throw new System.NotImplementedException();
-            return false;
         }
 
         /// <summary>
@@ -279,7 +278,6 @@ namespace SoulsLike
         public bool IsRunning(Actor actor)
         {
             throw new System.NotImplementedException();
-            return false;
         }
 
         /// <summary>
@@ -291,7 +289,6 @@ namespace SoulsLike
         public bool IsSneaking(Actor actor)
         {
             throw new System.NotImplementedException();
-            return false;
         }
 
         /// <summary>

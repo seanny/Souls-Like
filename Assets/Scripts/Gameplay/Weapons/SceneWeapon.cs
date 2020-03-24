@@ -6,8 +6,9 @@ namespace SoulsLike
     {
         public ItemWeapon weaponItem;
 
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
             interactableData.inventoryItem = weaponItem.Name;
             interactableData.position = new Vec3(transform.position);
             interactableData.rotation = new Quat(transform.rotation);

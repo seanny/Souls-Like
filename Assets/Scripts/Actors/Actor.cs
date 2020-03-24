@@ -8,6 +8,7 @@ namespace SoulsLike
         public ActorStats actorStats;
         public Actor attackedBy;
         public Helper animationHelper;
+        public ActorCombat actorCombat;
 
         Animator animator;
         CapsuleCollider actorCollider;

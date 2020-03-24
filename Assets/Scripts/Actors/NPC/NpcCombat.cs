@@ -32,8 +32,10 @@ namespace SoulsLike
         /// </summary>
         public Actor FightingActor => m_FightingActor;
 
+#pragma warning disable 0649
         [SerializeField] private AggressionLevel m_AggressionLevel;
         [SerializeField] private Actor m_FightingActor;
+#pragma warning restore 0649
 
         /// <summary>
         /// Initiate Combat with actor

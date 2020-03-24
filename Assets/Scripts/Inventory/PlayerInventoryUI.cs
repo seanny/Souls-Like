@@ -18,7 +18,9 @@ namespace SoulsLike
         public GameObject inventoryTransferUserInterface;
 
         [Header("Scroll Views")]
+#pragma warning disable 0649
         [SerializeField] private GameObject playerScrollViewContent;
+#pragma warning restore 0649
 
         [SerializeField] private List<InventoryButton> inventoryButtons;
 

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 namespace SoulsLike
 {
-    class InteractableUI : MonoBehaviour
+    public class InteractableUI : MonoBehaviour
     {
         public static InteractableUI instance { get; private set; }
         public TextMeshProUGUI interactableText;

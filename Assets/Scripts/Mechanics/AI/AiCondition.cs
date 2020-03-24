@@ -118,13 +118,10 @@ namespace SoulsLike
                     break;
                 case ScriptMethod.GetPlayerHealth:
                     return ComparisonCheck.IsTrue(PlayerActor.instance.actorStats.currentHealth, comparisonOperator, value);
-                    break;
                 case ScriptMethod.GetPlayerLevel:
                     return ComparisonCheck.IsTrue(PlayerActor.instance.actorStats.level, comparisonOperator, (int)value);
-                    break;
                 case ScriptMethod.GetPlayerMagic:
                     return ComparisonCheck.IsTrue(PlayerActor.instance.actorStats.currentMagic, comparisonOperator, value);
-                    break;
                 case ScriptMethod.GetQuestStage:
                     if (scriptParamaters[0].GetType() == typeof(string))
                     {

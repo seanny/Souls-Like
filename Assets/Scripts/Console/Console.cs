@@ -99,10 +99,8 @@ namespace SoulsLike
                                     break;
                                 case "freecam":
                                     throw new NotImplementedException("Free Camera command not implemented");
-                                    break;
                                 case "freecamspeed":
                                     throw new NotImplementedException("Free Camera Speed command not implemented");
-                                    break;
                                 case "debugstats":
                                     DebugStats.ToggleDebugStats();
                                     break;
