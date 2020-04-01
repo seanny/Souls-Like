@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace SoulsLike
 {
@@ -21,7 +20,6 @@ namespace SoulsLike
         protected override void Start()
         {
             base.Start();
-            weaponPrefab = Resources.Load<GameObject>("Weapons/Sword");
             actorLayerMasks = LayerMask.GetMask("Actor");
             animator = GetComponentInChildren<Animator>();
             animationHelper = GetComponentInChildren<Helper>();
@@ -31,18 +29,6 @@ namespace SoulsLike
             }
             animationHelper.weaponType = Helper.WeaponType.OneHanded;
             actorCollider = GetComponent<CapsuleCollider>();
-            GiveWeapon();
-        }
-
-        private void GiveWeapon()
-        {
-            Transform weaponPlacement = gameObject.GetComponentInChildren<WeaponPlacementPoint>().transform;
-            weaponObject = Instantiate(weaponPrefab);
-            weaponObject.transform.parent = weaponPlacement;
-            currentWeapon = weaponObject.GetComponent<IWeapon>();
-            weaponObject.transform.localPosition = currentWeapon.weaponAttackPoint;
-            weaponObject.transform.localRotation = Quaternion.Euler(currentWeapon.weaponAttackRotation);
-            weaponObject.transform.localScale = currentWeapon.weaponAttackScale;
         }
 
         /// <summary>

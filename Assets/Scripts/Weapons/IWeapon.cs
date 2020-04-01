@@ -5,6 +5,11 @@ namespace SoulsLike
     public interface IWeapon
     {
         /// <summary>
+        /// Weapon Name
+        /// </summary>
+        string weaponName { get; }
+
+        /// <summary>
         /// Weapon Type
         /// </summary>
         WeaponType weaponType { get; }

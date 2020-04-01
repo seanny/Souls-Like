@@ -8,6 +8,7 @@ namespace SoulsLike
         Actor holdingActor;
         public bool IsAttacking;
 
+        public string weaponName { get => "TEST_SWORD"; }
         public WeaponType weaponType { get => WeaponType.OneHanded; }
         public float weaponDamage { get => 1.5f; }
 

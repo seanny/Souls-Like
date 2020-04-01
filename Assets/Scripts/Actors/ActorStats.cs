@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SoulsLike
 {
@@ -194,5 +195,15 @@ namespace SoulsLike
         /// Actor's luck, affects everything in a small way.
         /// </summary>
         public int luck;
+
+        /// <summary>
+        /// Actor's Weapons in inventory
+        /// </summary>
+        public Dictionary<string, WeaponType> meleeWeapons = new Dictionary<string, WeaponType>();
+
+        /// <summary>
+        /// Actor's current weapon
+        /// </summary>
+        public int currentMeleeWeapon;
     }
 }
